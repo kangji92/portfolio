@@ -1,14 +1,21 @@
 <template>
   <div id="app">
-    <IntroPage/>
+    <AppHeader></AppHeader>
+    <IntroPage></IntroPage>
+    <AppFooter></AppFooter>
+    <router-view></router-view>
   </div>
 </template>
 <script>
+import AppHeader from "@/components/common/AppHeader.vue";
 import IntroPage from "@/views/IntroPage.vue";
+import AppFooter from "@/components/common/AppFooter.vue";
 export default {
   name: "Home",
   components: {
     IntroPage,
+    AppHeader,
+    AppFooter,
   },
 };
 </script>

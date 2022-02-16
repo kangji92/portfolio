@@ -1,0 +1,288 @@
+
+
+.prj-info {
+  position: relative;
+  float: left;
+  width: calc(100% - 60% - 50px);
+ height: 740px;
+  margin-top: 5%;
+  margin-left: 0;
+  padding: 50px;
+  color: $txt-def;
+  text-align: left;
+  @include respond-to("bp-max-1366") {
+    float: none;
+    width: calc(100% - 10%);
+    height: auto;
+
+    margin-left: 0;
+    padding: 10% 5%;
+  }
+  @include respond-to("bp-max-820") {
+    width: calc(100% - 16%);
+    padding: 10% 8%;
+  }
+  .btn-wrap {
+    margin-top: 10%;
+    .link {
+      display: block;
+      width: 211px;
+      height: 60px;
+      border-radius: calc(60px * 0.5);
+      text-align: center;
+      font-size: 28px;
+      border: 1px solid #707070;
+      @include display-flex {
+        justify-content: getJustify(center);
+        align-items: checkAlign(center);
+      }
+      color: $txt-def;
+      font-family: $font-eng;
+      font-weight: 300;
+      &:hover {
+        background: #333;
+        color: #fff;
+        transition: 0.3s;
+      }
+    }
+  }
+
+  &:before {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    content: attr(data-text);
+    font-size: 130px;
+    color: $txt-def;
+  }
+  h3 {
+    position: relative;
+    font-size: 32px;
+    color: $txt-def;
+    font-family: $font-kr;
+  }
+  .prj-info__sub-ttl {
+    position: relative;
+    margin-bottom: 10%;
+    padding-top: 16px;
+    font-size: 24px;
+    line-height: 1.3;
+  }
+  dl {
+    line-height: 1.5em;
+    //margin: 30px 0;
+    dt {
+      display: inline-block;
+      padding-right: 10px;
+      font-size: 18px;
+      font-family: $font-eng;
+      font-weight: 300;
+      color: $txt-def;
+      // b {}
+    }
+    dd {
+      display: inline-block;
+      font-size: 18px;
+      font-family: $font-eng;
+      font-weight: 300;
+      letter-spacing: normal;
+      color: $txt-def;
+    }
+    li:before {
+      //content:"\f105";
+      font-family: fontawesome;
+      margin-right: 10px;
+    }
+  }
+}
+
+
+.prj-photo {
+  float: right;
+  margin-top: 5%;
+  width: calc(100% - 40% - 50px - 120px);
+  //height: 100%;
+  height: 740px;
+  padding: 50px 0;
+  overflow: hidden;
+  margin-right: 120px;
+  @include respond-to("bp-max-1366") {
+    float: none;
+    width: calc(100% - 16%);
+    margin-right: 0;
+    padding: 10% 8%;
+  }
+  span {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .mockup {
+    &.mockup__pc {
+      position: absolute;
+      right: 26px;
+      top: 60px;
+      width: 1120px;
+      height: 678px;
+     // background: url("~@/assets/images/mockup/mockup_macbook.png") center center no-repeat;
+      background-size: 100%;
+      &.sh-bank {
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 732px;
+          height: 460px;
+      //    background: url("~@/assets/images/project/iam_suhyup/suhyup_01_1600.png") no-repeat;
+          background-size: 100%;
+          right: 199px;
+          top: 40px;
+        }
+      }
+    }
+    &.mockup__trans-pc {
+      &.inihub {
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          right: 167px;
+          bottom: 150px;
+          width: 510px;
+          height: 480px;
+         // background: url("~@/assets/images/project/pki_inihub/inihub_pc_01.png" center no-repeat;
+          background-size: 510px;
+        }
+      }
+    }
+
+    &.mockup__respons-pc {
+      &::after {
+        // pc
+        content: "";
+        display: block;
+        width: 952px;
+        height: 576px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        //background: url("~@/assets/images/mockup/mockup_macbook.png") center center no-repeat;
+        background-size: 100%;
+        //background-position-y: 50px;
+      }
+      &.kyobo {
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          right: 167px;
+          bottom: 150px;
+          width: 625px;
+          height: 392px;
+         // background: url("~@/assets/images/project/pki_kyobo/intergration_pc_01.png") no-repeat;
+          background-size: 100%;
+          background-position-y: 50%;
+        }
+      }
+      &.inihub {
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          right: 167px;
+          bottom: 150px;
+          width: 625px;
+          height: 392px;
+         // background: url("~@/assets/images/project/pki_inihub/inihub_a_pc_01.png") no-repeat;
+          background-size: 625px;
+          background-position-y: 50%;
+        }
+      }
+    }
+    &.mockup__respons-pad {
+      position: absolute;
+      left: -15px;
+      top: 60px;
+      &::after {
+        content: "";
+        display: block;
+        width: 490px;
+        height: 486px;
+        position: absolute;
+        top: 20px;
+        left: 120px;
+        //background: url("~@/assets/images/mockup/mockup_ipad.png") center center no-repeat;
+        background-size: 100%;
+        z-index: -1;
+      }
+      &.kyobo {
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+
+          width: 320px;
+          height: 428px;
+        }
+        //background: url('~@/assets/images/project/pki_kyobo/kyobo.png') center center no-repeat;
+        // background-size: 100%;
+      }
+      &.inihub {
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 30px;
+          left: 280px;
+         // background: url("~@/assets/images/project/pki_inihub/inihub_a_tablet_01.jpg") center center no-repeat;
+          background-size: 100%;
+          width: 300px;
+          height: 428px;
+          z-index: -1;
+        }
+      }
+    }
+    &.mockup__respons-mo {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      &::after {
+        content: "";
+        display: block;
+        width: 270px;
+        height: 329px;
+        position: absolute;
+        left: 70px;
+        bottom: 76px;
+       // background: url("~@/assets/images/mockup/mockup_iphone.png") center center no-repeat;
+        background-size: 100%;
+      }
+      &.kyobo {
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 178px;
+          bottom: 130px;
+          width: 130px;
+          height: 239px;
+        //  background: url("~@/assets/images/project/pki_kyobo/integration_mo_kyobo_auth.png") no-repeat;
+          background-size: 100%;
+        }
+      }
+      &.inihub {
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 178px;
+          bottom: 130px;
+          width: 130px;
+          height: 239px;
+         // background: url("~@/assets/images/project/pki_inihub/inihub_a_m_01.png") center top no-repeat;
+          background-size: 100%;
+        }
+      }
+    }
+  }
+}
