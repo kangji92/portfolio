@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="app__root">
     <AppHeader></AppHeader>
     <IntroPage></IntroPage>
     <AppFooter></AppFooter>

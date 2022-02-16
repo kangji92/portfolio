@@ -79,6 +79,16 @@
           </div>
         </div>
       </section>
+      <section class="section">
+        <div class="content resume">
+          <div class="resume-inner">
+            <div class="txt-group">
+              <em></em>
+              <p>이력서 링크</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </full-page>
   </div>
 </template>

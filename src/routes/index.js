@@ -8,19 +8,26 @@ export default new VueRouter({
   routes: [
     {
       path: "/",
-      redirect: "/intro",
-    },
-    {
-      path: "/intro",
-      component: () => import("@/views/IntroPage.vue"),
+      redirect: "/portfolio",
     },
     {
       path: "/portfolio",
-      component: () => import("@/views/PortfolioPage.vue"),
+      component: () => import("@/views/IntroPage.vue"),
     },
     {
-      path: "/librarys",
+      path: "/portfolio/portfolio",
+      component: () => import("@/views/PortfolioPage.vue"),
+    },
+
+    {
+      path: "/portfolio/librarys",
       component: () => import("@/views/LibrarysPage.vue"),
+    },
+    {
+      // porfolio
+      name: "inihub",
+      path: "/portfolio/portfolio/inihub/",
+      component: () => import("@/views/ProjectDetailPage.vue"),
     },
     {
       path: "*",

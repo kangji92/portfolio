@@ -1,0 +1,1045 @@
+
+.project-detail {
+  position: fixed;
+  width: 100%;
+  left:0;
+  top: 0;
+  height: 100%;
+  background-color: #fff;
+  z-index: 100;
+}
+.modal__overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.4);
+}
+ .modal__container {
+  width: 90vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 85vh;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+
+   /* width*/
+  &::-webkit-scrollbar {
+    width: 10px;
+    background: rgba(0,0,0,0.1); 
+  } 
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.1); 
+  }
+  
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.5); 
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(0,0,0,0.5); 
+  }
+ }
+ .modal__close {
+    width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    button {
+      width: 52px;
+      height: 52px;
+      background: transparent;
+      border: 0;
+      position: fixed;
+      top: 28px;
+      right: 48px;
+  
+      span {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 100%;
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 2px;
+          height: 52px;
+          background:#333;
+          transform: rotate(45deg);
+        }
+      
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 2px;
+          height: 52px;
+          background:#333;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+ 
+}
+.hiring-main {
+    height: 600px;
+    position: relative;
+  }
+  .hiring-heading {
+    position: absolute;
+    top: 50px;
+    left: 5%;
+    left: 0;
+    //transform: translate(-50%, -50%);
+    text-align: left;
+  }
+
+
+  .hiring-heading span:before,
+  .hiring-heading span:after {
+    content: '';
+    height: 2px;
+    background-color: #000;
+    width: 50px;
+    position: absolute;
+    top: 50%;
+  }
+  .hiring-heading span:before {
+    right: 120%;
+  }
+  .hiring-heading span:after {
+    left: 120%;
+  }
+  .hiring-heading h1 {
+    font-size: 48px;
+    font-size: 2vw;
+    font-weight: 600;
+    margin: 0;
+    margin-top: 1.5vw;
+    line-height:1.25em;
+    color: #333;
+  }
+  .hiring-heading span {
+    // text-transform: uppercase;
+     font-weight: 500;
+     font-size: 28px;
+     font-size: 1.25vw;
+     color: #333;
+     position: relative;
+  
+   }
+
+  .hiring-info {
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
+  .hiring-info > div {
+    //float: left;
+    width: 50%;
+    height: 600px;
+  }
+  .center-parent {
+    position: relative;
+  }
+  .center-child {
+    position: absolute;
+    //top: 50%;
+    //left: 50%;
+    left: 5%;
+    top: 25%;
+    //transform: translate(-50%, -50%);
+    width: 70%;
+  }
+
+  .center-child h2 {
+    font-size: 36px;
+    font-weight: normal;
+  }
+  .center-child p {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.5em;
+  }
+  .photo img {
+    width: 100%;
+  }
+  .hiring-slogan {
+    padding: 100px 0;
+  }
+  .hiring-slogan p {
+    font-size: 32px;
+    font-weight: 300;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    position: relative;
+  }
+  .hiring-slogan p:before {
+    content: ',,';
+    font-family: 'Overpass', sans-serif;
+    font-size: 200px;
+    position: absolute;
+    color: #ddd;
+    transform: rotate(180deg);
+    top: -82px;
+    left: -35px;
+  }
+  .hiring-contact ul {
+    display: inline-block;
+    width: 49%;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.5em;
+  }
+  .hiring-contact ul li:first-child {
+    font-weight: 400;
+  }
+  .hiring-contact ul li:last-child {
+    color: dodgerblue;
+  }
+  .sns {}
+  .sns a {
+    font-size: 15px;
+    color: #000;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    margin: 2px;
+    position: relative;
+    transition: 0.3s;
+  }
+  .sns a:before {
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    transition: 0.3s;
+  }
+  .sns a:hover {
+    color: #fff;
+  }
+  .sns a:hover:before {
+    transform: translateX(-50%) scale(1);
+  }
+  .sns a:nth-child(1):before {
+    background-color: #3b5999;
+  }
+  .sns a:nth-child(2):before {
+    background-color: #55acee;
+  }
+  .sns a:nth-child(3):before {
+    background-color: #0077B5;
+  }
+  .sns a:nth-child(4):before {
+    background-color: #e4405f;
+  }
+  .sns a:nth-child(5):before {
+    background-color: #cd201f;
+  }
+  .sns a:nth-child(6):before {
+    background-color: #25D366;
+  }
+  
+
+/* ############ SubPage : Hiring ############ */
+.hiring-main.project-main1 {
+   // background: url('../assets/images/project-main-01-01.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+.hiring-main.project-main2 {
+    //background: url('../assets/images/project-main-02-01.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+.hiring-main.project-main3 {
+  //  background: url('../assets/images/project-main-03-01.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+ }
+.hiring-main.project-main1 .hiring-heading,
+.hiring-main.project-main2 .hiring-heading,
+.hiring-main.project-main3 .hiring-heading {
+color: #fff;
+width: 100%;
+animation: slidedown 1s linear both;
+}
+.hiring-main.project-main1 .hiring-heading h1,
+.hiring-main.project-main2 .hiring-heading h1,
+.hiring-main.project-main3 .hiring-heading h1 {
+font-size: 70px;
+}
+.project-detail .hiring-info {
+margin-bottom: 0;
+}
+.project-detail .hiring-slogan p:before {
+left: -100px;
+}
+.photo.project-info {
+font-size: 20px;
+font-weight: 300;
+padding-top: 120px;
+}
+.project-detail .hiring-heading span:before,
+.project-detail .hiring-heading span:after {
+background-color: #fff;
+}
+  
+  @keyframes slidedown {
+    0% {
+      opacity: 0;
+      margin-top: -50px;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 0;
+    }
+  }
+  
+  /* Featherlight Custom CSS */
+  .featherlight .featherlight-content {
+    position: relative;
+    text-align: left;
+    vertical-align: middle;
+    display: inline-block;
+    overflow: auto;
+    padding: 0;
+    border-bottom: 25px solid transparent;
+    margin-left: 0;
+    margin-right: 0;
+    max-height: 100%;
+    background: #fff;
+    cursor: auto;
+    white-space: normal;
+    width: 100%;
+    height: 100%;
+  }
+  .featherlight iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+  }
+  .featherlight .featherlight-close-icon {
+    position: absolute;
+    z-index: 9999;
+    top: 30px;
+    right: 70px;
+    line-height: 25px;
+    width: 25px;
+    cursor: pointer;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    background: rgba(255, 255, 255, 0.3);
+    color: #000;
+    border: none;
+    padding: 0;
+    font-size: 40px;
+    outline: none;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  .photo {
+      span.bg-1 {
+        //  background: url('../assets/images/project-main-01-02.jpg') center center no-repeat;
+   
+        }
+
+  }
+  
+
+
+.hiring-main.project-main1 {
+   // background: url('../assets/images/project-main-01-01.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+
+
+
+button { padding: 0; cursor: pointer;}
+
+
+.btn__line {
+  width: 200px;
+ // border: 1px solid $color-def;
+  height: 64px;
+  background: transparent;
+  font-size: 28px;
+  border-radius: calc(60px * 0.5);
+ &:hover {
+   transition: all 0.5s;
+   background: #000;
+   color: #fff;
+ }
+}
+
+.modal {
+  
+  &.project-detail {
+    .inner { 
+    //  @include clearfix;
+      position:relative; 
+      width: 90%; 
+      margin: 0 auto;}
+    .header {
+      position: fixed;
+      left:0;
+      top:0;
+      width: 100%;
+      background: rgba(255,255,255,0.8);
+      z-index:100;
+      .header-inner {
+        width: 95%;
+        margin: auto;     
+      }
+      
+    }
+
+    
+    .hiring-main {
+      h1 {
+        font-size: 48px;
+        font-size: 2.2vw;
+        font-family: 600;
+      }
+      .sub-ttl {
+        font-size: 28px;
+        display: block;
+        font-family: 500;
+        margin-top: 16px;
+      }
+
+
+    }
+
+    .project__info {
+      width: 100%;
+      color: #333;
+      margin-top: 20vw;
+      text-align: left;
+      font-size: 1.25rem;
+      line-height: 1.25;
+      dl {
+        width: 100%; 
+        text-align: left;
+        display: block;
+        dt {
+          display: inline-block; 
+          padding: 0 1vw 0 0;
+        }
+        dd {
+          display: inline-block;
+        }
+      }
+
+      .btn__line {
+        margin-top: 66px;
+      }
+    }
+    
+  }
+}
+
+
+
+.mockup {
+  &.nexess {
+    width: 56vw;
+    height: 35vw;
+    position: absolute;
+    top: 25%;
+    right: -15%;
+   
+    span {
+      width: 100%;
+      height: 100%;
+      display: block;
+     // background: url('../assets/images/project/iam_nexess/project_nexess_main_01@2x.png') no-repeat center center ;
+      background-size: 100% auto;
+      image-rendering: -webkit-optimize-contrast;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+
+    }
+  }
+  &.mobilian {
+    width: 36vw;
+    height: 38vw;
+
+    position: absolute;
+    top: 14%;
+    right: 14%;
+    span {
+      width: 100%;
+      height: 100%;
+      display: block;
+   //   background: url('../assets/images/project/pki_mobilianWeb/mobilian_01@2x.png') no-repeat center center ;
+     
+      background-size: 100% auto;
+      image-rendering: -webkit-optimize-contrast;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+
+    }
+    &::before {
+      content: '';
+      width: 38vw;
+      height: 38vw;
+      background: rgba(43,104,184,0.15);
+      display: block;
+      position: absolute;
+      border-radius: 50%;
+      top: 1.5%;
+      left: 22%;
+    }
+  }
+  &.pc {
+    &.inihub {
+      width: 44vw;
+      height: 30vw;
+      width: 1120px;
+      height: 730px;
+      position: absolute;
+      top: 35%;
+      right: -15%;
+      right: -5vw;
+      span {
+        width: 100%;
+        height: 100%;
+        display: block;
+     //  background: url('../assets/images/project/pki_inihub/inihub_mockup_pc@2x.png') no-repeat center center ;
+        background-size: 100% auto;
+        image-rendering: -webkit-optimize-contrast;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+  
+      }
+      
+    }
+
+  }
+  &.mo {
+    &.inihub {
+      width: 20vw;
+      height: 30vw;
+      width: 384px;
+      height: 576px;
+      position: absolute;
+      top: 35%;
+      right: 40vw;
+      span {
+        width: 100%;
+        height: 100%;
+        display: block;
+        //background: url('../assets/images/project/pki_inihub/inihub_mockup_mo@2x.png') no-repeat center center ;
+        background-size: 100%;
+        image-rendering: -webkit-optimize-contrast;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+  
+      }
+    }
+  }
+  
+}
+
+
+
+
+.ttl {
+  h2 { 
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  p {
+    display: inline-block;
+    padding-left: 80px;
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 24px;
+    float: left;
+  }
+}
+.hiring-info {
+  margin-top: 80px;
+ // @include clearfix;
+  div {
+    height: auto;
+  }
+  .center {
+    width: 100%;
+  }
+  .contour {
+    display: block;
+    width: 64px;
+    height: 1px;
+    background: #707070;
+    margin-bottom: 24px;
+  }
+
+
+
+  .col {
+ //   @include clearfix;
+    display: block;
+    float: left;
+    width: 50%;
+  }
+
+
+  dl {
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.5em;
+    dt {
+      display: inline-block; 
+    }
+    dd {
+      display: inline-block;
+      padding-left: 18px;
+    }
+  }
+  
+
+.visual-box {
+  position: relative;
+  width: 100%;
+  margin-top: 1vw;
+  .visual__ttl {
+    text-align: center;
+    margin-bottom: 1vw;
+  }
+  
+  &.col {
+    float: left;
+    width: 50%;
+    position: relative;
+  }
+  .mockup_sub {
+    position: relative;
+    width: 760px;
+    height: 436px;
+    margin: 0 auto;
+    span {
+      display: block;
+      width: 100%;
+      height: 100%;
+      image-rendering: -webkit-optimize-contrast;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+    }
+    &.nexess1 {
+      margin: 0 auto;
+      span {
+       // background: url('../assets/images/project/iam_nexess/project_nexess_sub_01@2x.png') no-repeat ;
+        background-size: 100%;
+      }
+    }
+    &.nexess2 {
+      span {
+      //  background: url('../assets/images/project/iam_nexess/project_nexess_sub_02@2x.png') no-repeat;
+        position: absolute;
+        top: 50%;
+        left: -10%;
+        transform: translateY(-50%);
+        background-size: 100%;
+      }
+    }
+    &.nexess3 {
+      span {
+      //  background: url('../assets/images/project/iam_nexess/project_nexess_sub_03@2x.png') no-repeat ;
+        background-size: 100%;
+        position: absolute;
+        top: 50%;
+        right: -10%;
+        transform: translateY(-50%);
+      }
+    }
+    &.nexess4 {
+      span {
+      //  background: url('../assets/images/project/iam_nexess/project_nexess_sub_04@2x.png') no-repeat ;
+        background-size: 100%;
+        position: absolute;
+        top: 50%;
+        right: -10%;
+        transform: translateY(-50%);
+      }
+    }
+    &.nexess5 {
+      span {
+     //   background: url('../assets/images/project/iam_nexess/project_nexess_sub_05@2x.png') no-repeat ;
+        background-size: 100%;
+        position: absolute;
+        top: 50%;
+        left: -10%;
+        transform: translateY(-50%);
+      }
+    }
+    &.nexess6 {
+      span {
+       // background: url('../assets/images/project/iam_nexess/project_nexess_sub_06@2x.png') no-repeat ;
+        background-size: 100%;
+        position: absolute;
+        top: 50%;
+        right: -10%;
+        transform: translateY(-50%);
+      }
+    }
+    &.nexess7 {
+      span {
+      //  background: url('../assets/images/project/iam_nexess/project_nexess_sub_07@2x.png') no-repeat ;
+        background-size: 100%;
+        position: absolute;
+        top: 50%;
+        left: -10%;
+        transform: translateY(-50%);
+      }
+    }
+    &.nexess8 {
+      span {
+     //   background: url('../assets/images/project/iam_nexess/project_nexess_sub_08@2x.png') no-repeat ;
+        background-size: 100%;
+        position: absolute;
+        top: 50%;
+        right: -15%;
+        transform: translateY(-50%);
+      }
+    }
+    &.nexess9 {
+     // span {
+      //  background: url('../assets/images/project/iam_nexess/project_nexess_sub_09@2x.png') no-repeat ;
+        background-size: 100%;
+        position: absolute;
+        top: 50%;
+        left: -15%;
+        transform: translateY(-50%);
+      }
+    }
+    &.nexess10 {
+      span {
+    //    background: url('../assets/images/project/iam_nexess/project_nexess_sub_10@2x.png') no-repeat ;
+        background-size: 100%;
+        position: absolute;
+        top: 50%;
+        right: -15%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &.mobilian1 {
+      width: 360px;
+      height: 779px;
+      position: absolute;
+      left: 0;
+      top: 28px;
+      span {
+     //   background: url('../assets/images/project/pki_mobilianWeb/mobilian_02@2x.png') no-repeat ;
+        background-size: 100%;
+      }
+    }
+    &.mobilian2 {
+      width: 360px;
+      height: 779px;
+      position: absolute;
+      left: 21%;
+      top: 28px;
+      span {
+     //   background: url('../assets/images/project/pki_mobilianWeb/mobilian_04@2x.png') no-repeat ;
+        background-size: 100%;
+      }
+    }
+    &.mobilian3 {
+      width: 360px;
+      height: 779px;
+      
+      span {
+     //   background: url('../assets/images/project/pki_mobilianWeb/mobilian_03@2x.png') no-repeat ;
+        background-size: 100%;
+      }
+    }
+    &.mobilian4 {
+      width: 360px;
+      height: 779px;
+      position: absolute;
+      left: 0;
+      top: 32px;
+      span {
+       // background: url('../assets/images/project/pki_mobilianWeb/mobilian_05@2x.png') no-repeat ;
+        background-size: 100%;
+      }
+    }
+    &.mobilian5 {
+      width: 360px;
+      height: 779px;
+      span {
+      //  background: url('../assets/images/project/pki_mobilianWeb/mobilian_06@2x.png') no-repeat ;
+        background-size: 100%;
+      }
+    }
+    &.mobilian6 {
+      width: 360px;
+      height: 779px;
+      position: absolute;
+      left: 60%;
+      top: 32px;
+      span {
+       // background: url('../assets/images/project/pki_mobilianWeb/mobilian_07@2x.png') no-repeat ;
+        background-size: 100%;
+      }
+    }
+    &.inihub1 {
+      // mo
+      width: 320px;
+      height: 692px;
+      //position: absolute;
+      //left: 0;
+      //top: 32px;
+      span {
+     //   background: url('../assets/images/project/pki_inihub/inihub_m_01@2x.png') no-repeat ;
+        background-size: 100%;
+      }
+    }
+    &.inihub2 {
+      width: 20vw;
+      height: 573px;
+      //position: absolute;
+      //left: 360px;
+     // top: 32px;
+      span {
+     //   background: url('../assets/images/project/pki_inihub/inihub_pc_01.png') no-repeat ;
+        background-size: 100%;
+      }
+    }
+    &.inihub5 {
+      // pc
+      margin: 0;
+      width: 610px;
+      width: 20vw;
+      height: 573px;
+      //position: absolute;
+      //left: 0;
+      //top: 32px;
+      span {
+     //   background: url('../assets/images/project/pki_inihub/inihub_pc_02@2x.png') no-repeat ;
+        background-size: 100%;
+      }
+    }
+    &.inihub4 {
+      // pc
+      width: 20vw;
+      height: 573px;
+      position: absolute;
+      left: 18%;
+      top: 32px;
+      span {
+        //background: url('../assets/images/project/pki_inihub/inihub_pc_03@2x.png') no-repeat ;
+        background-size: 100%;
+      }
+    }
+    &.inihub3 {
+      // pc
+      width: 20vw;
+      height: 573px;
+      position: absolute;
+      left: 38%;
+      top: 32px;
+      span {
+       // background: url('../assets/images/project/pki_inihub/inihub_pc_04@2x.png') no-repeat ;
+        background-size: 100%;
+      }
+    }
+    &.inihub6 {
+      // mow
+      width: 320px;
+      height: 692px;
+      position: absolute;
+      right: 15%;
+      top: 32px;
+      span {
+      //  background: url('../assets/images/project/pki_inihub/inihub_m_02@2x.png') no-repeat ;
+        background-size: 100%;
+      }
+    }
+    &.inihub7 {
+       // mow
+       width: 320px;
+       height: 692px;
+      position: absolute;
+      right: 0;
+      top: 32px;
+      span {
+        //background: url('../assets/images/project/pki_inihub/inihub_m_03@2x.png') no-repeat ;
+        background-size: 100%;
+      }
+    }
+    &.inihub8 {
+      // pc
+      width: 20vw;
+      height: 573px;
+      position: absolute;
+      //left: 20%;
+      //top: 32px;
+      span {
+      //  background: url('../assets/images/project/pki_inihub/inihub_pc_05@2x.png') no-repeat ;
+        background-size: 100%;
+      }
+    }
+    &.inihub9 {
+      // mow
+      width: 320px;
+       height: 692px;
+      position: absolute;
+      left: 0;
+      top: 32px;
+      span {
+     //   background: url('../assets/images/project/pki_inihub/inihub_m_02@2x.png') no-repeat ;
+        background-size: 100%;
+      }
+    }
+    
+  }
+
+
+
+  }
+
+
+.project__desc {
+  margin-top: 16px;
+  dt {display: block;  line-height: 1.5em;}
+  dd {padding:0 ;}
+}
+
+
+
+.section-wrap {
+  margin-top: 8vw;
+}
+.guide-info {
+  .ttl {
+    font-size: 30px;
+    font-weight: 600;
+    float: left;
+    width: 50%;
+
+  }
+  .style-guide {
+    float: left;
+   
+    .sub-ttl {
+      width: 50%;
+      h4 {
+        font-size: 24px;
+        float: left;
+      }
+    }
+    .palette-wrap {
+      float : left;
+      margin-left: 10vw;
+      ul {
+        width: 100%;
+        height: 100%;
+        
+        display: block;
+        li {
+          float: left;
+          width: 36px;
+          height: 36px;
+          background: #000;
+        }
+        li + li {
+          margin-left: 0.5vw;
+        }
+      }
+    }
+  }
+}
+
+
+
+.ia-tbl-wrap {
+  position: relative;
+  table {
+    th, td {
+      border-top: 1px solid #999; padding: 0.4em; 
+      font-size: 1.2rem;
+    }
+    th {
+      border-right: 1px solid #999; 
+      text-align: center; 
+      padding: 10px; 
+      font-weight: bold; 
+      padding: 0.6em; 
+      border-bottom: 1px solid #333;
+     
+    }
+    .d1,.d2,.d3,.d4, .date, td {
+      border-right: 1px solid #999; 
+      padding: 0 10px;
+    }
+    .num {
+      text-align: center;
+    }
+    tbody {
+      td {
+        border-top: 1px solid #ddd; line-height: 1.3em; padding: 0.4em;
+      }
+    }
+    tbody + tbody tr:first-child td{
+      border-top: 1px solid #999 !important;
+    }
+  
+
+  }
+
+}
+
+.hash-group {
+  display: block;
+  float: left;
+  width: 100%;
+  margin-bottom: 2rem;
+  ul {
+    li {
+      float: left;
+      
+    }
+    li + li {
+      margin-left: 1.25rem;
+    }
+  }
+}

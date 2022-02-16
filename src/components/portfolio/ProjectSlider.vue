@@ -24,9 +24,9 @@
             <dd>{{ project.info_dd_04 }}</dd>
           </dl>
           <div class="btn-wrap">
-            <!-- <router-link tag="a" class="link" to="/project"
+            <router-link tag="a" class="link" to="/portfolio/portfolio/inihub/"
               >Detail View</router-link
-            >-->
+            >
           </div>
         </div>
         <div class="prj-photo">

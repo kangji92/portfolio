@@ -10,12 +10,12 @@
         </div>
         <ul class="intro__btns-wrap">
           <li>
-            <router-link tag="button" class="btn trn" to="/portfolio">
+            <router-link tag="button" class="btn trn" to="/portfolio/portfolio">
               Portfolio
             </router-link>
           </li>
           <li>
-            <router-link tag="button" class="btn navy" to="/librarys"
+            <router-link tag="button" class="btn navy" to="/portfolio/librarys"
               >Librarys</router-link
             >
           </li>
