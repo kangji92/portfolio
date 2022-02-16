@@ -1,0 +1,349 @@
+//-----------
+//  base
+//-----------
+html,
+body {
+  overscroll-behavior: contain; // 모바일/태블릿에서 scroll chaining 막기 (안드로이드 Chrome, 삼성인터넷 용)
+}
+* {
+  touch-action: pan-y; // 터치 확대/축소막기
+}
+body {
+  -webkit-text-size-adjust:none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ /* min-width: 320px;
+  min-height: 100%;
+  */
+  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  @include prefix(box-sizing, border-box);
+  border: none;
+  word-break: keep-all;
+  font-family: $font-dl;
+  font-size: 16px;
+  letter-spacing: normal;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  color: $color-def;
+  //overflow-x: hidden;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  touch-action: pan-y; // 터치 확대/축소막기
+}
+body::before {
+  /* never visible - this is used in jQuery to check the current MQ */
+  content: 'mobile';
+  display: none;
+}
+
+@media only screen and (min-width: 1050px) {
+  body::before {
+    /* never visible - this is used in jQuery to check the current MQ */
+    content: 'desktop';
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+a {
+  // display: block;
+  text-decoration: none;
+  color: inherit;
+  font-style: normal;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+button {
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+textarea {
+  /* safari */
+  @include prefix(box-sizing, border-box);
+  @include prefix(appearance, none);
+  line-height: 1;
+}
+
+/* input  */
+input {
+  display: inline-block;
+  height: auto;
+  width: 100%;
+  padding: 0 14px;
+  font-size: 20px;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  border: 1px transparent;
+  background: transparent;
+  @include prefix(box-sizing, border-box);
+  @include prefix(appearance, none);
+
+  @include placeholder {
+    // vertical-align: middle;
+    color: #aeaeae;
+    opacity: 1;
+    font-family: $font-r;
+    // letter-spacing: -0.06em;
+    //line-height: 1;
+    // line-height: normal !important; firefox에서 수직정렬안됨
+    // font-size: 22px;
+    //height: 100%;
+    // @include display-flex {
+    //   align-content: checkAlign(center);
+    // -webkit-algin-items: center;
+    // align-items: center;
+    //}
+  }
+  /* IE10 이상을 위한 css
+    &::placeholder {
+      opacity: 1; 파이어폭스에서 뿌옇게 나오는 현상을 방지하기 위한 css 
+    }
+    */
+  /*
+    &::-webkit-input-placeholder {
+      //  line-height: normal;
+    }  */
+  /* IE 
+    &:-ms-input-placeholder {
+      // line-height: 1;
+    }
+    */
+  /* Firefox 
+    &:-moz-input-placeholder {   
+    }
+    */
+  &::-ms-clear {
+    display: none; // IE10 이상에서 input box 에 추가된 지우기 버튼 제거
+  }
+}
+
+input,
+textarea {
+  -webkit-appearance: none;
+  // -webkit-border-radius: 0;
+}
+
+input[type="text"],
+input[type="password"] {
+  //width: 100%; /* 원하는 너비 설정 */
+  height: auto; /* 높이값 초기화 */
+  // line-height: normal; /* line-height 초기화 */
+  //padding: .8em .5em; /* 원하는 여백 설정, 상하단 여백으로 높이를 조절 */
+  border-radius: 0; /* iSO 둥근모서리 제거 */
+  outline-style: none; /* 포커스시 발생하는 효과 제거를 원한다면 */
+  -webkit-appearance: none; /* 브라우저별 기본 스타일링 제거 */
+  -moz-appearance: none;
+  appearance: none;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+select {
+  border: 0;
+  /* Select box 스타일 초기화 */
+  @include prefix(appearance, none);
+  background: transparent;
+  /* IE 에서 Select box 화살표 제거 */
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+.blind {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  font-size: 0;
+  line-height: 0;
+}
+
+
+.hide {
+  display: none;
+}
+
+.wrap {
+  position: relative;
+  width: 100%;
+  //min-height: 100vh;
+}
+@mixin loginBtn {
+  border-radius: 0;
+  padding: 10px 20px;
+  color: #fff;
+  //font-size: 1.2rem;
+  // height: 50px;
+ 
+}
+
+.btn {
+  width: 100%;
+  &-pink {
+    @include loginBtn;
+    background: $btn-pink;
+  }
+  &-lgray {
+    @include loginBtn;
+    background: $btn-lgray;
+  }
+  &-gray {
+    @include loginBtn;
+    background: $btn-gray;
+  }
+  &-blue {
+    @include loginBtn;
+    background: $btn-blue;
+  }
+  &__line {
+    border: 1px solid #000;
+    height: 60px;
+    border-radius: calc(60px * 0.5);
+  }
+}
+
+h2 {
+  text-align: left;
+  font-size: 24px;
+  // width: 100%;
+  // background: rgba(83, 70, 197, 0.2);
+}
+strong {
+  font-family: $font-m;
+}
+
+// 공통 Container
+.container {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+
+
+  
+}
+
+button[type="menu"]:disabled {
+  color: #b8b8b8;
+  cursor: auto;
+}
+legend {
+  width: 100%;
+}
+object {
+  width: 100%;
+}
+
+input:read-only,
+textarea:read-only {
+  color: #b8b8b8;
+  cursor: auto;
+}
+
+h4 {
+  text-align: center;
+  font-size: 32px;
+  font-family: $font-b;
+}
+
+.center {
+  text-align: center;
+}
+.left {
+  text-align: left;
+}
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
+.mt-120 {
+  margin-top: 120px !important;
+ 
+}
+
+.mt-150 {
+  margin-top: 150px !important;
+  
+}
+
+.disabled {
+  color: $txt-disabled;
+  cursor: default;
+}
+
+.hidden {
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden !important;
+  touch-action: none;
+}
+
+input[type="radio"]:disabled + label {
+  //background-color: initial;
+  color: $color-disabled !important;
+  // background: $color-disabled !important;
+}
+
+/* focus */
+.wrap a:focus,
+.wrap button:focus,
+.wrap select:focus,
+.wrap input:focus {
+  outline: solid 1px #999;
+}
+
+/* 접근성 마우스사용시 focus 비활성 */
+.wrap.using-mouse :focus,
+.wrap.using-mouse a:focus,
+.wrap.using-mouse button:focus,
+.wrap.using-mouse select:focus,
+.wrap.using-mouse input:focus {
+  outline: none !important;
+}
+
+/* CSS */
+.touch-hidden {
+  height: 100%;
+  // min-height: 100%;
+  overflow: hidden !important;
+  touch-action: none;
+}
+
+
+#dimmed {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.41);
+  z-index: 600;
+}
+#notSupport {
+  z-index: 2000;
+}
+
+

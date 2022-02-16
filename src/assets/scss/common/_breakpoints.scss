@@ -1,0 +1,158 @@
+// Break Point (Desktop First)
+$breakpoints: (
+
+
+  /* ---------
+      2022
+  --------- */
+  "bp-landscape-1600": (
+    max-width: 1600px,
+    // ~1600px  노트북(1600x900) 대응
+  ),
+  "bp-landscape-1440": (
+    max-width: 1440px,
+  ),
+  "bp-landscape-1366": (
+    max-width: 1366px,
+    // 태블릿(1280x800) , 노트북(1366x768) 대응
+  ),
+  "bp-landscape-1024": (
+    max-width: 1024px,
+  ),
+  "bp-tablet-820": (
+    max-width: 820px,
+    // 태블릿(세로모드)
+  ),
+  "bp-mobile-600": (
+    max-width: 600px,
+  ),
+  "bp-mobile-428": (
+    max-width: 428px,
+  ),
+  "bp-mobile-320": (
+    max-width: 320px,
+  ),
+  "bp-mobile-280": (
+    // 갤럭시 폴드
+    max-width: 280px,
+  ),
+
+ /* ---------
+  Mobile 퍼스트
+  --------- */
+  "bp-min-321": (
+    min-width: 321px,
+  ),
+  "bp-min-361": (
+    min-width: 361px,
+  ),
+  "bp-min-481": (
+    min-width: 481px,
+  ),
+  "bp-min-801": (
+    min-width: 801px,
+  ),
+  "bp-min-1025": (
+    min-width: 1025px,
+  ),
+  "bp-min-1366": (
+    min-width: 1366px,
+  ),
+
+ /* ---------
+  PC 퍼스트
+  --------- */
+  "bp-max-1366": (
+    max-width: 1366px,
+  ),
+  "bp-max-1024": (
+    max-width: 1024px,
+  ),
+  "bp-max-820": (
+    max-width: 820px,
+  ),
+  "bp-max-768": (
+    max-width: 768px,
+  ),
+  "bp-max-440": (
+    max-width: 440px,
+  ),
+  "bp-max-320": (
+    max-width: 320px,
+  ),
+
+
+
+  //
+  "bp-xxl": (
+    max-width: 1600px,
+    // 1401~1600px  노트북(1600x900) 대응
+  ),
+  "bp-xxl-xl": (
+    max-width: 1280px,
+    // 1401~1600px  노트북(1600x900) 대응
+  ),
+  "bp-xl": (
+    max-width: 1174px,
+    // 1141~1400px  태블릿(1280x800) & 노트북(1366x768) 대응
+  ),
+  "bp-l": (
+    max-width: 992px,
+  ),
+  "bp-l-m": (
+    max-width: 800px,
+  ),
+  "bp-m": (
+    max-width: 780px,
+    // Mobile ( 441 ~ 540 )
+  ),
+  "bp-m-s": (
+    // Mobile ( 401 ~ 440 )
+    max-width: 440px,
+    // 갤럭시 S10 (412)
+    // iPhone 11 (414),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+  ),
+  "bp-s": (
+    // 380-410px 사이 폰트사이즈 미세조정
+    max-width: 410px,
+    // Mobile ( 381px ~ 400pxx )
+  ),
+  "bp-s-xs": (
+    max-width: 384px,
+    // Mobile ( 361px ~ 384px )
+  ),
+  "bp-xs": (
+    max-width: 360px,
+    // Mobile ( 360px )
+  ),
+  "bp-xxs": (
+    max-width: 359px,
+  ),
+  "bp-xxxs": (
+    max-width: 319px,
+    // iphone 5 이하
+  ),
+);
+
+/// resposive Manager
+/// @access public
+/// @param {String} $breakpoint
+/// @requires $breakpoints
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == "string",
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+        + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}

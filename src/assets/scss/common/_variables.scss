@@ -1,0 +1,45 @@
+
+// ----------------
+//   variables
+//-----------------
+
+// font-family
+$font-bk: "NotoBK", san-serif;
+$font-b: "NotoB", san-serif;
+$font-m: "NotoM", san-serif;
+$font-r: "NotoR", san-serif;
+$font-dl: "NotoDL", san-serif;
+$font-l: "NotoL", san-serif;
+$font-t: "NotoT", san-serif;
+
+$navy: #2475b6;
+// buttons color
+$btn-pink: #f34176;
+$btn-lgray: #9f9f9f;
+$btn-gray: #6f6f6f;
+$btn-blue: #2b40ab;
+$blue: #2b40ab;
+$sky: #92c0f1;
+$sblue: #2d74c1;
+
+$color-disabled: #b8b8b8;
+// txt color
+$color-def: #222;
+$txt-def: #222; // default txt Color
+$txt-gray: #747473;
+$txt-disabled: #b8b8b8;
+$txt-pink: #f34176;
+$txt-red: #ea6575;
+$txt-navy: #24364f;
+$txt-blue: #2b40ab;
+$txt-yw: yellow;
+
+// PC, Tablet Lanscape, MObile Portrait
+// Break Point (Desktop First)
+$pc-l-width: 1440px;
+$pc-m-width: 1280px;
+$tab-s-width: 960px;
+$mobi-l-width: 640px;
+$mobi-m-width: 425px;
+$mobi-s-width: 375px;
+$mobi-xs-width: 320px;
