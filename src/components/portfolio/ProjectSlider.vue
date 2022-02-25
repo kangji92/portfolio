@@ -1,8 +1,8 @@
 <template>
   <div>
     <button class="btn-prj__list"></button>
-    <VueSlickCarousel :arrows="false" :dots="true" v-bind="settings">
-      <div v-for="project in projectList" :key="project.idx">
+    <VueSlickCarousel :arrows="true" :dots="true" v-bind="settings">
+      <div v-for="project in projectList" :key="project.idx" class="prj-wrap">
         <div class="prj-info">
           <p class="prj-info__num">{{ project.idx }}</p>
           <h3>{{ project.ttl }}</h3>
@@ -83,7 +83,7 @@ export default {
           info_dd_04: "Git, Github Desktop, photoshop",
           mockup_class_01: "mockup__respons",
           image_class: "my-portfolio",
-        },
+        },  */
         {
           idk: "02",
           ttl: "Sh수협은행 Nextro시스템 고도화",
@@ -99,7 +99,7 @@ export default {
           mockup_class_01: "mockup__pc sh-bank",
           image_class: "sh-bank",
         },
-        */
+
         {
           idk: "03",
           ttl: "교보생명 통합인증센터 구축",
@@ -160,9 +160,9 @@ export default {
           info_dd_03: "html5, css3, javascript, jquery",
           info_dt_04: "<b>사용 Tool: </b>",
           info_dt_05: "Tomcat, Git, Bitbucket",
-          mockup_class_01: "mockup__pc multi-demo",
-          mockup_class_02: "mockup__pad multi-demo",
-          mockup_class_03: "mockup__mo multi-demo",
+          mockup_class_01: "mockup__respons-pc multi-demo",
+          mockup_class_02: "mockup__respons-pad multi-demo",
+          mockup_class_03: "mockup__respons-mo multi-demo",
           image_class: "multi-demo",
         },
         {
@@ -231,6 +231,9 @@ export default {
 .slick-list {
   height: 80vh;
 }
+.slick-dots {
+  margin-top: 100px;
+}
 .slick-dots li {
   display: inline-block;
   margin: 0.5rem;
@@ -253,11 +256,32 @@ export default {
   top: 50%;
   transform: translateY(-50%);
 }
-.slick-arrow.slick-next {
-  right: 0;
-}
+
 .slick-arrow.slick-prev {
-  left: 0;
+  text-indent: -999px;
+  width: 48px;
+  height: 48px;
+  left: 10px;
+  z-index: 1000;
+  background: url("~@/assets/images/ico_prev.png") center center no-repeat;
+  background-size: 100%;
+  opacity: 0.3;
+}
+.slick-arrow.slick-next {
+  text-indent: -9999px;
+  width: 48px;
+  height: 48px;
+  right: 10px;
+  background: url("~@/assets/images/ico_next.png") center center no-repeat;
+  background-size: 100%;
+  opacity: 0.4;
+}
+.slick-arrow.slick-prev:hover,
+.slick-arrow.slick-prev:focus,
+.slick-arrow.slick-next:hover,
+.slick-arrow.slick-next:focus {
+  opacity: 1;
+  transition: all 0.3s;
 }
 </style>
 <style lang="scss" scoped>
@@ -295,5 +319,7 @@ export default {
     opacity: 1;
     transition: 0.5s;
   }
+}
+.mockup {
 }
 </style>

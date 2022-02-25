@@ -63,6 +63,20 @@
         </div>
       </section>
       <section class="section">
+        <div class="content experience">
+          <div class="experience-inner">
+            <div class="txt-group">
+              <em>日日新又日新</em>
+              <p>끊임없이 보다 나은 사람이 되자</p>
+            </div>
+            <span
+              >웹퍼블리셔 강지연입니다. <br />
+              저 자신을 발전시키기 위해 시간과 노력을 아끼지 않겠습니다.</span
+            >
+          </div>
+        </div>
+      </section>
+      <section class="section">
         <ProjectSlider></ProjectSlider>
       </section>
       <section class="section">

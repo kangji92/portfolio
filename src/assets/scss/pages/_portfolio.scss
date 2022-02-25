@@ -1,24 +1,28 @@
 
-
+.prj-wrap {
+  @include clearfix;
+}
 .prj-info {
   position: relative;
   float: left;
   width: calc(100% - 60% - 50px);
- height: 740px;
+  height: 740px;
   margin-top: 5%;
   margin-left: 0;
-  padding: 50px;
+  padding: 50px 0 50px 100px;
   color: $txt-def;
   text-align: left;
   @include respond-to("bp-max-1366") {
-    float: none;
-    width: calc(100% - 10%);
+    //float: none;
+    //width: calc(100% - 10%);
     height: auto;
-
     margin-left: 0;
-    padding: 10% 5%;
+        width: 33%;
+    padding:0;
+    margin: 8% 0 5% 5%;
   }
   @include respond-to("bp-max-820") {
+    float: none;
     width: calc(100% - 16%);
     padding: 10% 8%;
   }
@@ -98,34 +102,46 @@
 
 
 .prj-photo {
+  position: relative;
   float: right;
   margin-top: 5%;
   width: calc(100% - 40% - 50px - 120px);
-  //height: 100%;
+ 
   height: 740px;
   padding: 50px 0;
-  overflow: hidden;
+  //overflow: hidden;
   margin-right: 120px;
   @include respond-to("bp-max-1366") {
-    float: none;
-    width: calc(100% - 16%);
-    margin-right: 0;
-    padding: 10% 8%;
+    //float: none;
+    padding: 0;
+    width: 55%;
+    margin: 5% 5%  5% 0;
+    //padding: 10% 5%;
   }
   span {
     display: block;
     width: 100%;
     height: 100%;
   }
+.mockup-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
   .mockup {
     &.mockup__pc {
       position: absolute;
-      right: 26px;
+      right: 0px;
       top: 60px;
       width: 1120px;
       height: 678px;
-     // background: url("~@/assets/images/mockup/mockup_macbook.png") center center no-repeat;
+      background: url("~@/assets/images/mockup/mockup_macbook.png") center center no-repeat;
       background-size: 100%;
+      @include respond-to("bp-max-1366") {
+        width: 120%;
+        top: 17%;
+      }
       &.sh-bank {
         &::after {
           content: "";
@@ -133,14 +149,40 @@
           position: absolute;
           width: 732px;
           height: 460px;
-      //    background: url("~@/assets/images/project/iam_suhyup/suhyup_01_1600.png") no-repeat;
+          background: url("~@/assets/images/projects/initech/suhyup/suhyup_01_1600.png") no-repeat;
           background-size: 100%;
           right: 199px;
           top: 40px;
+          @include respond-to("bp-max-1366") {
+            width: 100%;
+            width: 66%;
+            right: 17%;
+            top: 15%;
+            z-index: -1;
+                   
+          }
+        }
+      }
+      &.nexess-demo {
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 734px;
+          height: 460px;
+          background: url("~@/assets/images/projects/initech/nexess/nexess_main_01.png") no-repeat;
+          background-size: 100%;
+          right: 197px;
+          top: 40px;
+          @include respond-to("bp-max-1366") {
+            width: 100%;
+          }
         }
       }
     }
     &.mockup__trans-pc {
+      width: 100%;
+      height: 100%;
       &.inihub {
         &::before {
           content: "";
@@ -150,13 +192,17 @@
           bottom: 150px;
           width: 510px;
           height: 480px;
-         // background: url("~@/assets/images/project/pki_inihub/inihub_pc_01.png" center no-repeat;
+          background: url("~@/assets/images/projects/initech/inihub/inihub_pc_01.png") center no-repeat;
           background-size: 510px;
         }
       }
     }
 
     &.mockup__respons-pc {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      bottom: 20px;
       &::after {
         // pc
         content: "";
@@ -198,11 +244,28 @@
           background-position-y: 50%;
         }
       }
+      &.multi-demo {
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          right: 167px;
+          bottom: 150px;
+          width: 625px;
+          height: 392px;
+          background: url("~@/assets/images/projects/initech/demo/multi_demo_01.png") no-repeat;
+          background-size: 100%;
+          background-position-y: 50%;
+        }
+      }
+
     }
     &.mockup__respons-pad {
       position: absolute;
-      left: -15px;
-      top: 60px;
+      width: 100%;
+      height: 100%;
+      left: -50px;
+      top: 70px;
       &::after {
         content: "";
         display: block;
@@ -210,8 +273,8 @@
         height: 486px;
         position: absolute;
         top: 20px;
-        left: 120px;
-        //background: url("~@/assets/images/mockup/mockup_ipad.png") center center no-repeat;
+        left: -105px;
+        background: url("~@/assets/images/mockup/mockup_ipad.png") center center no-repeat;
         background-size: 100%;
         z-index: -1;
       }
@@ -220,12 +283,11 @@
           content: "";
           display: block;
           position: absolute;
-
           width: 320px;
-          height: 428px;
+          height: 428px;    
+          top: 51px;
+          left: 43px;
         }
-        //background: url('~@/assets/images/project/pki_kyobo/kyobo.png') center center no-repeat;
-        // background-size: 100%;
       }
       &.inihub {
         &::before {
@@ -234,7 +296,7 @@
           position: absolute;
           top: 30px;
           left: 280px;
-         // background: url("~@/assets/images/project/pki_inihub/inihub_a_tablet_01.jpg") center center no-repeat;
+          background: url("~@/assets/images/projects/initech/inihub/inihub_a_tablet_01.jpg") center center no-repeat;
           background-size: 100%;
           width: 300px;
           height: 428px;
@@ -244,8 +306,9 @@
     }
     &.mockup__respons-mo {
       position: absolute;
-      left: 0;
-      bottom: 0;
+      left: -270px;
+      bottom: 17px;
+
       &::after {
         content: "";
         display: block;
@@ -254,7 +317,7 @@
         position: absolute;
         left: 70px;
         bottom: 76px;
-       // background: url("~@/assets/images/mockup/mockup_iphone.png") center center no-repeat;
+        background: url("~@/assets/images/mockup/mockup_iphone.png") center center no-repeat;
         background-size: 100%;
       }
       &.kyobo {
@@ -262,11 +325,11 @@
           content: "";
           display: block;
           position: absolute;
-          left: 178px;
+          left: 176px;
           bottom: 130px;
           width: 130px;
           height: 239px;
-        //  background: url("~@/assets/images/project/pki_kyobo/integration_mo_kyobo_auth.png") no-repeat;
+          background: url("~@/assets/images/projects/initech/kyobo/integration_mo_kyobo_auth.png") no-repeat;
           background-size: 100%;
         }
       }
@@ -279,7 +342,7 @@
           bottom: 130px;
           width: 130px;
           height: 239px;
-         // background: url("~@/assets/images/project/pki_inihub/inihub_a_m_01.png") center top no-repeat;
+          background: url("~@/assets/images/projects/initech/inihub/inihub_a_m_01.png") center top no-repeat;
           background-size: 100%;
         }
       }
