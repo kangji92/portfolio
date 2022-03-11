@@ -1,55 +1,46 @@
 <template>
   <div class="portfolio-main">
-    <full-page :options="options" id="fullpage" ref="fullpage">
+    <full-page
+      :options="options"
+      @showPopupDlg="showPopupDlg"
+      id="fullpage"
+      ref="fullpage"
+    >
       <section class="section">
         <div class="inner">
           <div class="ttl-group">
-            <h2>
-              Web Publisher<br />
-              <em><b>Kang</b> JI Yeon</em>
-            </h2>
-            <p>개인 포트폴리오 사이트입니다</p>
+            <h2 v-html="$t('portfolio.ttl')"></h2>
+            <p>{{ $t("portfolio.ttl_p") }}</p>
           </div>
         </div>
       </section>
       <section class="section">
         <div class="content desc">
           <div class="desc-inner">
-            <h3>UX/UI Development</h3>
+            <h3>{{ $t("portfolio.sec_1_ttl_h3") }}</h3>
             <ul class="item-group">
               <li>
-                <h4>Mark up</h4>
+                <h4>{{ $t("portfolio.sec_1_ttl_h4_1") }}</h4>
                 <p>
-                  웹표준을 바탕으로 컨텐츠 내용에 알맞은 시멘틱 마크업을
-                  작성합니다. 검색엔진 최적화를 통해 사용자들에게 더많은 접근할
-                  수 있도록 합니다.
-                  <br />크로스브라우징 이슈에 대한 다양한 해결방법을 공부하고
-                  적용합니다.
+                  {{ $t("portfolio.sec_1_desc_1") }}
                 </p>
               </li>
               <li>
-                <h4>Style Sheets</h4>
+                <h4>{{ $t("portfolio.sec_1_ttl_h4_2") }}</h4>
                 <p>
-                  효율적이고 유지보수를 고려하여 CSS를 작성합니다. Sass(scss)
-                  프로세싱을 사용하여 CSS 확장 기능을 활용합니다.
+                  {{ $t("portfolio.sec_1_desc_2") }}
                 </p>
               </li>
               <li>
-                <h4>Javascript</h4>
+                <h4>{{ $t("portfolio.sec_1_ttl_h4_3") }}</h4>
                 <p>
-                  자바스크립트의 기본 문법을 이해하고 활용합니다.<br />
-                  라이브러리, 플러그인을 적용하거나 <br />
-                  구조를 분석하여 원하는 용도로 수정할 수 있습니다.
-                  <br />Vue.js 등의 자바스크립트 기반 프레임워크를 다룰 수
-                  있습니다.
+                  {{ $t("portfolio.sec_1_desc_3") }}
                 </p>
               </li>
               <li>
-                <h4>Colaboration Tool</h4>
+                <h4>{{ $t("portfolio.sec_1_ttl_h4_4") }}</h4>
                 <p>
-                  디자이너, 개발자와 원할한 협업을 끌어내기 위해 노력합니다.
-                  Git, Bitbucket, Zeplin, Sourcetree 등 협업을 위한 툴을
-                  사용합니다.
+                  {{ $t("portfolio.sec_1_desc_4") }}
                 </p>
                 <ul class="tool-list">
                   <li></li>
@@ -64,16 +55,7 @@
       </section>
       <section class="section">
         <div class="content experience">
-          <div class="experience-inner">
-            <div class="txt-group">
-              <em>日日新又日新</em>
-              <p>끊임없이 보다 나은 사람이 되자</p>
-            </div>
-            <span
-              >웹퍼블리셔 강지연입니다. <br />
-              저 자신을 발전시키기 위해 시간과 노력을 아끼지 않겠습니다.</span
-            >
-          </div>
+          <div class="experience-inner"></div>
         </div>
       </section>
       <section class="section">
@@ -82,14 +64,14 @@
       <section class="section">
         <div class="content about">
           <div class="about-inner">
-            <div class="txt-group">
+            <!-- <div class="txt-group">
               <em>日日新又日新</em>
               <p>끊임없이 보다 나은 사람이 되자</p>
             </div>
             <span
               >웹퍼블리셔 강지연입니다. <br />
               저 자신을 발전시키기 위해 시간과 노력을 아끼지 않겠습니다.</span
-            >
+            >-->
           </div>
         </div>
       </section>
@@ -98,12 +80,13 @@
           <div class="resume-inner">
             <div class="txt-group">
               <em></em>
-              <p>이력서 링크</p>
+              <p></p>
             </div>
           </div>
         </div>
       </section>
     </full-page>
+    <Modal v-if="showPopup" @close-popup-dlg="closePopup"></Modal>
   </div>
 </template>
 <script>
@@ -111,16 +94,20 @@ import Vue from "vue";
 import "fullpage.js/vendors/scrolloverflow"; // Optional. When using scrollOverflow:true
 import VueFullPage from "vue-fullpage.js";
 import ProjectSlider from "@/components/portfolio/ProjectSlider.vue";
+import Modal from "@/views/Modal.vue";
 
 Vue.use(VueFullPage);
 export default {
   components: {
     ProjectSlider,
+    Modal,
   },
   data() {
     return {
+      showPopup: false,
       offsets: [],
       idx: 0,
+
       options: {
         afterLoad: this.afterLoad,
         licenseKey: "57A4E3B2-4CF4497D-84973653-2E0DBD93",
@@ -138,8 +125,24 @@ export default {
       },
     };
   },
+  methods: {
+    showPopupDlg(param) {
+      //alert("ddd");
+      this.$emit("showPopupDlg", param);
+      //this.popupIdx = popupData.data;
+      this.showPopup = true;
+    },
+    closePopup() {
+      this.showPopup = false;
+    },
+  },
 };
 </script>
+<style>
+b {
+  font-weight: 500 !important;
+}
+</style>
 <style lang="scss" scoped>
 @import "@/assets/scss/main";
 @import "@/assets/scss/pages/_portfolio";

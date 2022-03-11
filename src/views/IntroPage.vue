@@ -3,21 +3,18 @@
     <div class="intro">
       <div class="intro-inner">
         <div class="ttl-group">
-          <h2>
-            Web Publisher<br />
-            <em><b>Kang</b> JI Yeon</em>
-          </h2>
+          <h2 v-html="$t('intro.ttl')"></h2>
         </div>
         <ul class="intro__btns-wrap">
           <li>
             <router-link tag="button" class="btn trn" to="/portfolio/portfolio">
-              Portfolio
+              {{ $t("intro.btn_1") }}
             </router-link>
           </li>
           <li>
-            <router-link tag="button" class="btn navy" to="/portfolio/librarys"
-              >Librarys</router-link
-            >
+            <router-link tag="button" class="btn navy" to="/portfolio/librarys">
+              {{ $t("intro.btn_2") }}
+            </router-link>
           </li>
         </ul>
       </div>
@@ -26,7 +23,11 @@
 </template>
 
 <script></script>
-
+<style>
+b {
+  font-weight: 500 !important;
+}
+</style>
 <style lang="scss" scoped>
 @import "@/assets/scss/main";
 
@@ -66,7 +67,7 @@
 
       em {
         b {
-          font-weight: 500;
+          font-weight: 500 !important;
         }
       }
     }

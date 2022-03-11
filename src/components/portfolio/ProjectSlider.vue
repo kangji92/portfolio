@@ -4,29 +4,38 @@
     <VueSlickCarousel :arrows="true" :dots="true" v-bind="settings">
       <div v-for="project in projectList" :key="project.idx" class="prj-wrap">
         <div class="prj-info">
-          <p class="prj-info__num">{{ project.idx }}</p>
-          <h3>{{ project.ttl }}</h3>
-          <p class="prj-info__sub-ttl" v-html="project.sub_ttl"></p>
+          <p class="prj-info__num">{{ $t(project.idx) }}</p>
+          <h3>{{ $t(project.ttl) }}</h3>
+          <p class="prj-info__sub-ttl" v-html="$t(project.sub_ttl)"></p>
           <dl>
-            <dt v-html="project.info_dt_01"></dt>
-            <dd>{{ project.info_dd_01 }}</dd>
+            <dt v-html="$t('project.info_dt_01')"></dt>
+            <dd>{{ $t(project.info_dd_01) }}</dd>
           </dl>
           <dl>
-            <dt v-html="project.info_dt_02"></dt>
-            <dd>{{ project.info_dd_02 }}</dd>
+            <dt v-html="$t('project.info_dt_02')"></dt>
+            <dd>{{ $t(project.info_dd_02) }}</dd>
           </dl>
           <dl>
-            <dt v-html="project.info_dt_03"></dt>
-            <dd>{{ project.info_dd_03 }}</dd>
+            <dt v-html="$t('project.info_dt_03')"></dt>
+            <dd>{{ $t(project.info_dd_03) }}</dd>
           </dl>
           <dl>
-            <dt v-html="project.info_dt_04"></dt>
-            <dd>{{ project.info_dd_04 }}</dd>
+            <dt v-html="$t('project.info_dt_04')"></dt>
+            <dd>{{ $t(project.info_dd_04) }}</dd>
           </dl>
           <div class="btn-wrap">
+            <!--
             <router-link tag="a" class="link" to="/portfolio/portfolio/inihub/"
               >Detail View</router-link
             >
+            <router-link
+              tag="a"
+              class="link"
+              :to="`/portfolio/portfolio/${project.name}`"
+              >Detail View</router-link
+            >-->
+
+            <button class="link" @click="openModal()">열기</button>
           </div>
         </div>
         <div class="prj-photo">
@@ -47,15 +56,22 @@ import "vue-slick-carousel/dist/vue-slick-carousel.css";
 
 export default {
   name: "MyComponent",
-  components: { VueSlickCarousel },
+  components: {
+    VueSlickCarousel,
+  },
+  props: {
+    project: Object,
+  },
   data() {
     return {
+      visible: false,
       titleShow: false,
       titleAnimType: "",
       titleAnimation: {
         delay: 0,
         duration: 1000,
       },
+
       slickSet: {
         dotsClass: "slick-dots",
         edgeFriction: 0.35,
@@ -85,16 +101,15 @@ export default {
           image_class: "my-portfolio",
         },  */
         {
-          idk: "02",
+          idk: "01",
+          id: "sh-bank",
+          name: "sh-bank",
           ttl: "Sh수협은행 Nextro시스템 고도화",
           sub_ttl: " 보안솔루션 IAM팀 제품 시스템고도화",
           info_dt_01: "<b>기간: </b>",
           info_dd_01: "2021.07 ~ 2021.08",
-          info_dt_02: "<b>담당업무: </b>",
           info_dd_02: "웹퍼블리싱",
-          info_dt_03: "<b>마크업/개발방식: </b>",
           info_dd_03: "Html5",
-          info_dt_04: "<b>사용 Tool: </b>",
           info_dd_04: "Tomcat",
           mockup_class_01: "mockup__pc sh-bank",
           image_class: "sh-bank",
@@ -102,6 +117,8 @@ export default {
 
         {
           idk: "03",
+          id: "kyobo",
+          name: "kyobo",
           ttl: "교보생명 통합인증센터 구축",
           sub_ttl: " 보안솔루션 신제품 INIHUB ",
           info_dt_01: "<b>기간: </b>",
@@ -119,6 +136,9 @@ export default {
         },
         {
           idk: "04",
+          id: "inihub",
+
+          name: "inihub",
           ttl: "인증통합플랫폼 이니허브 개발",
           sub_ttl: "보안솔루션 신제품",
           info_dt_01: "<b>기간: </b>",
@@ -133,6 +153,8 @@ export default {
         },
         {
           idk: "06",
+          id: "nexess-demo",
+          name: "nexess-demo",
           ttl: "Nexess Demo System 구축",
           sub_ttl: "",
           info_dt_01: "<b>기간: </b>",
@@ -150,6 +172,8 @@ export default {
         {
           idk: "07",
           ttl: "멀티인증 Demo 사이트 구축",
+          id: "multi-demo",
+          name: "multi-demo",
           sub_ttl: "",
           info_ttl_06: "",
           info_dt_01: "<b>기간: </b>",
@@ -167,6 +191,8 @@ export default {
         },
         {
           idk: "08",
+          id: "inipass",
+          name: "inipass",
           ttl: "공인인증서 이니패스 운영 및 유지보수",
           sub_ttl: "2019.02 ~ 2020.06",
           info_dt_01: "<b>기간: </b>",
@@ -181,6 +207,8 @@ export default {
         },
         {
           idk: "09",
+          id: "lotte",
+          name: "lotte",
           ttl: "롯데백화점 하이드리드앱 운영관리",
           sub_ttl: "",
           info_dt_01: "<b>기간: </b>",
@@ -197,6 +225,8 @@ export default {
         },
         {
           idk: "10",
+          id: "wedding",
+          name: "wedding",
           ttl: "모바일청첩장",
           sub_ttl: "",
           info_ttl_07: "",
@@ -213,6 +243,7 @@ export default {
       ],
     };
   },
+
   methods: {
     afterLoad() {
       // console.log("Emitted 'after load' event.");
@@ -220,7 +251,12 @@ export default {
     showNext() {
       this.$refs.carousel.next();
     },
+    openModal() {
+      //alert("ddd");
+      this.visible = !this.visible;
+    },
   },
+
   mounted() {
     this.titleAnimType = "transition.rotate";
   },
@@ -319,7 +355,5 @@ export default {
     opacity: 1;
     transition: 0.5s;
   }
-}
-.mockup {
 }
 </style>

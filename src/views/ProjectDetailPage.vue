@@ -1,21 +1,20 @@
 <template>
-  <div class="modal project-detail">
-    <ProjectDetailB />
-  </div>
+  <div class="project-detail"></div>
 </template>
 
 <script>
-import ProjectDetailB from "@/components/portfolio/ProjectDetailB.vue";
+//import ProjectDetailC from "@/components/portfolio/ProjectDetailC.vue";
 export default {
-  name: "ProjectDetail",
-  components: {
-    ProjectDetailB,
-  },
+  //name: "ProjectDetailC",
+  components: {},
 };
 </script>
 <style lang="scss" scoped>
 .project-detail {
   width: 100%;
   height: 100%;
+  position: relative;
+  min-height: 100vh;
+  background: #fff;
 }
 </style>

@@ -25,9 +25,21 @@ export default new VueRouter({
     },
     {
       // porfolio
-      name: "inihub",
-      path: "/portfolio/portfolio/inihub/",
+      //name: "",
+      path: "/portfolio/portfolio/inihub",
+      component: () => import("@/components/portfolio/ProjectDetailC.vue"),
+      props: {},
+    },
+    {
+      path: "/portfolio/portfolio/sh-bank",
+      //component: () => import("@/views/ProjectDetailPage.vue"),
+      component: () => import("@/components/portfolio/ProjectDetailA.vue"),
+      //props: {},
+    },
+    {
+      path: "/portfolio/portfolio/multi-demo",
       component: () => import("@/views/ProjectDetailPage.vue"),
+      props: {},
     },
     {
       path: "*",

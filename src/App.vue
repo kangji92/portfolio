@@ -10,6 +10,7 @@
 import AppHeader from "@/components/common/AppHeader.vue";
 import IntroPage from "@/views/IntroPage.vue";
 import AppFooter from "@/components/common/AppFooter.vue";
+
 export default {
   name: "Home",
   components: {
@@ -17,6 +18,40 @@ export default {
     AppHeader,
     AppFooter,
   },
+  data() {
+    return {
+      stateId: 0,
+
+      menu: ["HOME", "ABOUT", "projectS", "ETC"],
+      projects: [
+        {
+          id: "0",
+          title: "Sample project1",
+          price: 10000,
+          img: "https://dummyimage.com/200/F6A9A9/464660",
+        },
+        {
+          id: "1",
+          title: "Sample project2",
+          price: 50000,
+          img: "https://dummyimage.com/200/FFBF86/464660",
+        },
+        {
+          id: "2",
+          title: "Sample project3",
+          price: 30000,
+          img: "https://dummyimage.com/200/FFF47D/464660",
+        },
+        {
+          id: "3",
+          title: "Sample project5",
+          price: 70000,
+          img: "https://dummyimage.com/200/C2F784/464660",
+        },
+      ],
+    };
+  },
+  methods: {},
 };
 </script>
 <style lang="scss">

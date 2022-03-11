@@ -3,14 +3,22 @@
     <nav class="gnb">
       <div class="gnb-inner">
         <ul class="navigation">
-          <router-link tag="li" to="/">Home</router-link>
-          <router-link tag="li" to="/librarys/elements">Elements</router-link>
-          <router-link tag="li" to="/librarys/modules">Modules</router-link>
-          <router-link tag="li" to="/librarys/interaction"
-            >Interaction</router-link
+          <router-link tag="li" to="/"> {{ $t("library.menu_1") }}</router-link>
+          <router-link tag="li" to="/librarys/elements">{{
+            $t("library.menu_2")
+          }}</router-link>
+          <router-link tag="li" to="/librarys/modules">{{
+            $t("library.menu_3")
+          }}</router-link>
+          <router-link tag="li" to="/librarys/interaction">{{
+            $t("library.menu_4")
+          }}</router-link>
+          <router-link tag="li" to="/blog">
+            {{ $t("library.menu_4") }}</router-link
           >
-          <router-link tag="li" to="/blog">Blog</router-link>
-          <router-link tag="li" to="/reference">Reference</router-link>
+          <router-link tag="li" to="/reference">
+            {{ $t("library.menu_5") }}</router-link
+          >
           <!--<router-link  v-for="nav in navigation" :key="nav.idx" :to="'/' + nav.path">{{ nav.id }}</router-link>-->
         </ul>
       </div>
