@@ -1,11 +1,6 @@
 <template>
   <div class="portfolio-main">
-    <full-page
-      :options="options"
-      @showPopupDlg="showPopupDlg"
-      id="fullpage"
-      ref="fullpage"
-    >
+    <full-page :options="options" id="fullpage" ref="fullpage">
       <section class="section">
         <div class="inner">
           <div class="ttl-group">
@@ -21,9 +16,7 @@
             <ul class="item-group">
               <li>
                 <h4>{{ $t("portfolio.sec_1_ttl_h4_1") }}</h4>
-                <p>
-                  {{ $t("portfolio.sec_1_desc_1") }}
-                </p>
+                <p v-html="$t('portfolio.sec_1_desc_1')"></p>
               </li>
               <li>
                 <h4>{{ $t("portfolio.sec_1_ttl_h4_2") }}</h4>

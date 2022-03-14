@@ -2,37 +2,23 @@
   <div class="modal-template">
     <div class="modal__overlay" @click="$emit('close-modal')"></div>
     <div class="modal__container">
-      <ProjectDetailA> </ProjectDetailA>
-    </div>
-
-    <div class="modal__close">
-      <button type="button" class="btn-close" @click="$emit('close')">
-        <span></span>
-      </button>
+      모달팝업
+      <div class="modal__close">
+        <button type="button" class="btn-close" @click="$emit('close-modal')">
+          <span></span>
+        </button>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import ProjectDetailA from "@/components/portfolio/ProjectDetailA.vue";
-
-export default {
-  components: {
-    ProjectDetailA,
-  },
-  methods: {
-    del_data() {
-      this.$emit("close");
-    },
-  },
-  props: {},
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/pages/_prj-detail";
 .modal-template {
-  //z-index: 100000;
+  z-index: 100000;
   overflow-y: hidden;
   height: 100vh;
 }

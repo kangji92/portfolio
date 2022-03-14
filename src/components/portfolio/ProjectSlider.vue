@@ -1,10 +1,15 @@
 <template>
   <div>
     <button class="btn-prj__list"></button>
-    <VueSlickCarousel :arrows="true" :dots="true" v-bind="settings">
+    <VueSlickCarousel
+      class="slider"
+      :arrows="true"
+      :dots="true"
+      v-bind="settings"
+    >
       <div v-for="project in projectList" :key="project.idx" class="prj-wrap">
         <div class="prj-info">
-          <p class="prj-info__num">{{ $t(project.idx) }}</p>
+          <p class="prj-info__num" v-html="$t(project.idx)"></p>
           <h3>{{ $t(project.ttl) }}</h3>
           <p class="prj-info__sub-ttl" v-html="$t(project.sub_ttl)"></p>
           <dl>
@@ -34,8 +39,13 @@
               :to="`/portfolio/portfolio/${project.name}`"
               >Detail View</router-link
             >-->
-
-            <button class="link" @click="openModal()">열기</button>
+            <router-link
+              tag="a"
+              class="link"
+              :to="`/portfolio/portfolio/${project.name}`"
+              >Detail View</router-link
+            >
+            <!-- <button class="link" @click="openModal">열기</button> -->
           </div>
         </div>
         <div class="prj-photo">
@@ -47,23 +57,29 @@
         </div>
       </div>
     </VueSlickCarousel>
+    <router-view></router-view>
+    <!--
+    <Modal v-if="isModalViewed" @close-modal="closeModal"></Modal> -->
   </div>
 </template>
 
 <script>
 import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
-
+//import TestModal from "@/components/common/TestModal.vue";
+//import Modal from "@/components/portfolio/Modal.vue";
 export default {
   name: "MyComponent",
   components: {
     VueSlickCarousel,
+    //Modal,
   },
   props: {
     project: Object,
   },
   data() {
     return {
+      isModalViewed: false,
       visible: false,
       titleShow: false,
       titleAnimType: "",
@@ -101,7 +117,7 @@ export default {
           image_class: "my-portfolio",
         },  */
         {
-          idk: "01",
+          idx: "01",
           id: "sh-bank",
           name: "sh-bank",
           ttl: "Sh수협은행 Nextro시스템 고도화",
@@ -116,7 +132,7 @@ export default {
         },
 
         {
-          idk: "03",
+          idx: "03",
           id: "kyobo",
           name: "kyobo",
           ttl: "교보생명 통합인증센터 구축",
@@ -135,12 +151,11 @@ export default {
           image_class: "kyobo",
         },
         {
-          idk: "04",
+          idx: "04",
           id: "inihub",
-
           name: "inihub",
           ttl: "인증통합플랫폼 이니허브 개발",
-          sub_ttl: "보안솔루션 신제품",
+          sub_ttl: "보안솔루션 신제품 ",
           info_dt_01: "<b>기간: </b>",
           info_dd_01: "2021.07 ~ 2021.08",
           info_dt_02: "<b>담당업무: </b>",
@@ -152,11 +167,11 @@ export default {
           mockup_class_01: "mockup__trans-pc inihub",
         },
         {
-          idk: "06",
+          idx: "05",
           id: "nexess-demo",
           name: "nexess-demo",
           ttl: "Nexess Demo System 구축",
-          sub_ttl: "",
+          sub_ttl: "SSO 데모사이트 구축",
           info_dt_01: "<b>기간: </b>",
           info_dd_01: "2020.07 ~ 2020.08",
           info_dt_02: "<b>담당업무: </b>",
@@ -170,7 +185,7 @@ export default {
           mockup_class_02: "mockup__pad nexess-demo",
         },
         {
-          idk: "07",
+          idx: "07",
           ttl: "멀티인증 Demo 사이트 구축",
           id: "multi-demo",
           name: "multi-demo",
@@ -190,7 +205,7 @@ export default {
           image_class: "multi-demo",
         },
         {
-          idk: "08",
+          idx: "08",
           id: "inipass",
           name: "inipass",
           ttl: "공인인증서 이니패스 운영 및 유지보수",
@@ -206,7 +221,7 @@ export default {
           image_class: "inipass",
         },
         {
-          idk: "09",
+          idx: "09",
           id: "lotte",
           name: "lotte",
           ttl: "롯데백화점 하이드리드앱 운영관리",
@@ -248,22 +263,27 @@ export default {
     afterLoad() {
       // console.log("Emitted 'after load' event.");
     },
-    showNext() {
-      this.$refs.carousel.next();
-    },
     openModal() {
-      //alert("ddd");
-      this.visible = !this.visible;
+      this.isModalViewed = true;
+    },
+    closeModal() {
+      this.isModalViewed = false;
     },
   },
 
   mounted() {
     this.titleAnimType = "transition.rotate";
+
+    //
   },
 };
 </script>
 
 <style>
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
 .slick-list {
   height: 80vh;
 }
@@ -326,7 +346,7 @@ export default {
 
 .prj-info__num {
   font-size: 5rem !important;
-  color: rgba(0, 0, 0, 0.15);
+  color: rgba(0, 0, 0, 0.2);
   font-family: $font-eng;
   font-weight: 500;
   line-height: 1.4;

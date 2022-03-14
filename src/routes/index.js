@@ -27,13 +27,27 @@ export default new VueRouter({
       // porfolio
       //name: "",
       path: "/portfolio/portfolio/inihub",
-      component: () => import("@/components/portfolio/ProjectDetailC.vue"),
+      component: () => import("@/components/portfolio/Inihub.vue"),
+      props: {},
+    },
+    {
+      // porfolio
+      //name: "",
+      path: "/portfolio/portfolio/nexess-demo",
+      component: () => import("@/components/portfolio/Nexess.vue"),
+      props: {},
+    },
+    {
+      // porfolio
+      //name: "",
+      path: "/portfolio/portfolio/kyobo",
+      component: () => import("@/components/portfolio/Kyobo.vue"),
       props: {},
     },
     {
       path: "/portfolio/portfolio/sh-bank",
       //component: () => import("@/views/ProjectDetailPage.vue"),
-      component: () => import("@/components/portfolio/ProjectDetailA.vue"),
+      component: () => import("@/components/portfolio/SHBank.vue"),
       //props: {},
     },
     {

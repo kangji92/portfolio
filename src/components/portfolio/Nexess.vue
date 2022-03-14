@@ -13,10 +13,10 @@
         <div class="hiring-main project-main1">
           <div class="hiring-heading">
             <div class="inner">
-              <h1 v-html="'project.ttl_' + project.name"></h1>
+              <h1 v-html="$t('project.ttl_' + project.name)"></h1>
               <span
                 class="sub-ttl"
-                v-html="'project.subttl_' + project.name"
+                v-html="$t('project.subttl_' + project.name)"
               ></span>
               <div class="project__info">
                 <div class="hash-group">
@@ -49,7 +49,7 @@
             <div class="col">
               <span class="contour"></span>
               <div class="ttl">
-                <h2>{{ "project.artical_ttl_01" }}</h2>
+                <h2>{{ $t("project.artical_ttl_01") }}</h2>
               </div>
               <dl>
                 <dt>인코딩 :</dt>
@@ -78,14 +78,13 @@
             <div class="col">
               <span class="contour"></span>
               <div class="ttl">
-                <h2>{{ "project.artical_ttl_02" }}</h2>
+                <h2>{{ $t("project.artical_ttl_02") }}</h2>
               </div>
               <div class="guide-info">
                 <div class="style-guide">
                   <div class="sub-ttl">
                     <h4>Colors</h4>
                   </div>
-
                   <div class="palette-wrap">
                     <ul>
                       <li></li>
@@ -105,7 +104,7 @@
             <div class="center">
               <div class="inner">
                 <div class="ttl">
-                  <h2>{{ "project.artical_ttl_03" }}</h2>
+                  <h2>{{ $t("project.artical_ttl_03") }}</h2>
                   <p>Desktop / Tablet | Resolution 1366 | OnePage scroll</p>
                 </div>
                 <div class="visual-box">
@@ -142,7 +141,7 @@
             <div class="center">
               <div class="inner">
                 <div class="ttl">
-                  <h2>{{ "project.artical_ttl_04" }}</h2>
+                  <h2>{{ $t("project.artical_ttl_04") }}</h2>
                   <p>Work System Page | Main</p>
                 </div>
                 <div class="visual-box">

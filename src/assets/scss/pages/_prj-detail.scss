@@ -1,21 +1,14 @@
 
 .project-detail {
-  position: fixed;
-  width: 100%;
-  left:0;
-  top: 0;
-  height: 100%;
-  background-color: #fff;
+ // position: fixed;
+ // width: 100%;
+ // left:0;
+ // top: 0;
+ // height: 100%;
+ // background-color: #fff;
   z-index: 10000;
 }
-.modal__overlay {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: rgba(0,0,0,0.4);
-}
+
  .modal__container {
   width: 90vw;
   position: absolute;
@@ -127,7 +120,7 @@
   }
   .hiring-heading h1 {
     font-size: 48px;
-    font-size: 2vw;
+    font-size: 1.8vw;
     font-weight: 600;
     margin: 0;
     margin-top: 1.5vw;
@@ -486,7 +479,6 @@ button { padding: 0; cursor: pointer;}
   &.mobilian {
     width: 36vw;
     height: 38vw;
-
     position: absolute;
     top: 14%;
     right: 14%;
@@ -512,6 +504,24 @@ button { padding: 0; cursor: pointer;}
       border-radius: 50%;
       top: 1.5%;
       left: 22%;
+    }
+  }
+    &.sh-bank {
+    width: 56vw;
+    height: 35vw;
+    position: absolute;
+    top: 70%;
+    right: 0;
+    span {
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: url('~@/assets/images/projects/initech/suhyup/project_mockup_01.png') no-repeat center center ;
+      background-size: 100% auto;
+      image-rendering: -webkit-optimize-contrast;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+
     }
   }
   &.pc {
@@ -652,6 +662,8 @@ button { padding: 0; cursor: pointer;}
       transform: translateZ(0);
       backface-visibility: hidden;
     }
+
+    // nexess 데모
     &.nexess1 {
       margin: 0 auto;
       span {
@@ -738,6 +750,77 @@ button { padding: 0; cursor: pointer;}
         left: -15%;
         transform: translateY(-50%);
       }
+     
+    // 수협
+     &.sh-bank1 {
+      margin: 0 auto;
+      span {
+        background: url('~@/assets/images/projects/initech/suhyup/shbank_main_01.png') no-repeat ;
+        background-size: 100%;
+      }
+    }
+    &.sh-bank2 {
+      span {
+        background: url('~@/assets/images/projects/initech/suhyup/shbank_main_02.png') no-repeat;
+        position: absolute;
+        top: 50%;
+        left: -10%;
+        transform: translateY(-50%);
+        background-size: 100%;
+      }
+    }
+    &.sh-bank3 {
+      span {
+        background: url('~@/assets/images/projects/initech/suhyup/shbank_main_03.png') no-repeat ;
+        background-size: 100%;
+        position: absolute;
+        top: 50%;
+        right: -10%;
+        transform: translateY(-50%);
+      }
+    }
+    &.sh-bank4 {
+      span {
+        background: url('~@/assets/images/projects/initech/suhyup/shbank_sub_01.png') no-repeat ;
+        background-size: 100%;
+        position: absolute;
+        top: 50%;
+        right: -10%;
+        transform: translateY(-50%);
+      }
+    }
+    &.sh-bank5 {
+      span {
+        background: url('~@/assets/images/projects/initech/suhyup/shbank_sub_02.png') no-repeat ;
+        background-size: 100%;
+        position: absolute;
+        top: 50%;
+        left: -10%;
+        transform: translateY(-50%);
+      }
+    }
+    &.sh-bank6 {
+      span {
+        background: url('~@/assets/images/projects/initech/suhyup/shbank_sub_03.png') no-repeat ;
+        background-size: 100%;
+        position: absolute;
+        top: 50%;
+        right: -10%;
+        transform: translateY(-50%);
+      }
+    }
+    &.sh-bank7 {
+      span {
+        background: url('~@/assets/images/projects/initech/suhyup/shbank_sub_04.png') no-repeat ;
+        background-size: 100%;
+        position: absolute;
+        top: 50%;
+        left: -10%;
+        transform: translateY(-50%);
+      }
+    }
+    
+      
     }
     &.nexess10 {
       span {
@@ -920,7 +1003,8 @@ button { padding: 0; cursor: pointer;}
         background-size: 100%;
       }
     }
-    
+   
+
   }
 
 
@@ -1033,3 +1117,68 @@ button { padding: 0; cursor: pointer;}
     }
   }
 }
+.project-main1 {
+.inner {    width: 1600px;
+    margin: 0 auto;}
+}
+
+// 팔레트
+.kyobo {
+  .palette-wrap{
+      ul {
+        li {
+          border-radius: 5px;
+          &:nth-child(1) {
+            background: #2B68B8;
+            border:1px solid  #2B68B8;
+          }
+          &:nth-child(2) {
+            background: #2F5081;
+            border:1px solid  #2F5081;
+          }
+          &:nth-child(3) {
+            background: #4DAC26;
+            border:1px solid  #4DAC26;
+          }
+          &:nth-child(4) {
+            background: #CCCCCC;
+            border:1px solid  #CCCCCC;
+          }
+          &:nth-child(5) {
+            background: #fff;
+            border:1px solid  #707070;
+          }
+        }
+      }
+  }
+}
+.sh-bank {
+  .palette-wrap{
+      ul {
+        li {
+          border-radius: 5px;
+          &:nth-child(1) {
+            background: #173A64;
+            border:1px solid  #173A64;
+          }
+          &:nth-child(2) {
+            background: #0D63AA;
+             border:1px solid  #0D63AA;
+          }
+          &:nth-child(3) {
+            background: #1F9CD7;
+             border:1px solid  #1F9CD7;
+          }
+          &:nth-child(4) {
+            background: #858686;
+             border:1px solid  #858686;
+          }
+          &:nth-child(5) {
+            background: #fff;
+            border:1px solid  #707070;
+          }
+        }
+      }
+  }
+}
+

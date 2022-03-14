@@ -4,12 +4,15 @@
     <IntroPage></IntroPage>
     <AppFooter></AppFooter>
     <router-view></router-view>
+    <TestModal v-if="isModalViewed" @close-modal="closeModal"></TestModal>
+    <button class="button" @click="openModal">열기</button>
   </div>
 </template>
 <script>
 import AppHeader from "@/components/common/AppHeader.vue";
 import IntroPage from "@/views/IntroPage.vue";
 import AppFooter from "@/components/common/AppFooter.vue";
+import TestModal from "@/components/common/TestModal.vue";
 
 export default {
   name: "Home",
@@ -17,11 +20,13 @@ export default {
     IntroPage,
     AppHeader,
     AppFooter,
+    TestModal,
   },
   data() {
     return {
       stateId: 0,
 
+      isModalViewed: false,
       menu: ["HOME", "ABOUT", "projectS", "ETC"],
       projects: [
         {
@@ -51,16 +56,41 @@ export default {
       ],
     };
   },
-  methods: {},
+  methods: {
+    openModal() {
+      this.isModalViewed = true;
+    },
+    closeModal() {
+      this.isModalViewed = false;
+    },
+    showView() {
+      this.$store.commit("setToggle", true);
+    },
+    hideView() {
+      this.$store.commit("setToggle", false);
+    },
+    showPopupDlg() {
+      // 자식창에서 팝업 요청이 오면 띄운다.
+      this.showPopup = true;
+    },
+    closePopup() {
+      this.showPopup = false;
+    },
+
+    doSend() {},
+  },
 };
 </script>
 <style lang="scss">
+.scrollLock {
+  overflow: hidden;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  //color: #2c3e50;
 }
 
 #nav {
@@ -74,5 +104,11 @@ export default {
       color: #42b983;
     }
   }
+}
+.button {
+  margin-top: 180px;
+  font-size: 22px;
+  padding: 10px;
+  cursor: pointer;
 }
 </style>

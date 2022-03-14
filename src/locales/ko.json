@@ -20,7 +20,7 @@
         "sec_1_ttl_h4_2": " Style Sheets ",
         "sec_1_ttl_h4_3": " Javascript",
         "sec_1_ttl_h4_4": "Colaboration Tool",
-        "sec_1_desc_1": " 웹표준을 바탕으로 컨텐츠 내용에 알맞은 시멘틱 마크업을 작성합니다. 검색엔진 최적화를 통해 사용자들에게 더많은 접근할 수 있도록 합니다. <br />크로스브라우징 이슈에 대한 다양한 해결방법을 공부하고 적용합니다.",
+        "sec_1_desc_1": " 웹표준을 바탕으로 컨텐츠 내용에 알맞은 시멘틱 마크업을 작성합니다. 검색엔진 최적화를 통해 사용자들에게 더많은 접근할 수 있도록 합니다. <br>크로스브라우징 이슈에 대한 다양한 해결방법을 공부하고 적용합니다.",
         "sec_1_desc_2": " 효율적이고 유지보수를 고려하여 CSS를 작성합니다. Sass(scss) 프로세싱을 사용하여 CSS 확장 기능을 활용합니다.",
         "sec_1_desc_3": " 자바스크립트의 기본 문법을 이해하고 활용합니다.<br /> 라이브러리, 플러그인을 적용하거나 <br /> 구조를 분석하여 원하는 용도로 수정할 수 있습니다. <br />Vue.js 등의 자바스크립트 기반 프레임워크를 다룰 수 있습니다.",
         "sec_1_desc_4": " 디자이너, 개발자와 원할한 협업을 끌어내기 위해 노력합니다. Git, Bitbucket, Zeplin, Sourcetree 등 협업을 위한 툴을 사용합니다."
@@ -33,13 +33,21 @@
         "info_dt_03" : "<b>마크업/개발방식: </b>",
         "info_dt_04": "<b>사용 Tool: </b>",
 
+
+       
+        "ttl_sh-bank" : "Sh수협은행 Nextro시스템 고도화",
+        "subttl_sh-bank" : "PC Web",
+
+
         "ttl_nexess": "Nexess Demo System 구축",
         "subttl_nexess": "반응형 Web (PC / Tablet)",
         "info_date": "날짜 : ",
         "info_output" : "기여도 : ",
         "nexess_info_date" : "2020.05 - 2020.08",
         "nexess_info_output" : "퍼블리싱 100%",
-        "artical_ttl_01" : "Tech Stack",
+
+
+        "artical_ttl_01": "Tech Stack",
         "artical_ttl_02" : "Style Guides",
         "artical_ttl_03" : "Main Page",
         "artical_ttl_04" : "Sub Pages",
@@ -50,11 +58,16 @@
         "mobilian_info_date" : "2021.05 - 2021.08",
         "mobilian_info_output" : "퍼블리싱 100%, 프론트엔드 80% ",
 
-
         "ttl_inihub": "인증통합플랫폼 이니허브 UI 개발",
         "subttl_inihub": "Responsive Web (PC / Tablet / Mobile)",
         "inihub_info_date" : "2020.12 - 2021.07",
-        "inihub_info_output" : "퍼블리싱 100% / 프론트엔드 80%"
+        "inihub_info_output" : "퍼블리싱 100% / 프론트엔드 80%",
+
+        "ttl_kyobo": "교보생명 통합인증센터 구축",
+        "subttl_kyobo": "Responsive Web (PC / Tablet / Mobile)",
+        "kyobo_info_date" : "2020.12 - 2021.07",
+        "kyobo_info_output" : "퍼블리싱 100% / 프론트엔드 80%"
+
     },
 
     "prj_mobilian" : {

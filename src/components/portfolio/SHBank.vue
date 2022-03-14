@@ -13,10 +13,10 @@
         <div class="hiring-main project-main1">
           <div class="hiring-heading">
             <div class="inner">
-              <h1 v-html="'project.ttl_' + project.name"></h1>
+              <h1 v-html="$t('project.ttl_' + project.name)"></h1>
               <span
                 class="sub-ttl"
-                v-html="'project.subttl_' + project.name"
+                v-html="$t('project.subttl_' + project.name)"
               ></span>
               <div class="project__info">
                 <div class="hash-group">
@@ -49,7 +49,7 @@
             <div class="col">
               <span class="contour"></span>
               <div class="ttl">
-                <h2>{{ "project.artical_ttl_01" }}</h2>
+                <h2>{{ $t("project.artical_ttl_01") }}</h2>
               </div>
               <dl>
                 <dt>인코딩 :</dt>
@@ -78,7 +78,7 @@
             <div class="col">
               <span class="contour"></span>
               <div class="ttl">
-                <h2>{{ "project.artical_ttl_02" }}</h2>
+                <h2>{{ $t("project.artical_ttl_02") }}</h2>
               </div>
               <div class="guide-info">
                 <div class="style-guide">
@@ -105,11 +105,11 @@
             <div class="center">
               <div class="inner">
                 <div class="ttl">
-                  <h2>{{ "project.artical_ttl_03" }}</h2>
+                  <h2>{{ $t("project.artical_ttl_03") }}</h2>
                   <p>Desktop / Tablet | Resolution 1366 | OnePage scroll</p>
                 </div>
                 <div class="visual-box">
-                  <p class="visual__ttl">Section1 | SSO Solution</p>
+                  <p class="visual__ttl">Part1 | SSO System 1차인증</p>
                   <div class="mockup_sub" :class="project.name + 1">
                     <span></span>
                   </div>
@@ -141,58 +141,18 @@
           <article class="hiring-info">
             <div class="center">
               <div class="inner">
+                <!--
                 <div class="ttl">
-                  <h2>{{ "project.artical_ttl_04" }}</h2>
-                  <p>Work System Page | Main</p>
+                  <h2>{{ $t("project.artical_ttl_04") }}</h2>
+                  <p>Part2 | SSO System 2차인증</p>
                 </div>
+                -->
                 <div class="visual-box">
-                  <p class="visual__ttl">Part1 | SSO Solution</p>
+                  <p class="visual__ttl">Part2 | SSO System 2차인증</p>
                   <div class="mockup_sub" :class="project.name + 4">
                     <span></span>
                   </div>
                 </div>
-              </div>
-            </div>
-          </article>
-          <article class="hiring-info">
-            <div class="visual-box col">
-              <p class="visual__ttl">Work System Page | Login</p>
-              <div class="mockup_sub" :class="project.name + 5">
-                <span></span>
-              </div>
-            </div>
-            <div class="visual-box col">
-              <p class="visual__ttl">Work System Page | Potal</p>
-              <div class="mockup_sub" :class="project.name + 6">
-                <span></span>
-              </div>
-            </div>
-          </article>
-          <article class="hiring-info">
-            <div class="visual-box col">
-              <p class="visual__ttl">Work System Page | MOTP</p>
-              <div class="mockup_sub" :class="project.name + 7">
-                <span></span>
-              </div>
-            </div>
-            <div class="visual-box col">
-              <p class="visual__ttl">Work System Page | Portal</p>
-              <div class="mockup_sub" :class="project.name + 8">
-                <span></span>
-              </div>
-            </div>
-          </article>
-          <article class="hiring-info">
-            <div class="visual-box col">
-              <p class="visual__ttl">Work System Page | Webmail</p>
-              <div class="mockup_sub" :class="project.name + 9">
-                <span></span>
-              </div>
-            </div>
-            <div class="visual-box col">
-              <p class="visual__ttl">Work System Page | WorkFlow</p>
-              <div class="mockup_sub" :class="project.name + 10">
-                <span></span>
               </div>
             </div>
           </article>
@@ -210,7 +170,7 @@ export default {
       projectList: [
         {
           idx: 1,
-          name: "nexess",
+          name: "sh-bank",
           ttl: "+ Tech Stack",
           artical_ttl: "Tech Stack",
         },
