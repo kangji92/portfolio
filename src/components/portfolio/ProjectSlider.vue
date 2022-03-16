@@ -130,6 +130,20 @@ export default {
           mockup_class_01: "mockup__pc sh-bank",
           image_class: "sh-bank",
         },
+        {
+          idx: "02",
+          id: "mobilian",
+          name: "mobilian",
+          ttl: "INISAFE Mobilian 모바일공인인증서 고도화",
+          sub_ttl: " 보안솔루션 PKI 제품 고도화",
+          info_dt_01: "<b>기간: </b>",
+          info_dd_01: "2021.07 ~ 2021.11",
+          info_dd_02: "프론트앤드, 웹퍼블리싱",
+          info_dd_03: "vue-cli, sass(scss)",
+          info_dd_04: "Git, Bitbucket, SourceTree ",
+          mockup_class_01: "mockup__mo mobilian",
+          image_class: "mobilian",
+        },
 
         {
           idx: "03",
@@ -239,7 +253,25 @@ export default {
           mockup_class_02: "mockup__mo lotte",
         },
         {
-          idk: "10",
+          idx: "10",
+          id: "lotte-event",
+          name: "lotte-event",
+          ttl: "롯데백화점 이벤트존 컨텐츠 템플릿화",
+          sub_ttl: "",
+          info_dt_01: "<b>기간: </b>",
+          info_dd_01: "2019.07 ~ 20219.08",
+          info_dt_02: "<b>담당업무: </b>",
+          info_dd_02: "웹퍼블리싱",
+          info_dt_03: "<b>마크업/개발방식: </b>",
+          info_dd_03: "html5, css3, javascript, jquery",
+          info_dt_04: "<b>사용 Tool: </b>",
+          info_dd_04: "eclipse, 레드마인, photoshop",
+          info_ttl_07: "",
+          mockup_class_01: "mockup__pc lotte",
+          mockup_class_02: "mockup__mo lotte",
+        },
+        {
+          idx: "11",
           id: "wedding",
           name: "wedding",
           ttl: "모바일청첩장",
@@ -290,6 +322,7 @@ export default {
 .slick-dots {
   margin-top: 100px;
 }
+
 .slick-dots li {
   display: inline-block;
   margin: 0.5rem;
@@ -339,17 +372,39 @@ export default {
   opacity: 1;
   transition: all 0.3s;
 }
+
+@media screen and (max-width: 820px) {
+  /* 모바일에 사용될 스트일 시트를 여기에 작성합니다. */
+  .slick-dots {
+    margin-top: 14%;
+  }
+  .slick-arrow.slick-prev {
+    width: 8vw;
+    height: 8vw;
+    top: 55%;
+    left: 2.5%;
+  }
+  .slick-arrow.slick-next {
+    width: 8vw;
+    height: 8vw;
+    top: 55%;
+    right: 2.5%;
+  }
+}
 </style>
 <style lang="scss" scoped>
 @import "@/assets/scss/main";
 @import "@/assets/scss/pages/_portfolio";
 
 .prj-info__num {
-  font-size: 5rem !important;
+  font-size: 5rem;
   color: rgba(0, 0, 0, 0.2);
   font-family: $font-eng;
   font-weight: 500;
   line-height: 1.4;
+  @include respond-to("bp-max-820") {
+    font-size: 12vw;
+  }
 }
 
 .slick-list {
@@ -370,6 +425,7 @@ export default {
   @include respond-to("bp-max-820") {
     top: 15vw;
     right: 8%;
+    display: none;
   }
   &:hover {
     opacity: 1;

@@ -17,17 +17,25 @@
     //width: calc(100% - 10%);
     height: auto;
     margin-left: 0;
-        width: 33%;
+    width: 33%;
     padding:0;
     margin: 8% 0 5% 5%;
   }
   @include respond-to("bp-max-820") {
     float: none;
-    width: calc(100% - 16%);
-    padding: 10% 8%;
+    width: 100%;
+    margin: 0;
+    margin-top: 0%;
+    padding: 18% 5% 0 5%;
   }
   .btn-wrap {
     margin-top: 10%;
+    @include respond-to("bp-max-820") {
+      position: absolute;
+      bottom: -86vw;
+  left: 47%;
+   transform: translateX(-50%);
+    }
     .link {
       display: block;
       width: 211px;
@@ -48,6 +56,12 @@
         color: #fff;
         transition: 0.3s;
       }
+      @include respond-to("bp-max-820") {
+         width: 35vw;
+        height: 10vw;
+        font-size:5vw;
+         
+      }
     }
   }
 
@@ -64,6 +78,9 @@
     font-size: 32px;
     color: $txt-def;
     font-family: $font-kr;
+    @include respond-to("bp-max-820") {
+      font-size: 6vw;
+    }
   }
   .prj-info__sub-ttl {
     position: relative;
@@ -71,8 +88,17 @@
     padding-top: 16px;
     font-size: 24px;
     line-height: 1.3;
+     font-family: $font-kr;
+    @include respond-to("bp-max-820") {
+     //display: none;
+         margin-bottom: 2%;
+             font-size: 4vw;
+    }
   }
   dl {
+    @include respond-to("bp-max-820") {
+     display: none;
+    }
     line-height: 1.5em;
     //margin: 30px 0;
     dt {
@@ -118,6 +144,12 @@
     margin: 5% 5%  5% 0;
     //padding: 10% 5%;
   }
+   @include respond-to("bp-max-820") {
+     width: 100%;
+     height: 60vw;
+     margin:  0;
+    
+   }
   span {
     display: block;
     width: 100%;
@@ -142,6 +174,13 @@
         width: 120%;
         top: 17%;
       }
+      @include respond-to("bp-max-820") {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        width: 90vw;
+       height: 76vw;
+      }
       &.sh-bank {
         &::after {
           content: "";
@@ -159,7 +198,12 @@
             right: 17%;
             top: 15%;
             z-index: -1;
-                   
+          }
+          @include respond-to("bp-max-820") {
+              width: 59vw;
+              right: 18%;
+                top: 18%;
+              height: 37vw;
           }
         }
       }
@@ -176,6 +220,15 @@
           top: 40px;
           @include respond-to("bp-max-1366") {
             width: 100%;
+          }
+           @include respond-to("bp-max-820") {
+            width: 59vw;
+            right: 18%;
+            top: 18%;
+            height: 37vw;
+            width: 59.5vw;
+    right: 17%;
+    top: 18%;
           }
         }
       }
@@ -194,6 +247,13 @@
           height: 480px;
           background: url("~@/assets/images/projects/initech/inihub/inihub_pc_01.png") center no-repeat;
           background-size: 510px;
+          @include respond-to("bp-max-820") {
+            right: 0;
+            bottom: 0;
+            width: 50vw;
+            height: 40vw;
+            background-size: 50vw;
+          }
         }
       }
     }
@@ -203,6 +263,10 @@
       height: 100%;
       position: absolute;
       bottom: 20px;
+      @include respond-to("bp-max-820") {
+             bottom: -10vw;
+
+        }
       &::after {
         // pc
         content: "";
@@ -215,6 +279,11 @@
         background: url("~@/assets/images/mockup/mockup_macbook.png") center center no-repeat;
         background-size: 100%;
         //background-position-y: 50px;
+        @include respond-to("bp-max-820") {
+            width: 83vw;
+            height: 52vw;
+            bottom:0;
+        }
       }
       &.kyobo {
         &::before {
@@ -228,6 +297,16 @@
           background: url("~@/assets/images/projects/initech/kyobo/intergration_pc_01.png") no-repeat;
           background-size: 100%;
           background-position-y: 50%;
+          @include respond-to("bp-max-820") {
+            
+            right: 0;
+            bottom: 0;
+            background-position-y: 0;
+              width: 55vw;
+            height: 36vw;
+            right: 14vw;
+            bottom: 13vw;
+          }
         }
       }
       &.inihub {
@@ -256,6 +335,13 @@
           background: url("~@/assets/images/projects/initech/demo/multi_demo_01.png") no-repeat;
           background-size: 100%;
           background-position-y: 50%;
+          @include respond-to("bp-max-820") {
+              background-position-y:0;
+               width: 55vw;
+              height: 36vw;
+              right: 14vw;
+              bottom: 13vw;
+          }
         }
       }
 
@@ -266,6 +352,11 @@
       height: 100%;
       left: -50px;
       top: 70px;
+      @include respond-to("bp-max-820") {
+        left: 2vw;
+        top: 12vw;
+        
+      }
       &::after {
         content: "";
         display: block;
@@ -277,6 +368,12 @@
         background: url("~@/assets/images/mockup/mockup_ipad.png") center center no-repeat;
         background-size: 100%;
         z-index: -1;
+        @include respond-to("bp-max-820") {
+              width: 40vw;
+          height: 44vw;
+          top: 0;
+          left: 0;
+        }
       }
       &.kyobo {
         &::before {
@@ -287,6 +384,12 @@
           height: 428px;    
           top: 51px;
           left: 43px;
+          @include respond-to("bp-max-820") {
+               width: 40vw;
+    height: 44vw;
+            top: 0;
+            left: 0;
+          }
         }
       }
       &.inihub {
@@ -301,6 +404,12 @@
           width: 300px;
           height: 428px;
           z-index: -1;
+          @include respond-to("bp-max-820") {
+            width: 40vw;
+            height: 35vw;
+            top: 0;
+            left: 0;
+          }
         }
       }
     }
@@ -308,17 +417,29 @@
       position: absolute;
       left: -270px;
       bottom: 17px;
+      @include respond-to("bp-max-820") {
+        bottom: -8vw;
+        left: 10vw;
+     
+      }
 
       &::after {
         content: "";
         display: block;
-        width: 270px;
-        height: 329px;
+        width: 259px;
+        height: 339px;
+  
         position: absolute;
         left: 70px;
         bottom: 76px;
         background: url("~@/assets/images/mockup/mockup_iphone.png") center center no-repeat;
         background-size: 100%;
+        @include respond-to("bp-max-820") {
+           width: 30vw;
+          height: 38vw;
+          bottom: 0;
+          left: 0;
+        }
       }
       &.kyobo {
         &::before {
@@ -331,6 +452,13 @@
           height: 239px;
           background: url("~@/assets/images/projects/initech/kyobo/integration_mo_kyobo_auth.png") no-repeat;
           background-size: 100%;
+          @include respond-to("bp-max-820") {
+            width: 14.5vw;
+            height: 27vw;
+            bottom: 6.2vw;
+            left: 11.8vw;
+            
+          }
         }
       }
       &.inihub {
@@ -344,6 +472,57 @@
           height: 239px;
           background: url("~@/assets/images/projects/initech/inihub/inihub_a_m_01.png") center top no-repeat;
           background-size: 100%;
+          @include respond-to("bp-max-820") {
+           
+          }
+        }
+      }
+    }
+    &.mockup__mo {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      &::after {
+        content: "";
+        display: block;
+       width: 356px;
+    height: 444px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: url("~@/assets/images/mockup/mockup_iphone.png") center center no-repeat;
+        background-size: 100%;
+        @include respond-to("bp-max-820") {
+          width: 30vw;
+          height: 38vw;
+          bottom: 0;
+          left: 0;
+        }
+      }
+      &.wedding {
+        &::after {
+          display: none;
+        }
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 1060px;
+          height: 568px;
+          background: url("~@/assets/images/projects/wedding.png") center top no-repeat;
+          background-size: 100%;
+         @include respond-to("bp-max-820") {
+          width: 70vw;
+          height: 48vw;
+          top: 70%;
+          left:50%;
+          transform: translate(-50%, -50%);
+        }
+       
         }
       }
     }

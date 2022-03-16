@@ -66,8 +66,17 @@
         "ttl_kyobo": "교보생명 통합인증센터 구축",
         "subttl_kyobo": "Responsive Web (PC / Tablet / Mobile)",
         "kyobo_info_date" : "2020.12 - 2021.07",
-        "kyobo_info_output" : "퍼블리싱 100% / 프론트엔드 80%"
+        "kyobo_info_output" : "퍼블리싱 100% / 프론트엔드 80%",
 
+        "ttl_wedding": "모바일 청첩장",
+        "subttl_wedding":"Mobile", 
+        "wedding_info_date" : "2019.10",
+        "wedding_info_output" : "퍼블리싱 100%",
+
+        "ttl_multi-demo": "멀티인증 Demo 시스템 구축",
+        "subttl_multi-demo":"Responsive Web (PC / Mobile)", 
+        "multi-demo_info_date" : "2019.01 - 2019.12",
+        "multi-demo_info_output" : "퍼블리싱 100%"
     },
 
     "prj_mobilian" : {

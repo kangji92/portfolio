@@ -1,3 +1,4 @@
+@import "@/assets/scss/main";
 
 .project-detail {
  // position: fixed;
@@ -15,7 +16,8 @@
   left: 50%;
   top: 50%;
   height: 85vh;
-  transform: translate(-50%, -50%);
+  @include translate(-50%, -50%);
+ 
   background-color: #fff;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -105,6 +107,7 @@
 
   .hiring-heading span:before,
   .hiring-heading span:after {
+    display: none;
     content: '';
     height: 2px;
     background-color: #000;
@@ -134,7 +137,14 @@
      font-size: 1.25vw;
      color: #333;
      position: relative;
-  
+     &.sub-ttl {
+    @include respond-to("bp-max-820") {
+      font-size: 3.8vw;
+      margin-top: 2vw;
+      display: block;
+    }
+     }
+ 
    }
 
   .hiring-info {
@@ -145,6 +155,9 @@
     //float: left;
     width: 50%;
     height: 600px;
+    @include respond-to("bp-max-820") {
+      width: 100%;
+  }
   }
   .center-parent {
     position: relative;
@@ -261,6 +274,7 @@
    // background: url('../assets/images/project-main-01-01.jpg') no-repeat center center;
     background-size: cover;
     height: 100vh;
+    
 }
 .hiring-main.project-main2 {
     //background: url('../assets/images/project-main-02-01.jpg') no-repeat center center;
@@ -282,7 +296,11 @@ animation: slidedown 1s linear both;
 .hiring-main.project-main1 .hiring-heading h1,
 .hiring-main.project-main2 .hiring-heading h1,
 .hiring-main.project-main3 .hiring-heading h1 {
-font-size: 70px;
+//font-size: 70px;
+ font-size: 4vw;
+  @include respond-to("bp-max-820") {
+    font-size: 5.5vw;
+  }
 }
 .project-detail .hiring-info {
 margin-bottom: 0;
@@ -364,6 +382,9 @@ background-color: #fff;
    // background: url('../assets/images/project-main-01-01.jpg') no-repeat center center;
     background-size: cover;
     height: 100vh;
+    @include respond-to("bp-max-820") {
+      height: 90vw;
+    }
 }
 
 
@@ -380,6 +401,12 @@ button { padding: 0; cursor: pointer;}
   background: transparent;
   font-size: 28px;
   border-radius: calc(60px * 0.5);
+   @include respond-to("bp-max-820") {
+     display: none;
+      width: 36vw;
+      height: 12vw;
+       font-size: 4.5vw;
+   }
  &:hover {
    transition: all 0.5s;
    background: #000;
@@ -415,12 +442,15 @@ button { padding: 0; cursor: pointer;}
         font-size: 48px;
         font-size: 2.2vw;
         font-family: 600;
+      
       }
       .sub-ttl {
         font-size: 28px;
         display: block;
         font-family: 500;
         margin-top: 16px;
+    
+      
       }
 
 
@@ -482,6 +512,12 @@ button { padding: 0; cursor: pointer;}
     position: absolute;
     top: 14%;
     right: 14%;
+      @include respond-to("bp-max-820") {
+        width: 75vw;
+        height: 76vw;
+        top: 36%;
+        right: 14%;
+      }
     span {
       width: 100%;
       height: 100%;
@@ -504,6 +540,13 @@ button { padding: 0; cursor: pointer;}
       border-radius: 50%;
       top: 1.5%;
       left: 22%;
+      @include respond-to("bp-max-820") {
+        display: none;
+        width: 68vw;
+        height: 68vw;
+        top: 3.5%;
+        left: 26%;
+      }
     }
   }
     &.sh-bank {
@@ -512,6 +555,17 @@ button { padding: 0; cursor: pointer;}
     position: absolute;
     top: 70%;
     right: 0;
+
+ @include respond-to("bp-max-820") {
+   width: 76vw;
+    height: 48vw;
+    top: 70%;
+    left: 50%;
+    @include translateX(-50%)
+ }
+       
+
+
     span {
       width: 100%;
       height: 100%;
@@ -534,6 +588,12 @@ button { padding: 0; cursor: pointer;}
       top: 35%;
       right: -15%;
       right: -5vw;
+      @include respond-to("bp-max-820") {
+        width: 80vw;
+           height: 51vw;
+        top:36%;
+         left: 18%;
+       }
       span {
         width: 100%;
         height: 100%;
@@ -558,6 +618,12 @@ button { padding: 0; cursor: pointer;}
       position: absolute;
       top: 35%;
       right: 40vw;
+      @include respond-to("bp-max-820") {
+        width: 46vw;
+        height: 46vw;
+        top: 50%;
+        left: -9%;
+       }
       span {
         width: 100%;
         height: 100%;
@@ -578,16 +644,25 @@ button { padding: 0; cursor: pointer;}
 
 
 .ttl {
+  
   h2 { 
     display: inline-block;
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 30px;
+    @include respond-to("bp-max-820") {
+      font-size: 5vw;
+          margin-bottom: 5vw;
+    }
   }
   p {
     display: inline-block;
     padding-left: 80px;
     font-size: 20px;
+     @include respond-to("bp-max-820") {
+      padding-left: 0;
+      font-size: 3.25vw;
+    }
   }
   h4 {
     font-size: 24px;
@@ -597,8 +672,20 @@ button { padding: 0; cursor: pointer;}
 .hiring-info {
   margin-top: 80px;
  // @include clearfix;
+ @include respond-to("bp-max-820") {
+    margin-top: 12vw;
+  }
   div {
     height: auto;
+    @include respond-to("bp-max-820") {
+    text-align: left;
+    }
+  }
+  .inner {
+      @include respond-to("bp-max-820") {
+    width: 86%;
+    margin: 0 auto;
+    }
   }
   .center {
     width: 100%;
@@ -618,6 +705,10 @@ button { padding: 0; cursor: pointer;}
     display: block;
     float: left;
     width: 50%;
+     @include respond-to("bp-max-820") {
+       width: 100%;
+       margin-top: 10vw;
+     }
   }
 
 
@@ -625,20 +716,38 @@ button { padding: 0; cursor: pointer;}
     width: 100%;
     font-size: 18px;
     line-height: 1.5em;
+     @include respond-to("bp-max-820") {
+       font-size: 3.5vw;
+     }
     dt {
       display: inline-block; 
+      @include respond-to("bp-max-820") {
+      width: 40%;
+      padding: 1vw 0;
+     }
     }
     dd {
       display: inline-block;
       padding-left: 18px;
+      @include respond-to("bp-max-820") {
+     
+      padding: 1vw 0;
+     }
     }
   }
-  
+   @include respond-to("bp-max-820") {
+     dl { line-height: 5vw;
+    }
+     dl + dl {border-top: 1px solid #1111;}
+   }  
 
 .visual-box {
   position: relative;
   width: 100%;
   margin-top: 1vw;
+   @include respond-to("bp-max-820") {
+      margin-top: 3vw;
+   }
   .visual__ttl {
     text-align: center;
     margin-bottom: 1vw;
@@ -654,6 +763,10 @@ button { padding: 0; cursor: pointer;}
     width: 760px;
     height: 436px;
     margin: 0 auto;
+    @include respond-to("bp-max-820") {
+          width: 60vw;
+    height: 35vw;
+    }
     span {
       display: block;
       width: 100%;
@@ -708,7 +821,8 @@ button { padding: 0; cursor: pointer;}
         position: absolute;
         top: 50%;
         left: -10%;
-        transform: translateY(-50%);
+      
+         @include translateY(-50%)
       }
     }
     &.nexess6 {
@@ -718,7 +832,8 @@ button { padding: 0; cursor: pointer;}
         position: absolute;
         top: 50%;
         right: -10%;
-        transform: translateY(-50%);
+  
+         @include translateY(-50%)
       }
     }
     &.nexess7 {
@@ -728,7 +843,7 @@ button { padding: 0; cursor: pointer;}
         position: absolute;
         top: 50%;
         left: -10%;
-        transform: translateY(-50%);
+      @include translateY(-50%);
       }
     }
     &.nexess8 {
@@ -765,7 +880,7 @@ button { padding: 0; cursor: pointer;}
         position: absolute;
         top: 50%;
         left: -10%;
-        transform: translateY(-50%);
+        @include translateY(-50%)
         background-size: 100%;
       }
     }
@@ -776,7 +891,7 @@ button { padding: 0; cursor: pointer;}
         position: absolute;
         top: 50%;
         right: -10%;
-        transform: translateY(-50%);
+        @include translateY(-50%)
       }
     }
     &.sh-bank4 {
@@ -786,7 +901,10 @@ button { padding: 0; cursor: pointer;}
         position: absolute;
         top: 50%;
         right: -10%;
-        transform: translateY(-50%);
+      @include translateY(-50%);
+       @include respond-to("bp-max-820") {
+         right: 0;
+       }
       }
     }
     &.sh-bank5 {
@@ -796,7 +914,7 @@ button { padding: 0; cursor: pointer;}
         position: absolute;
         top: 50%;
         left: -10%;
-        transform: translateY(-50%);
+        @include translateY(-50%)
       }
     }
     &.sh-bank6 {
@@ -806,7 +924,7 @@ button { padding: 0; cursor: pointer;}
         position: absolute;
         top: 50%;
         right: -10%;
-        transform: translateY(-50%);
+        @include translateY(-50%)
       }
     }
     &.sh-bank7 {
@@ -816,7 +934,7 @@ button { padding: 0; cursor: pointer;}
         position: absolute;
         top: 50%;
         left: -10%;
-        transform: translateY(-50%);
+        @include translateY(-50%)
       }
     }
     
@@ -829,7 +947,7 @@ button { padding: 0; cursor: pointer;}
         position: absolute;
         top: 50%;
         right: -15%;
-        transform: translateY(-50%);
+       @include translateY(-50%)
       }
     }
 
@@ -1012,6 +1130,7 @@ button { padding: 0; cursor: pointer;}
   }
 
 
+
 .project__desc {
   margin-top: 16px;
   dt {display: block;  line-height: 1.5em;}
@@ -1029,9 +1148,14 @@ button { padding: 0; cursor: pointer;}
     font-weight: 600;
     float: left;
     width: 50%;
+    @include respond-to("bp-max-820") {
+      font-size: 8vw;
+    }
 
   }
-  .style-guide {
+ 
+}
+ .style-guide {
     float: left;
    
     .sub-ttl {
@@ -1039,6 +1163,9 @@ button { padding: 0; cursor: pointer;}
       h4 {
         font-size: 24px;
         float: left;
+         @include respond-to("bp-max-820") {
+             font-size: 3.5vw;
+         }
       }
     }
     .palette-wrap {
@@ -1061,8 +1188,6 @@ button { padding: 0; cursor: pointer;}
       }
     }
   }
-}
-
 
 
 .ia-tbl-wrap {
@@ -1119,7 +1244,11 @@ button { padding: 0; cursor: pointer;}
 }
 .project-main1 {
 .inner {    width: 1600px;
-    margin: 0 auto;}
+    margin: 0 auto;
+   @include respond-to("bp-max-820") {
+     width: 86%;
+   }
+  }
 }
 
 // 팔레트
