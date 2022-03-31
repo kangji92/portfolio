@@ -10,7 +10,7 @@
       <div v-for="project in projectList" :key="project.idx" class="prj-wrap">
         <div class="prj-info">
           <p class="prj-info__num" v-html="$t(project.idx)"></p>
-          <h3>{{ $t(project.ttl) }}</h3>
+          <h3 v-html="$t(project.ttl)"></h3>
           <p class="prj-info__sub-ttl" v-html="$t(project.sub_ttl)"></p>
           <dl>
             <dt v-html="$t('project.info_dt_01')"></dt>
@@ -120,7 +120,7 @@ export default {
           idx: "01",
           id: "sh-bank",
           name: "sh-bank",
-          ttl: "Sh수협은행 Nextro시스템 고도화",
+          ttl: "수협은행 Nextro시스템 고도화",
           sub_ttl: " 보안솔루션 IAM팀 제품 시스템고도화",
           info_dt_01: "<b>기간: </b>",
           info_dd_01: "2021.07 ~ 2021.08",
@@ -134,7 +134,7 @@ export default {
           idx: "02",
           id: "mobilian",
           name: "mobilian",
-          ttl: "INISAFE Mobilian 모바일공인인증서 고도화",
+          ttl: "INISAFE Mobilian <br> 모바일공인인증서 고도화",
           sub_ttl: " 보안솔루션 PKI 제품 고도화",
           info_dt_01: "<b>기간: </b>",
           info_dd_01: "2021.07 ~ 2021.11",
@@ -238,7 +238,7 @@ export default {
           idx: "09",
           id: "lotte",
           name: "lotte",
-          ttl: "롯데백화점 하이드리드앱 운영관리",
+          ttl: "롯데백화점 하이드리드앱<br> 운영관리",
           sub_ttl: "",
           info_dt_01: "<b>기간: </b>",
           info_dd_01: "2019.07 ~ 20219.08",
@@ -274,8 +274,8 @@ export default {
           idx: "11",
           id: "wedding",
           name: "wedding",
-          ttl: "모바일청첩장",
-          sub_ttl: "",
+          ttl: "모바일 청첩장",
+          sub_ttl: "Mobile Wedding Invitation",
           info_ttl_07: "",
           info_dt_01: "<b>기간: </b>",
           info_dd_01: "2018",
@@ -397,16 +397,31 @@ export default {
 @import "@/assets/scss/pages/_portfolio";
 
 .prj-info__num {
-  font-size: 5rem;
-  color: rgba(0, 0, 0, 0.2);
+  font-size: 4.6rem;
+  color: rgba(0, 0, 0, 0.15);
   font-family: $font-eng;
   font-weight: 500;
-  line-height: 1.4;
+  //line-height: 1.4;
+  margin-bottom: 16px;
   @include respond-to("bp-max-820") {
     font-size: 12vw;
+    float: left;
+    margin-right: 2vw;
   }
 }
-
+.prj-info {
+  h3 {
+    br {
+      display: none;
+    }
+    @include respond-to("bp-max-820") {
+      margin-top: 3vw;
+      br {
+        display: block;
+      }
+    }
+  }
+}
 .slick-list {
   width: 80%;
 }

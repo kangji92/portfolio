@@ -58,10 +58,16 @@ $breakpoints: (
   "bp-min-1366": (
     min-width: 1366px,
   ),
+  "bp-min-1600": (
+    min-width: 1366px,
+  ),
 
  /* ---------
   PC 퍼스트
   --------- */
+   "bp-max-1600": (
+    max-width: 1600px,
+  ),
   "bp-max-1366": (
     max-width: 1366px,
   ),

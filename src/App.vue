@@ -16,6 +16,14 @@ import TestModal from "@/components/common/TestModal.vue";
 
 export default {
   name: "Home",
+  beforeCreate() {
+    window.addEventListener("load", this.srceenHandler);
+  },
+  created: function () {
+    window.addEventListener("load", this.srceenHandler);
+    //window.addEventListener("resize", this.onResize);
+  },
+  updated() {},
   components: {
     IntroPage,
     AppHeader,
@@ -57,6 +65,70 @@ export default {
     };
   },
   methods: {
+    // 미지원 대체화면
+    srceenHandler() {
+      // 모바일 & 태블릿 구분
+      var mobileTablet =
+        /Android|Mobile|iP(hone|od|ad)|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/;
+
+      // 세로모드 구분
+      var isPortrait = window.innerWidth <= window.innerHeight;
+
+      if (navigator.userAgent.match(mobileTablet)) {
+        if (navigator.userAgent.match(/iPad|Android/i)) {
+          // 아이패드, 안드로이드 OS
+          if (
+            window.matchMedia("(min-width: 361px) and (max-width: 600px)")
+              .matches
+          ) {
+            if (isPortrait) {
+              // 세로 모드일때
+              this.isNotSupport = false;
+            } else {
+              // 가로 모드일때
+              this.isNotSupport = true;
+            }
+          } else {
+            this.isNotSupport = false;
+          }
+        } else if (navigator.userAgent.match(/iPhone|iPod/i)) {
+          // 아이폰
+          if (isPortrait) {
+            // 세로 모드일때
+            this.isNotSupport = false;
+          } else {
+            // 가로 모드일때
+            this.isNotSupport = true;
+          }
+        } else {
+          if (window.matchMedia("(max-width: 767px)").matches) {
+            if (isPortrait) {
+              // 세로 모드일때
+              this.isNotSupport = false;
+            } else {
+              // 가로 모드일때
+              this.isNotSupport = true;
+            }
+          } else {
+            this.isNotSupport = false;
+          }
+        }
+      } else {
+        // PC
+        if (window.matchMedia("(max-width: 767px)").matches) {
+          if (window.innerWidth <= window.innerHeight) {
+            // 세로 모드일때
+            this.isNotSupport = false;
+          } else {
+            // 가로 모드일때
+            this.isNotSupport = true;
+          }
+        } else {
+          this.isNotSupport = false;
+        }
+      }
+    },
+
     openModal() {
       this.isModalViewed = true;
     },

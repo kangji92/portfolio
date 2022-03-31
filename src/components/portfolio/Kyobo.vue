@@ -52,7 +52,7 @@
                   <dt>해상도 범위</dt>
                   <dd>- Mobile / Tablet(세로) : 320px ~ 800px</dd>
                 </dl>
-                <button class="btn__line" type="button">View Demo</button>
+                <!-- <button class="btn__line" type="button">View Site</button>-->
               </div>
             </div>
             <div class="mockup pc" :class="project.name"><span></span></div>

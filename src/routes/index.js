@@ -5,11 +5,14 @@ Vue.use(VueRouter);
 
 export default new VueRouter({
   mode: "history",
+  // 페이지 전환시 스크롤 최상단으로 이동
+  scrollBehavior: () => ({ y: 0 }),
   routes: [
     {
       path: "/",
       redirect: "/portfolio",
     },
+
     {
       path: "/portfolio",
       component: () => import("@/views/IntroPage.vue"),
@@ -17,6 +20,12 @@ export default new VueRouter({
     {
       path: "/portfolio/portfolio",
       component: () => import("@/views/PortfolioPage.vue"),
+      //components: {
+      //  default: () =>
+      //    import(/* webpackChunkName "common" */ "@/views/PortfolioPage.vue"),
+      //  mobile: () =>
+      //    import(/* webpackChunkName "common" */ "@/views/PortfolioPageM.vue"),
+      //},
     },
 
     {
@@ -53,6 +62,10 @@ export default new VueRouter({
     {
       path: "/portfolio/portfolio/mobilian",
       component: () => import("@/components/portfolio/Mobilian.vue"),
+    },
+    {
+      path: "/portfolio/portfolio/lotte-event",
+      component: () => import("@/components/portfolio/Lotte.vue"),
     },
     {
       path: "/portfolio/portfolio/wedding",

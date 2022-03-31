@@ -46,10 +46,63 @@
         </div>
       </section>
 
-      <section class="section">
-        <ProjectSlider></ProjectSlider>
+      <section class="section" v-if="isLandscape === true">
+        <ProjectSlider class="pc-visual"></ProjectSlider>
       </section>
-
+      <div
+        v-for="project in projectList"
+        :key="project.idx"
+        class="prj-wrap section"
+        v-else
+      >
+        <div class="prj-info">
+          <p class="prj-info__num" v-html="$t(project.idx)"></p>
+          <h3 v-html="$t(project.ttl)"></h3>
+          <p class="prj-info__sub-ttl" v-html="$t(project.sub_ttl)"></p>
+          <dl>
+            <dt v-html="$t('project.info_dt_01')"></dt>
+            <dd>{{ $t(project.info_dd_01) }}</dd>
+          </dl>
+          <dl>
+            <dt v-html="$t('project.info_dt_02')"></dt>
+            <dd>{{ $t(project.info_dd_02) }}</dd>
+          </dl>
+          <dl>
+            <dt v-html="$t('project.info_dt_03')"></dt>
+            <dd>{{ $t(project.info_dd_03) }}</dd>
+          </dl>
+          <dl>
+            <dt v-html="$t('project.info_dt_04')"></dt>
+            <dd>{{ $t(project.info_dd_04) }}</dd>
+          </dl>
+          <div class="btn-wrap">
+            <!--
+            <router-link tag="a" class="link" to="/portfolio/portfolio/inihub/"
+              >Detail View</router-link
+            >
+            <router-link
+              tag="a"
+              class="link"
+              :to="`/portfolio/portfolio/${project.name}`"
+              >Detail View</router-link
+            >-->
+            <router-link
+              tag="a"
+              class="link"
+              :to="`/portfolio/portfolio/${project.name}`"
+              >Detail View</router-link
+            >
+            <!-- <button class="link" @click="openModal">열기</button> -->
+          </div>
+        </div>
+        <div class="prj-photo">
+          <div class="mockup-wrap">
+            <div class="mockup" :class="project.mockup_class_01"></div>
+            <div class="mockup" :class="project.mockup_class_02"></div>
+            <div class="mockup" :class="project.mockup_class_03"></div>
+          </div>
+        </div>
+      </div>
       <section class="section">
         <div class="content about">
           <div class="about-inner">
@@ -324,6 +377,7 @@ b {
 <style lang="scss" scoped>
 @import "@/assets/scss/main";
 @import "@/assets/scss/pages/_portfolio";
+@import "@/assets/scss/pages/_portfolio-m";
 .portfolio-main {
   position: absolute;
   width: 100%;

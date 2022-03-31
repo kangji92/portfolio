@@ -61,6 +61,11 @@ export default {
       background: url("~@/assets/images/logo_kangji.png") no-repeat center
         center;
       background-size: 48px;
+      @include respond-to("bp-max-820") {
+        width: 10vw;
+        height: 10vw;
+        background-size: 10vw;
+      }
       @include display-flex {
         justify-content: getJustify(fs);
       }

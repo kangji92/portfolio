@@ -27,15 +27,15 @@
                   </ul>
                 </div>
                 <dl>
-                  <dt>{{ "project.info_date" }}</dt>
+                  <dt>{{ $t("project.info_date") }}</dt>
                   <dd>
-                    {{ "project." + project.name + "_info_date" }}
+                    {{ $t("project." + project.name + "_info_date") }}
                   </dd>
                 </dl>
                 <dl>
-                  <dt>{{ "project.info_output" }}</dt>
+                  <dt>{{ $t("project.info_output") }}</dt>
                   <dd>
-                    {{ "project." + project.name + "_info_output" }}
+                    {{ $t("project." + project.name + "_info_output") }}
                   </dd>
                 </dl>
                 <button class="btn__line" type="button">View Site</button>

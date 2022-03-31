@@ -21,24 +21,24 @@
               <div class="project__info">
                 <div class="hash-group">
                   <ul>
-                    <li><a href="#">#vue-cli</a></li>
-                    <li><a href="#">#Sass(SCSS)</a></li>
+                    <li><a href="#">#html5</a></li>
+                    <li><a href="#">#jquery</a></li>
                     <li><a href="#">#javascript</a></li>
                   </ul>
                 </div>
                 <dl>
-                  <dt>{{ $t("project.info_date") }}</dt>
+                  <dt>{{ "project.info_date" }}</dt>
                   <dd>
-                    {{ $t("project." + project.name + "_info_date") }}
+                    {{ "project." + project.name + "_info_date" }}
                   </dd>
                 </dl>
                 <dl>
-                  <dt>{{ $t("project.info_output") }}</dt>
+                  <dt>{{ "project.info_output" }}</dt>
                   <dd>
-                    {{ $t("project." + project.name + "_info_output") }}
+                    {{ "project." + project.name + "_info_output" }}
                   </dd>
                 </dl>
-                <!-- <button class="btn__line" type="button">View Site</button>-->
+                <button class="btn__line" type="button">View Site</button>
               </div>
             </div>
             <div class="mockup" :class="project.name"><span></span></div>
@@ -170,7 +170,7 @@ export default {
       projectList: [
         {
           idx: 1,
-          name: "mobilian",
+          name: "wedding",
           ttl: "+ Tech Stack",
           artical_ttl: "Tech Stack",
         },

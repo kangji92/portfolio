@@ -93,7 +93,9 @@
 }
 .hiring-main {
     height: 600px;
+    width: 100%;
     position: relative;
+ 
   }
   .hiring-heading {
     position: absolute;
@@ -138,6 +140,7 @@
      color: #333;
      position: relative;
      &.sub-ttl {
+       font-size: 28px;
     @include respond-to("bp-max-820") {
       font-size: 3.8vw;
       margin-top: 2vw;
@@ -274,7 +277,6 @@
    // background: url('../assets/images/project-main-01-01.jpg') no-repeat center center;
     background-size: cover;
     height: 100vh;
-    
 }
 .hiring-main.project-main2 {
     //background: url('../assets/images/project-main-02-01.jpg') no-repeat center center;
@@ -297,7 +299,8 @@ animation: slidedown 1s linear both;
 .hiring-main.project-main2 .hiring-heading h1,
 .hiring-main.project-main3 .hiring-heading h1 {
 //font-size: 70px;
- font-size: 4vw;
+ font-size: 3vw;
+ padding-bottom: 1vw;
   @include respond-to("bp-max-820") {
     font-size: 5.5vw;
   }
@@ -374,16 +377,17 @@ background-color: #fff;
   
   
   
-  
-  
-  
 
 .hiring-main.project-main1 {
    // background: url('../assets/images/project-main-01-01.jpg') no-repeat center center;
     background-size: cover;
     height: 100vh;
-    @include respond-to("bp-max-820") {
-      height: 90vw;
+     @include respond-to("bp-max-1366") {
+     height: 48vw;
+    }
+    @include respond-to("bp-max-1024") {
+      height: 100vw;
+      //background: #fef8ee;
     }
 }
 
@@ -414,9 +418,10 @@ button { padding: 0; cursor: pointer;}
  }
 }
 
-.modal {
   
-  &.project-detail {
+
+
+.project-detail {
     .inner { 
     //  @include clearfix;
       position:relative; 
@@ -433,45 +438,76 @@ button { padding: 0; cursor: pointer;}
         width: 95%;
         margin: auto;     
       }
-      
     }
 
-    
     .hiring-main {
       h1 {
         font-size: 48px;
         font-size: 2.2vw;
         font-family: 600;
-      
       }
       .sub-ttl {
         font-size: 28px;
         display: block;
         font-family: 500;
         margin-top: 16px;
-    
-      
       }
-
 
     }
 
     .project__info {
       width: 100%;
       color: #333;
-      margin-top: 20vw;
       text-align: left;
+      position: absolute;
+      top: 28vw;
       font-size: 1.25rem;
       line-height: 1.25;
+
+     
+      @include respond-to("bp-max-820") {
+          top: 72vw;
+        }
+
+
+        .hash-group {
+          display: block;
+          float: left;
+          width: 100%;
+          margin-bottom: 2%;
+          ul {
+            li {
+              float: left;
+              font-size: 1.5vw;
+              @include respond-to("bp-max-820") {
+                font-size: 4vw;
+              }
+            }
+            li + li {
+              margin-left: 1.25rem;
+            }
+          }
+          
+        }
       dl {
         width: 100%; 
         text-align: left;
         display: block;
+        font-size: 1vw;
+         @include respond-to("bp-max-820") {
+            font-size: 3vw;
+         }
         dt {
+          width: 5%;
+          
           display: inline-block; 
           padding: 0 1vw 0 0;
+          @include respond-to("bp-max-820") {
+               width: 15%;
+          }
         }
         dd {
+         
           display: inline-block;
         }
       }
@@ -482,28 +518,32 @@ button { padding: 0; cursor: pointer;}
     }
     
   }
-}
-
-
 
 .mockup {
+  @include background-image-render;
+  span {
+    @include background-image-render;
+  }
   &.nexess {
     width: 56vw;
     height: 35vw;
     position: absolute;
-    top: 25%;
-    right: -15%;
-   
+    top: 81%;
+    right: 3%;
+    @include respond-to("bp-max-820") {
+    width: 85vw;
+    height: 53vw;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    }
+    
     span {
       width: 100%;
       height: 100%;
       display: block;
       background: url('~@/assets/images/projects/initech/nexess/project_nexess_main_01@2x.png') no-repeat center center ;
       background-size: 100% auto;
-      image-rendering: -webkit-optimize-contrast;
-      transform: translateZ(0);
-      backface-visibility: hidden;
-
     }
   }
   &.mobilian {
@@ -512,23 +552,18 @@ button { padding: 0; cursor: pointer;}
     position: absolute;
     top: 14%;
     right: 14%;
-      @include respond-to("bp-max-820") {
-        width: 75vw;
-        height: 76vw;
-        top: 36%;
-        right: 14%;
-      }
+    @include respond-to("bp-max-820") {
+      width: 75vw;
+      height: 76vw;
+      top: 36%;
+      right: 14%;
+    }
     span {
       width: 100%;
       height: 100%;
       display: block;
       background: url('~@/assets/images/projects/initech/mobilian/mobilian_01@2x.png') no-repeat center center ;
-     
       background-size: 100% auto;
-      image-rendering: -webkit-optimize-contrast;
-      transform: translateZ(0);
-      backface-visibility: hidden;
-
     }
     &::before {
       content: '';
@@ -549,33 +584,26 @@ button { padding: 0; cursor: pointer;}
       }
     }
   }
-    &.sh-bank {
+  &.sh-bank {
     width: 56vw;
     height: 35vw;
     position: absolute;
-    top: 70%;
-    right: 0;
+    top: 81%;
+    right: 3%;
 
- @include respond-to("bp-max-820") {
-   width: 76vw;
-    height: 48vw;
-    top: 70%;
-    left: 50%;
-    @include translateX(-50%)
- }
-       
-
-
+    @include respond-to("bp-max-820") {
+      width: 85vw;
+      height: 53vw;
+      top: 20vw;
+      left: 50%;
+      @include translateX(-50%);
+    }
     span {
       width: 100%;
       height: 100%;
       display: block;
       background: url('~@/assets/images/projects/initech/suhyup/project_mockup_01.png') no-repeat center center ;
       background-size: 100% auto;
-      image-rendering: -webkit-optimize-contrast;
-      transform: translateZ(0);
-      backface-visibility: hidden;
-
     }
   }
   &.pc {
@@ -603,11 +631,8 @@ button { padding: 0; cursor: pointer;}
         image-rendering: -webkit-optimize-contrast;
         transform: translateZ(0);
         backface-visibility: hidden;
-  
       }
-      
     }
-
   }
   &.mo {
     &.inihub {
@@ -637,14 +662,9 @@ button { padding: 0; cursor: pointer;}
       }
     }
   }
-  
 }
 
-
-
-
 .ttl {
-  
   h2 { 
     display: inline-block;
     font-size: 30px;
@@ -671,7 +691,6 @@ button { padding: 0; cursor: pointer;}
 }
 .hiring-info {
   margin-top: 80px;
- // @include clearfix;
  @include respond-to("bp-max-820") {
     margin-top: 12vw;
   }
@@ -679,12 +698,6 @@ button { padding: 0; cursor: pointer;}
     height: auto;
     @include respond-to("bp-max-820") {
     text-align: left;
-    }
-  }
-  .inner {
-      @include respond-to("bp-max-820") {
-    width: 86%;
-    margin: 0 auto;
     }
   }
   .center {
@@ -697,20 +710,22 @@ button { padding: 0; cursor: pointer;}
     background: #707070;
     margin-bottom: 24px;
   }
-
-
-
   .col {
- //   @include clearfix;
+    //   @include clearfix;
     display: block;
     float: left;
     width: 50%;
-     @include respond-to("bp-max-820") {
-       width: 100%;
-       margin-top: 10vw;
-     }
+    text-align: left;
+    @include respond-to("bp-max-820") {
+      width: 100%;
+      //margin-top: 10vw;
+    }
   }
-
+  .col + .col {
+    @include respond-to("bp-max-820") {
+      margin-top: 13vw;
+    }
+  }
 
   dl {
     width: 100%;
@@ -721,6 +736,7 @@ button { padding: 0; cursor: pointer;}
      }
     dt {
       display: inline-block; 
+      width: 12%;
       @include respond-to("bp-max-820") {
       width: 40%;
       padding: 1vw 0;
@@ -735,409 +751,393 @@ button { padding: 0; cursor: pointer;}
      }
     }
   }
-   @include respond-to("bp-max-820") {
-     dl { line-height: 5vw;
-    }
-     dl + dl {border-top: 1px solid #1111;}
-   }  
+  @include respond-to("bp-max-820") {
+    dl { line-height: 5vw;}
+    dl + dl {border-top: 1px solid #1111;}
+  }  
 
-.visual-box {
-  position: relative;
-  width: 100%;
-  margin-top: 1vw;
-   @include respond-to("bp-max-820") {
-      margin-top: 3vw;
-   }
-  .visual__ttl {
-    text-align: center;
-    margin-bottom: 1vw;
-  }
-  
-  &.col {
-    float: left;
-    width: 50%;
+  .visual-box {
     position: relative;
-  }
-  .mockup_sub {
-    position: relative;
-    width: 760px;
-    height: 436px;
-    margin: 0 auto;
+    width: 100%;
+    margin-top: 1vw;
     @include respond-to("bp-max-820") {
-          width: 60vw;
-    height: 35vw;
+      margin-top: 10vw;
     }
-    span {
-      display: block;
-      width: 100%;
-      height: 100%;
-      image-rendering: -webkit-optimize-contrast;
-      transform: translateZ(0);
-      backface-visibility: hidden;
+    .visual__ttl {
+      text-align: center;
+      margin-bottom: 1vw;
     }
-
-    // nexess 데모
-    &.nexess1 {
+    &.col {
+      float: left;
+      width: 50%;
+      position: relative;
+    }
+    .mockup_sub {
+      position: relative;
+      width: 760px;
+      height: 436px;
       margin: 0 auto;
-      span {
-        background: url('~@/assets/images/projects/initech/nexess/project_nexess_sub_01@2x.png') no-repeat ;
-        background-size: 100%;
+      @include respond-to("bp-max-820") {
+        width: 60vw;
+        height: 35vw;
       }
-    }
-    &.nexess2 {
       span {
-        background: url('~@/assets/images/projects/initech/nexess/project_nexess_sub_02@2x.png') no-repeat;
-        position: absolute;
-        top: 50%;
-        left: -10%;
-        transform: translateY(-50%);
-        background-size: 100%;
+        display: block;
+        width: 100%;
+        height: 100%;
+        @include background-image-render;
       }
-    }
-    &.nexess3 {
-      span {
-        background: url('~@/assets/images/projects/initech/nexess/project_nexess_sub_03@2x.png') no-repeat ;
-        background-size: 100%;
-        position: absolute;
-        top: 50%;
-        right: -10%;
-        transform: translateY(-50%);
+
+      // nexess 데모
+      &.nexess1 {
+        margin: 0 auto;
+        span {
+          background: url('~@/assets/images/projects/initech/nexess/project_nexess_sub_01@2x.png') no-repeat ;
+          background-size: 100%;
+        }
       }
-    }
-    &.nexess4 {
-      span {
-        background: url('~@/assets/images/projects/initech/nexess/project_nexess_sub_04@2x.png') no-repeat ;
-        background-size: 100%;
-        position: absolute;
-        top: 50%;
-        right: -10%;
-        transform: translateY(-50%);
+      &.nexess2 {
+        span {
+          background: url('~@/assets/images/projects/initech/nexess/project_nexess_sub_02@2x.png') no-repeat;
+          position: absolute;
+          top: 50%;
+          left: -10%;
+          transform: translateY(-50%);
+          background-size: 100%;
+        }
       }
-    }
-    &.nexess5 {
-      span {
-        background: url('~@/assets/images/projects/initech/nexess/project_nexess_sub_05@2x.png') no-repeat ;
-        background-size: 100%;
-        position: absolute;
-        top: 50%;
-        left: -10%;
+      &.nexess3 {
+        span {
+          background: url('~@/assets/images/projects/initech/nexess/project_nexess_sub_03@2x.png') no-repeat ;
+          background-size: 100%;
+          position: absolute;
+          top: 50%;
+          right: -10%;
+          transform: translateY(-50%);
+        }
+      }
+      &.nexess4 {
+        span {
+          background: url('~@/assets/images/projects/initech/nexess/project_nexess_sub_04@2x.png') no-repeat ;
+          background-size: 100%;
+          position: absolute;
+          top: 50%;
+          right: -10%;
+          transform: translateY(-50%);
+        }
+      }
+      &.nexess5 {
+        span {
+          background: url('~@/assets/images/projects/initech/nexess/project_nexess_sub_05@2x.png') no-repeat ;
+          background-size: 100%;
+          position: absolute;
+          top: 50%;
+          left: -10%;
+          @include translateY(-50%);
+        }
+      }
+      &.nexess6 {
+        span {
+          background: url('~@/assets/images/projects/initech/nexess/project_nexess_sub_06@2x.png') no-repeat ;
+          background-size: 100%;
+          position: absolute;
+          top: 50%;
+          right: -10%;
+          @include translateY(-50%);
+        }
+      }
+      &.nexess7 {
+        span {
+          background: url('~@/assets/images/projects/initech/nexess/project_nexess_sub_07@2x.png') no-repeat ;
+          background-size: 100%;
+          position: absolute;
+          top: 50%;
+          left: -10%;
+          @include translateY(-50%);
+        }
+      }
+      &.nexess8 {
+        span {
+          background: url('~@/assets/images/projects/initech/nexess/project_nexess_sub_08@2x.png') no-repeat ;
+          background-size: 100%;
+          position: absolute;
+          top: 50%;
+          right: -15%;
+          transform: translateY(-50%);
+        }
+      }
+      &.nexess9 {
+      // span {
+        //  background: url('~@/assets/images/projects/iam_nexess/project_nexess_sub_09@2x.png') no-repeat ;
+          background-size: 100%;
+          position: absolute;
+          top: 50%;
+          left: -15%;
+          transform: translateY(-50%);
+      }
       
-         @include translateY(-50%)
+      // 수협
+      &.sh-bank1 {
+        margin: 0 auto;
+        span {
+          background: url('~@/assets/images/projects/initech/suhyup/shbank_main_01.png') no-repeat ;
+          background-size: 100%;
+        }
       }
-    }
-    &.nexess6 {
-      span {
-        background: url('~@/assets/images/projects/initech/nexess/project_nexess_sub_06@2x.png') no-repeat ;
-        background-size: 100%;
+      &.sh-bank2 {
+        span {
+          background: url('~@/assets/images/projects/initech/suhyup/shbank_main_02.png') no-repeat;
+          position: absolute;
+          top: 50%;
+          left: -10%;
+          @include translateY(-50%)
+          //background-size: 100%;
+        }
+      }
+      &.sh-bank3 {
+        span {
+          background: url('~@/assets/images/projects/initech/suhyup/shbank_main_03.png') no-repeat ;
+          background-size: 100%;
+          position: absolute;
+          top: 50%;
+          right: -10%;
+          @include translateY(-50%)
+        }
+      }
+      &.sh-bank4 {
+        span {
+          background: url('~@/assets/images/projects/initech/suhyup/shbank_sub_01.png') no-repeat ;
+          background-size: 100%;
+          position: absolute;
+          top: 50%;
+          right: -10%;
+          @include translateY(-50%);
+          @include respond-to("bp-max-820") {
+            right: 0;
+          }
+        }
+      }
+      &.sh-bank5 {
+        span {
+          background: url('~@/assets/images/projects/initech/suhyup/shbank_sub_02.png') no-repeat ;
+          background-size: 100%;
+          position: absolute;
+          top: 50%;
+          left: -10%;
+          @include translateY(-50%)
+        }
+      }
+      &.sh-bank6 {
+        span {
+          background: url('~@/assets/images/projects/initech/suhyup/shbank_sub_03.png') no-repeat ;
+          background-size: 100%;
+          position: absolute;
+          top: 50%;
+          right: -10%;
+          @include translateY(-50%)
+        }
+      }
+      &.sh-bank7 {
+        span {
+          background: url('~@/assets/images/projects/initech/suhyup/shbank_sub_04.png') no-repeat ;
+          background-size: 100%;
+          position: absolute;
+          top: 50%;
+          left: -10%;
+          @include translateY(-50%)
+        }
+      }
+
+      /*
+      &.nexess10 {
+        span {
+          background: url('~@/assets/images/projects/initech/nexess/project_nexess_sub_10@2x.png') no-repeat ;
+          background-size: 100%;
+          position: absolute;
+          top: 50%;
+          right: -15%;
+          @include translateY(-50%)
+        }
+      }
+
+      &.mobilian1 {
+        width: 360px;
+        height: 779px;
         position: absolute;
-        top: 50%;
-        right: -10%;
+        left: 0;
+        top: 28px;
+        span {
+          background: url('~@/assets/images/projects/initech/mobilian/mobilian_02@2x.png') no-repeat ;
+          background-size: 100%;
+        }
+      }
+      &.mobilian2 {
+        width: 360px;
+        height: 779px;
+        position: absolute;
+        left: 21%;
+        top: 28px;
+        span {
+          background: url('~@/assets/images/projects/initech/mobilian/mobilian_04@2x.png') no-repeat ;
+          background-size: 100%;
+        }
+      }
+      &.mobilian3 {
+        width: 360px;
+        height: 779px;  
+        span {
+          background: url('~@/assets/images/projects/initech/mobilian/mobilian_03@2x.png') no-repeat ;
+          background-size: 100%;
+        }
+      }
+      &.mobilian4 {
+        width: 360px;
+        height: 779px;
+        position: absolute;
+        left: 0;
+        top: 32px;
+        span {
+          background: url('~@/assets/images/projects/initech/mobilian/mobilian_05@2x.png') no-repeat ;
+          background-size: 100%;
+        }
+      }
+      &.mobilian5 {
+        width: 360px;
+        height: 779px;
+        span {
+          background: url('~@/assets/images/projects/initech/mobilian/mobilian_06@2x.png') no-repeat ;
+          background-size: 100%;
+        }
+      }
+      &.mobilian6 {
+        width: 360px;
+        height: 779px;
+        position: absolute;
+        left: 60%;
+        top: 32px;
+        span {
+          background: url('~@/assets/images/projects/initech/mobilian/mobilian_07@2x.png') no-repeat ;
+          background-size: 100%;
+        }
+      }
+      &.inihub1 {
+        // mo
+        width: 320px;
+        height: 692px;
+        //position: absolute;
+        //left: 0;
+        //top: 32px;
+        span {
+        background: url('~@/assets/images/projects/initech/inihub/inihub_m_01@2x.png') no-repeat ;
+          background-size: 100%;
+        }
+      }
+      &.inihub2 {
+        width: 20vw;
+        height: 573px;
+        span {
+          background: url('~@/assets/images/projects/initech/inihub/inihub_pc_01.png') no-repeat ;
+          background-size: 100%;
+        }
+      }
+      &.inihub5 {
+        // pc
+        margin: 0;
+        width: 610px;
+        width: 20vw;
+        height: 573px;
+        //position: absolute;
+        //left: 0;
+        //top: 32px;
+        span {
+          background: url('~@/assets/images/projects/initech/inihub/inihub_pc_02@2x.png') no-repeat ;
+          background-size: 100%;
+        }
+      }
+      &.inihub4 {
+        // pc
+        width: 20vw;
+        height: 573px;
+        position: absolute;
+        left: 18%;
+        top: 32px;
+        span {
+          background: url('~@/assets/images/projects/initech/inihub/inihub_pc_03@2x.png') no-repeat ;
+          background-size: 100%;
+        }
+      }
+      &.inihub3 {
+        // pc
+        width: 20vw;
+        height: 573px;
+        position: absolute;
+        left: 38%;
+        top: 32px;
+        span {
+          background: url('~@/assets/images/projects/initech/inihub/inihub_pc_04@2x.png') no-repeat ;
+          background-size: 100%;
+        }
+      }
+      &.inihub6 {
+        // mow
+        width: 320px;
+        height: 692px;
+        position: absolute;
+        right: 15%;
+        top: 32px;
+        span {
+          background: url('~@/assets/images/projects/initech/inihub/inihub_m_02@2x.png') no-repeat ;
+          background-size: 100%;
+        }
+      }
+      &.inihub7 {
+        // mow
+        width: 320px;
+        height: 692px;
+        position: absolute;
+        right: 0;
+        top: 32px;
+        span {
+          background: url('~@/assets/images/projects/initech/inihub/inihub_m_03@2x.png') no-repeat ;
+          background-size: 100%;
+        }
+      }
+      &.inihub8 {
+        // pc
+        width: 20vw;
+        height: 573px;
+        position: absolute;
+        span {
+          background: url('~@/assets/images/projects/initech/inihub/inihub_pc_05@2x.png') no-repeat ;
+          background-size: 100%;
+        }
+      }
+      &.inihub9 {
+        // mow
+        width: 320px;
+        height: 692px;
+        position: absolute;
+        left: 0;
+        top: 32px;
+        span {
+          background: url('~@/assets/images/projects/initech/inihub/inihub_m_02@2x.png') no-repeat ;
+          background-size: 100%;
+        }
+      }
+      */
+          
+    }
   
-         @include translateY(-50%)
-      }
-    }
-    &.nexess7 {
-      span {
-        background: url('~@/assets/images/projects/initech/nexess/project_nexess_sub_07@2x.png') no-repeat ;
-        background-size: 100%;
-        position: absolute;
-        top: 50%;
-        left: -10%;
-      @include translateY(-50%);
-      }
-    }
-    &.nexess8 {
-      span {
-        background: url('~@/assets/images/projects/initech/nexess/project_nexess_sub_08@2x.png') no-repeat ;
-        background-size: 100%;
-        position: absolute;
-        top: 50%;
-        right: -15%;
-        transform: translateY(-50%);
-      }
-    }
-    &.nexess9 {
-     // span {
-      //  background: url('~@/assets/images/projects/iam_nexess/project_nexess_sub_09@2x.png') no-repeat ;
-        background-size: 100%;
-        position: absolute;
-        top: 50%;
-        left: -15%;
-        transform: translateY(-50%);
-      }
-     
-    // 수협
-     &.sh-bank1 {
-      margin: 0 auto;
-      span {
-        background: url('~@/assets/images/projects/initech/suhyup/shbank_main_01.png') no-repeat ;
-        background-size: 100%;
-      }
-    }
-    &.sh-bank2 {
-      span {
-        background: url('~@/assets/images/projects/initech/suhyup/shbank_main_02.png') no-repeat;
-        position: absolute;
-        top: 50%;
-        left: -10%;
-        @include translateY(-50%)
-        background-size: 100%;
-      }
-    }
-    &.sh-bank3 {
-      span {
-        background: url('~@/assets/images/projects/initech/suhyup/shbank_main_03.png') no-repeat ;
-        background-size: 100%;
-        position: absolute;
-        top: 50%;
-        right: -10%;
-        @include translateY(-50%)
-      }
-    }
-    &.sh-bank4 {
-      span {
-        background: url('~@/assets/images/projects/initech/suhyup/shbank_sub_01.png') no-repeat ;
-        background-size: 100%;
-        position: absolute;
-        top: 50%;
-        right: -10%;
-      @include translateY(-50%);
-       @include respond-to("bp-max-820") {
-         right: 0;
-       }
-      }
-    }
-    &.sh-bank5 {
-      span {
-        background: url('~@/assets/images/projects/initech/suhyup/shbank_sub_02.png') no-repeat ;
-        background-size: 100%;
-        position: absolute;
-        top: 50%;
-        left: -10%;
-        @include translateY(-50%)
-      }
-    }
-    &.sh-bank6 {
-      span {
-        background: url('~@/assets/images/projects/initech/suhyup/shbank_sub_03.png') no-repeat ;
-        background-size: 100%;
-        position: absolute;
-        top: 50%;
-        right: -10%;
-        @include translateY(-50%)
-      }
-    }
-    &.sh-bank7 {
-      span {
-        background: url('~@/assets/images/projects/initech/suhyup/shbank_sub_04.png') no-repeat ;
-        background-size: 100%;
-        position: absolute;
-        top: 50%;
-        left: -10%;
-        @include translateY(-50%)
-      }
-    }
     
-      
-    }
-    &.nexess10 {
-      span {
-        background: url('~@/assets/images/projects/initech/nexess/project_nexess_sub_10@2x.png') no-repeat ;
-        background-size: 100%;
-        position: absolute;
-        top: 50%;
-        right: -15%;
-       @include translateY(-50%)
-      }
-    }
-
-    &.mobilian1 {
-      width: 360px;
-      height: 779px;
-      position: absolute;
-      left: 0;
-      top: 28px;
-      span {
-        background: url('~@/assets/images/projects/initech/mobilian/mobilian_02@2x.png') no-repeat ;
-        background-size: 100%;
-      }
-    }
-    &.mobilian2 {
-      width: 360px;
-      height: 779px;
-      position: absolute;
-      left: 21%;
-      top: 28px;
-      span {
-        background: url('~@/assets/images/projects/initech/mobilian/mobilian_04@2x.png') no-repeat ;
-        background-size: 100%;
-      }
-    }
-    &.mobilian3 {
-      width: 360px;
-      height: 779px;
-      
-      span {
-        background: url('~@/assets/images/projects/initech/mobilian/mobilian_03@2x.png') no-repeat ;
-        background-size: 100%;
-      }
-    }
-    &.mobilian4 {
-      width: 360px;
-      height: 779px;
-      position: absolute;
-      left: 0;
-      top: 32px;
-      span {
-        background: url('~@/assets/images/projects/initech/mobilian/mobilian_05@2x.png') no-repeat ;
-        background-size: 100%;
-      }
-    }
-    &.mobilian5 {
-      width: 360px;
-      height: 779px;
-      span {
-        background: url('~@/assets/images/projects/initech/mobilian/mobilian_06@2x.png') no-repeat ;
-        background-size: 100%;
-      }
-    }
-    &.mobilian6 {
-      width: 360px;
-      height: 779px;
-      position: absolute;
-      left: 60%;
-      top: 32px;
-      span {
-        background: url('~@/assets/images/projects/initech/mobilian/mobilian_07@2x.png') no-repeat ;
-        background-size: 100%;
-      }
-    }
-    &.inihub1 {
-      // mo
-      width: 320px;
-      height: 692px;
-      //position: absolute;
-      //left: 0;
-      //top: 32px;
-      span {
-       background: url('~@/assets/images/projects/initech/inihub/inihub_m_01@2x.png') no-repeat ;
-        background-size: 100%;
-      }
-    }
-    &.inihub2 {
-      width: 20vw;
-      height: 573px;
-      //position: absolute;
-      //left: 360px;
-     // top: 32px;
-      span {
-        background: url('~@/assets/images/projects/initech/inihub/inihub_pc_01.png') no-repeat ;
-        background-size: 100%;
-      }
-    }
-    &.inihub5 {
-      // pc
-      margin: 0;
-      width: 610px;
-      width: 20vw;
-      height: 573px;
-      //position: absolute;
-      //left: 0;
-      //top: 32px;
-      span {
-        background: url('~@/assets/images/projects/initech/inihub/inihub_pc_02@2x.png') no-repeat ;
-        background-size: 100%;
-      }
-    }
-    &.inihub4 {
-      // pc
-      width: 20vw;
-      height: 573px;
-      position: absolute;
-      left: 18%;
-      top: 32px;
-      span {
-        background: url('~@/assets/images/projects/initech/inihub/inihub_pc_03@2x.png') no-repeat ;
-        background-size: 100%;
-      }
-    }
-    &.inihub3 {
-      // pc
-      width: 20vw;
-      height: 573px;
-      position: absolute;
-      left: 38%;
-      top: 32px;
-      span {
-        background: url('~@/assets/images/projects/initech/inihub/inihub_pc_04@2x.png') no-repeat ;
-        background-size: 100%;
-      }
-    }
-    &.inihub6 {
-      // mow
-      width: 320px;
-      height: 692px;
-      position: absolute;
-      right: 15%;
-      top: 32px;
-      span {
-        background: url('~@/assets/images/projects/initech/inihub/inihub_m_02@2x.png') no-repeat ;
-        background-size: 100%;
-      }
-    }
-    &.inihub7 {
-       // mow
-       width: 320px;
-       height: 692px;
-      position: absolute;
-      right: 0;
-      top: 32px;
-      span {
-        background: url('~@/assets/images/projects/initech/inihub/inihub_m_03@2x.png') no-repeat ;
-        background-size: 100%;
-      }
-    }
-    &.inihub8 {
-      // pc
-      width: 20vw;
-      height: 573px;
-      position: absolute;
-      //left: 20%;
-      //top: 32px;
-      span {
-        background: url('~@/assets/images/projects/initech/inihub/inihub_pc_05@2x.png') no-repeat ;
-        background-size: 100%;
-      }
-    }
-    &.inihub9 {
-      // mow
-      width: 320px;
-       height: 692px;
-      position: absolute;
-      left: 0;
-      top: 32px;
-      span {
-        background: url('~@/assets/images/projects/initech/inihub/inihub_m_02@2x.png') no-repeat ;
-        background-size: 100%;
-      }
-    }
-   
-
   }
 
-
-
-  }
-
-
+}
 
 .project__desc {
   margin-top: 16px;
   dt {display: block;  line-height: 1.5em;}
   dd {padding:0 ;}
 }
-
-
 
 .section-wrap {
   margin-top: 8vw;
@@ -1155,40 +1155,43 @@ button { padding: 0; cursor: pointer;}
   }
  
 }
- .style-guide {
-    float: left;
-   
-    .sub-ttl {
-      width: 50%;
-      h4 {
-        font-size: 24px;
-        float: left;
-         @include respond-to("bp-max-820") {
-             font-size: 3.5vw;
-         }
+.style-guide {
+  float: left;
+  .sub-ttl {
+    width: 50%;
+      @include respond-to("bp-max-820") {
+      float: left;
+      width: 10%;
       }
-    }
-    .palette-wrap {
-      float : left;
-      margin-left: 10vw;
-      ul {
-        width: 100%;
-        height: 100%;
+    h4 {
+      font-size: 24px;
+      float: left;
+        @include respond-to("bp-max-820") {
+            font-size: 3.5vw;
         
-        display: block;
-        li {
-          float: left;
-          width: 36px;
-          height: 36px;
-          background: #000;
         }
-        li + li {
-          margin-left: 0.5vw;
-        }
+    }
+  }
+  .palette-wrap {
+    float : left;
+    margin-left: 10vw;
+    ul {
+      width: 100%;
+      height: 100%;
+      
+      display: block;
+      li {
+        float: left;
+        width: 36px;
+        height: 36px;
+        background: #000;
+      }
+      li + li {
+        margin-left: 0.5vw;
       }
     }
   }
-
+}
 
 .ia-tbl-wrap {
   position: relative;
@@ -1224,30 +1227,15 @@ button { padding: 0; cursor: pointer;}
   
 
   }
-
 }
 
-.hash-group {
-  display: block;
-  float: left;
-  width: 100%;
-  margin-bottom: 2rem;
-  ul {
-    li {
-      float: left;
-      
-    }
-    li + li {
-      margin-left: 1.25rem;
-    }
-  }
-}
 .project-main1 {
-.inner {    width: 1600px;
+  .inner {    
+    max-width: 1600px;
     margin: 0 auto;
-   @include respond-to("bp-max-820") {
-     width: 86%;
-   }
+    @include respond-to("bp-max-1366") {
+      width: 100%;
+    }
   }
 }
 
@@ -1311,3 +1299,18 @@ button { padding: 0; cursor: pointer;}
   }
 }
 
+.project-detail {
+  .inner {
+    width: calc(100% - 80px);
+    max-width: 1600px;
+    margin: 0 auto;
+    @include respond-to("bp-max-1366") {
+      width: calc(100% - 10%);
+      margin: 0 5%;
+    }
+     @include respond-to("bp-max-820") {
+
+     }
+  }
+ 
+}
