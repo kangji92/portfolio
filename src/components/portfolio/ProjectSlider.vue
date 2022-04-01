@@ -168,7 +168,7 @@ export default {
           idx: "04",
           id: "inihub",
           name: "inihub",
-          ttl: "인증통합플랫폼 이니허브 개발",
+          ttl: "인증통합플랫폼 이니허브 UI 개발",
           sub_ttl: "보안솔루션 신제품 ",
           info_dt_01: "<b>기간: </b>",
           info_dd_01: "2021.07 ~ 2021.08",

@@ -5,7 +5,7 @@
     <AppFooter></AppFooter>
     <router-view></router-view>
     <TestModal v-if="isModalViewed" @close-modal="closeModal"></TestModal>
-    <button class="button" @click="openModal">열기</button>
+    <!--<button class="button" @click="openModal">열기</button>-->
   </div>
 </template>
 <script>

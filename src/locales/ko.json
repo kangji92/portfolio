@@ -32,51 +32,65 @@
         "info_dt_02": "<b>담당업무: </b>",
         "info_dt_03" : "<b>마크업/개발방식: </b>",
         "info_dt_04": "<b>사용 Tool: </b>",
-
-
-       
-        "ttl_sh-bank" : "Sh수협은행 Nextro시스템 고도화",
-        "subttl_sh-bank" : "PC Web",
-
-
-        "ttl_nexess": "Nexess Demo System 구축",
-        "subttl_nexess": "반응형 Web (PC / Tablet)",
         "info_date": "날짜 : ",
         "info_output" : "기여도 : ",
-        "nexess_info_date" : "2020.05 - 2020.08",
-        "nexess_info_output" : "퍼블리싱 100%",
 
+        "ttl_sh-bank" : "수협은행 Nextro시스템 고도화",
+        "subttl_sh-bank" : "PC Web",
+        "sh-bank_info_date" : "2021.07 ~ 2021.08",
+        "sh-bank_info_output": "퍼블리싱 100%",
 
-        "artical_ttl_01": "Tech Stack",
-        "artical_ttl_02" : "Style Guides",
-        "artical_ttl_03" : "Main Page",
-        "artical_ttl_04" : "Sub Pages",
-        "artical_ttl_05" : "Style Guides",
-        
         "ttl_mobilian": "공동인증서(구 공인인증서) <br> MobilianWeb 고도화",
         "subttl_mobilian": "Mobile / Tablet",
         "mobilian_info_date" : "2021.05 - 2021.08",
         "mobilian_info_output" : "퍼블리싱 100%, 프론트엔드 80% ",
-
-        "ttl_inihub": "인증통합플랫폼 이니허브 UI 개발",
-        "subttl_inihub": "Responsive Web (PC / Tablet / Mobile)",
-        "inihub_info_date" : "2020.12 - 2021.07",
-        "inihub_info_output" : "퍼블리싱 100% / 프론트엔드 80%",
 
         "ttl_kyobo": "교보생명 통합인증센터 구축",
         "subttl_kyobo": "Responsive Web (PC / Tablet / Mobile)",
         "kyobo_info_date" : "2020.12 - 2021.07",
         "kyobo_info_output" : "퍼블리싱 100% / 프론트엔드 80%",
 
+        "ttl_inihub": "인증통합플랫폼 이니허브 UI 개발",
+        "subttl_inihub": "Responsive Web (PC / Tablet / Mobile)",
+        "inihub_info_date" : "2020.12 - 2021.07",
+        "inihub_info_output" : "퍼블리싱 100% / 프론트엔드 80%",
+
+        "ttl_nexess": "Nexess Demo System 구축",
+        "subttl_nexess": "반응형 Web (PC / Tablet)",
+        "nexess_info_date" : "2020.05 - 2020.08",
+        "nexess_info_output" : "퍼블리싱 100%",
+
+        "ttl_multi-demo": "멀티인증 Demo 시스템 구축",
+        "subttl_multi-demo":"Responsive Web (PC / Mobile)", 
+        "multi-demo_info_date" : "2019.01 - 2019.12",
+        "multi-demo_info_output" : "퍼블리싱 100%",
+   
+        "ttl_inipass": "공인인증서 이니패스 운영 및 유지보수",
+        "subttl_inipass":"PC / Mobile", 
+        "inipass_info_date" : "2019.09 ~ 2020.02",
+        "inipass_info_output" : "퍼블리싱 100%",
+
+        "ttl_lotte": "롯데백화점 하이드리드앱 운영관리",
+        "subttl_lotte":"PC / Mobile", 
+        "lotte_info_date" : "2019.07 ~ 20219.08",
+        "lotte_info_output" : "퍼블리싱 100%",
+
+        "ttl_lotte-event": "롯데백화점 이벤트존 컨텐츠 템플릿화",
+        "subttl_lotte-event":"PC / Mobile", 
+        "lotte-event_info_date" : "2019.07 ~ 20219.08",
+        "lotte-event_info_output" : "퍼블리싱 100%",
+
         "ttl_wedding": "모바일 청첩장",
         "subttl_wedding":"Mobile", 
         "wedding_info_date" : "2019.10",
         "wedding_info_output" : "퍼블리싱 100%",
 
-        "ttl_multi-demo": "멀티인증 Demo 시스템 구축",
-        "subttl_multi-demo":"Responsive Web (PC / Mobile)", 
-        "multi-demo_info_date" : "2019.01 - 2019.12",
-        "multi-demo_info_output" : "퍼블리싱 100%"
+        "artical_ttl_01": "Tech Stack",
+        "artical_ttl_02" : "Style Guides",
+        "artical_ttl_03" : "Main Page",
+        "artical_ttl_04" : "Sub Pages",
+        "artical_ttl_05" : "Style Guides"
+
     },
 
     "prj_mobilian" : {

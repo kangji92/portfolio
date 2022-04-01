@@ -63,6 +63,10 @@
                 <dt>Server :</dt>
                 <dd>Tomcat</dd>
               </dl>
+              <dl>
+                <dt>UI Desgin Guide Tool :</dt>
+                <dd>Photoshop</dd>
+              </dl>
               <dl class="project__desc">
                 <dt>웹 호환성</dt>
                 <dd>
@@ -85,7 +89,6 @@
                   <div class="sub-ttl">
                     <h4>Colors</h4>
                   </div>
-
                   <div class="palette-wrap">
                     <ul>
                       <li></li>

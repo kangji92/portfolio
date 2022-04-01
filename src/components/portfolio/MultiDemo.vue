@@ -45,11 +45,12 @@
                   <dt>웹 호환성</dt>
                   <dd>
                     - PC : Chrome, Firefox, IE11, Safari <br />
-                    - Tablet : Android 6.X / IOS 10.X
+                    - Tablet/Mobile : Android 6.X / IOS 10.X
                   </dd>
                 </dl>
                 <dl class="project__desc">
                   <dt>해상도 범위</dt>
+                  <dd>- PC/ Tablet(가로) : 801px ~ 1920px</dd>
                   <dd>- Mobile / Tablet(세로) : 320px ~ 800px</dd>
                 </dl>
                 <button class="btn__line" type="button">View Demo</button>
@@ -68,36 +69,24 @@
                 <h2>{{ $t("project.artical_ttl_01") }}</h2>
               </div>
               <dl>
-                <dt>Encode :</dt>
+                <dt>인코딩 :</dt>
                 <dd>UTF-8</dd>
               </dl>
               <dl>
                 <dt>SCM :</dt>
-                <dd>Git</dd>
+                <dd>SVN</dd>
               </dl>
               <dl>
-                <dt>Git Cloud Service :</dt>
+                <dt>Cloud Service :</dt>
                 <dd>Bitbucket</dd>
               </dl>
               <dl>
-                <dt>Git-GUI :</dt>
-                <dd>Sourcetree</dd>
-              </dl>
-              <dl>
-                <dt>Framework :</dt>
-                <dd>Vue.js (Vue-cli)</dd>
+                <dt>Server :</dt>
+                <dd>Tomcat</dd>
               </dl>
               <dl>
                 <dt>UI Desgin Guide Tool :</dt>
-                <dd>Zeplin</dd>
-              </dl>
-              <dl class="project__desc">
-                <dt>Details</dt>
-                <dd>
-                  - Vuex 상태관리 <br />
-                  - i18n 다국어 지원<br />
-                  - Vue-router 라우팅 기능
-                </dd>
+                <dd>Photoshop</dd>
               </dl>
             </div>
             <div class="col">
@@ -109,7 +98,6 @@
                 <div class="sub-ttl">
                   <h4>Colors</h4>
                 </div>
-
                 <div class="palette-wrap">
                   <ul>
                     <li></li>

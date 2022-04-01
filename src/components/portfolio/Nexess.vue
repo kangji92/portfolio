@@ -51,17 +51,21 @@
               <div class="ttl">
                 <h2>{{ $t("project.artical_ttl_01") }}</h2>
               </div>
-              <dl>
+              <dl class="project__desc">
                 <dt>인코딩 :</dt>
                 <dd>UTF-8</dd>
               </dl>
-              <dl>
+              <dl class="project__desc">
                 <dt>SCM :</dt>
                 <dd>SVN</dd>
               </dl>
-              <dl>
+              <dl class="project__desc">
                 <dt>Server :</dt>
                 <dd>Tomcat</dd>
+              </dl>
+              <dl class="project__desc">
+                <dt>UI Desgin Guide Tool :</dt>
+                <dd>Photoshop</dd>
               </dl>
               <dl class="project__desc">
                 <dt>웹 호환성</dt>

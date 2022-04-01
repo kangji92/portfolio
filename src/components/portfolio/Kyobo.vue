@@ -89,7 +89,7 @@
               </dl>
               <dl>
                 <dt>UI Desgin Guide Tool :</dt>
-                <dd>Zeplin</dd>
+                <dd>Zeplin, Photoshop</dd>
               </dl>
               <dl class="project__desc">
                 <dt>Details</dt>
@@ -98,6 +98,17 @@
                   - i18n 다국어 지원<br />
                   - Vue-router 라우팅 기능
                 </dd>
+              </dl>
+              <dl class="project__desc">
+                <dt>웹 호환성</dt>
+                <dd>
+                  - PC : Chrome, Firefox, IE11, Safari <br />
+                  - Tablet : Android 6.X / IOS 10.X
+                </dd>
+              </dl>
+              <dl class="project__desc">
+                <dt>해상도 범위</dt>
+                <dd>- PC/ Tablet(가로) : 801px ~ 1920px</dd>
               </dl>
             </div>
             <div class="col">
