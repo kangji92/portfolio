@@ -2,11 +2,12 @@
 
 .project-detail {
  // position: fixed;
- // width: 100%;
+  width: 100%;
  // left:0;
  // top: 0;
- // height: 100%;
- // background-color: #fff;
+ float: left;
+  height: 100%;
+ background-color: #fff;
   z-index: 10000;
    font-family: $font-eng;
 }
@@ -494,11 +495,11 @@ button { padding: 0; cursor: pointer;}
               float: left;
               font-size: 1.5vw;
               @include respond-to("bp-max-820") {
-                font-size: 4vw;
+                font-size: 3vw;
               }
             }
             li + li {
-              margin-left: 1.25rem;
+              margin-left: 2vw;
             }
           }
           
@@ -545,11 +546,11 @@ button { padding: 0; cursor: pointer;}
     top: 81%;
     right: 3%;
     @include respond-to("bp-max-820") {
-    width: 85vw;
-    height: 53vw;
-    top: 70%;
-    left: 50%;
-    transform: translateX(-50%);
+      width: 85vw;
+      height: 53vw;
+      top: 25%;
+      left: 50%;
+      transform: translateX(-50%);
     }
     
     span {
@@ -633,7 +634,7 @@ button { padding: 0; cursor: pointer;}
       @include respond-to("bp-max-820") {
         width: 80vw;
            height: 51vw;
-        top:36%;
+       top: 31%;
          left: 18%;
        }
       span {
@@ -660,7 +661,7 @@ button { padding: 0; cursor: pointer;}
       @include respond-to("bp-max-820") {
         width: 46vw;
         height: 46vw;
-        top: 50%;
+        top: 40%;
         left: -9%;
        }
       span {
@@ -778,20 +779,27 @@ button { padding: 0; cursor: pointer;}
     width: 100%;
     margin-top: 1vw;
     @include respond-to("bp-max-820") {
-      margin-top: 5vw;
+      margin-top: 10vw;
     }
     .visual__ttl {
       text-align: center;
-      margin-bottom: 1vw;
+      margin-bottom: 2vw;
     }
     &.col {
       float: left;
       width: 50%;
       position: relative;
-      @include respond-to("bp-max-820") {
-      height: 87vw;
+       @include respond-to("bp-max-820") {
+        height: 91vw;
        }
       
+      &.pc {
+      @include respond-to("bp-max-820") {
+        height: 40vw;
+       }
+      
+      }
+     
     }
    
     .mockup_sub {
@@ -844,7 +852,7 @@ button { padding: 0; cursor: pointer;}
           background-size: 100%;
           position: absolute;
           top: 50%;
-          right: -10%;
+          right: 0;
           transform: translateY(-50%);
         }
       }
@@ -884,18 +892,29 @@ button { padding: 0; cursor: pointer;}
           background-size: 100%;
           position: absolute;
           top: 50%;
-          right: -15%;
+          right: -10%;
           transform: translateY(-50%);
         }
       }
       &.nexess9 {
-      // span {
-        //  background: url('~@/assets/images/projects/iam_nexess/project_nexess_sub_09@2x.png') no-repeat ;
+       span {
+          background: url('~@/assets/images/projects/initech/nexess/project_nexess_sub_09@2x.png') no-repeat ;
           background-size: 100%;
           position: absolute;
           top: 50%;
-          left: -15%;
+          left: -10%;
           transform: translateY(-50%);
+        }
+      }
+       &.nexess10 {
+        span {
+          background: url('~@/assets/images/projects/initech/nexess/project_nexess_sub_10@2x.png') no-repeat ;
+          background-size: 100%;
+          position: absolute;
+          top: 50%;
+          right: -10%;
+          transform: translateY(-50%);
+       }
       }
       
       // 수협
@@ -1023,12 +1042,13 @@ button { padding: 0; cursor: pointer;}
         height: 779px;
         position: absolute;
         left: 0;
-        top: 32px;
+        top: 28px;
         span {
           background: url('~@/assets/images/projects/initech/mobilian/mobilian_05@2x.png') no-repeat ;
           background-size: 100%;
         }
          @include respond-to("bp-max-820") {
+         
           width: 40vw;
           height: 85vw;
         }
@@ -1062,7 +1082,7 @@ button { padding: 0; cursor: pointer;}
         height: 779px;
         position: absolute;
         left: 60%;
-        top: 32px;
+        top: 28px;
         span {
           background: url('~@/assets/images/projects/initech/mobilian/mobilian_07@2x.png') no-repeat ;
           background-size: 100%;
@@ -1071,6 +1091,7 @@ button { padding: 0; cursor: pointer;}
           width: 40vw;
           height: 85vw;
           left: 0;
+          
         }
       }
       &.mobilian8 {
@@ -1078,7 +1099,7 @@ button { padding: 0; cursor: pointer;}
         height: 779px;
         position: absolute;
         left: 60%;
-        top: 32px;
+        top: 28px;
         span {
           background: url('~@/assets/images/projects/initech/mobilian/mobilian_08@2x.png') no-repeat ;
           background-size: 100%;
@@ -1213,11 +1234,12 @@ button { padding: 0; cursor: pointer;}
   
     
   }
-   .visual-box.col + .visual-box.col {
-      @include respond-to("bp-max-820") {
-        margin-top: 5vw;
-      }
+  .visual-box.col + .visual-box.col {
+    @include respond-to("bp-max-820") {
+      margin-top: 10vw;
     }
+  }
+
 
 }
 
@@ -1360,6 +1382,7 @@ button { padding: 0; cursor: pointer;}
   }
 }
 .sh-bank {
+ 
   .palette-wrap{
       ul {
         li {
@@ -1443,7 +1466,7 @@ button { padding: 0; cursor: pointer;}
       height: 100%;
       min-height: 119vw;
       position: relative;
-      margin-top: 15vw;
+      padding-top: 15vw;
     }
     .hiring-heading {
     @include respond-to("bp-max-820") {

@@ -87,7 +87,7 @@
                 </dl>
                 <dl class="project__desc">
                   <dt>해상도 범위</dt>
-                  <dd>- Mobile/Tablet(세로) : 280px ~ 820px</dd>
+                  <dd>- Mobile/Tablet : 280px ~ 820px</dd>
                 </dl>
               </div>
               <div class="col">
