@@ -40,22 +40,14 @@
                     {{ $t("project." + project.name + "_info_output") }}
                   </dd>
                 </dl>
-                <dl class="project__desc">
-                  <dt>웹 호환성</dt>
-                  <dd>
-                    - PC : Chrome, Firefox, IE11, Safari <br />
-                    - Tablet : Android 6.X / IOS 10.X
-                  </dd>
-                </dl>
-                <dl class="project__desc">
-                  <dt>해상도 범위</dt>
-                  <dd>- Mobile / Tablet(세로) : 320px ~ 800px</dd>
-                </dl>
+
                 <!-- <button class="btn__line" type="button">View Site</button>-->
               </div>
             </div>
-            <div class="mockup pc" :class="project.name"><span></span></div>
-            <div class="mockup mo" :class="project.name"><span></span></div>
+            <div class="mockup-wrap">
+              <div class="mockup pc" :class="project.name"><span></span></div>
+              <div class="mockup mo" :class="project.name"><span></span></div>
+            </div>
           </div>
         </div>
 
@@ -87,7 +79,7 @@
                 <dd>Vue.js (Vue-cli)</dd>
               </dl>
               <dl>
-                <dt>UI Desgin Guide Tool :</dt>
+                <dt>UI Guide Tool :</dt>
                 <dd>Zeplin</dd>
               </dl>
               <dl class="project__desc">
@@ -95,7 +87,22 @@
                 <dd>
                   - Vuex 상태관리 <br />
                   - i18n 다국어 지원<br />
-                  - Vue-router 라우팅 기능
+                  - Vue-router 라우팅 기능<br />
+                  - Sass(SCSS)
+                </dd>
+              </dl>
+              <dl class="project__desc">
+                <dt>웹 호환성</dt>
+                <dd>
+                  - PC : Chrome, Firefox, IE11, Safari <br />
+                  - Tablet : Android 6.X / IOS 10.X
+                </dd>
+              </dl>
+              <dl class="project__desc">
+                <dt>해상도 범위</dt>
+                <dd>
+                  - PC/ Tablet(가로) : 801px ~ 1920px<br />
+                  - Mobile/ Tablet(세로) : 280px ~ 800px
                 </dd>
               </dl>
             </div>
@@ -187,6 +194,7 @@
             </article>
           </div>
         </section>
+        <!--
         <section class="section-wrap">
           <div class="inner">
             <div class="ttl">
@@ -325,7 +333,7 @@
               </table>
             </div>
           </div>
-        </section>
+        </section>-->
       </div>
     </div>
   </div>

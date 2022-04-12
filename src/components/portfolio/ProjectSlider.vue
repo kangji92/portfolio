@@ -49,7 +49,7 @@
           </div>
         </div>
         <div class="prj-photo">
-          <div class="mockup-wrap">
+          <div class="mockup-wrap" :class="project.mockup_wrap">
             <div class="mockup" :class="project.mockup_class_01"></div>
             <div class="mockup" :class="project.mockup_class_02"></div>
             <div class="mockup" :class="project.mockup_class_03"></div>
@@ -127,6 +127,7 @@ export default {
           info_dd_02: "웹퍼블리싱",
           info_dd_03: "Html5",
           info_dd_04: "Tomcat",
+          mockup_wrap: "",
           mockup_class_01: "mockup__pc sh-bank",
           image_class: "sh-bank",
         },
@@ -141,6 +142,7 @@ export default {
           info_dd_02: "프론트앤드, 웹퍼블리싱",
           info_dd_03: "vue-cli, sass(scss)",
           info_dd_04: "Git, Bitbucket, SourceTree ",
+          mockup_wrap: "",
           mockup_class_01: "mockup__mo mobilian",
           image_class: "mobilian",
         },
@@ -159,6 +161,7 @@ export default {
           info_dd_03: "vue-cli, sass(scss)",
           info_dt_04: "<b>사용 Tool: </b>",
           info_dd_04: "Git, Bitbucket, SourceTree, zeplin, photoshop",
+          mockup_wrap: "mockup-wrap__respons",
           mockup_class_01: "mockup__respons-pc kyobo",
           mockup_class_02: "mockup__respons-pad kyobo",
           mockup_class_03: "mockup__respons-mo kyobo",
@@ -168,7 +171,7 @@ export default {
           idx: "04",
           id: "inihub",
           name: "inihub",
-          ttl: "인증통합플랫폼 이니허브 UI 개발",
+          ttl: "인증통합플랫폼 이니허브 개발",
           sub_ttl: "보안솔루션 신제품 ",
           info_dt_01: "<b>기간: </b>",
           info_dd_01: "2021.07 ~ 2021.08",
@@ -178,7 +181,9 @@ export default {
           info_dd_03: "Vue.js (vue-cli), sass(scss)",
           info_dt_04: "<b>사용 Tool: </b>",
           info_dd_04: "Git, Bitbucket, SourceTree, zeplin, photoshop",
-          mockup_class_01: "mockup__trans-pc inihub",
+          mockup_wrap: "mockup-wrap__respons",
+          mockup_class_01: "mockup__respons-pc inihub",
+          mockup_class_03: "mockup__respons-mo inihub",
         },
         {
           idx: "05",
@@ -195,6 +200,7 @@ export default {
           info_dt_04: "<b>사용 Tool: </b>",
           info_dd_04: "Tomcat, photoshop",
           info_ttl_06: "",
+          mockup_wrap: "",
           mockup_class_01: "mockup__pc nexess-demo",
           mockup_class_02: "mockup__pad nexess-demo",
         },
@@ -233,6 +239,8 @@ export default {
           info_dt_04: "<b>사용 Tool: </b>",
           info_dt_05: "Photoshop",
           image_class: "inipass",
+          mockup_class_01: "mockup__pc inipass",
+          mockup_class_03: "mockup__mo inipass",
         },
         {
           idx: "09",
@@ -249,7 +257,7 @@ export default {
           info_dt_04: "<b>사용 Tool: </b>",
           info_dd_04: "eclipse, 레드마인, photoshop",
           info_ttl_07: "",
-          mockup_class_01: "mockup__pc lotte",
+          mockup_wrap: "",
           mockup_class_02: "mockup__mo lotte",
         },
         {
@@ -267,8 +275,8 @@ export default {
           info_dt_04: "<b>사용 Tool: </b>",
           info_dd_04: "eclipse, 레드마인, photoshop",
           info_ttl_07: "",
-          mockup_class_01: "mockup__pc lotte",
-          mockup_class_02: "mockup__mo lotte",
+          mockup_wrap: "",
+          mockup_class_01: "mockup__mo lotte",
         },
         {
           idx: "11",
@@ -285,6 +293,7 @@ export default {
           info_dd_03: "",
           info_dt_04: "<b>사용 Tool: </b>",
           info_dt_05: "",
+          mockup_wrap: "",
           mockup_class_01: "mockup__mo wedding",
         },
       ],

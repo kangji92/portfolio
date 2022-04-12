@@ -27,6 +27,13 @@ export default new VueRouter({
       //    import(/* webpackChunkName "common" */ "@/views/PortfolioPageM.vue"),
       //},
     },
+    {
+      path: "/portfolio/blog",
+      component: () => import("@/views/BlogPage.vue"),
+      beforeEnter() {
+        window.location.href = "https://kang-ji.tistory.com";
+      },
+    },
 
     {
       path: "/portfolio/librarys",

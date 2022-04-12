@@ -11,9 +11,15 @@
               {{ $t("intro.btn_1") }}
             </router-link>
           </li>
-          <li>
+          <!--
             <router-link tag="button" class="btn navy" to="/portfolio/librarys">
               {{ $t("intro.btn_2") }}
+            </router-link>
+          </li>
+          -->
+          <li>
+            <router-link tag="button" class="btn trn" to="/portfolio/blog">
+              {{ $t("intro.btn_3") }}
             </router-link>
           </li>
         </ul>

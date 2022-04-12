@@ -2,10 +2,25 @@
   <div class="portfolio-main">
     <full-page :options="options" id="fullpage" ref="fullpage">
       <section class="section">
-        <div class="inner">
+        <div class="hiring inner">
           <div class="ttl-group">
             <h2 v-html="$t('portfolio.ttl')"></h2>
             <p>{{ $t("portfolio.ttl_p") }}</p>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="content about">
+          <div class="about-inner">
+            <div class="txt-group">
+              <em>日日新又日新</em>
+              <p>끊임없이 보다 나은 사람이 되자</p>
+            </div>
+            <span
+              >웹퍼블리셔 강지연입니다. <br />
+              저 자신을 발전시키기 위해<br />
+              시간과 노력을 아끼지 않겠습니다.</span
+            >
           </div>
         </div>
       </section>
@@ -41,36 +56,32 @@
         </div>
       </section>
       <section class="section">
-        <div class="content experience">
-          <div class="experience-inner"></div>
-        </div>
-      </section>
-
-      <section class="section">
         <ProjectSlider></ProjectSlider>
       </section>
-
       <section class="section">
-        <div class="content about">
-          <div class="about-inner">
-            <!-- <div class="txt-group">
-              <em>日日新又日新</em>
-              <p>끊임없이 보다 나은 사람이 되자</p>
-            </div>
-            <span
-              >웹퍼블리셔 강지연입니다. <br />
-              저 자신을 발전시키기 위해 시간과 노력을 아끼지 않겠습니다.</span
-            >-->
-          </div>
+        <div class="content experience">
+          <ExperienceSlider></ExperienceSlider>
         </div>
       </section>
       <section class="section">
-        <div class="content resume">
-          <div class="resume-inner">
+        <div class="content contact">
+          <div class="contact-inner">
             <div class="txt-group">
-              <em></em>
+              <em>Thank you</em>
               <p></p>
             </div>
+            <ul>
+              <li>Email: kangji92@kakao.com</li>
+              <li>Blog: kangji92@kakao.com</li>
+              <li>
+                <a
+                  class="btn download"
+                  href="@/asset/[UI_Developer]_resume_kangjiyeon.pdf"
+                  target="_blank"
+                  >이력서(PDF)</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -83,12 +94,14 @@ import Vue from "vue";
 import "fullpage.js/vendors/scrolloverflow"; // Optional. When using scrollOverflow:true
 import VueFullPage from "vue-fullpage.js";
 import ProjectSlider from "@/components/portfolio/ProjectSlider.vue";
+import ExperienceSlider from "@/components/portfolio/ExperienceSlider.vue";
 import Modal from "@/views/Modal.vue";
 
 Vue.use(VueFullPage);
 export default {
   components: {
     ProjectSlider,
+    ExperienceSlider,
     Modal,
   },
   data() {
@@ -540,6 +553,9 @@ b {
 
     .about-inner {
       margin-top: 15%;
+      @include respond-to("bp-max-820") {
+        margin-top: 30%;
+      }
       .txt-group {
         position: relative;
         text-align: center;
@@ -553,13 +569,9 @@ b {
           position: absolute;
           left: 50%;
           top: 180%;
-          //@include respond-to("bp-max-1366") {
-          //  height: 5vw;
-          //  top: 7.5vw;
-          //}
-          //@include respond-to("bp-max-820") {
-          //  display: none;
-          //}
+          @include respond-to("bp-max-820") {
+            top: 210%;
+          }
         }
         em {
           font-size: 48px;
@@ -569,12 +581,18 @@ b {
           text-align: center;
           margin-bottom: 10px;
           line-height: 1.25em;
+          @include respond-to("bp-max-820") {
+            font-size: 9.5vw;
+          }
         }
         p {
           font-size: 28px;
           font-family: $font-kr;
           font-weight: 300;
           text-align: center;
+          @include respond-to("bp-max-820") {
+            font-size: 5vw;
+          }
         }
       }
       span {
@@ -585,6 +603,10 @@ b {
         margin-top: 10%;
         line-height: 1.25em;
         text-align: center;
+        @include respond-to("bp-max-820") {
+          font-size: 5vw;
+          margin-top: 70%;
+        }
       }
     }
 
@@ -725,112 +747,6 @@ b {
       }
     }
 
-    .experience-inner {
-      width: 1600px;
-      margin: 0 auto;
-      margin-top: 5%;
-      text-align: left;
-      .ttl {
-        float: left;
-        width: 240px;
-        position: relative;
-        h3 {
-          font-size: 40px;
-          text-align: left;
-          font-family: $font-eng;
-          font-weight: 300;
-          position: relative;
-          @include respond-to("bp-landscape-1024") {
-          }
-          @include respond-to("bp-tablet-820") {
-            // 820
-            font-size: 3vw;
-          }
-          &::after {
-            content: "";
-            display: block;
-            width: 85px;
-            height: 1px;
-            background: #707070;
-            position: absolute;
-            top: 200%;
-            left: 0;
-            @include respond-to("bp-max-1366") {
-              height: 5vw;
-              top: 7.5vw;
-            }
-            @include respond-to("bp-tablet-820") {
-              // 820
-              display: none;
-            }
-          }
-        }
-        p {
-          margin-top: 25%;
-          color: #999;
-          font-size: 20px;
-          font-family: $font-kr;
-          font-weight: 300;
-        }
-      }
-
-      .terms-group {
-        float: right;
-        width: 80%;
-        height: 80vh;
-        overflow: hidden;
-        dl {
-          display: block;
-          width: 100%;
-          font-family: $font-kr;
-          font-weight: 300;
-          dt {
-            float: left;
-            width: 25%;
-            font-size: 28px;
-            margin-top: 30px;
-          }
-          dd {
-            width: 70%;
-            float: left;
-            margin-top: 30px;
-            span {
-              display: block;
-            }
-            em {
-              font-size: 28px;
-              padding-bottom: 12px;
-            }
-
-            p {
-              padding: 10px 0;
-              font-size: 22px;
-              line-height: 1.3em;
-            }
-            span {
-              font-size: 20px;
-              line-height: 1.3em;
-            }
-          }
-          dt + dd {
-            margin-left: 5%;
-          }
-        }
-      }
-      .terms-group:first-child {
-        position: relative;
-        &::before {
-          content: "...";
-          display: block;
-          height: 10px;
-          width: 50px;
-          font-size: 40px;
-          left: 50%;
-          position: absolute;
-          top: 80%;
-        }
-      }
-    }
     .education-inner {
       width: 1600px;
       margin: 0 auto;
@@ -1032,33 +948,18 @@ b {
       }
 
       .btn {
-        position: absolute;
-        left: 0;
-        bottom: 30px;
-        width: 25%;
-        text-align: center;
-      }
-      .btn label {
-        cursor: pointer;
-        width: 5px;
-        height: 5px;
-        background-color: #000;
-        display: inline-block;
-        border-radius: 50%;
-        margin: 8px;
-        position: relative;
-      }
-      .btn label:before {
-        content: "";
-        display: inline-block;
-        border: 1px solid transparent;
-        width: 17px;
-        height: 17px;
-        border-radius: 50%;
-        position: absolute;
-        left: -6px;
-        top: -6px;
-        transition: 0.3s;
+        display: block !important;
+        height: 60px;
+        width: 122px;
+        font-size: 28px;
+        border: 1px solid #000;
+        border-radius: 60px;
+        font-family: $font-eng;
+        background: transparent;
+        &:hover {
+          background: #000;
+          color: #fff;
+        }
       }
     }
     .slick-list {
@@ -1153,6 +1054,74 @@ b {
   display: block;
   @include respond-to("bp-tablet-820") {
     display: none;
+  }
+}
+
+.hiring {
+  animation: slidedown 1s linear both;
+}
+
+@keyframes slidedown {
+  0% {
+    opacity: 0;
+    margin-top: -50px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+.btn {
+  width: 242px;
+  font-size: 20px;
+  border: 1px solid #000;
+  height: 60px;
+  border-radius: 60px;
+  cursor: pointer;
+  font-family: $font-eng;
+  background: transparent;
+  &.trn {
+    background: transparent;
+  }
+  &.navy {
+    background: #3b3b3b;
+    color: #fff;
+  }
+  &:hover {
+    background: #000;
+    color: #fff;
+  }
+}
+.contact-inner {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  height: 100%;
+  height: auto;
+  .ttl-group {
+    h2 {
+      font-size: 62px;
+      text-align: left;
+      color: #000;
+      margin: 0;
+      letter-spacing: -0.05em;
+      font-weight: 300;
+      @include respond-to("bp-tablet-820") {
+        // 820
+        font-size: 58px;
+      }
+      @include respond-to("bp-mobile-600") {
+        // 600
+        font-size: 10vw;
+      }
+
+      em {
+        b {
+          font-weight: 500 !important;
+        }
+      }
+    }
   }
 }
 </style>

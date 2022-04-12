@@ -1,4 +1,7 @@
 {
+    "btn": {
+        "resume": "이력서 다운받기"
+    },
     "library": {
         "menu_1":"Home",
         "menu_2":"Elements",
@@ -10,7 +13,8 @@
     "intro" : {
         "ttl": " Web Publisher<br/><em><b>Kang</b> JI Yeon</em>",
         "btn_1": "Portfolio",
-        "btn_2": "Librarys"
+        "btn_2": "Librarys",
+        "btn_3": "Blog"
     },
     "portfolio" : {
         "ttl": " Web Publisher<br/><em><b>Kang</b> JI Yeon</em>",
@@ -36,7 +40,7 @@
         "info_output" : "기여도 : ",
 
         "ttl_sh-bank" : "수협은행 Nextro시스템 고도화",
-        "subttl_sh-bank" : "PC Web",
+        "subttl_sh-bank" : "SSO인증 보안 시스템 ",
         "sh-bank_info_date" : "2021.07 ~ 2021.08",
         "sh-bank_info_output": "퍼블리싱 100%",
 

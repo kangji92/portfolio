@@ -11,6 +11,64 @@
   z-index: 10000;
    font-family: $font-eng;
 }
+    .project__info {
+      width: 100%;
+      color: #333;
+      text-align: left;
+      position: absolute;
+      top: 28vw;
+      font-size: 1.25rem;
+      line-height: 1.25; 
+      @include respond-to("bp-max-820") {
+        top: 90vw;
+      }
+        .hash-group {
+          display: block;
+          float: left;
+          width: 100%;
+          margin-bottom: 2%;
+          ul {
+            li {
+              float: left;
+              font-size: 1.5vw;
+              @include respond-to("bp-max-820") {
+                font-size: 3vw;
+              }
+            }
+            li + li {
+              margin-left: 2vw;
+            }
+          }
+          
+        }
+      dl {
+        width: 100%; 
+        text-align: left;
+        display: block;
+        font-size: 1vw;
+         @include respond-to("bp-max-820") {
+            font-size: 3vw;
+         }
+        dt {
+          width: 5%;
+          
+          display: inline-block; 
+          padding: 0 1vw 0 0;
+          @include respond-to("bp-max-820") {
+               width: 15%;
+          }
+        }
+        dd {
+         
+          display: inline-block;
+        }
+      }
+
+      .btn__line {
+        margin-top: 66px;
+      }
+    }
+  
 
  .modal__container {
   width: 90vw;
@@ -463,74 +521,14 @@ button { padding: 0; cursor: pointer;}
         font-family: 500;
         margin-top: 16px;
           @include respond-to("bp-max-820") {
-            font-size: 4.5vw;
+            font-size: 4vw;
                 margin-top: 1vw;
           }
       }
 
     }
 
-    .project__info {
-      width: 100%;
-      color: #333;
-      text-align: left;
-      position: absolute;
-      top: 28vw;
-      font-size: 1.25rem;
-      line-height: 1.25;
 
-     
-      @include respond-to("bp-max-820") {
-          top: 103vw;
-        }
-
-
-        .hash-group {
-          display: block;
-          float: left;
-          width: 100%;
-          margin-bottom: 2%;
-          ul {
-            li {
-              float: left;
-              font-size: 1.5vw;
-              @include respond-to("bp-max-820") {
-                font-size: 3vw;
-              }
-            }
-            li + li {
-              margin-left: 2vw;
-            }
-          }
-          
-        }
-      dl {
-        width: 100%; 
-        text-align: left;
-        display: block;
-        font-size: 1vw;
-         @include respond-to("bp-max-820") {
-            font-size: 3vw;
-         }
-        dt {
-          width: 5%;
-          
-          display: inline-block; 
-          padding: 0 1vw 0 0;
-          @include respond-to("bp-max-820") {
-               width: 15%;
-          }
-        }
-        dd {
-         
-          display: inline-block;
-        }
-      }
-
-      .btn__line {
-        margin-top: 66px;
-      }
-    }
     
   }
 
@@ -609,7 +607,7 @@ button { padding: 0; cursor: pointer;}
     @include respond-to("bp-max-820") {
       width: 85vw;
       height: 53vw;
-      top: 20vw;
+      top: 24vw;
       left: 50%;
       @include translateX(-50%);
     }
@@ -633,9 +631,9 @@ button { padding: 0; cursor: pointer;}
       right: -5vw;
       @include respond-to("bp-max-820") {
         width: 80vw;
-           height: 51vw;
-       top: 31%;
-         left: 18%;
+        height: 51vw;
+        top: 10vw;
+        left: 18%;
        }
       span {
         width: 100%;
@@ -661,7 +659,7 @@ button { padding: 0; cursor: pointer;}
       @include respond-to("bp-max-820") {
         width: 46vw;
         height: 46vw;
-        top: 40%;
+        top: 15vw;
         left: -9%;
        }
       span {
@@ -706,9 +704,20 @@ button { padding: 0; cursor: pointer;}
 }
 .hiring-info {
   margin-top: 80px;
+  .ttl {text-align: left;}
+
+  &:last-child {
+    margin-bottom: 12vw;
+  }
   @include respond-to("bp-max-820") {
+        margin-top: 0;
+     // margin-top: 10vw;
+  }
+  &.components {
+     @include respond-to("bp-max-820") {
       //  margin-top: 44vw;
-      margin-top: 10vw;
+      margin-top: 15vw;
+    }
   }
   .inner {
     height: auto;
@@ -756,7 +765,7 @@ button { padding: 0; cursor: pointer;}
       display: inline-block; 
       width: 12%;
       @include respond-to("bp-max-820") {
-      width: 40%;
+      width: 35.5%;
       padding: 1vw 0;
      }
     }
@@ -764,7 +773,7 @@ button { padding: 0; cursor: pointer;}
       display: inline-block;
       padding-left: 18px;
       @include respond-to("bp-max-820") {
-     
+      width: 64.5%;
       padding: 1vw 0;
      }
     }
@@ -790,7 +799,7 @@ button { padding: 0; cursor: pointer;}
       width: 50%;
       position: relative;
        @include respond-to("bp-max-820") {
-        height: 91vw;
+        height: 81vw;
        }
       
       &.pc {
@@ -801,7 +810,7 @@ button { padding: 0; cursor: pointer;}
       }
      
     }
-   
+  
     .mockup_sub {
       position: relative;
       width: 760px;
@@ -989,6 +998,8 @@ button { padding: 0; cursor: pointer;}
           @include translateY(-50%)
         }
       }
+
+       // mobilian
       &.mobilian1 {
         width: 360px;
         height: 779px;
@@ -1035,8 +1046,7 @@ button { padding: 0; cursor: pointer;}
            left: 0;
            margin: 0 auto;
         }
-      }
-    
+      }   
       &.mobilian4 {
         width: 360px;
         height: 779px;
@@ -1110,6 +1120,308 @@ button { padding: 0; cursor: pointer;}
           left: 0;
         }
       }
+    
+      // kyobo
+      &.kyobo1 {
+        width: 580px;
+        height: 550px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        span {
+          &:nth-child(1) {
+            background: url('~@/assets/images/projects/initech/kyobo/indv_kakao_auth.png') no-repeat ;
+            background-size: 100%;
+            position:absolute;
+            left: 0;
+            top: 0;
+          }
+          &:nth-child(2) {
+            background: url('~@/assets/images/projects/initech/kyobo/indv_pass_auth.png') no-repeat ;
+            background-size: 100%;
+            position:absolute;
+            left: 100px;
+            top: 0;
+            @include respond-to("bp-max-820") {
+              left: 14vw;
+            }
+          }
+          &:nth-child(3) {
+            background: url('~@/assets/images/projects/initech/kyobo/indv_toss_auth.png') no-repeat ;
+            background-size: 100%;
+            position:absolute;
+            left: 100px;
+            top: 0;
+            @include respond-to("bp-max-820") {
+              left: 28vw;
+            }
+          }
+          &:nth-child(4) {
+            background: url('~@/assets/images/projects/initech/kyobo/indv_toss_auth.png') no-repeat ;
+            background-size: 100%;
+            position:absolute;
+            left: 100px;
+            top: 0;
+            @include respond-to("bp-max-820") {
+              left: 42vw;
+            }
+          }
+          
+        }
+        @include respond-to("bp-max-820") {
+          width: 48vw;
+          height: 48vw;
+        }
+      }
+      &.kyobo2 {
+        width: 580px;
+        height: 550px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        span {
+          &:nth-child(1) {
+            background: url('~@/assets/images/projects/initech/kyobo/indv_kakao_m.png') no-repeat ;
+            background-size: 100%;
+            position:absolute;
+            right: 0;
+            top: 0;
+          }
+          &:nth-child(2) {
+            background: url('~@/assets/images/projects/initech/kyobo/indv_toss_m.png') no-repeat ;
+            background-size: 100%;
+            position:absolute;
+            left: 100px;
+            top: 0;
+            @include respond-to("bp-max-820") {
+              left: 12vw;
+            }
+          }
+          &:nth-child(3) {
+            background: url('~@/assets/images/projects/initech/kyobo/indv_toss_m.png') no-repeat ;
+            background-size: 100%;
+            position:absolute;
+            left: 100px;
+            top: 0;
+            @include respond-to("bp-max-820") {
+              left: 24vw;
+            }
+          }
+          &:nth-child(4) {
+            background: url('~@/assets/images/projects/initech/kyobo/indv_toss_m.png') no-repeat ;
+            background-size: 100%;
+            position:absolute;
+            left: 100px;
+            top: 0;
+            @include respond-to("bp-max-820") {
+              left: 36vw;
+            }
+          }
+          
+        }
+        @include respond-to("bp-max-820") {
+          width: 29vw;
+          height: 65vw;
+        }
+      }
+      &.kyobo3 {
+        width: 580px;
+        height: 550px;
+        position: absolute;
+        left: 0;
+        top: 28px;
+        span {
+          &:nth-child(1) {
+            background: url('~@/assets/images/projects/initech/kyobo/indv_agreepop_m.png') no-repeat ;
+            background-size: 100%;
+            position:absolute;
+            left: 0;
+            top: 0;
+          }
+          &:nth-child(2) {
+            background: url('~@/assets/images/projects/initech/kyobo/indv_alertpop_m.png') no-repeat ;
+            background-size: 100%;
+            position:absolute;
+            left: 100px;
+            top: 0;
+            @include respond-to("bp-max-820") {
+              left: 12vw;
+            }
+          }
+          &:nth-child(3) {
+            background: url('~@/assets/images/projects/initech/kyobo/indv_toss_auth.png') no-repeat ;
+            background-size: 100%;
+            position:absolute;
+            left: 100px;
+            top: 0;
+            @include respond-to("bp-max-820") {
+              left: 24vw;
+            }
+          }
+          
+        }
+        @include respond-to("bp-max-820") {
+          width: 29vw;
+          height: 65vw;
+        }
+      }
+      &.kyobo4 {
+        width: 580px;
+        height: 550px;
+        position: absolute;
+        left: 0;
+        top: 28px;
+        span {
+          &:nth-child(1) {
+            background: url('~@/assets/images/projects/initech/kyobo/indv_alert.png') no-repeat ;
+            background-size: 100%;
+            position:absolute;
+            left: 0;
+            top: 0;
+          }
+        
+          
+        }
+        @include respond-to("bp-max-820") {
+          width: 48vw;
+          height: 48vw;
+        }
+      }
+      &.kyobo5 {
+        width: 580px;
+        height: 550px;
+        position: absolute;
+        left: 0;
+        top: 28px;
+        span {
+          &:nth-child(1) {
+            background: url('~@/assets/images/projects/initech/kyobo/BT_01.png') no-repeat ;
+            background-size: 100%;
+            position:absolute;
+            left: 0;
+            top: 0;
+          }
+          &:nth-child(2) {
+            background: url('~@/assets/images/projects/initech/kyobo/BT_01_m.png') no-repeat ;
+            background-size: 100%;
+            position:absolute;
+            left: 100px;
+            top: 0;
+            @include respond-to("bp-max-820") {
+              left: 12vw;
+            }
+          }
+          &:nth-child(3) {
+            background: url('~@/assets/images/projects/initech/kyobo/indv_toss_auth.png') no-repeat ;
+            background-size: 100%;
+            position:absolute;
+            left: 100px;
+            top: 0;
+            @include respond-to("bp-max-820") {
+              left: 24vw;
+            }
+          }
+          
+        }
+        @include respond-to("bp-max-820") {
+          width: 48vw;
+          height: 48vw;
+        }
+      }
+      &.kyobo6 {
+        width: 580px;
+        height: 550px;
+        position: absolute;
+        left: 0;
+        top: 28px;
+        span {
+          background: url('~@/assets/images/projects/initech/kyobo/BT_01_m.png') no-repeat ;
+          background-size: 100%;
+          position:absolute;
+          left: 100px;
+          top: 0;
+          @include respond-to("bp-max-820") {
+            left: 12vw;
+          }
+        
+        }
+        @include respond-to("bp-max-820") {
+          width: 29vw;
+          height: 65vw;
+        }
+      }
+      &.kyobo7 {
+        width: 580px;
+        height: 550px;
+        position: absolute;
+        left: 0;
+        top: 28px;
+        span {
+          &:nth-child(1) {
+            background: url('~@/assets/images/projects/initech/kyobo/BT_03.png') no-repeat ;
+            background-size: 100%;
+            position:absolute;
+            left: 0;
+            top: 0;
+          }
+          &:nth-child(2) {
+            background: url('~@/assets/images/projects/initech/kyobo/BT_payco.png') no-repeat ;
+            background-size: 100%;
+            position:absolute;
+            left: 100px;
+            top: 0;
+            @include respond-to("bp-max-820") {
+              left: 12vw;
+            }
+          }
+        }
+        @include respond-to("bp-max-820") {
+          width: 48vw;
+          height: 48vw;
+        }
+      }
+      &.kyobo8 {
+        width: 580px;
+        height: 550px;
+        position: absolute;
+        left: 0;
+        top: 28px;
+        span {
+          &:nth-child(1) {
+            background: url('~@/assets/images/projects/initech/kyobo/indv_kakao_m.png') no-repeat ;
+            background-size: 100%;
+            position:absolute;
+            right: 0;
+            top: 0;
+          }
+          &:nth-child(2) {
+            background: url('~@/assets/images/projects/initech/kyobo/indv_toss_m.png') no-repeat ;
+            background-size: 100%;
+            position:absolute;
+            left: 100px;
+            top: 0;
+            @include respond-to("bp-max-820") {
+              left: 12vw;
+            }
+          }
+          &:nth-child(3) {
+            background: url('~@/assets/images/projects/initech/kyobo/indv_toss_auth.png') no-repeat ;
+            background-size: 100%;
+            position:absolute;
+            left: 100px;
+            top: 0;
+            @include respond-to("bp-max-820") {
+              left: 24vw;
+            }
+          }
+          
+        }
+        @include respond-to("bp-max-820") {
+          width: 29vw;
+          height: 65vw;
+        }
+      }
+      
 
       /*
       &.nexess10 {
@@ -1231,7 +1543,24 @@ button { padding: 0; cursor: pointer;}
       */
           
     }
-  
+    &.type-mix {
+   
+      @include respond-to("bp-max-820") {
+        float: left;
+        p {
+             text-align: left;
+        }
+        .mockup_sub {
+          margin: 0;
+        }
+     
+      }
+      .mockup_sub {
+        
+        position: relative;
+      }
+    }
+   
     
   }
   .visual-box.col + .visual-box.col {
@@ -1249,9 +1578,6 @@ button { padding: 0; cursor: pointer;}
   dd {padding:0 ;}
 }
 
-.section-wrap {
-  
-}
 .guide-info {
   .ttl {
     font-size: 30px;
@@ -1340,103 +1666,12 @@ button { padding: 0; cursor: pointer;}
 }
 
 .project-main1 {
-    
-
   .inner {    
     max-width: 1600px;
     margin: 0 auto;
     @include respond-to("bp-max-1366") {
       width: 100%;
     }
-  }
-}
-
-// 팔레트
-.kyobo {
-  .palette-wrap{
-      ul {
-        li {
-          border-radius: 5px;
-          &:nth-child(1) {
-            background: #2B68B8;
-            border:1px solid  #2B68B8;
-          }
-          &:nth-child(2) {
-            background: #2F5081;
-            border:1px solid  #2F5081;
-          }
-          &:nth-child(3) {
-            background: #4DAC26;
-            border:1px solid  #4DAC26;
-          }
-          &:nth-child(4) {
-            background: #CCCCCC;
-            border:1px solid  #CCCCCC;
-          }
-          &:nth-child(5) {
-            background: #fff;
-            border:1px solid  #707070;
-          }
-        }
-      }
-  }
-}
-.sh-bank {
- 
-  .palette-wrap{
-      ul {
-        li {
-          border-radius: 5px;
-          &:nth-child(1) {
-            background: #173A64;
-            border:1px solid  #173A64;
-          }
-          &:nth-child(2) {
-            background: #0D63AA;
-             border:1px solid  #0D63AA;
-          }
-          &:nth-child(3) {
-            background: #1F9CD7;
-             border:1px solid  #1F9CD7;
-          }
-          &:nth-child(4) {
-            background: #858686;
-             border:1px solid  #858686;
-          }
-          &:nth-child(5) {
-            background: #fff;
-            border:1px solid  #707070;
-          }
-        }
-      }
-  }
-}
-.mobilian {
-   .palette-wrap{
-      ul {
-        li {
-          border-radius: 5px;
-          &:nth-child(1) {
-            background: #000;
-            border:1px solid  #000;
-          }
-          &:nth-child(2) {
-            background: #303FA4;
-             border:1px solid  #303FA4;
-          }
-          &:nth-child(3) {
-            background: #E6EBFE;
-             border:1px solid  #707070;
-          }
-          &:nth-child(4) {
-            background: #CCCCCC;
-             border:1px solid  #707070;
-          }
-          &:nth-child(5) {
-           display: none;
-          }
-        }
-      }
   }
 }
 
@@ -1467,16 +1702,151 @@ button { padding: 0; cursor: pointer;}
       min-height: 119vw;
       position: relative;
       padding-top: 15vw;
+      background: #f9f9f9;
+      padding-bottom: 10vw;
     }
+    
     .hiring-heading {
     @include respond-to("bp-max-820") {
       text-align: left;
         float: left;
         position: relative;
         height: 100%;
-        min-height: 119vw;
+            min-height: 114vw;
       }
      }
   }
     
+}
+
+
+.kyobo {
+  .palette-wrap{
+      ul {
+        li {
+          border-radius: 5px;
+          &:nth-child(1) {
+            background: #2B68B8;
+            border:1px solid  #2B68B8;
+          }
+          &:nth-child(2) {
+            background: #2F5081;
+            border:1px solid  #2F5081;
+          }
+          &:nth-child(3) {
+            background: #4DAC26;
+            border:1px solid  #4DAC26;
+          }
+          &:nth-child(4) {
+            background: #CCCCCC;
+            border:1px solid  #CCCCCC;
+          }
+          &:nth-child(5) {
+            background: #fff;
+            border:1px solid  #707070;
+          }
+        }
+      }
+  }
+}
+
+.sh-bank {
+  .project__info {
+    @include respond-to("bp-max-820") {
+      top: 85vw;
+    }
+  }
+  .hiring-main {
+    &.project-main1 {
+      height: 600px;
+      width: 100%;
+      position: relative;
+      @include respond-to("bp-max-820") {
+        height: 100%;
+        min-height: 100vw;
+        position: relative;
+        padding-top: 15vw;
+      }
+      
+      .hiring-heading {
+      @include respond-to("bp-max-820") {
+        text-align: left;
+        float: left;
+        position: relative;
+        height: 100%;
+          min-height: 104vw;
+      }
+      }
+    }
+      
+  }
+   .palette-wrap{
+      ul {
+        li {
+          border-radius: 5px;
+          &:nth-child(1) {
+            background: #173A64;
+            border:1px solid  #173A64;
+          }
+          &:nth-child(2) {
+            background: #0D63AA;
+             border:1px solid  #0D63AA;
+          }
+          &:nth-child(3) {
+            background: #1F9CD7;
+             border:1px solid  #1F9CD7;
+          }
+          &:nth-child(4) {
+            background: #858686;
+             border:1px solid  #858686;
+          }
+          &:nth-child(5) {
+            background: #fff;
+            border:1px solid  #707070;
+          }
+        }
+      }
+  }
+}
+.mobilian {
+  .project__info {
+    @include respond-to("bp-max-820") {
+      top: 100vw;
+    }
+  }
+  .palette-wrap{
+      ul {
+        li {
+          border-radius: 5px;
+          &:nth-child(1) {
+            background: #000;
+            border:1px solid  #000;
+          }
+          &:nth-child(2) {
+            background: #303FA4;
+             border:1px solid  #303FA4;
+          }
+          &:nth-child(3) {
+            background: #E6EBFE;
+             border:1px solid  #707070;
+          }
+          &:nth-child(4) {
+            background: #CCCCCC;
+             border:1px solid  #707070;
+          }
+          &:nth-child(5) {
+           display: none;
+          }
+        }
+      }
+  }
+}
+.inihub {
+  .mockup-wrap {
+    position: relative;
+    .mockup {
+
+    }
+
+  }
 }

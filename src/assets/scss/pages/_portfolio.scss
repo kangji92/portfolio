@@ -1,4 +1,10 @@
 
+section {
+  min-width: 1600px;
+  @include respond-to("bp-max-820") {
+    min-width: none;
+  }
+}
 .prj-wrap {
   @include clearfix;
 }
@@ -171,11 +177,11 @@
     height: 100%;
     left: -10%;
     top: 0;
- @include respond-to("bp-max-820") {
-      left: 0;
-      top: 5vw;
-  }
-}
+    @include respond-to("bp-max-820") {
+          left: 0;
+          top: 5vw;
+      }
+    }
   .mockup {
     @include background-image-render;
     &::after {
@@ -278,12 +284,12 @@
           content: "";
           display: block;
           position: absolute;
-          right: 167px;
+          right: 127px;
           bottom: 150px;
-          width: 510px;
-          height: 480px;
-          background: url("~@/assets/images/projects/initech/inihub/inihub_pc_01.png") center no-repeat;
-          background-size: 510px;
+          width: 1000px;
+          height: 680px;
+          background: url("~@/assets/images/projects/initech/inihub/inihub_mockup_01@2x.png") center no-repeat;
+          background-size: 100%;
           @include respond-to("bp-max-820") {
             left: 50%;
             transform: translateX(-50%);
@@ -300,10 +306,13 @@
       width: 100%;
       height: 100%;
       position: absolute;
-      bottom: 20px;
+      ///bottom: 20px;
+      left: 60px;
+      bottom: 142px;
       @include respond-to("bp-max-820") {
-             bottom: 0;
-
+             //bottom: 0;
+        top: -10vw;
+        right: 1vw;
         }
       &::after {
         // pc
@@ -340,7 +349,7 @@
             right: 0;
             bottom: 0;
             background-position-y: 0;
-              width: 55vw;
+             width: 55vw;
             height: 36vw;
             right: 14vw;
             bottom: 13vw;
@@ -348,17 +357,24 @@
         }
       }
       &.inihub {
+        &::after {
+          display: none;
+        }
         &::before {
           content: "";
           display: block;
           position: absolute;
-          right: 167px;
-          bottom: 150px;
-          width: 625px;
-          height: 392px;
-          background: url("~@/assets/images/projects/initech/inihub/inihub_a_pc_01.png") no-repeat;
-          background-size: 625px;
-          background-position-y: 50%;
+          left: 76px;
+          //left: 4vw;
+          bottom: 70px;
+          //bottom: 3.8vw;
+          width: 1005px;
+          height: 592px;
+          //width: 52.5vw;
+          //height: 30vw;
+          background: url("~@/assets/images/projects/initech/inihub/inihub_mockup_pc@2x.png") no-repeat;
+          background-size: 100%;
+         // background-position-y: 50%;
         }
       }
       &.multi-demo {
@@ -388,11 +404,12 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      left: -50px;
       top: 70px;
+      left: -20px;
+      z-index: -1;
       @include respond-to("bp-max-820") {
         left: 2vw;
-        top: 12vw;
+        top: 23vw;
         
       }
       &::after {
@@ -439,8 +456,8 @@
           left: 280px;
           background: url("~@/assets/images/projects/initech/inihub/inihub_a_tablet_01.jpg") center center no-repeat;
           background-size: 100%;
-          width: 300px;
-          height: 428px;
+          width: 310px;
+          height: 418px;
           z-index: -1;
           @include respond-to("bp-max-820") {
             width: 40vw;
@@ -452,14 +469,16 @@
       }
     }
     &.mockup__respons-mo {
-      position: absolute;
-      left: -270px;
-      bottom: 17px;
-      @include respond-to("bp-max-820") {
-        bottom: -8vw;
-        left: 10vw;
-     
-      }
+        position: absolute;
+        //left: -270px;
+        //bottom: 17px;
+        left: -234px;
+        bottom: 112px;
+        @include respond-to("bp-max-820") {
+          bottom: 9vw;
+          left: 17vw;
+      
+        }
 
       &::after {
         content: "";
@@ -500,20 +519,26 @@
         }
       }
       &.inihub {
+        &::after {display: none;}
         &::before {
           content: "";
           display: block;
           position: absolute;
-          left: 178px;
-          bottom: 130px;
-          width: 130px;
-          height: 239px;
-          background: url("~@/assets/images/projects/initech/inihub/inihub_a_m_01.png") center top no-repeat;
+          left: 76px;
+          bottom: 90px;
+           //  left: 6vw;
+          //bottom: 5vw;
+          width: 502px;
+          height: 490px;
+          //width: 26.15vw;
+          //height: 25.55vw;
+          background: url("~@/assets/images/projects/initech/inihub/inihub_mockup_mo@2x.png") center top no-repeat;
           background-size: 100%;
           @include respond-to("bp-max-820") {
            
           }
         }
+        
       }
     }
     &.mockup__mo {
@@ -521,7 +546,7 @@
       height: 100%;
       position: absolute;
       left: 0;
-      top: 10%;
+      top: 5%;
      @include respond-to("bp-max-820") {
       top: 0;
      }
@@ -529,7 +554,7 @@
       &::after {
         content: "";
         display: block;
-       width: 356px;
+        width: 356px;
         height: 444px;
         position: absolute;
         left: 0;
@@ -576,6 +601,35 @@
        
         }
       }
+      &.lotte {
+         &::after {
+          display: none;
+        }
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: -15%;
+          top: 5%;
+          width: 1100px;
+          height: 568px;
+          background: url("~@/assets/images/projects/lotte/lotte_mockup_main.png") center top no-repeat;
+          background-size: 100%;
+          @include respond-to("bp-max-1600") {
+            width: 58vw;
+            height: 32vw;
+            top: 10vw;
+          }
+          @include respond-to("bp-max-820") {
+            width: 70vw;
+            height: 48vw;
+            left: 50%;
+            top: 36%;
+            transform: translate(-50%, -50%);
+          }
+       
+        }
+      }
       &.mobilian {
         margin-top: 5%;
             
@@ -591,8 +645,8 @@
           position: absolute;
           left: 8%;
           top: 0;
-          width: 850px;
-          height: 642px;
+          width: 720px;
+          height: 542px;
          
           background: url("~@/assets/images/projects/initech/mobilian/mobilian_main_wrap.png") center top no-repeat;
           background-size: 100%;

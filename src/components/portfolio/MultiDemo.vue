@@ -85,7 +85,7 @@
                 <dd>Tomcat</dd>
               </dl>
               <dl>
-                <dt>UI Desgin Guide Tool :</dt>
+                <dt>UI Guide Tool :</dt>
                 <dd>Photoshop</dd>
               </dl>
             </div>
@@ -113,7 +113,7 @@
         </article>
         <section class="section-wrap">
           <div class="inner">
-            <article class="hiring-info">
+            <article class="hiring-info components">
               <div class="ttl">
                 <h2>Components</h2>
               </div>

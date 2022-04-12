@@ -41,17 +41,6 @@
                     {{ $t("project." + project.name + "_info_output") }}
                   </dd>
                 </dl>
-                <dl class="project__desc">
-                  <dt>웹 호환성</dt>
-                  <dd>
-                    - PC : Chrome, Firefox, IE11, Safari <br />
-                    - Tablet : Android 6.X / IOS 10.X
-                  </dd>
-                </dl>
-                <dl class="project__desc">
-                  <dt>해상도 범위</dt>
-                  <dd>- Mobile / Tablet(세로) : 320px ~ 800px</dd>
-                </dl>
                 <!-- <button class="btn__line" type="button">View Site</button>-->
               </div>
             </div>
@@ -88,7 +77,7 @@
                 <dd>Vue.js (Vue-cli)</dd>
               </dl>
               <dl>
-                <dt>UI Desgin Guide Tool :</dt>
+                <dt>UI Guide Tool :</dt>
                 <dd>Zeplin, Photoshop</dd>
               </dl>
               <dl class="project__desc">
@@ -96,19 +85,23 @@
                 <dd>
                   - Vuex 상태관리 <br />
                   - i18n 다국어 지원<br />
-                  - Vue-router 라우팅 기능
+                  - Vue-router 라우팅 기능<br />
+                  - Sass(SCSS)
                 </dd>
               </dl>
               <dl class="project__desc">
                 <dt>웹 호환성</dt>
                 <dd>
                   - PC : Chrome, Firefox, IE11, Safari <br />
-                  - Tablet : Android 6.X / IOS 10.X
+                  - Tablet/Moblie : Android 6.X / IOS 10.X<br />
                 </dd>
               </dl>
               <dl class="project__desc">
                 <dt>해상도 범위</dt>
-                <dd>- PC/ Tablet(가로) : 801px ~ 1920px</dd>
+                <dd>
+                  - PC/ Tablet(가로) : 801px ~ 1920px<br />
+                  - Mobile/ Tablet(세로) : 280px ~ 800px
+                </dd>
               </dl>
             </div>
             <div class="col">
@@ -136,63 +129,70 @@
         </article>
         <section class="section-wrap">
           <div class="inner">
-            <article class="hiring-info">
+            <article class="hiring-info components">
               <div class="ttl">
                 <h2>Components</h2>
               </div>
-              <h3 class="visual__ttl">Cloud Auth</h3>
-              <div class="visual-box col">
-                <p class="visual__ttl">Mobile Web</p>
+              <h3 class="visual__ttl">Individual UI</h3>
+              <div class="visual-box type-mix">
                 <div class="mockup_sub" :class="project.name + 1">
                   <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
                 </div>
+                <p class="visual__ttl">PC</p>
               </div>
-              <div class="visual-box col">
-                <p class="visual__ttl">PC Web</p>
+              <div class="visual-box type-mix">
                 <div class="mockup_sub" :class="project.name + 2">
                   <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
                 </div>
+                <p class="visual__ttl">Mobile</p>
               </div>
-            </article>
-            <article class="hiring-info">
-              <h3 class="visual__ttl">
-                Simple Auth | Toss, Kakao, PASS, NAVER PAYCO
-              </h3>
               <div class="visual-box col">
-                <p class="visual__ttl">PC Web</p>
                 <div class="mockup_sub" :class="project.name + 3">
                   <span></span>
-                </div>
-                <div class="mockup_sub" :class="project.name + 4">
                   <span></span>
                 </div>
+                <p class="visual__ttl">Mobile</p>
+              </div>
+              <div class="visual-box col">
+                <div class="mockup_sub" :class="project.name + 4">
+                  <span></span>
+                  <span></span>
+                </div>
+                <p class="visual__ttl">PC</p>
+              </div>
+            </article>
+
+            <article class="hiring-info">
+              <h3 class="visual__ttl">Intergration UI</h3>
+              <div class="visual-box col">
+                <p class="visual__ttl">Main</p>
                 <div class="mockup_sub" :class="project.name + 5">
                   <span></span>
                 </div>
               </div>
               <div class="visual-box col">
-                <p class="visual__ttl">Mobile Web</p>
                 <div class="mockup_sub" :class="project.name + 6">
                   <span></span>
                 </div>
+              </div>
+              <div class="visual-box type-mix">
+                <p class="visual__ttl">PC</p>
                 <div class="mockup_sub" :class="project.name + 7">
                   <span></span>
-                </div>
-              </div>
-            </article>
-            <article class="hiring-info">
-              <h3 class="visual__ttl">
-                SNS Auth | Toss, Kakao, PASS, NAVER PAYCO
-              </h3>
-              <div class="visual-box col">
-                <p class="visual__ttl">PC Web</p>
-                <div class="mockup_sub" :class="project.name + 8">
+                  <span></span>
                   <span></span>
                 </div>
               </div>
-              <div class="visual-box col">
-                <p class="visual__ttl">Mobile Web</p>
-                <div class="mockup_sub" :class="project.name + 9">
+              <div class="visual-box type-mix">
+                <p class="visual__ttl">Mobile</p>
+                <div class="mockup_sub" :class="project.name + 8">
+                  <span></span>
                   <span></span>
                 </div>
               </div>

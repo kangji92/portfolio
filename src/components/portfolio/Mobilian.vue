@@ -67,7 +67,7 @@
                   <dd>Vue.js (Vue-cli)</dd>
                 </dl>
                 <dl>
-                  <dt>UI Desgin Guide Tool :</dt>
+                  <dt>UI Guide Tool :</dt>
                   <dd>Zeplin, Photoshop</dd>
                 </dl>
                 <dl class="project__desc">
@@ -75,7 +75,8 @@
                   <dd>
                     - Vuex 상태관리 <br />
                     - i18n 다국어 지원<br />
-                    - Vue-router 라우팅 기능
+                    - Vue-router 라우팅 기능<br />
+                    - Sass(SCSS)
                   </dd>
                 </dl>
                 <dl class="project__desc">
@@ -115,8 +116,7 @@
               </div>
             </div>
           </article>
-
-          <article class="hiring-info">
+          <article class="hiring-info components">
             <div class="inner">
               <div class="ttl">
                 <h2>Components</h2>
@@ -170,13 +170,6 @@
                   <span></span>
                 </div>
               </div>
-            </div>
-          </article>
-        </section>
-        <section class="section-wrap">
-          <article class="hiring-info">
-            <div class="center">
-              <article class="hiring-info"></article>
             </div>
           </article>
         </section>
