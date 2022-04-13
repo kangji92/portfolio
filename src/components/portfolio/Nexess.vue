@@ -38,13 +38,13 @@
                     {{ $t("project." + project.name + "_info_output") }}
                   </dd>
                 </dl>
-                <button class="btn__line" type="button">View Site</button>
+                <!--     <button class="btn__line" type="button">View Site</button>-->
               </div>
             </div>
             <div class="mockup" :class="project.name"><span></span></div>
           </div>
         </div>
-        <article class="hiring-info">
+        <div class="hiring-info">
           <div class="inner">
             <div class="col">
               <span class="contour"></span>
@@ -102,11 +102,11 @@
               </div>
             </div>
           </div>
-        </article>
+        </div>
         <section class="section-wrap">
           <article class="hiring-info components">
-            <div class="center">
-              <div class="inner">
+            <div class="inner">
+              <div class="center">
                 <div class="ttl">
                   <h2>{{ $t("project.artical_ttl_03") }}</h2>
                   <p>Desktop / Tablet | Resolution 1366</p>
@@ -121,24 +121,26 @@
             </div>
           </article>
           <article class="hiring-info">
-            <div class="visual-box col pc">
-              <p class="visual__ttl">Section2</p>
-              <div class="mockup_sub" :class="project.name + 2">
-                <span></span>
+            <div class="inner">
+              <div class="visual-box col pc">
+                <p class="visual__ttl">Section2</p>
+                <div class="mockup_sub" :class="project.name + 2">
+                  <span></span>
+                </div>
               </div>
-            </div>
-            <div class="visual-box col pc">
-              <p class="visual__ttl">Section3</p>
-              <div class="mockup_sub" :class="project.name + 3">
-                <span></span>
+              <div class="visual-box col pc">
+                <p class="visual__ttl">Section3</p>
+                <div class="mockup_sub" :class="project.name + 3">
+                  <span></span>
+                </div>
               </div>
             </div>
           </article>
         </section>
         <section class="section-wrap">
           <article class="hiring-info">
-            <div class="center">
-              <div class="inner">
+            <div class="inner">
+              <div class="center">
                 <div class="ttl">
                   <h2>{{ $t("project.artical_ttl_04") }}</h2>
                   <p>Work System Page | Main</p>
@@ -153,44 +155,50 @@
             </div>
           </article>
           <article class="hiring-info">
-            <div class="visual-box col pc">
-              <p class="visual__ttl">Login1</p>
-              <div class="mockup_sub" :class="project.name + 5">
-                <span></span>
+            <div class="inner">
+              <div class="visual-box col pc">
+                <p class="visual__ttl">Login1</p>
+                <div class="mockup_sub" :class="project.name + 5">
+                  <span></span>
+                </div>
               </div>
-            </div>
-            <div class="visual-box col pc">
-              <p class="visual__ttl">Login2</p>
-              <div class="mockup_sub" :class="project.name + 6">
-                <span></span>
-              </div>
-            </div>
-          </article>
-          <article class="hiring-info">
-            <div class="visual-box col pc">
-              <p class="visual__ttl">MOTP</p>
-              <div class="mockup_sub" :class="project.name + 7">
-                <span></span>
-              </div>
-            </div>
-            <div class="visual-box col pc">
-              <p class="visual__ttl">Portal</p>
-              <div class="mockup_sub" :class="project.name + 8">
-                <span></span>
+              <div class="visual-box col pc">
+                <p class="visual__ttl">Login2</p>
+                <div class="mockup_sub" :class="project.name + 6">
+                  <span></span>
+                </div>
               </div>
             </div>
           </article>
           <article class="hiring-info">
-            <div class="visual-box col pc">
-              <p class="visual__ttl">Webmail</p>
-              <div class="mockup_sub" :class="project.name + 9">
-                <span></span>
+            <div class="inner">
+              <div class="visual-box col pc">
+                <p class="visual__ttl">MOTP</p>
+                <div class="mockup_sub" :class="project.name + 7">
+                  <span></span>
+                </div>
+              </div>
+              <div class="visual-box col pc">
+                <p class="visual__ttl">Portal</p>
+                <div class="mockup_sub" :class="project.name + 8">
+                  <span></span>
+                </div>
               </div>
             </div>
-            <div class="visual-box col pc">
-              <p class="visual__ttl">WorkFlow</p>
-              <div class="mockup_sub" :class="project.name + 10">
-                <span></span>
+          </article>
+          <article class="hiring-info">
+            <div class="inner">
+              <div class="visual-box col pc">
+                <p class="visual__ttl">Webmail</p>
+                <div class="mockup_sub" :class="project.name + 9">
+                  <span></span>
+                </div>
+              </div>
+              <div class="visual-box col pc">
+                <p class="visual__ttl">WorkFlow</p>
+                <div class="mockup_sub" :class="project.name + 10">
+                  <span></span>
+                </div>
               </div>
             </div>
           </article>

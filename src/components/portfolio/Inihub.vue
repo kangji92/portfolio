@@ -25,7 +25,6 @@
                     <li><a href="#">#vue-router</a></li>
                     <li><a href="#">#반응형웹</a></li>
                     <li><a href="#">#다국어지원</a></li>
-                    <li><a href="#">#보안솔루션</a></li>
                   </ul>
                 </div>
                 <dl>

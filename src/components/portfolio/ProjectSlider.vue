@@ -1,6 +1,7 @@
 <template>
   <div>
-    <button class="btn-prj__list"></button>
+    <!--
+    <button class="btn-prj__list"></button>-->
     <VueSlickCarousel
       class="slider"
       :arrows="true"

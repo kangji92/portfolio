@@ -6,6 +6,7 @@
     <router-view></router-view>
     <TestModal v-if="isModalViewed" @close-modal="closeModal"></TestModal>
     <!--<button class="button" @click="openModal">열기</button>-->
+    <NotSupport v-show="isNotSupport" id="isNotSupport"></NotSupport>
   </div>
 </template>
 <script>
@@ -13,6 +14,7 @@ import AppHeader from "@/components/common/AppHeader.vue";
 import IntroPage from "@/views/IntroPage.vue";
 import AppFooter from "@/components/common/AppFooter.vue";
 import TestModal from "@/components/common/TestModal.vue";
+import NotSupport from "@/components/common/NotSupport.vue";
 
 export default {
   name: "Home",
@@ -29,11 +31,12 @@ export default {
     AppHeader,
     AppFooter,
     TestModal,
+    NotSupport,
   },
   data() {
     return {
       stateId: 0,
-
+      isNotSupport: false,
       isModalViewed: false,
       menu: ["HOME", "ABOUT", "projectS", "ETC"],
       projects: [
@@ -102,13 +105,14 @@ export default {
           }
         } else {
           if (window.matchMedia("(max-width: 767px)").matches) {
-            if (isPortrait) {
-              // 세로 모드일때
-              this.isNotSupport = false;
-            } else {
-              // 가로 모드일때
-              this.isNotSupport = true;
-            }
+            this.isNotSupport = true;
+            // if (isPortrait) {
+            // 세로 모드일때
+            //  this.isNotSupport = false;
+            // } else {
+            // 가로 모드일때
+            //   this.isNotSupport = true;
+            // }
           } else {
             this.isNotSupport = false;
           }
@@ -182,5 +186,21 @@ export default {
   font-size: 22px;
   padding: 10px;
   cursor: pointer;
+}
+/*
+@media screen and (max-width: 480px) and (orientation: portrait) {
+  #isNotSupport {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 801px) and (max-width: 1023px) and (orientation: landscape) {
+  #isNotSupport {
+    display: block !important;
+  }
+}*/
+@media screen and (max-width: 820px) and (orientation: portrait) {
+  #isNotSupport {
+    display: block !important;
+  }
 }
 </style>

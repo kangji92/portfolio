@@ -63,7 +63,7 @@
           <ExperienceSlider></ExperienceSlider>
         </div>
       </section>
-      <section class="section">
+      <!--   <section class="section">
         <div class="content contact">
           <div class="contact-inner">
             <div class="txt-group">
@@ -85,6 +85,7 @@
           </div>
         </div>
       </section>
+      -->
     </full-page>
     <Modal v-if="showPopup" @close-popup-dlg="closePopup"></Modal>
   </div>
