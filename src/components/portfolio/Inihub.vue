@@ -129,8 +129,8 @@
           </div>
         </article>
         <section class="section-wrap">
-          <div class="inner">
-            <article class="hiring-info">
+          <article class="hiring-info">
+            <div class="inner">
               <div class="ttl">
                 <h2>Components</h2>
               </div>
@@ -147,51 +147,51 @@
                   <span></span>
                 </div>
               </div>
-            </article>
-            <article class="hiring-info">
-              <h3 class="visual__ttl">
-                Simple Auth | Toss, Kakao, PASS, NAVER PAYCO
-              </h3>
-              <div class="visual-box col">
-                <p class="visual__ttl">PC Web</p>
-                <div class="mockup_sub" :class="project.name + 3">
-                  <span></span>
-                </div>
-                <div class="mockup_sub" :class="project.name + 4">
-                  <span></span>
-                </div>
-                <div class="mockup_sub" :class="project.name + 5">
-                  <span></span>
-                </div>
+            </div>
+          </article>
+          <article class="hiring-info">
+            <h3 class="visual__ttl">
+              Simple Auth | Toss, Kakao, PASS, NAVER PAYCO
+            </h3>
+            <div class="visual-box col">
+              <p class="visual__ttl">PC Web</p>
+              <div class="mockup_sub" :class="project.name + 3">
+                <span></span>
               </div>
-              <div class="visual-box col">
-                <p class="visual__ttl">Mobile Web</p>
-                <div class="mockup_sub" :class="project.name + 6">
-                  <span></span>
-                </div>
-                <div class="mockup_sub" :class="project.name + 7">
-                  <span></span>
-                </div>
+              <div class="mockup_sub" :class="project.name + 4">
+                <span></span>
               </div>
-            </article>
-            <article class="hiring-info">
-              <h3 class="visual__ttl">
-                SNS Auth | Toss, Kakao, PASS, NAVER PAYCO
-              </h3>
-              <div class="visual-box col">
-                <p class="visual__ttl">PC Web</p>
-                <div class="mockup_sub" :class="project.name + 8">
-                  <span></span>
-                </div>
+              <div class="mockup_sub" :class="project.name + 5">
+                <span></span>
               </div>
-              <div class="visual-box col">
-                <p class="visual__ttl">Mobile Web</p>
-                <div class="mockup_sub" :class="project.name + 9">
-                  <span></span>
-                </div>
+            </div>
+            <div class="visual-box col">
+              <p class="visual__ttl">Mobile Web</p>
+              <div class="mockup_sub" :class="project.name + 6">
+                <span></span>
               </div>
-            </article>
-          </div>
+              <div class="mockup_sub" :class="project.name + 7">
+                <span></span>
+              </div>
+            </div>
+          </article>
+          <article class="hiring-info">
+            <h3 class="visual__ttl">
+              SNS Auth | Toss, Kakao, PASS, NAVER PAYCO
+            </h3>
+            <div class="visual-box col">
+              <p class="visual__ttl">PC Web</p>
+              <div class="mockup_sub" :class="project.name + 8">
+                <span></span>
+              </div>
+            </div>
+            <div class="visual-box col">
+              <p class="visual__ttl">Mobile Web</p>
+              <div class="mockup_sub" :class="project.name + 9">
+                <span></span>
+              </div>
+            </div>
+          </article>
         </section>
         <!--
         <section class="section-wrap">

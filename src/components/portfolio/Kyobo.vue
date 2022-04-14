@@ -23,10 +23,8 @@
                   <ul>
                     <li><a href="#">#Vue.js</a></li>
                     <li><a href="#">#vue-router</a></li>
-                    <li><a href="#">#모바일웹</a></li>
                     <li><a href="#">#반응형웹</a></li>
                     <li><a href="#">#다국어지원</a></li>
-                    <li><a href="#">#보안솔루션</a></li>
                   </ul>
                 </div>
                 <dl>
@@ -128,14 +126,18 @@
           </div>
         </article>
         <section class="section-wrap">
-          <div class="inner">
-            <article class="hiring-info components">
+          <article class="hiring-info components">
+            <div class="inner">
               <div class="ttl">
                 <h2>Components</h2>
               </div>
-              <h3 class="visual__ttl">Individual UI</h3>
-              <div class="visual-box type-mix">
+              <h3>Individual UI</h3>
+              <div class="visual-box type-mix pc">
                 <div class="mockup_sub" :class="project.name + 1">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
                   <span></span>
                   <span></span>
                   <span></span>
@@ -143,7 +145,7 @@
                 </div>
                 <p class="visual__ttl">PC</p>
               </div>
-              <div class="visual-box type-mix">
+              <div class="visual-box type-mix mo">
                 <div class="mockup_sub" :class="project.name + 2">
                   <span></span>
                   <span></span>
@@ -152,52 +154,59 @@
                 </div>
                 <p class="visual__ttl">Mobile</p>
               </div>
-              <div class="visual-box col">
+              <div class="visual-box type-mix mo">
                 <div class="mockup_sub" :class="project.name + 3">
                   <span></span>
                   <span></span>
                 </div>
                 <p class="visual__ttl">Mobile</p>
               </div>
-              <div class="visual-box col">
+              <div class="visual-box type-mix pc">
                 <div class="mockup_sub" :class="project.name + 4">
                   <span></span>
                   <span></span>
                 </div>
                 <p class="visual__ttl">PC</p>
               </div>
-            </article>
-
-            <article class="hiring-info">
-              <h3 class="visual__ttl">Intergration UI</h3>
-              <div class="visual-box col">
-                <p class="visual__ttl">Main</p>
-                <div class="mockup_sub" :class="project.name + 5">
-                  <span></span>
-                </div>
+            </div>
+          </article>
+          <!-- 통합UI -->
+          <article class="hiring-info components">
+            <h3 class="visual__ttl">Intergration UI</h3>
+            <div class="visual-box type-mix">
+              <p class="visual__ttl">Main</p>
+              <div class="mockup_sub" :class="project.name + 5">
+                <span></span>
+                <span></span>
               </div>
-              <div class="visual-box col">
-                <div class="mockup_sub" :class="project.name + 6">
-                  <span></span>
-                </div>
+            </div>
+            <div class="visual-box type-mix pc">
+              <p class="visual__ttl">PC</p>
+              <div class="mockup_sub" :class="project.name + 6">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
-              <div class="visual-box type-mix">
-                <p class="visual__ttl">PC</p>
-                <div class="mockup_sub" :class="project.name + 7">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
+            </div>
+            <div class="visual-box type-mix mo">
+              <p class="visual__ttl">Mobile</p>
+              <div class="mockup_sub" :class="project.name + 7">
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
-              <div class="visual-box type-mix">
-                <p class="visual__ttl">Mobile</p>
-                <div class="mockup_sub" :class="project.name + 8">
-                  <span></span>
-                  <span></span>
-                </div>
+            </div>
+            <div class="visual-box type-mix">
+              <p class="visual__ttl">Mobile</p>
+              <div class="mockup_sub" :class="project.name + 8">
+                <span></span>
+                <span></span>
               </div>
-            </article>
-          </div>
+            </div>
+          </article>
         </section>
       </div>
     </div>
