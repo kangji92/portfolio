@@ -21,7 +21,7 @@
               <div class="project__info">
                 <div class="hash-group">
                   <ul>
-                    <li><a href="#">#Vue.js</a></li>
+                    <li><a href="#">#Vue-cli</a></li>
                     <li><a href="#">#vue-router</a></li>
                     <li><a href="#">#반응형웹</a></li>
                     <li><a href="#">#다국어지원</a></li>
@@ -133,16 +133,16 @@
             <div class="inner">
               <div class="ttl">
                 <h2>Components</h2>
+                <p>Responsive | Desktop / Tablet / Mobile | 32 Screens</p>
               </div>
               <h3 class="visual__ttl">Cloud Auth</h3>
               <div class="visual-box col">
-                <p class="visual__ttl">Mobile Web</p>
                 <div class="mockup_sub" :class="project.name + 1">
+                  <span></span>
                   <span></span>
                 </div>
               </div>
               <div class="visual-box col">
-                <p class="visual__ttl">PC Web</p>
                 <div class="mockup_sub" :class="project.name + 2">
                   <span></span>
                 </div>
@@ -153,12 +153,15 @@
             <h3 class="visual__ttl">
               Simple Auth | Toss, Kakao, PASS, NAVER PAYCO
             </h3>
-            <div class="visual-box col">
-              <p class="visual__ttl">PC Web</p>
+            <div class="visual-box type-mix">
               <div class="mockup_sub" :class="project.name + 3">
+                <span></span>
+                <span></span>
                 <span></span>
               </div>
               <div class="mockup_sub" :class="project.name + 4">
+                <span></span>
+                <span></span>
                 <span></span>
               </div>
               <div class="mockup_sub" :class="project.name + 5">
@@ -166,7 +169,6 @@
               </div>
             </div>
             <div class="visual-box col">
-              <p class="visual__ttl">Mobile Web</p>
               <div class="mockup_sub" :class="project.name + 6">
                 <span></span>
               </div>
@@ -180,7 +182,6 @@
               SNS Auth | Toss, Kakao, PASS, NAVER PAYCO
             </h3>
             <div class="visual-box col">
-              <p class="visual__ttl">PC Web</p>
               <div class="mockup_sub" :class="project.name + 8">
                 <span></span>
               </div>

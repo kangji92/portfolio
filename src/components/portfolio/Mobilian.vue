@@ -119,7 +119,7 @@
             <div class="inner">
               <div class="ttl">
                 <h2>Components</h2>
-                <p>Mobile / Tablet | Resolution 820</p>
+                <p>Mobile / Tablet | Resolution 820 | 17 pages</p>
               </div>
               <div class="visual-box col">
                 <p class="visual__ttl">인증서 목록</p>

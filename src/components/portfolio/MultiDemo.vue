@@ -127,9 +127,9 @@
               </div>
             </article>
             <article class="hiring-info components">
-              <h3 class="visual__ttl">Service</h3>
+              <!--<h3 class="visual__ttl">Service</h3>-->
               <div class="visual-box">
-                <p class="visual__ttl">PC</p>
+                <!--<p class="visual__ttl">PC</p>-->
                 <div class="mockup_sub" :class="project.name + 3">
                   <span></span>
                   <span></span>
@@ -145,9 +145,9 @@
               </div>
             </article>
             <article class="hiring-info components">
-              <h3 class="visual__ttl">Certficate</h3>
+              <!--<h3 class="visual__ttl">Certficate</h3>-->
               <div class="visual-box">
-                <p class="visual__ttl">PC</p>
+                <!--<p class="visual__ttl">PC</p>-->
                 <div class="mockup_sub" :class="project.name + 6">
                   <span></span>
                   <span></span>

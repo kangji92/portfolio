@@ -109,7 +109,7 @@
               <div class="center">
                 <div class="ttl">
                   <h2>{{ $t("project.artical_ttl_03") }}</h2>
-                  <p>Desktop / Tablet | Resolution 1366</p>
+                  <p>Desktop / Tablet | Resolution 1366 | 17 Pages</p>
                 </div>
                 <div class="visual-box">
                   <p class="visual__ttl">Section1 | SSO Solution</p>
