@@ -849,9 +849,10 @@ button { padding: 0; cursor: pointer;}
         display: block;
         width: 100%;
         height: 100%;
-        @include background-image-render;
+       // @include background-image-render;
       }
 
+   
       // nexess 데모
       &.nexess1 {
         margin: 0 auto;
@@ -1485,7 +1486,179 @@ button { padding: 0; cursor: pointer;}
         }
       }
       
-
+   // multidemo
+      &.multi-demo1 {
+        width: 800px;
+        height: 520px;
+        border-radius: 15px;
+        border: 1px solid #000;
+        overflow: hidden;
+        span {
+          width: 800px;
+          height: 760px;
+          background: url('~@/assets/images/projects/initech/demo/multidemo_01.png') no-repeat ;
+          background-size: 100%;
+        }
+      }
+      &.multi-demo2 {
+        width: 800px;
+        height: 520px;
+        border-radius: 15px;
+        border: 1px solid #000;
+        overflow: hidden;
+        
+        span {
+         width: 800px;
+          height: 760px;
+          background: url('~@/assets/images/projects/initech/demo/multidemo_02.png') no-repeat ;
+          background-size: 100%;
+        }
+      }
+      &.multi-demo3 {
+        width: 100%;
+        height: 660px;
+        border-radius: 15px;
+        //border: 1px solid #000;
+        //overflow: hidden;
+        position: absolute;
+        left: 0;
+        top: 0;
+        span {
+          width: 800px;
+          border-radius: 15px;
+          border: 1px solid #000;
+          overflow: hidden;
+          position: absolute;
+          &:nth-child(1) {
+            background: url('~@/assets/images/projects/initech/demo/multidemo_03.png') no-repeat ;
+            background-size: 100%;
+            top: 28px;
+            left: 0;
+          }
+          &:nth-child(2) {
+            top: 28px;
+            left: 810px;
+            background: url('~@/assets/images/projects/initech/demo/multidemo_03_eng.png') no-repeat ;
+            background-size: 100%;
+          }
+        }
+      }
+      &.multi-demo4 {
+        width: 100%;
+        height: 560px;
+        border-radius: 15px;
+        position: absolute;
+        left: 0;
+        top: 680px;
+        span {
+          width: 800px;
+          border-radius: 15px;
+          border: 1px solid #000;
+          overflow: hidden;
+          position: absolute;
+          &:nth-child(1) {
+            background: url('~@/assets/images/projects/initech/demo/multidemo_05.png') no-repeat ;
+            background-size: 100%;
+            top: 28px;
+            left: 0;
+          }
+          &:nth-child(2) {
+            top: 28px;
+            left: 810px;
+            background: url('~@/assets/images/projects/initech/demo/multidemo_05_eng.png') no-repeat ;
+            background-size: 100%;
+           
+          }
+        }
+        
+      }
+      &.multi-demo5 {
+        width: 100%;
+        height: 560px;
+        position: absolute;
+        left: 0;
+        top: 1280px;
+        span {
+          width: 800px;
+          border-radius: 15px;
+          border: 1px solid #000;
+          overflow: hidden;
+          position: absolute;
+          &:nth-child(1) {
+            background: url('~@/assets/images/projects/initech/demo/multidemo_06.png') no-repeat ;
+            background-size: 100%;
+            top: 28px;
+            left: 0;
+          }
+          &:nth-child(2) {
+            top: 28px;
+            left: 810px;
+            background: url('~@/assets/images/projects/initech/demo/multidemo_06_eng.png') no-repeat ;
+            background-size: 100%;
+           
+          }
+        }
+        
+      }
+      &.multi-demo6 {
+        width: 100%;
+        height: 460px;
+        position: absolute;
+        left: 0;
+        top: 1800px;
+        span {
+          width: 800px;
+          border-radius: 15px;
+          border: 1px solid #000;
+          overflow: hidden;
+          position: absolute;
+          &:nth-child(1) {
+            background: url('~@/assets/images/projects/initech/demo/multidemo_07.png') no-repeat ;
+            background-size: 100%;
+            top: 28px;
+            left: 0;
+          }
+          &:nth-child(2) {
+            top: 28px;
+            left: 810px;
+            background: url('~@/assets/images/projects/initech/demo/multidemo_07_eng.png') no-repeat ;
+            background-size: 100%;
+           
+          }
+        }
+        
+      }
+      &.multi-demo7 {
+        width: 100%;
+        height: 460px;
+        position: absolute;
+        left: 0;
+        top: 2100px;
+       
+        span {
+          width: 800px;
+          border-radius: 15px;
+          border: 1px solid #000;
+          overflow: hidden;
+          position: absolute;
+          &:nth-child(1) {
+            background: url('~@/assets/images/projects/initech/demo/multidemo_09.png') no-repeat ;
+            background-size: 100%;
+            top: 28px;
+            left: 0;
+          }
+          &:nth-child(2) {
+            top: 28px;
+            left: 810px;
+            background: url('~@/assets/images/projects/initech/demo/multidemo_10.png') no-repeat ;
+            background-size: 100%;
+           
+          }
+        }
+        
+      }
+  
+      
       /*
       &.nexess10 {
         span {

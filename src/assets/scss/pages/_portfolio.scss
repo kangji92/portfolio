@@ -183,12 +183,12 @@ section {
       }
     }
   .mockup {
-    @include background-image-render;
+    //@include background-image-render;
     &::after {
-      @include background-image-render;
+     // @include background-image-render;
     }
     &::before {
-      @include background-image-render;
+     // @include background-image-render;
     }
     &.mockup__pc {
       position: absolute;
@@ -386,7 +386,7 @@ section {
           bottom: 150px;
           width: 625px;
           height: 392px;
-          background: url("~@/assets/images/projects/initech/demo/multi_demo_01.png") no-repeat;
+          background: url("~@/assets/images/projects/initech/demo/multidemo_01.png") no-repeat;
           background-size: 100%;
           background-position-y: 50%;
           @include respond-to("bp-max-820") {
