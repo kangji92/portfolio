@@ -40,7 +40,7 @@
         "info_output" : "기여도 : ",
 
         "ttl_sh-bank" : "수협은행 Nextro시스템 UX/UI 고도화",
-        "subttl_sh-bank" : "SSO인증 보안 시스템 ",
+        "subttl_sh-bank" : "SSO 2Factor인증시스템 UI화면 (PC Web/Tablet) ",
         "sh-bank_info_date" : "2021.06 ~ 2021.09",
         "sh-bank_info_output": "퍼블리싱 100%",
 

@@ -51,8 +51,10 @@
                 </dl>
               </div>
             </div>
-            <div class="mockup pc" :class="project.name"><span></span></div>
-            <div class="mockup mo" :class="project.name"><span></span></div>
+            <div class="mockup-wrap">
+              <div class="mockup pc" :class="project.name"><span></span></div>
+              <div class="mockup mo" :class="project.name"><span></span></div>
+            </div>
           </div>
         </div>
 

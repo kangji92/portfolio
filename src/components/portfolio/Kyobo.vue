@@ -42,8 +42,10 @@
                 <!-- <button class="btn__line" type="button">View Site</button>-->
               </div>
             </div>
-            <div class="mockup pc" :class="project.name"><span></span></div>
-            <div class="mockup mo" :class="project.name"><span></span></div>
+            <div class="mockup-wrap">
+              <div class="mockup pc" :class="project.name"><span></span></div>
+              <div class="mockup mo" :class="project.name"><span></span></div>
+            </div>
           </div>
         </div>
 
@@ -90,8 +92,8 @@
               <dl class="project__desc">
                 <dt>웹 호환성</dt>
                 <dd>
-                  - PC : Chrome, Firefox, IE11, Safari <br />
-                  - Tablet/Moblie : Android 6.X / IOS 10.X<br />
+                  - PC : Chrome, MSEdge, Firefox, IE11, Safari <br />
+                  - Tablet/Mobile : Android 6.X / IOS 10.X
                 </dd>
               </dl>
               <dl class="project__desc">
@@ -144,7 +146,6 @@
                   <span></span>
                   <span></span>
                 </div>
-                <p class="visual__ttl">PC</p>
               </div>
               <div class="visual-box type-mix mo">
                 <div class="mockup_sub" :class="project.name + 2">
@@ -155,15 +156,15 @@
                 </div>
                 <!-- <p class="visual__ttl">Mobile</p>-->
               </div>
-              <div class="visual-box type-mix mo">
-                <div class="mockup_sub" :class="project.name + 3">
+              <div class="visual-box type-mix pc">
+                <div class="mockup_sub" :class="project.name + 4">
                   <span></span>
                   <span></span>
                 </div>
                 <!-- <p class="visual__ttl">Mobile</p>-->
               </div>
-              <div class="visual-box type-mix pc">
-                <div class="mockup_sub" :class="project.name + 4">
+              <div class="visual-box type-mix mo">
+                <div class="mockup_sub" :class="project.name + 3">
                   <span></span>
                   <span></span>
                 </div>

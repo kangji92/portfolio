@@ -70,8 +70,8 @@
               <dl class="project__desc">
                 <dt>웹 호환성</dt>
                 <dd>
-                  - PC : Chrome, Firefox, IE11, Safari <br />
-                  - Tablet : Android 6.X / IOS 10.X
+                  - PC : Chrome, MSEdge, Firefox, IE11, Safari <br />
+                  - Tablet/Mobile : Android 6.X / IOS 10.X
                 </dd>
               </dl>
               <dl class="project__desc">

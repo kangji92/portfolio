@@ -46,6 +46,7 @@
         text-align: left;
         display: block;
         font-size: 1vw;
+        line-height: 1.5;
          @include respond-to("bp-max-820") {
             font-size: 3vw;
          }
@@ -660,6 +661,59 @@ button { padding: 0; cursor: pointer;}
         backface-visibility: hidden;
       }
     }
+    
+    &.kyobo {
+      width: 44vw;
+      height: 30vw;
+      width: 1120px;
+      height: 730px;
+      position: absolute;
+      top: 35%;
+      right: -15%;
+      right: -5vw;
+      @include respond-to("bp-max-820") {
+        width: 80vw;
+        height: 51vw;
+        top: 10vw;
+        left: 18%;
+       }
+      span {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: url('~@/assets/images/projects/initech/kyobo/mockup_pc_kyobo.png') no-repeat center center ;
+        background-size: 100% auto;
+        image-rendering: -webkit-optimize-contrast;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+      }
+    }
+    &.multi-demo {
+      width: 44vw;
+      height: 30vw;
+      width: 1120px;
+      height: 730px;
+      position: absolute;
+      top: 35%;
+      right: -15%;
+      right: -5vw;
+      @include respond-to("bp-max-820") {
+        width: 80vw;
+        height: 51vw;
+        top: 10vw;
+        left: 18%;
+       }
+      span {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: url('~@/assets/images/projects/initech/demo/mockup_pc_multidemo.png') no-repeat center center ;
+        background-size: 100% auto;
+        image-rendering: -webkit-optimize-contrast;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+      }
+    }
   }
   &.mo {
     &.inihub {
@@ -683,6 +737,62 @@ button { padding: 0; cursor: pointer;}
         height: 100%;
         display: block;
         background: url('~@/assets/images/projects/initech/inihub/inihub_mockup_mo@2x.png') no-repeat center center ;
+        background-size: 100%;
+        image-rendering: -webkit-optimize-contrast;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+  
+      }
+    }
+      &.kyobo {
+      width: 27vw;
+    height: 30vw;
+    /* width: 384px; */
+    /* height: 576px; */
+    position: absolute;
+    /* top: 0; */
+    top: 7vw;
+    right: 40vw;
+
+      @include respond-to("bp-max-820") {
+        width: 46vw;
+        height: 46vw;
+        top: 15vw;
+        left: -9%;
+       }
+      span {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: url('~@/assets/images/projects/initech/kyobo/kyobo_main.png') no-repeat center center ;
+        background-size: 100%;
+        image-rendering: -webkit-optimize-contrast;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+  
+      }
+    }
+     &.multi-demo {
+      width: 27vw;
+    height: 30vw;
+    /* width: 384px; */
+    /* height: 576px; */
+    position: absolute;
+    /* top: 0; */
+    top: 7vw;
+    right: 40vw;
+
+      @include respond-to("bp-max-820") {
+        width: 46vw;
+        height: 46vw;
+        top: 15vw;
+        left: -9%;
+       }
+      span {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: url('~@/assets/images/projects/initech/demo/demo_mockup_mo.png') no-repeat center center ;
         background-size: 100%;
         image-rendering: -webkit-optimize-contrast;
         transform: translateZ(0);
@@ -1111,7 +1221,7 @@ button { padding: 0; cursor: pointer;}
       // kyobo
       &.kyobo1 {
         width: 100%;
-        height: 550px;
+        height: 880px;
         position: absolute;
         left: 0;
         top: 0;
@@ -1202,7 +1312,7 @@ button { padding: 0; cursor: pointer;}
         top: 0;
         span {
           width: 320px;
-          height: 690px;
+          height: 880px;
           float: left;
           &:nth-child(1) {
             background: url('~@/assets/images/projects/initech/kyobo/indv_kakao_m.png') no-repeat ;
@@ -1583,7 +1693,7 @@ button { padding: 0; cursor: pointer;}
       }
       // inihub
       &.inihub1 {
-        height: 420px;
+        height: 690px;
         position: absolute;
         left: 0;
         top: 32px;
@@ -1593,11 +1703,22 @@ button { padding: 0; cursor: pointer;}
           width: 420px;
           height: 402px;
           @include background-image-render;
+           position:absolute;
+          &:nth-child(1){
             background: url('~@/assets/images/projects/initech/inihub/inihub_pc_01.png') no-repeat ;
             background-size: 100%;
-            position:absolute;
             left: 0;
             top: 0;
+          }
+          &:nth-child(2) {
+            width: 320px;
+            height: 690px;
+            background: url('~@/assets/images/projects/initech/inihub/inihub_m_01.png') no-repeat ;
+            background-size: 100%;
+            left: 430px;
+            top: 0;
+          }
+            
        
         }
         @include respond-to("bp-max-820") {
@@ -1606,50 +1727,83 @@ button { padding: 0; cursor: pointer;}
         }
       }
       &.inihub2 {
-        height: 690px;
+        height: 737px;
         position: absolute;
-        left: 480px;
+        left: 0;
         top: 32px;
         margin: 0;
+        float: left;
         span {
           width: 320px;
-          height: 690px;
+          height: 737px;
           float: left;
           @include background-image-render;
-            background: url('~@/assets/images/projects/initech/inihub/inihub_m_01.png') no-repeat ;
+          position:absolute;
+         
+     
+          &:nth-child(1) {
+            width: 320px;
+            height: 737px;
+            background: url('~@/assets/images/projects/initech/inihub/mo_02_kakao.png') no-repeat ;
             background-size: 100%;
-            position:absolute;
             left: 0;
             top: 0;
-       
+             border-radius: 20px;
+          border: 5px solid #666;
+          }
+          &:nth-child(2) {
+            width: 320px;
+            height: 737px;
+            background: url('~@/assets/images/projects/initech/inihub/mo_03_pass.png') no-repeat ;
+            background-size: 100%;
+            left: 140px;
+            top: 0;
+            border-radius: 20px;
+            border: 5px solid #666;
+          }
+          &:nth-child(3) {
+            width: 320px;
+            height: 737px;
+            background: url('~@/assets/images/projects/initech/inihub/mo_04_naver.png') no-repeat ;
+            background-size: 100%;
+            left: 360px;
+            top: 0;
+            border-radius: 20px;
+            border: 5px solid #666;
+          }
         }
         @include respond-to("bp-max-820") {
           width: 48vw;
           height: 48vw;
         }
       }
-      &.inihub3 {
-        height: 690px;
+       &.inihub3 {
         position: absolute;
-        left: 480px;
+        left: 0;
         top: 32px;
         margin: 0;
+        float: left;
         span {
-          width: 320px;
-          height: 690px;
-          float: left;
+          width: 420px;
+          height: 402px;
           @include background-image-render;
             position: absolute;
             &:nth-child(1) {
-            background: url('~@/assets/images/projects/initech/inihub/inihub_m_02@2x.png') no-repeat ;
+            background: url('~@/assets/images/projects/initech/inihub/inihub_pc_02@2x.png') no-repeat ;
             background-size: 100%;
             left: 0;
             top: 0;
             }
             &:nth-child(2) {
-              background: url('~@/assets/images/projects/initech/inihub/inihub_m_03@2x.png') no-repeat ;
+              background: url('~@/assets/images/projects/initech/inihub/inihub_pc_03@2x.png') no-repeat ;
               background-size: 100%;
-              left: 100px;
+              left: 200px;
+              top: 0;
+            }
+            &:nth-child(3) {
+              background: url('~@/assets/images/projects/initech/inihub/inihub_pc_04@2x.png') no-repeat ;
+              background-size: 100%;
+              left: 400px;
               top: 0;
             }
        
@@ -1660,26 +1814,220 @@ button { padding: 0; cursor: pointer;}
         }
       }
       &.inihub4 {
-        height: 890px;
+        height: 737px;
         position: absolute;
-        left: 0;
         top: 32px;
         margin: 0;
+        float: right;
         span {
-          width: 420px;
-          height: 402px;
+          width: 320px;
+          height: 737px;
+          float: left;
           @include background-image-render;
-          background: url('~@/assets/images/projects/initech/inihub/inihub_pc_02@2x.png') no-repeat ;
-          background-size: 100%;
-          position: absolute;
-          left: 0;
-          top: 0;
+          position:absolute;
+         
+          &:nth-child(1) {
+            width: 320px;
+            height: 737px;
+            background: url('~@/assets/images/projects/initech/inihub/mo_01_toss_1.png') no-repeat ;
+            background-size: 100%;
+            left: 0;
+            top: 0;
+            border-radius: 20px;
+            border: 5px solid #666;
+          }
+          &:nth-child(2) {
+            width: 320px;
+            height: 737px;
+            background: url('~@/assets/images/projects/initech/inihub/mo_03_pass_1.png') no-repeat ;
+            background-size: 100%;
+            left: 180px;
+            top: 0;
+             border-radius: 20px;
+          border: 5px solid #666;
+          }
+          &:nth-child(3) {
+            width: 320px;
+            height: 737px;
+            background: url('~@/assets/images/projects/initech/inihub/mo_04_naver_1.png') no-repeat ;
+            background-size: 100%;
+            left:360px;
+            top: 0;
+            border-radius: 20px;
+            border: 5px solid #666;
+          }
         }
         @include respond-to("bp-max-820") {
           width: 48vw;
           height: 48vw;
         }
       }
+      &.inihub5 {
+        height: 737px;
+        position: absolute;
+        left: 0;
+        top: 32px;
+        margin: 0;
+        float: left;
+        span {
+          width: 320px;
+          height: 737px;
+          float: left;
+          @include background-image-render;
+          position:absolute;
+     
+          &:nth-child(1) {
+            width: 320px;
+            height: 737px;
+            background: url('~@/assets/images/projects/initech/inihub/mo_01_toss_2.png') no-repeat ;
+            background-size: 100%;
+            left: 0;
+            top: 0;
+            border-radius: 20px;
+            border: 5px solid #666;
+          }
+          &:nth-child(2) {
+            width: 320px;
+            height: 737px;
+            background: url('~@/assets/images/projects/initech/inihub/mo_02_kakao_2.png') no-repeat ;
+            background-size: 100%;
+            left: 140px;
+            top: 0;
+             border-radius: 20px;
+            border: 5px solid #666;
+          }
+          &:nth-child(3) {
+            width: 320px;
+            height: 737px;
+            background: url('~@/assets/images/projects/initech/inihub/mo_03_pass_2.png') no-repeat ;
+            background-size: 100%;
+            left: 280px;
+            top: 0;
+            border-radius: 20px;
+            border: 5px solid #666;
+          }
+           &:nth-child(4) {
+            width: 320px;
+            height: 737px;
+            background: url('~@/assets/images/projects/initech/inihub/mo_04_naver_2.png') no-repeat ;
+            background-size: 100%;
+            left: 420px;
+            top: 0;
+            border-radius: 20px;
+            border: 5px solid #666;
+          }
+        }
+        @include respond-to("bp-max-820") {
+          width: 48vw;
+          height: 48vw;
+        }
+      }
+      &.inihub6 {
+        position: absolute;
+        left: 0;
+        top: 32px;
+        margin: 0;
+        float: left;
+        span {
+          width: 420px;
+          height: 402px;
+          @include background-image-render;
+            position: absolute;
+            &:nth-child(1) {
+            background: url('~@/assets/images/projects/initech/inihub/pc_01_toss_1.png') no-repeat ;
+            background-size: 100%;
+            left: 0;
+            top: 0;
+            }
+            &:nth-child(2) {
+              background: url('~@/assets/images/projects/initech/inihub/pc_07_kb_2_2.png') no-repeat ;
+              background-size: 100%;
+              left: 200px;
+              top: 0;
+            }
+            &:nth-child(3) {
+              background: url('~@/assets/images/projects/initech/inihub/pc_05_payco_1.png') no-repeat ;
+              background-size: 100%;
+              left: 400px;
+              top: 0;
+            }
+       
+        }
+        @include respond-to("bp-max-820") {
+          width: 48vw;
+          height: 48vw;
+        }
+      }
+      &.inihub7 {
+        position: absolute;
+        left: 0;
+        top: 32px;
+        margin: 0;
+        float: left;
+        span {
+          width: 420px;
+          height: 402px;
+          @include background-image-render;
+            position: absolute;
+            &:nth-child(1) {
+            background: url('~@/assets/images/projects/initech/inihub/pc_02_kakao_2.png') no-repeat ;
+            background-size: 100%;
+            left: 0;
+            top: 0;
+            }
+            &:nth-child(2) {
+              background: url('~@/assets/images/projects/initech/inihub/pc_04_naver_2.png') no-repeat ;
+              background-size: 100%;
+              left: 200px;
+              top: 0;
+            }
+            &:nth-child(3) {
+              background: url('~@/assets/images/projects/initech/inihub/pc_05_payco_2.png') no-repeat ;
+              background-size: 100%;
+              left: 360px;
+              top: 0;
+            }
+       
+        }
+        @include respond-to("bp-max-820") {
+          width: 48vw;
+          height: 48vw;
+        }
+      }
+       &.inihub8 {
+        position: absolute;
+        left: 0;
+        top: 32px;
+        margin: 0;
+        float: left;
+        span {
+          width: 420px;
+          height: 402px;
+        
+          @include background-image-render;
+            position: absolute;
+            &:nth-child(1) {
+            background: url('~@/assets/images/projects/initech/inihub/inihub_pc_05@2x.png') no-repeat ;
+            background-size: 100%;
+            left: 0;
+            top: 0;
+            }
+            &:nth-child(2) {
+              width: 320px;
+              height: 690px;
+              background: url('~@/assets/images/projects/initech/inihub/inihub_m_04@2x.png') no-repeat ;
+              background-size: 100%;
+              left: 430px;
+              top: 0;
+            }
+       
+        }
+        @include respond-to("bp-max-820") {
+          width: 48vw;
+          height: 48vw;
+        }
+      }
+   
       
       
     // multidemo
@@ -1702,9 +2050,9 @@ button { padding: 0; cursor: pointer;}
         border-radius: 15px;
         border: 1px solid #000;
         overflow: hidden;
-        
+        margin-left: 10px;
         span {
-         width: 800px;
+          width: 800px;
           height: 760px;
           background: url('~@/assets/images/projects/initech/demo/multidemo_02.png') no-repeat ;
           background-size: 100%;
@@ -1986,6 +2334,10 @@ button { padding: 0; cursor: pointer;}
       }
       &.mo {
         width: 44%;
+        height:820px;
+      }
+       &.mix {
+        height: 690px;
       }
       @include respond-to("bp-max-820") {
         float: left;
@@ -2285,7 +2637,9 @@ button { padding: 0; cursor: pointer;}
       }
   }
 }
-.inihub {
+.inihub,
+.kyobo,
+.multi-demo {
   .mockup-wrap {
     //position: relative;
         position: absolute;

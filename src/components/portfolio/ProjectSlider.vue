@@ -221,7 +221,6 @@ export default {
           info_dt_04: "<b>사용 Tool: </b>",
           info_dt_05: "Tomcat, Git, Bitbucket",
           mockup_class_01: "mockup__respons-pc multi-demo",
-          mockup_class_02: "mockup__respons-pad multi-demo",
           mockup_class_03: "mockup__respons-mo multi-demo",
           image_class: "multi-demo",
         },

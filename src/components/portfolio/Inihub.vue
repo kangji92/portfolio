@@ -93,8 +93,8 @@
               <dl class="project__desc">
                 <dt>웹 호환성</dt>
                 <dd>
-                  - PC : Chrome, Firefox, IE11, Safari <br />
-                  - Tablet : Android 6.X / IOS 10.X
+                  - PC : Chrome, MSEdge, Firefox, IE11, Safari <br />
+                  - Tablet/Mobile : Android 6.X / IOS 10.X
                 </dd>
               </dl>
               <dl class="project__desc">
@@ -136,60 +136,76 @@
                 <p>Responsive | Desktop / Tablet / Mobile | 32 Screens</p>
               </div>
               <h3 class="visual__ttl">Cloud Auth</h3>
-              <div class="visual-box col">
+              <div class="visual-box type-mix mix">
                 <div class="mockup_sub" :class="project.name + 1">
                   <span></span>
                   <span></span>
                 </div>
               </div>
-              <div class="visual-box col">
+            </div>
+          </article>
+          <article class="hiring-info">
+            <div class="inner">
+              <h3 class="visual__ttl">
+                Simple Auth | Toss, Kakao, PASS, NAVER, PAYCO, Shinhan, KB
+              </h3>
+              <div class="visual-box type-mix">
                 <div class="mockup_sub" :class="project.name + 2">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="mockup_sub" :class="project.name + 3">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="visual-box type-mix">
+                <div class="mockup_sub" :class="project.name + 6">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="mockup_sub" :class="project.name + 4">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="visual-box type-mix">
+                <div class="mockup_sub" :class="project.name + 5">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="mockup_sub" :class="project.name + 7">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
                   <span></span>
                 </div>
               </div>
             </div>
           </article>
           <article class="hiring-info">
-            <h3 class="visual__ttl">
-              Simple Auth | Toss, Kakao, PASS, NAVER PAYCO
-            </h3>
-            <div class="visual-box type-mix">
-              <div class="mockup_sub" :class="project.name + 3">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <div class="mockup_sub" :class="project.name + 4">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <div class="mockup_sub" :class="project.name + 5">
-                <span></span>
-              </div>
-            </div>
-            <div class="visual-box col">
-              <div class="mockup_sub" :class="project.name + 6">
-                <span></span>
-              </div>
-              <div class="mockup_sub" :class="project.name + 7">
-                <span></span>
-              </div>
-            </div>
-          </article>
-          <article class="hiring-info">
-            <h3 class="visual__ttl">
-              SNS Auth | Toss, Kakao, PASS, NAVER PAYCO
-            </h3>
-            <div class="visual-box col">
-              <div class="mockup_sub" :class="project.name + 8">
-                <span></span>
-              </div>
-            </div>
-            <div class="visual-box col">
-              <p class="visual__ttl">Mobile Web</p>
-              <div class="mockup_sub" :class="project.name + 9">
-                <span></span>
+            <div class="inner">
+              <h3 class="visual__ttl">
+                SNS Auth | Toss, Kakao, PASS, NAVER PAYCO
+              </h3>
+              <div class="visual-box col">
+                <div class="mockup_sub" :class="project.name + 8">
+                  <span></span>
+                  <span></span>
+                </div>
               </div>
             </div>
           </article>

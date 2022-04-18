@@ -378,24 +378,24 @@ section {
         }
       }
       &.multi-demo {
+        &::after {
+          display: none;
+        }
         &::before {
           content: "";
           display: block;
           position: absolute;
-          right: 167px;
-          bottom: 150px;
-          width: 625px;
-          height: 392px;
-          background: url("~@/assets/images/projects/initech/demo/multidemo_01.png") no-repeat;
+          left: 76px;
+          //left: 4vw;
+          bottom: 70px;
+          //bottom: 3.8vw;
+          width: 1005px;
+          height: 592px;
+          //width: 52.5vw;
+          //height: 30vw;
+          background: url("~@/assets/images/projects/initech/demo/mockup_pc_multidemo.png") no-repeat;
           background-size: 100%;
-          background-position-y: 50%;
-          @include respond-to("bp-max-820") {
-              background-position-y:0;
-               width: 55vw;
-              height: 36vw;
-              right: 14vw;
-              bottom: 13vw;
-          }
+         // background-position-y: 50%;
         }
       }
 
@@ -441,7 +441,7 @@ section {
           left: 43px;
           @include respond-to("bp-max-820") {
                width: 40vw;
-    height: 44vw;
+            height: 44vw;
             top: 0;
             left: 0;
           }
@@ -459,6 +459,27 @@ section {
           width: 310px;
           height: 418px;
           z-index: -1;
+          @include respond-to("bp-max-820") {
+            width: 40vw;
+            height: 35vw;
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+      &.kyobo {
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 50px;
+          left: 49px;
+          background: url("~@/assets/images/projects/initech/kyobo/intergration/pad_kakao_1.jpg") center -50px no-repeat;
+          background-size: 100%;
+          width: 310px;
+          height: 418px;
+          z-index: -1;
+            @include background-image-render;
           @include respond-to("bp-max-820") {
             width: 40vw;
             height: 35vw;
@@ -503,11 +524,11 @@ section {
           content: "";
           display: block;
           position: absolute;
-          left: 176px;
+          left: 169px;
           bottom: 130px;
           width: 130px;
           height: 239px;
-          background: url("~@/assets/images/projects/initech/kyobo/integration_mo_kyobo_auth.png") no-repeat;
+          background: url("~@/assets/images/projects/initech/kyobo/intergration/mo_01_kakao.jpg") center -35px  no-repeat;
           background-size: 100%;
           @include respond-to("bp-max-820") {
             width: 14.5vw;
@@ -533,6 +554,28 @@ section {
           //width: 26.15vw;
           //height: 25.55vw;
           background: url("~@/assets/images/projects/initech/inihub/inihub_mockup_mo@2x.png") center top no-repeat;
+          background-size: 100%;
+          @include respond-to("bp-max-820") {
+           
+          }
+        }
+        
+      }
+       &.multi-demo {
+        &::after {display: none;}
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 76px;
+          bottom: 90px;
+           //  left: 6vw;
+          //bottom: 5vw;
+          width: 502px;
+          height: 490px;
+          //width: 26.15vw;
+          //height: 25.55vw;
+          background: url("~@/assets/images/projects/initech/demo/demo_mockup_mo.png") center top no-repeat;
           background-size: 100%;
           @include respond-to("bp-max-820") {
            
