@@ -239,8 +239,8 @@ export default {
           info_dt_04: "<b>사용 Tool: </b>",
           info_dt_05: "Photoshop",
           image_class: "inipass",
-          mockup_class_01: "mockup__pc inipass",
-          mockup_class_03: "mockup__mo inipass",
+          mockup_class_01: "mockup__respons-pc inipass",
+          mockup_class_03: "mockup__respons-mo inipass",
         },
         {
           idx: "09",

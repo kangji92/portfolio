@@ -4,11 +4,7 @@
     <div v-for="project in projectList" :key="project.id" :class="project.name">
       <div class="container">
         <div class="header">
-          <div class="header-inner">
-            <!--<div class="modal-preface">
-                                    <span>+ 머리말</span>
-                                </div>-->
-          </div>
+          <div class="header-inner"></div>
         </div>
         <div class="hiring-main project-main1">
           <div class="hiring-heading">
@@ -41,7 +37,10 @@
                 <!--     <button class="btn__line" type="button">View Site</button>-->
               </div>
             </div>
-            <div class="mockup" :class="project.name"><span></span></div>
+            <div class="mockup-wrap">
+              <div class="mockup pc" :class="project.name"><span></span></div>
+              <div class="mockup mo" :class="project.name"><span></span></div>
+            </div>
           </div>
         </div>
         <div class="hiring-info">
@@ -108,12 +107,13 @@
             <div class="inner">
               <div class="center">
                 <div class="ttl">
-                  <h2>{{ $t("project.artical_ttl_03") }}</h2>
-                  <p>Desktop / Tablet | Resolution 1366</p>
+                  <h2>Pages</h2>
+                  <p>Desktop</p>
                 </div>
                 <div class="visual-box">
-                  <p class="visual__ttl">Section1 | SSO Solution</p>
+                  <p class="visual__ttl">Main</p>
                   <div class="mockup_sub" :class="project.name + 1">
+                    <span></span>
                     <span></span>
                   </div>
                 </div>
@@ -122,15 +122,10 @@
           </article>
           <article class="hiring-info">
             <div class="inner">
-              <div class="visual-box col pc">
-                <p class="visual__ttl">Section2</p>
+              <div class="visual-box pc">
+                <p class="visual__ttl">이니패스 소개</p>
                 <div class="mockup_sub" :class="project.name + 2">
                   <span></span>
-                </div>
-              </div>
-              <div class="visual-box col pc">
-                <p class="visual__ttl">Section3</p>
-                <div class="mockup_sub" :class="project.name + 3">
                   <span></span>
                 </div>
               </div>
@@ -142,62 +137,17 @@
             <div class="inner">
               <div class="center">
                 <div class="ttl">
-                  <h2>{{ $t("project.artical_ttl_04") }}</h2>
-                  <p>Work System Page | Main</p>
+                  <h2>Pages</h2>
+                  <p>Mobile</p>
                 </div>
                 <div class="visual-box">
-                  <p class="visual__ttl">Part1 | SSO Solution</p>
-                  <div class="mockup_sub" :class="project.name + 4">
+                  <!--<p class="visual__ttl"></p>-->
+                  <div class="mockup_sub" :class="project.name + 3">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                     <span></span>
                   </div>
-                </div>
-              </div>
-            </div>
-          </article>
-          <article class="hiring-info">
-            <div class="inner">
-              <div class="visual-box col pc">
-                <p class="visual__ttl">Login1</p>
-                <div class="mockup_sub" :class="project.name + 5">
-                  <span></span>
-                </div>
-              </div>
-              <div class="visual-box col pc">
-                <p class="visual__ttl">Login2</p>
-                <div class="mockup_sub" :class="project.name + 6">
-                  <span></span>
-                </div>
-              </div>
-            </div>
-          </article>
-          <article class="hiring-info">
-            <div class="inner">
-              <div class="visual-box col pc">
-                <p class="visual__ttl">MOTP</p>
-                <div class="mockup_sub" :class="project.name + 7">
-                  <span></span>
-                </div>
-              </div>
-              <div class="visual-box col pc">
-                <p class="visual__ttl">Portal</p>
-                <div class="mockup_sub" :class="project.name + 8">
-                  <span></span>
-                </div>
-              </div>
-            </div>
-          </article>
-          <article class="hiring-info">
-            <div class="inner">
-              <div class="visual-box col pc">
-                <p class="visual__ttl">Webmail</p>
-                <div class="mockup_sub" :class="project.name + 9">
-                  <span></span>
-                </div>
-              </div>
-              <div class="visual-box col pc">
-                <p class="visual__ttl">WorkFlow</p>
-                <div class="mockup_sub" :class="project.name + 10">
-                  <span></span>
                 </div>
               </div>
             </div>
@@ -216,7 +166,7 @@ export default {
       projectList: [
         {
           idx: 1,
-          name: "nexess",
+          name: "inipass",
           ttl: "+ Tech Stack",
           artical_ttl: "Tech Stack",
         },

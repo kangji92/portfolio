@@ -714,6 +714,32 @@ button { padding: 0; cursor: pointer;}
         backface-visibility: hidden;
       }
     }
+      &.inipass {
+      width: 44vw;
+      height: 30vw;
+      width: 1120px;
+      height: 730px;
+      position: absolute;
+      top: 35%;
+      right: -15%;
+      right: -5vw;
+      @include respond-to("bp-max-820") {
+        width: 80vw;
+        height: 51vw;
+        top: 10vw;
+        left: 18%;
+       }
+      span {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: url('~@/assets/images/projects/initech/inipass/mockup_pc_inipass.png') no-repeat center center ;
+        background-size: 100% auto;
+        image-rendering: -webkit-optimize-contrast;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+      }
+    }
   }
   &.mo {
     &.inihub {
@@ -774,13 +800,13 @@ button { padding: 0; cursor: pointer;}
     }
      &.multi-demo {
       width: 27vw;
-    height: 30vw;
-    /* width: 384px; */
-    /* height: 576px; */
-    position: absolute;
-    /* top: 0; */
-    top: 7vw;
-    right: 40vw;
+      height: 30vw;
+      /* width: 384px; */
+      /* height: 576px; */
+      position: absolute;
+      /* top: 0; */
+      top: 7vw;
+      right: 40vw;
 
       @include respond-to("bp-max-820") {
         width: 46vw;
@@ -793,6 +819,34 @@ button { padding: 0; cursor: pointer;}
         height: 100%;
         display: block;
         background: url('~@/assets/images/projects/initech/demo/demo_mockup_mo.png') no-repeat center center ;
+        background-size: 100%;
+        image-rendering: -webkit-optimize-contrast;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+  
+      }
+    }
+       &.inipass {
+      width: 27vw;
+      height: 30vw;
+      /* width: 384px; */
+      /* height: 576px; */
+      position: absolute;
+      /* top: 0; */
+      top: 7vw;
+      right: 40vw;
+
+      @include respond-to("bp-max-820") {
+        width: 46vw;
+        height: 46vw;
+        top: 15vw;
+        left: -9%;
+       }
+      span {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: url('~@/assets/images/projects/initech/inipass/mockup_mo_inipass.png') no-repeat center center ;
         background-size: 100%;
         image-rendering: -webkit-optimize-contrast;
         transform: translateZ(0);
@@ -1065,6 +1119,7 @@ button { padding: 0; cursor: pointer;}
        }
       }
       
+      
       // 수협
       &.sh-bank1 {
         margin: 0 auto;
@@ -1217,7 +1272,77 @@ button { padding: 0; cursor: pointer;}
         }
       }   
 
-    
+      &.inipass1 {
+        width: 100%;
+        height: 400px;
+        span {
+          width: 700px;
+          height: 400px;
+          float: left;
+            border: 1px solid #707070;
+            border-radius: 15px;
+          &:nth-child(1) {
+            background: url('~@/assets/images/projects/initech/inipass/inipass_02.png') center top no-repeat ;
+            background-size: 100%;
+          
+          }
+          &:nth-child(2) {
+            margin-left: 10px;
+            background: url('~@/assets/images/projects/initech/inipass/inipass_menu.png') center top no-repeat ;
+            background-size: 100%;
+          }
+        }
+      }
+      &.inipass2 {
+        width: 100%;
+        height: 400px;
+        span {
+          width: 700px;
+          height: 800px;
+          float: left;
+          border: 1px solid #707070;
+          border-radius: 15px;
+          &:nth-child(1) {
+            background: url('~@/assets/images/projects/initech/inipass/inipass_05.png') center top no-repeat ;
+            background-size: 100%;
+          }
+          &:nth-child(2) {
+            margin-left: 10px;
+            background: url('~@/assets/images/projects/initech/inipass/inipass_08.png') center top no-repeat ;
+            background-size: 100%;
+          }
+        }
+      }
+      &.inipass3 {
+        width: 100%;
+        height: 400px;
+        span {
+          width: 350px;
+          height: 620px;
+          float: left;
+          border: 1px solid #707070;
+          border-radius: 15px;
+          &:nth-child(1) {
+            background: url('~@/assets/images/projects/initech/inipass/inipass_m_01.png') center top no-repeat ;
+            background-size: 100%;
+          }
+          &:nth-child(2) {
+            margin-left: 10px;
+            background: url('~@/assets/images/projects/initech/inipass/inipass_m_02.png') center top no-repeat ;
+            background-size: 100%;
+          }
+          &:nth-child(3) {
+            margin-left: 10px;
+            background: url('~@/assets/images/projects/initech/inipass/inipass_m_04.png') center top no-repeat ;
+            background-size: 100%;
+          }
+          &:nth-child(4) {
+            margin-left: 10px;
+            background: url('~@/assets/images/projects/initech/inipass/inipass_m_05.png') center top no-repeat ;
+            background-size: 100%;
+          }
+        }
+      }
       // kyobo
       &.kyobo1 {
         width: 100%;
@@ -1994,7 +2119,7 @@ button { padding: 0; cursor: pointer;}
           height: 48vw;
         }
       }
-       &.inihub8 {
+      &.inihub8 {
         position: absolute;
         left: 0;
         top: 32px;
@@ -2545,6 +2670,37 @@ button { padding: 0; cursor: pointer;}
       }
   }
 }
+.nexess {
+  .palette-wrap{
+      ul {
+        li {
+          border-radius: 5px;
+          &:nth-child(1) {
+             background: #012051;
+            border:1px solid  #012051;
+           
+          }
+          &:nth-child(2) {
+            background: #383795;
+            border:1px solid  #383795;
+          }
+          &:nth-child(3) {
+            background: #3986F6;
+            border:1px solid  #3986F6;
+           
+          }
+          &:nth-child(4) {
+            background: #4699DC;
+            border:1px solid  #4699DC;
+          }
+          &:nth-child(5) {
+            background: #494949;
+            border:1px solid  #494949;
+          }
+        }
+      }
+  }
+}
 
 .sh-bank {
   .project__info {
@@ -2637,9 +2793,98 @@ button { padding: 0; cursor: pointer;}
       }
   }
 }
+.inipass {
+  .palette-wrap {
+      ul {
+        li {
+          border-radius: 5px;
+          &:nth-child(1) {
+            background: #000;
+            border:1px solid  #000;
+          }
+          &:nth-child(2) {
+            background: #303030;
+             border:1px solid  #303030;
+          }
+          &:nth-child(3) {
+            background: #ffd217;
+             border:1px solid  #707070;
+          }
+          &:nth-child(4) {
+            background: #fff;
+             border:1px solid  #707070;
+          }
+          &:nth-child(5) {
+           display: none;
+          }
+        }
+      }
+  }
+}
+.inihub {
+  .palette-wrap {
+         ul {
+        li {
+          border-radius: 5px;
+          &:nth-child(1) {
+            background: #000;
+            border:1px solid  #000;
+          }
+          &:nth-child(2) {
+            background: #272d3d;
+             border:1px solid  #272d3d;
+          }
+          &:nth-child(3) {
+            background: #ff6766;
+             border:1px solid  #707070;
+          }
+          
+          &:nth-child(4) {
+            background: #848484;
+             border:1px solid  #848484;
+          }
+          &:nth-child(5) {
+              background: #f8f8f8;
+             border:1px solid  #707070;
+          }
+        }
+      }
+  }
+}
+.multi-demo {
+  .palette-wrap {
+         ul {
+        li {
+          border-radius: 5px;
+          &:nth-child(1) {
+            background: #000;
+            border:1px solid  #000;
+          }
+          &:nth-child(2) {
+            background: #2b40ab;
+             border:1px solid  #2b40ab;
+          }
+          &:nth-child(3) {
+            background: #ffec69;
+             border:1px solid  #707070;
+          }
+          
+          &:nth-child(4) {
+            background: #e9ecf2;
+             border:1px solid  #707070;
+          }
+          &:nth-child(5) {
+              background: #fff;
+             border:1px solid  #707070;
+          }
+        }
+      }
+  }
+}
 .inihub,
 .kyobo,
-.multi-demo {
+.multi-demo,
+.inipass {
   .mockup-wrap {
     //position: relative;
         position: absolute;

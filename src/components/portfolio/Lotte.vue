@@ -4,11 +4,7 @@
     <div v-for="project in projectList" :key="project.id" :class="project.name">
       <div class="container">
         <div class="header">
-          <div class="header-inner">
-            <!--<div class="modal-preface">
-                                    <span>+ 머리말</span>
-                                </div>-->
-          </div>
+          <div class="header-inner"></div>
         </div>
         <div class="hiring-main project-main1">
           <div class="hiring-heading">
@@ -41,7 +37,9 @@
                 <button class="btn__line" type="button">View Site</button>
               </div>
             </div>
-            <div class="mockup" :class="project.name"><span></span></div>
+            <div class="mockup-wrap">
+              <div class="mockup" :class="project.name"><span></span></div>
+            </div>
           </div>
         </div>
         <article class="hiring-info">
@@ -67,7 +65,7 @@
                 <dt>웹 호환성</dt>
                 <dd>
                   - PC : Chrome, Firefox, IE11, Safari <br />
-                  - Tablet : Android 6.X / IOS 10.X
+                  - MobileWeb/App : Android 6.X / IOS 10.X
                 </dd>
               </dl>
               <dl class="project__desc">
@@ -80,23 +78,7 @@
               <div class="ttl">
                 <h2>{{ $t("project.artical_ttl_02") }}</h2>
               </div>
-              <div class="guide-info">
-                <div class="style-guide">
-                  <div class="sub-ttl">
-                    <h4>Colors</h4>
-                  </div>
-
-                  <div class="palette-wrap">
-                    <ul>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              <div class="guide-info"></div>
             </div>
           </div>
         </article>
@@ -170,7 +152,7 @@ export default {
       projectList: [
         {
           idx: 1,
-          name: "wedding",
+          name: "lotte-event",
           ttl: "+ Tech Stack",
           artical_ttl: "Tech Stack",
         },

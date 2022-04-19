@@ -67,6 +67,12 @@ export default new VueRouter({
       //props: {},
     },
     {
+      path: "/portfolio/portfolio/inipass",
+      //component: () => import("@/views/ProjectDetailPage.vue"),
+      component: () => import("@/components/portfolio/Inipass.vue"),
+      //props: {},
+    },
+    {
       path: "/portfolio/portfolio/mobilian",
       component: () => import("@/components/portfolio/Mobilian.vue"),
     },
