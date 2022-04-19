@@ -73,17 +73,23 @@ export default new VueRouter({
       //props: {},
     },
     {
+      path: "/portfolio/resume",
+      //component: () => import("@/views/ProjectDetailPage.vue"),
+      component: () => import("@/components/portfolio/Resume.vue"),
+      //props: {},
+    },
+    {
       path: "/portfolio/portfolio/mobilian",
       component: () => import("@/components/portfolio/Mobilian.vue"),
     },
-    {
-      path: "/portfolio/portfolio/lotte-event",
-      component: () => import("@/components/portfolio/Lotte.vue"),
-    },
-    {
-      path: "/portfolio/portfolio/wedding",
-      component: () => import("@/components/portfolio/Wedding.vue"),
-    },
+    // {
+    //   path: "/portfolio/portfolio/lotte-event",
+    //component: () => import("@/components/portfolio/Lotte.vue"),
+    //  },
+    //  {
+    //   path: "/portfolio/portfolio/wedding",
+    //component: () => import("@/components/portfolio/Wedding.vue"),
+    //  },
     {
       path: "/portfolio/portfolio/multi-demo",
       component: () => import("@/components/portfolio/MultiDemo.vue"),

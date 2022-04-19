@@ -63,7 +63,7 @@
           <ExperienceSlider></ExperienceSlider>
         </div>
       </section>
-      <!--   <section class="section">
+      <section class="section">
         <div class="content contact">
           <div class="contact-inner">
             <div class="txt-group">
@@ -74,18 +74,18 @@
               <li>Email: kangji92@kakao.com</li>
               <li>Blog: kangji92@kakao.com</li>
               <li>
-                <a
-                  class="btn download"
-                  href="@/asset/[UI_Developer]_resume_kangjiyeon.pdf"
-                  target="_blank"
-                  >이력서(PDF)</a
+                <router-link
+                  tag="button"
+                  class="btn trn"
+                  to="/portfolio/resume"
                 >
+                  {{ $t("btn.resume") }}
+                </router-link>
               </li>
             </ul>
           </div>
         </div>
       </section>
-      -->
     </full-page>
     <Modal v-if="showPopup" @close-popup-dlg="closePopup"></Modal>
   </div>
