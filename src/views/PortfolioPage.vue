@@ -67,22 +67,11 @@
         <div class="content contact">
           <div class="contact-inner">
             <div class="txt-group">
-              <em>Thank you</em>
-              <p></p>
+              <em>Thank you.</em>
             </div>
-            <ul>
-              <li>Email: kangji92@kakao.com</li>
-              <li>Blog: kangji92@kakao.com</li>
-              <li>
-                <router-link
-                  tag="button"
-                  class="btn trn"
-                  to="/portfolio/resume"
-                >
-                  {{ $t("btn.resume") }}
-                </router-link>
-              </li>
-            </ul>
+            <router-link tag="button" class="btn trn" to="/portfolio/resume">
+              {{ $t("btn.resume") }}
+            </router-link>
           </div>
         </div>
       </section>
