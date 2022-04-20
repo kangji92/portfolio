@@ -1,7 +1,7 @@
 <template>
   <div class="resume-temp">
     <VuePdfApp
-      pdf="./../resume_kangjiyeon.pdf"
+      pdf="resume_kangjiyeon.pdf"
       page-scale="100"
       @open="openHandler"
     ></VuePdfApp>
