@@ -111,7 +111,8 @@ export default {
             this.isNotSupport = true;
           }
         } else {
-          if (window.matchMedia("(max-width: 767px)").matches) {
+          // 767
+          if (window.matchMedia("(max-width: 1599px)").matches) {
             this.isNotSupport = true;
             /* if (isPortrait) {
               // 세로 모드일때
@@ -126,7 +127,7 @@ export default {
         }
       } else {
         // PC
-        if (window.matchMedia("(max-width: 767px)").matches) {
+        if (window.matchMedia("(max-width: 1599px)").matches) {
           if (window.innerWidth <= window.innerHeight) {
             // 세로 모드일때
             this.isNotSupport = false;
@@ -209,7 +210,7 @@ export default {
   }
 }*/
 
-@media screen and (max-width: 820px) and (orientation: portrait) {
+@media screen and (max-width: 1599px) and (orientation: portrait) {
   #isNotSupport {
     display: block !important;
   }
