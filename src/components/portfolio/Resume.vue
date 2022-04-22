@@ -1,10 +1,11 @@
 <template>
   <div class="resume-temp">
-    <VuePdfApp
+    <!--<VuePdfApp
       pdf="./../resume_kangjiyeon.pdf"
       page-scale="100"
       @open="openHandler"
-    ></VuePdfApp>
+    ></VuePdfApp>-->
+    <VuePdfApp page-scale="100" :pdf="pdfLink" @open="openHandler"></VuePdfApp>
     <!--<VuePdfApp
       @after-created="afterCreated"
       page-scale="50"
@@ -18,6 +19,11 @@ import VuePdfApp from "vue-pdf-app";
 export default {
   components: {
     VuePdfApp,
+  },
+  computed: {
+    pdfLink() {
+      return document.location.origin + "/resume_kangjiyeon.pdf";
+    },
   },
   methods: {
     openHandler(pdfApp) {
