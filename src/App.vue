@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="app__root">
     <AppHeader></AppHeader>
-    <IntroPage></IntroPage>
+    <!--<IntroPage></IntroPage>-->
     <AppFooter></AppFooter>
     <router-view></router-view>
     <TestModal v-if="isModalViewed" @close-modal="closeModal"></TestModal>
@@ -11,7 +11,7 @@
 </template>
 <script>
 import AppHeader from "@/components/common/AppHeader.vue";
-import IntroPage from "@/views/IntroPage.vue";
+//import IntroPage from "@/views/IntroPage.vue";
 import AppFooter from "@/components/common/AppFooter.vue";
 import TestModal from "@/components/common/TestModal.vue";
 import NotSupport from "@/components/common/NotSupport.vue";
@@ -34,7 +34,7 @@ export default {
   },
   updated() {},
   components: {
-    IntroPage,
+    //IntroPage,
     AppHeader,
     AppFooter,
     TestModal,
@@ -45,6 +45,7 @@ export default {
       stateId: 0,
       isNotSupport: false,
       isModalViewed: false,
+      //showRoute: false,
       menu: ["HOME", "ABOUT", "projectS", "ETC"],
       projects: [
         {

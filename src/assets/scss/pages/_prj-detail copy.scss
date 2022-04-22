@@ -500,6 +500,11 @@ button { padding: 0; cursor: pointer;}
  }
 }
 
+  
+.section-wrap {
+  min-height: 2800px;
+}
+
 .project-detail {
     .inner { 
     //  @include clearfix;
@@ -1747,23 +1752,20 @@ button { padding: 0; cursor: pointer;}
             position:absolute;
             left: 0;
             top: 820px;
-            height: 500px;
           }
           &:nth-child(8) {
             background: url('~@/assets/images/projects/initech/kyobo/intergration/05_payco_2_1.png') no-repeat ;
             background-size: 100%;
             position:absolute;
-            left: 460px;
-            top: 820px;
-            height: 500px;
+           left: 460px;
+             top: 820px;
           }
           &:nth-child(9) {
             background: url('~@/assets/images/projects/initech/kyobo/intergration/05_payco_3.png') no-repeat ;
             background-size: 100%;
             position:absolute;
-            left: 920px;
-            top: 820px;
-            height: 500px;
+           left: 920px;
+             top: 820px;
           }
           @include respond-to("bp-max-820") {
             left: 12vw;
