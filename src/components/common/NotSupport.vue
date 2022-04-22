@@ -36,10 +36,16 @@ export default {};
   }
   .canvas-inner {
     z-index: 1000000000;
-    width: 400px;
+    width: 80%;
+    height: 100px;
+    border: 1px solid #333;
     margin: 0 auto;
     text-align: center;
     background-color: #fff;
+    @include display-flex {
+      align-items: checkAlign(center);
+      justify-content: getJustify(center);
+    }
     .txt-box {
       line-height: 1.5;
     }

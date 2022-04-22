@@ -40,7 +40,8 @@ b {
 .intro {
   height: 100%;
   width: 100%;
-  // background-color: #fef8ee;
+  position: fixed;
+  background-color: #fef8ee;
   font-family: $font-eng;
   .intro-inner {
     position: absolute;
@@ -93,21 +94,32 @@ b {
       cursor: pointer;
       font-family: $font-eng;
       background: transparent;
+      transition: 0.3s;
+      @include respond-to("bp-tablet-820") {
+        // 600
+        width: 30vw;
+        font-size: 5vw;
+        height: 11.5vw;
+        border-radius: calc(11.5vw * 0.5);
+      }
       &.trn {
         background: transparent;
       }
       &.navy {
         background: #3b3b3b;
-        color: #fff;
+        color: #fef8ee;
       }
       &:hover {
-        background: #000;
-        color: #fff;
+        background: #333;
+        color: #fef8ee;
       }
     }
   }
   li + li {
     margin-left: 2vw;
+    @include respond-to("bp-tablet-820") {
+      margin-left: 3vw;
+    }
   }
 }
 </style>

@@ -20,8 +20,12 @@ export default {};
   background-color: #fff;
   left: 50%;
   top: 50%;
-  font-size: 2rem;
+  font-size: 1.5rem;
   @include translate(-50%, -50%);
+  @include display-flex {
+    align-items: checkAlign(center);
+    justify-content: getJustify(center);
+  }
 }
 .dim {
   content: "";

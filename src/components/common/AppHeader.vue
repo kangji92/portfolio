@@ -47,7 +47,12 @@ export default {
   .gnb-inner {
     width: calc(100% - 40px);
     margin: auto;
-    height: 60px;
+    height: 80px;
+    @include respond-to("bp-tablet-820") {
+      // 820
+      width: calc(100% - 6vw);
+      height: 12.5vw;
+    }
     @include display-flex {
       align-items: checkAlign(center);
       justify-content: getJustify(sb);
@@ -62,9 +67,9 @@ export default {
         center;
       background-size: 48px;
       @include respond-to("bp-max-820") {
-        width: 10vw;
-        height: 10vw;
-        background-size: 10vw;
+        width: 8vw;
+        height: 8vw;
+        background-size: 8vw;
       }
       @include display-flex {
         justify-content: getJustify(fs);

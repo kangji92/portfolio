@@ -1,10 +1,15 @@
 <template>
   <div class="resume-temp">
     <VuePdfApp
-      pdf="resume_kangjiyeon.pdf"
+      pdf="./../resume_kangjiyeon.pdf"
       page-scale="100"
       @open="openHandler"
     ></VuePdfApp>
+    <!--<VuePdfApp
+      @after-created="afterCreated"
+      page-scale="50"
+      pdf="../../assets/resume_kangjiyeon.pdf"
+    />-->
   </div>
 </template>
 

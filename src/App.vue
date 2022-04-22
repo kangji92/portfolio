@@ -23,7 +23,14 @@ export default {
   },
   created: function () {
     window.addEventListener("load", this.srceenHandler);
-    //window.addEventListener("resize", this.onResize);
+    window.addEventListener("resize", this.onResize);
+  },
+  mounted() {
+    window.addEventListener("resize", this.onResize);
+  },
+
+  beforeDestroy() {
+    window.addEventListener("resize", this.onResize);
   },
   updated() {},
   components: {
@@ -106,13 +113,13 @@ export default {
         } else {
           if (window.matchMedia("(max-width: 767px)").matches) {
             this.isNotSupport = true;
-            // if (isPortrait) {
-            // 세로 모드일때
-            //  this.isNotSupport = false;
-            // } else {
-            // 가로 모드일때
-            //   this.isNotSupport = true;
-            // }
+            /* if (isPortrait) {
+              // 세로 모드일때
+              this.isNotSupport = false;
+            } else {
+              // 가로 모드일때
+              this.isNotSupport = true;
+            }*/
           } else {
             this.isNotSupport = false;
           }
@@ -131,6 +138,9 @@ export default {
           this.isNotSupport = false;
         }
       }
+    },
+    onResize() {
+      this.srceenHandler();
     },
 
     openModal() {
@@ -198,6 +208,7 @@ export default {
     display: block !important;
   }
 }*/
+
 @media screen and (max-width: 820px) and (orientation: portrait) {
   #isNotSupport {
     display: block !important;

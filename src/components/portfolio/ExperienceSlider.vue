@@ -250,6 +250,11 @@ export default {
     top: 55%;
     right: 2.5%;
   }
+  .experience-inner .slick-list {
+    height: 80vh;
+    float: right;
+    width: 100%;
+  }
 }
 </style>
 <style lang="scss" scoped>
@@ -285,10 +290,18 @@ export default {
   padding-top: 5%;
   text-align: left;
   height: calc(100% - 5%);
+  @include respond-to("bp-max-820") {
+    width: 80%;
+    padding: 15vw 0;
+    height: calc(100% - 30vw);
+  }
   .ttl {
     float: left;
     width: 240px;
     position: relative;
+    @include respond-to("bp-max-820") {
+      width: 100%;
+    }
     h3 {
       font-size: 40px;
       text-align: left;
@@ -326,12 +339,18 @@ export default {
       font-size: 20px;
       font-family: $font-kr;
       font-weight: 300;
+      @include respond-to("bp-max-820") {
+        margin-top: 5%;
+      }
     }
   }
   .terms-group {
     float: right;
     width: 80%;
     height: 70vh;
+    @include respond-to("bp-max-820") {
+      height: 70vh;
+    }
     overflow: hidden;
 
     dl {
@@ -344,31 +363,50 @@ export default {
         width: 25%;
         font-size: 24px;
         margin-top: 30px;
+        @include respond-to("bp-max-820") {
+          width: 100%;
+          font-size: 2.5vw;
+        }
       }
       dd {
         width: 70%;
         float: left;
         margin-top: 30px;
+        @include respond-to("bp-max-820") {
+          width: 100%;
+        }
         span {
           display: block;
         }
         em {
           font-size: 24px;
           padding-bottom: 12px;
+          @include respond-to("bp-max-820") {
+            font-size: 2.5vw;
+          }
         }
 
         p {
           padding: 10px 0;
           font-size: 20px;
           line-height: 1.3em;
+          @include respond-to("bp-max-820") {
+            font-size: 2vw;
+          }
         }
         span {
           font-size: 18px;
           line-height: 1.3em;
+          @include respond-to("bp-max-820") {
+            font-size: 1.8vw;
+          }
         }
       }
       dt + dd {
         margin-left: 5%;
+        @include respond-to("bp-max-820") {
+          margin-left: 0;
+        }
       }
     }
   }

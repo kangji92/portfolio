@@ -567,7 +567,6 @@ b {
           font-size: 48px;
           display: block;
           font-family: $font-kr;
-
           text-align: center;
           margin-bottom: 10px;
           line-height: 1.25em;
@@ -586,7 +585,7 @@ b {
         }
       }
       span {
-        font-size: 28px;
+        font-size: 26px;
         font-family: $font-kr;
         font-weight: 300;
         display: block;
@@ -1071,6 +1070,7 @@ b {
   cursor: pointer;
   font-family: $font-eng;
   background: transparent;
+  transition: 0.3s;
   &.trn {
     background: transparent;
   }
@@ -1079,8 +1079,8 @@ b {
     color: #fff;
   }
   &:hover {
-    background: #000;
-    color: #fff;
+    background: #333;
+    color: #fef8ee;
   }
 }
 .contact-inner {
