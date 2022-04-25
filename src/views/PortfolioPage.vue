@@ -1,5 +1,7 @@
 <template>
   <div class="portfolio-main">
+    <AppHeader></AppHeader>
+    <AppFooter></AppFooter>
     <full-page :options="options" id="fullpage" ref="fullpage">
       <section class="section">
         <div class="hiring inner">
@@ -81,6 +83,8 @@
 </template>
 <script>
 import Vue from "vue";
+import AppHeader from "@/components/common/AppHeader.vue";
+import AppFooter from "@/components/common/AppFooter.vue";
 import "fullpage.js/vendors/scrolloverflow"; // Optional. When using scrollOverflow:true
 import VueFullPage from "vue-fullpage.js";
 import ProjectSlider from "@/components/portfolio/ProjectSlider.vue";
@@ -93,6 +97,8 @@ export default {
     ProjectSlider,
     ExperienceSlider,
     Modal,
+    AppHeader,
+    AppFooter,
   },
   data() {
     return {

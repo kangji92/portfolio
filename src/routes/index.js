@@ -34,6 +34,13 @@ export default new VueRouter({
         window.location.href = "https://kang-ji.tistory.com";
       },
     },
+    {
+      path: "/portfolio/project/snbcorp",
+      component: () => import("@/views/BlogPage.vue"),
+      beforeEnter() {
+        window.location.href = "https://kang-ji.tistory.com";
+      },
+    },
 
     {
       path: "/portfolio/librarys",

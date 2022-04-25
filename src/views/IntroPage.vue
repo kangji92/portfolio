@@ -1,6 +1,8 @@
 <template>
   <div>
     <div class="intro">
+      <AppHeader></AppHeader>
+      <AppFooter></AppFooter>
       <div class="intro-inner">
         <div class="ttl-group">
           <h2 v-html="$t('intro.ttl')"></h2>
@@ -28,7 +30,16 @@
   </div>
 </template>
 
-<script></script>
+<script>
+import AppHeader from "@/components/common/AppHeader.vue";
+import AppFooter from "@/components/common/AppFooter.vue";
+export default {
+  components: {
+    AppHeader,
+    AppFooter,
+  },
+};
+</script>
 <style>
 b {
   font-weight: 500 !important;

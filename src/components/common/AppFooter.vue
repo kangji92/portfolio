@@ -18,5 +18,6 @@ export default {};
   bottom: 2vw;
   font-size: 1vw;
   font-family: $font-eng;
+  z-index: 1000000;
 }
 </style>
