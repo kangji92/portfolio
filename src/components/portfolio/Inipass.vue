@@ -98,6 +98,84 @@
                     </ul>
                   </div>
                 </div>
+                <div class="style-guide fonts">
+                  <div class="sub-ttl">
+                    <h4>Font</h4>
+                  </div>
+                  <div class="fonts-wrap">
+                    <ul>
+                      <li><p>NotoSansKr</p></li>
+                      <li><p>NotoSansKr</p></li>
+                      <li><p>NotoSansKr</p></li>
+                      <li><p>NotoSansKr</p></li>
+                      <li><p>NotoSansKr</p></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="style-guide icons">
+                  <div class="sub-ttl">
+                    <h4>Icon</h4>
+                  </div>
+                  <div class="icons-wrap">
+                    <ul>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/inihub/icons/ico_cloud.png"
+                            alt=""
+                        /></i>
+                      </li>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/inihub/icons/ico_public.png"
+                            alt=""
+                        /></i>
+                      </li>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/inihub/icons/ico_easyauth.png"
+                            alt=""
+                        /></i>
+                      </li>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/inihub/icons/ico_oauth.png"
+                            alt=""
+                        /></i>
+                      </li>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/inihub/icons/ico_id.png"
+                            alt=""
+                        /></i>
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        <img
+                          src="@/assets/images/projects/initech/inihub/icons/ico_step_01.png"
+                          alt=""
+                        />
+                      </li>
+                      <li>
+                        <img
+                          src="@/assets/images/projects/initech/inihub/icons/ico_step_02.png"
+                          alt="아이콘_2단계"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          src="@/assets/images/projects/initech/inihub/icons/ico_step_03.png"
+                          alt="아이콘_3단계"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -110,6 +110,82 @@
                     </ul>
                   </div>
                 </div>
+                <div class="style-guide fonts">
+                  <div class="sub-ttl">
+                    <h4>Fonts</h4>
+                  </div>
+                  <div class="fonts-wrap">
+                    <ul>
+                      <li><p>노토산스 NotoSansKr 700</p></li>
+                      <li><p>노토산스 NotoSansKr 600</p></li>
+                      <li><p>노토산스 NotoSansKr 500</p></li>
+                      <li><p>노토산스 NotoSansKr 400</p></li>
+                      <li><p>노토산스 NotoSansKr 300</p></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="style-guide icons">
+                  <div class="sub-ttl">
+                    <h4>Icons</h4>
+                  </div>
+                  <div class="icons-wrap">
+                    <ul>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/mobilian/icons/media_select.png"
+                            alt="아이콘패키지"
+                        /></i>
+                      </li>
+                    </ul>
+                    <ul>
+                      <li class="big">
+                        <i class="big">
+                          <img
+                            src="@/assets/images/projects/initech/mobilian/icons/ico_cert_export.png"
+                            alt="내보내기 아이콘"
+                        /></i>
+                      </li>
+                      <li class="big">
+                        <i class="big">
+                          <img
+                            src="@/assets/images/projects/initech/mobilian/icons/ico_cert_import.png"
+                            alt="가져오기 아이콘"
+                        /></i>
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/mobilian/icons/ico_cert_01.png"
+                            alt="아이콘"
+                        /></i>
+                      </li>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/mobilian/icons/ico_cert_02.png"
+                            alt="아이콘"
+                        /></i>
+                      </li>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/mobilian/icons/ico_cert_03.png"
+                            alt="아이콘"
+                        /></i>
+                      </li>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/mobilian/icons/ico_cert_04.png"
+                            alt="아이콘"
+                        /></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

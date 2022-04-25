@@ -123,6 +123,70 @@
                     <li></li>
                   </ul>
                 </div>
+                <div class="style-guide fonts">
+                  <div class="sub-ttl">
+                    <h4>Fonts</h4>
+                  </div>
+                  <div class="fonts-wrap">
+                    <ul>
+                      <li><p>교보생명 Font SemiBold</p></li>
+                      <li><p>교보생명 Font Bold</p></li>
+                      <li><p>교보생명 Font Reguler</p></li>
+                      <li><p>교보생명 Font Lignt</p></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="style-guide icons">
+                  <div class="sub-ttl">
+                    <h4>Icons</h4>
+                  </div>
+                  <div class="icons-wrap">
+                    <!--
+                    <ul>
+                      <li>
+                        <img
+                          src="@/assets/images/projects/initech/kyobo/intergration/icons/ico_waitstate_green.png"
+                          alt=""
+                        />
+                      </li>
+                      <li class="bg">
+                        <img
+                          src="@/assets/images/projects/initech/kyobo/intergration/icons/item_icon_01.png"
+                          alt=""
+                        />
+                      </li>
+                      <li class="bg">
+                        <img
+                          src="@/assets/images/projects/initech/kyobo/intergration/icons/item_icon_02.png"
+                          alt=""
+                        />
+                      </li>
+                    </ul>-->
+                    <ul>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/kyobo/indv/icons/ico_step_1.png"
+                            alt="1단계 아이콘"
+                        /></i>
+                      </li>
+                      <li>
+                        <i
+                          ><img
+                            src="@/assets/images/projects/initech/kyobo/indv/icons/ico_step_2.png"
+                            alt="2단계 아이콘"
+                        /></i>
+                      </li>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/kyobo/indv/icons/ico_step_3.png"
+                            alt="3단계 아이콘"
+                        /></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

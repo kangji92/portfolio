@@ -7,6 +7,7 @@
  // top: 0;
  float: left;
   height: 100%;
+  overflow-x: hidden;
  background-color: #fff;
   z-index: 10000;
    font-family: $font-eng;
@@ -941,7 +942,7 @@ button { padding: 0; cursor: pointer;}
      }
     dt {
       display: inline-block; 
-      width: 19%;
+      width: 22%;
       @include respond-to("bp-max-820") {
       width: 35.5%;
       padding: 1vw 0;
@@ -2513,8 +2514,12 @@ button { padding: 0; cursor: pointer;}
 }
 .style-guide {
   float: left;
+  width: 100%;
+  margin-top: 20px;
   .sub-ttl {
-    width: 50%;
+    width: 30%;
+    float: left;
+    height: 90px;
       @include respond-to("bp-max-820") {
       float: left;
       width: 10%;
@@ -2529,12 +2534,11 @@ button { padding: 0; cursor: pointer;}
     }
   }
   .palette-wrap {
-    float : left;
+    width: 100%;
     margin-left: 10vw;
     ul {
       width: 100%;
       height: 100%;
-      
       display: block;
       li {
         float: left;
@@ -2545,6 +2549,70 @@ button { padding: 0; cursor: pointer;}
       li + li {
         margin-left: 0.5vw;
       }
+    }
+  }
+  .fonts-wrap {
+      width: 100%;
+      height: 180px;
+      ul {
+        display: block;
+        li {
+          width: 100%;
+          line-height: 1.5;
+          font-size: 18px;
+          &:nth-child(1) {
+            font-weight: 700;
+          }
+          &:nth-child(2) {
+            font-weight: 600;
+          }
+          &:nth-child(3) {
+            font-weight: 500;
+          }
+          &:nth-child(4) {
+            font-weight: 400;
+          }
+          &:nth-child(5) {
+            font-weight: 300;
+          }
+        }
+      }
+
+  }
+  .icons-wrap {
+    float: right;
+    width: 70%;
+    height: 140px;
+    ul {
+      width: 100%;
+      display: block;
+      height: 40px;
+      li {
+        float: left;
+        width: 50px;
+        height: 50px;
+        i {
+          width: 50px;
+          height: 50px;
+          display: block;
+          float: left;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      li + li {
+        margin-left: 16px;
+      }
+    } 
+    ul + ul {
+      margin-top: 20px;
+    }
+   
+  }
+  &.fonts, &.icons {
+    .sub-ttl {
+      height: 180px;
     }
   }
 }
@@ -2670,6 +2738,41 @@ button { padding: 0; cursor: pointer;}
         }
       }
   }
+  .fonts-wrap {
+      ul {
+        li {
+           font-size: 19px;
+          &:nth-child(1) {
+            font-family: 'KyoboSB';
+          }
+          &:nth-child(2) {
+            font-family: 'KyoboB';
+          }
+          &:nth-child(3) {
+            font-family: 'KyoboR';
+          }
+          &:nth-child(4) {
+            font-family: 'KyoboL';
+          }
+        }
+      }
+
+  }
+  .icons-wrap {
+    ul {
+      li {
+      
+        i {
+          width: 50px;
+          height: 50px;
+          img {
+            width: 100%;
+          }
+        }
+       
+      }
+    }
+  }
 }
 .nexess {
   .palette-wrap{
@@ -2793,6 +2896,39 @@ button { padding: 0; cursor: pointer;}
         }
       }
   }
+  .icons {
+    height: 400px;
+  .icons-wrap {
+    ul {
+      float: left;
+      height: 80px;
+      li {
+        
+        &.big,
+        .big {
+          @include background-image-render;
+          width: 140px;
+          height: 100px;
+        }
+      }
+      &:nth-child(1) {
+           height: 228px;
+        li {
+          &:nth-child(1) {
+            width: 403px;
+            height: 228px;
+            i {
+              width: 100%;
+            }
+          }
+        }
+      }
+    
+    }
+    
+  }
+  }
+
 }
 .inipass {
   .palette-wrap {

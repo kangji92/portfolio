@@ -1,7 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
 
+@font-face {
+    font-family: 'KyoboR';
+    font-style: 'normal';
+    font-weight: 'normal';
+    src: url("~@/assets/fonts/kyobo/KyoboRegular.eot"); /* ie9+ */
+    src: url("~@/assets/fonts/kyobo/KyoboRegular.woff2") format("woff2"), /* supper mordern browser */
+        url("~@/assets/fonts/kyobo/KyoboRegular.woff") format("woff"),  /* pretty mordern browser */
+        url("~@/assets/fonts/kyobo/KyoboRegular.svg") format("svg"),  /* logacy ios */
+}
+@font-face {
+    font-family: 'KyoboB';
+    font-style: 'bold';
+    font-weight: 'bold';
+    src: url("~@/assets/fonts/kyobo/KyoboRegular.eot"); /* ie9+ */
+    src: url("~@/assets/fonts/kyobo/KyoboRegular.woff2") format("woff2"), /* supper mordern browser */
+        url("~@/assets/fonts/kyobo/KyoboRegular.woff") format("woff"),  /* pretty mordern browser */
+        url("~@/assets/fonts/kyobo/KyoboRegular.svg") format("svg"),  /* logacy ios */
+}
 
+@font-face {
+    font-family: 'KyoboL';
+    font-style: 'normal';
+    font-weight: 'normal';
+    src: url("~@/assets/fonts/kyobo/KyoboLight.eot"); /* ie9+ */
+    src: url("~@/assets/fonts/kyobo/KyoboLight.woff2") format("woff2"), /* supper mordern browser */
+        url("~@/assets/fonts/kyobo/KyoboLight.woff") format("woff"),  /* pretty mordern browser */
+        url("~@/assets/fonts/kyobo/KyoboLight.svg") format("svg"),  /* logacy ios */
+}
+@font-face {
+    font-family: 'KyoboLB';
+    font-style: 'normal';
+    font-weight: 'normal';
+    src: url("~@/assets/fonts/kyobo/KyoboUltraLightBold.eot"); /* ie9+ */
+    src: url("~@/assets/fonts/kyobo/KyoboUltraLightBold.woff2") format("woff2"), /* supper mordern browser */
+        url("~@/assets/fonts/kyobo/KyoboUltraLightBold.woff") format("woff"),  /* pretty mordern browser */
+        url("~@/assets/fonts/kyobo/KyoboUltraLightBold.svg") format("svg"),  /* logacy ios */
+}
+@font-face {
+    font-family: 'KyoboSB';
+    font-style: 'normal';
+    font-weight: 'normal';
+    src: url("~@/assets/fonts/kyobo/KyoboSemiBold.eot"); /* ie9+ */
+    src: url("~@/assets/fonts/kyobo/KyoboSemiBold.woff2") format("woff2"), /* supper mordern browser */
+        url("~@/assets/fonts/kyobo/KyoboSemiBold.woff") format("woff"),  /* pretty mordern browser */
+        url("~@/assets/fonts/kyobo/KyoboSemiBold.svg") format("svg"),  /* logacy ios */
+}
 
 /* 패스워드 원형 */
 

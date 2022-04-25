@@ -114,7 +114,6 @@
                 <div class="sub-ttl">
                   <h4>Colors</h4>
                 </div>
-
                 <div class="palette-wrap">
                   <ul>
                     <li></li>
@@ -122,6 +121,84 @@
                     <li></li>
                     <li></li>
                     <li></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="style-guide fonts">
+                <div class="sub-ttl">
+                  <h4>Fonts</h4>
+                </div>
+                <div class="fonts-wrap">
+                  <ul>
+                    <li><p>노토산스 NotoSansKr 700</p></li>
+                    <li><p>노토산스 NotoSansKr 600</p></li>
+                    <li><p>노토산스 NotoSansKr 500</p></li>
+                    <li><p>노토산스 NotoSansKr 400</p></li>
+                    <li><p>노토산스 NotoSansKr 300</p></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="style-guide icons">
+                <div class="sub-ttl">
+                  <h4>Icons</h4>
+                </div>
+                <div class="icons-wrap">
+                  <ul>
+                    <li>
+                      <i>
+                        <img
+                          src="@/assets/images/projects/initech/inihub/icons/ico_cloud.png"
+                          alt="금융인증서 아이콘"
+                      /></i>
+                    </li>
+                    <li>
+                      <i>
+                        <img
+                          src="@/assets/images/projects/initech/inihub/icons/ico_public.png"
+                          alt="공인인증서 아이콘"
+                      /></i>
+                    </li>
+                    <li>
+                      <i>
+                        <img
+                          src="@/assets/images/projects/initech/inihub/icons/ico_easyauth.png"
+                          alt="간편인증 아이콘"
+                      /></i>
+                    </li>
+                    <li>
+                      <i>
+                        <img
+                          src="@/assets/images/projects/initech/inihub/icons/ico_oauth.png"
+                          alt="SNS인증 아이콘"
+                      /></i>
+                    </li>
+                    <li>
+                      <i>
+                        <img
+                          src="@/assets/images/projects/initech/inihub/icons/ico_id.png"
+                          alt="아이콘_아이디인증"
+                      /></i>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <img
+                        src="@/assets/images/projects/initech/inihub/icons/ico_step_01.png"
+                        alt="1단계 아이콘"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src="@/assets/images/projects/initech/inihub/icons/ico_step_02.png"
+                        alt="2단계 아이콘"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src="@/assets/images/projects/initech/inihub/icons/ico_step_03.png"
+                        alt="2단계 아이콘"
+                      />
+                    </li>
                   </ul>
                 </div>
               </div>
