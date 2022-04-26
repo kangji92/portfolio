@@ -1,5 +1,22 @@
 @import "@/assets/scss/main";
 
+
+[data-scroll] {
+  opacity: 0;
+  will-change: tranform, scale, opacity;
+  transform: translateY(6rem) scale(0.93);
+  transition: all 1.5s cubic-bezier(0.16s, 0.84, 0.44, 1);
+  ///transition: opacity 1s;
+}
+[data-scroll="in"] {
+  opacity: 1;
+    transform: translateY(0) scale(1);
+}
+[data-scroll="out"] {
+  opacity: 0;
+}
+
+
 .project-detail {
  // position: fixed;
   width: 100%;
@@ -2606,7 +2623,7 @@ button { padding: 0; cursor: pointer;}
       }
     } 
     ul + ul {
-      margin-top: 20px;
+      margin-top: 16px;
     }
    
   }
@@ -3025,6 +3042,10 @@ button { padding: 0; cursor: pointer;}
           border-radius: 5px;
           font-size: 20px;
           text-align: center;
+          &:focus,
+          &:hover {
+              -webkit-box-shadow: 4px 2px 8px 1px rgba(0, 0, 0, 0.18); -moz-box-shadow: 4px 2px 8px 1px rgba(0, 0, 0, 0.18); box-shadow: 4px 2px 8px 1px rgba(0, 0, 0, 0.18); transition: all 0.1s;
+          }
         }
         &:nth-child(1) {
           button {
@@ -3056,10 +3077,7 @@ button { padding: 0; cursor: pointer;}
    
       
      
-      &:focus,
-      &:hover {
-          -webkit-box-shadow: 4px 2px 8px 1px rgba(0, 0, 0, 0.18); -moz-box-shadow: 4px 2px 8px 1px rgba(0, 0, 0, 0.18); box-shadow: 4px 2px 8px 1px rgba(0, 0, 0, 0.18); transition: all 0.1s;
-      }
+     
     
     }
 
@@ -3161,6 +3179,25 @@ button { padding: 0; cursor: pointer;}
         }
       }
   }
+   .icons-wrap {
+    ul {
+      width: 380px;
+      float: left;
+      height: 80px;
+      li {
+      width: 60px;
+      height: 60px;
+    
+      i {
+        width: 100%;
+      }
+      }
+      li + li {margin-left: 16px;}
+      
+    }
+    
+  
+  }
 }
 .inihub {
   .palette-wrap {
@@ -3191,6 +3228,25 @@ button { padding: 0; cursor: pointer;}
         }
       }
   }
+   .icons-wrap {
+    ul {
+      width: 380px;
+      float: left;
+      height: 80px;
+      li {
+      width: 60px;
+      height: 60px;
+    
+      i {
+        width: 100%;
+      }
+      }
+      li + li {margin-left: 16px;}
+      
+    }
+    
+  
+  }
 }
 .multi-demo {
   .palette-wrap {
@@ -3220,6 +3276,25 @@ button { padding: 0; cursor: pointer;}
           }
         }
       }
+  }
+  .icons-wrap {
+    ul {
+      width: 380px;
+      float: left;
+      height: 80px;
+      li {
+      width: 60px;
+      height: 60px;
+    
+      i {
+        width: 100%;
+      }
+      }
+      li + li {margin-left: 16px;}
+      
+    }
+    
+  
   }
 }
 .inihub,

@@ -3,9 +3,6 @@
   <div class="project-detail">
     <div v-for="project in projectList" :key="project.id" :class="project.name">
       <div class="container">
-        <div class="header">
-          <div class="header-inner"></div>
-        </div>
         <div class="hiring-main project-main1">
           <div class="hiring-heading">
             <div class="inner">

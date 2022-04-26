@@ -1,10 +1,13 @@
 
+
+
 section {
   min-width: 1600px;
   @include respond-to("bp-max-820") {
     min-width: auto;
   }
 }
+
 .prj-wrap {
   @include clearfix;
 }

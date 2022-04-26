@@ -100,21 +100,21 @@
                 </div>
                 <div class="style-guide fonts">
                   <div class="sub-ttl">
-                    <h4>Font</h4>
+                    <h4>Fonts</h4>
                   </div>
                   <div class="fonts-wrap">
                     <ul>
-                      <li><p>NotoSansKr</p></li>
-                      <li><p>NotoSansKr</p></li>
-                      <li><p>NotoSansKr</p></li>
-                      <li><p>NotoSansKr</p></li>
-                      <li><p>NotoSansKr</p></li>
+                      <li><p>노토산스 NotoSansKr 700</p></li>
+                      <li><p>노토산스 NotoSansKr 600</p></li>
+                      <li><p>노토산스 NotoSansKr 500</p></li>
+                      <li><p>노토산스 NotoSansKr 400</p></li>
+                      <li><p>노토산스 NotoSansKr 300</p></li>
                     </ul>
                   </div>
                 </div>
                 <div class="style-guide icons">
                   <div class="sub-ttl">
-                    <h4>Icon</h4>
+                    <h4>Icons</h4>
                   </div>
                   <div class="icons-wrap">
                     <ul>
@@ -153,6 +153,9 @@
                             alt=""
                         /></i>
                       </li>
+                    </ul>
+
+                    <ul>
                       <li>
                         <i>
                           <img
@@ -160,51 +163,59 @@
                             alt=""
                         /></i>
                       </li>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/inipass/icons/a8_st01.png"
+                            alt=""
+                        /></i>
+                      </li>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/inipass/icons/a8_st03.png"
+                            alt=""
+                        /></i>
+                      </li>
+                      <li>
+                        <i
+                          ><img
+                            src="@/assets/images/projects/initech/inipass/icons/ico_mng03.png"
+                            alt=""
+                        /></i>
+                      </li>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/inipass/icons/ico_mng08.png"
+                            alt=""
+                        /></i>
+                      </li>
                     </ul>
                     <ul>
                       <li>
-                        <img
-                          src="@/assets/images/projects/initech/inipass/icons/a8_st01.png"
-                          alt=""
-                        />
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/inipass/icons/ico_mng01.png"
+                            alt=""
+                          />
+                        </i>
                       </li>
                       <li>
-                        <img
-                          src="@/assets/images/projects/initech/inipass/icons/a8_st03.png"
-                          alt=""
-                        />
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/inipass/icons/ico_mng02.png"
+                            alt=""
+                          />
+                        </i>
                       </li>
                       <li>
-                        <img
-                          src="@/assets/images/projects/initech/inipass/icons/ico_mng03.png"
-                          alt=""
-                        />
-                      </li>
-                      <li>
-                        <img
-                          src="@/assets/images/projects/initech/inipass/icons/ico_mng08.png"
-                          alt=""
-                        />
-                      </li>
-                    </ul>
-                    <ul>
-                      <li>
-                        <img
-                          src="@/assets/images/projects/initech/inipass/icons/ico_mng01.png"
-                          alt=""
-                        />
-                      </li>
-                      <li>
-                        <img
-                          src="@/assets/images/projects/initech/inipass/icons/ico_mng02.png"
-                          alt=""
-                        />
-                      </li>
-                      <li>
-                        <img
-                          src="@/assets/images/projects/initech/inipass/icons/ico_mng09.png"
-                          alt=""
-                        />
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/inipass/icons/ico_mng09.png"
+                            alt=""
+                          />
+                        </i>
                       </li>
                     </ul>
                   </div>

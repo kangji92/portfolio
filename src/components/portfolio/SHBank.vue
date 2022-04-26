@@ -3,13 +3,6 @@
   <div class="project-detail">
     <div v-for="project in projectList" :key="project.id" :class="project.name">
       <div class="container">
-        <div class="header">
-          <div class="header-inner">
-            <!--<div class="modal-preface">
-                                    <span>+ 머리말</span>
-                                </div>-->
-          </div>
-        </div>
         <div class="hiring-main project-main1">
           <div class="hiring-heading">
             <div class="inner">
@@ -238,6 +231,8 @@
 </template>
 
 <script>
+import ScrollOut from "scroll-out";
+ScrollOut();
 export default {
   name: "CompProject",
   data() {

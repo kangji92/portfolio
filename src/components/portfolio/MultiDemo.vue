@@ -37,18 +37,6 @@
                     {{ $t("project." + project.name + "_info_output") }}
                   </dd>
                 </dl>
-                <dl class="project__desc">
-                  <dt>웹 호환성</dt>
-                  <dd>
-                    - PC : Chrome, Firefox, IE11, Safari <br />
-                    - Tablet/Mobile : Android 6.X / IOS 10.X
-                  </dd>
-                </dl>
-                <dl class="project__desc">
-                  <dt>해상도 범위</dt>
-                  <dd>- PC/ Tablet(가로) : 801px ~ 1920px</dd>
-                  <dd>- Mobile / Tablet(세로) : 320px ~ 800px</dd>
-                </dl>
               </div>
             </div>
             <div class="mockup-wrap">
@@ -85,6 +73,24 @@
                 <dt>UI Guide Tool :</dt>
                 <dd>Photoshop</dd>
               </dl>
+              <dl class="project__desc">
+                <dt>Details</dt>
+                <dd>- 다국어 지원<br /></dd>
+              </dl>
+              <dl class="project__desc">
+                <dt>웹 호환성</dt>
+                <dd>
+                  - PC : Chrome, Firefox, IE11, Safari <br />
+                  - Tablet/Mobile : Android 6.X / IOS 10.X
+                </dd>
+              </dl>
+              <dl class="project__desc">
+                <dt>해상도 범위</dt>
+                <dd>
+                  - PC/ Tablet(가로) : 801px ~ 1920px<br />
+                  - Mobile / Tablet(세로) : 320px ~ 800px
+                </dd>
+              </dl>
             </div>
             <div class="col">
               <span class="contour"></span>
@@ -102,6 +108,142 @@
                     <li></li>
                     <li></li>
                     <li></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="style-guide fonts">
+                <div class="sub-ttl">
+                  <h4>Fonts</h4>
+                </div>
+                <div class="fonts-wrap">
+                  <ul>
+                    <li><p>노토산스 NotoSansKr 700</p></li>
+                    <li><p>노토산스 NotoSansKr 600</p></li>
+                    <li><p>노토산스 NotoSansKr 500</p></li>
+                    <li><p>노토산스 NotoSansKr 400</p></li>
+                    <li><p>노토산스 NotoSansKr 300</p></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="style-guide icons">
+                <div class="sub-ttl">
+                  <h4>Icons</h4>
+                </div>
+                <div class="icons-wrap">
+                  <ul>
+                    <li>
+                      <i>
+                        <img
+                          src="@/assets/images/projects/initech/demo/icons/ico_certi.png"
+                          alt=""
+                      /></i>
+                    </li>
+                    <li>
+                      <i>
+                        <img
+                          src="@/assets/images/projects/initech/demo/icons/ico_fing.png"
+                          alt=""
+                      /></i>
+                    </li>
+                    <li>
+                      <i>
+                        <img
+                          src="@/assets/images/projects/initech/demo/icons/ico_fingerprnt_01.png"
+                          alt=""
+                      /></i>
+                    </li>
+                    <li>
+                      <i>
+                        <img
+                          src="@/assets/images/projects/initech/demo/icons/ico_fingerprnt_02.png"
+                          alt=""
+                      /></i>
+                    </li>
+                    <li>
+                      <i>
+                        <img
+                          src="@/assets/images/projects/initech/demo/icons/ico_id.png"
+                          alt=""
+                      /></i>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <i>
+                        <img
+                          src="@/assets/images/projects/initech/demo/icons/ico_oauth_01.png"
+                          alt=""
+                      /></i>
+                    </li>
+                    <li>
+                      <i
+                        ><img
+                          src="@/assets/images/projects/initech/demo/icons/ico_oauth_02.png"
+                          alt=""
+                        />
+                      </i>
+                    </li>
+                    <li>
+                      <i
+                        ><img
+                          src="@/assets/images/projects/initech/demo/icons/ico_pattern.png"
+                          alt=""
+                        />
+                      </i>
+                    </li>
+                    <li>
+                      <i
+                        ><img
+                          src="@/assets/images/projects/initech/demo/icons/ico_pattern_01.png"
+                          alt=""
+                        />
+                      </i>
+                    </li>
+                    <li>
+                      <i>
+                        <img
+                          src="@/assets/images/projects/initech/demo/icons/ico_pattern_02.png"
+                          alt=""
+                      /></i>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <i>
+                        <img
+                          src="@/assets/images/projects/initech/demo/icons/ico_pin.png"
+                          alt=""
+                      /></i>
+                    </li>
+                    <li>
+                      <i>
+                        <img
+                          src="@/assets/images/projects/initech/demo/icons/ico_pin_01.png"
+                          alt=""
+                        />
+                      </i>
+                    </li>
+                    <li>
+                      <i>
+                        <img
+                          src="@/assets/images/projects/initech/demo/icons/ico_pin_02.png"
+                          alt=""
+                      /></i>
+                    </li>
+                    <li>
+                      <i>
+                        <img
+                          src="@/assets/images/projects/initech/demo/icons/ico_success.png"
+                          alt=""
+                      /></i>
+                    </li>
+                    <li>
+                      <i>
+                        <img
+                          src="@/assets/images/projects/initech/demo/icons/ico_error.png"
+                          alt=""
+                      /></i>
+                    </li>
                   </ul>
                 </div>
               </div>
