@@ -7,7 +7,7 @@
  // top: 0;
  float: left;
   height: 100%;
-  overflow-x: hidden;
+
  background-color: #fff;
   z-index: 10000;
    font-family: $font-eng;
@@ -2610,6 +2610,14 @@ button { padding: 0; cursor: pointer;}
     }
    
   }
+  .buttons-wrap {
+    ul li {
+      float: right;
+      width: 140px;
+      height: 48px;
+    }
+ 
+  }
   &.fonts, &.icons {
     .sub-ttl {
       height: 180px;
@@ -2773,6 +2781,61 @@ button { padding: 0; cursor: pointer;}
       }
     }
   }
+   .buttons-wrap {
+    ul {
+      li {
+        float: left;
+        width: 120px;
+        height: 48px;
+        button {
+          width: 120px;
+          height: 48px;
+          border-radius: calc(48px * 0.5);
+          margin: 0 auto;
+          font-size: 20px;
+          text-align: center;
+        }
+        &:nth-child(1) {
+          button {
+          border: 1px solid #2B68B8;
+            background: #2B68B8;;
+            color: #fff;
+          }
+        }
+         &:nth-child(2) {
+          button {
+              border: 1px solid #2F5081;
+              background: #2F5081;
+              color: #fff;
+          }
+        }
+         &:nth-child(3) {
+          button {
+              border: 1px solid #CCCCCC;
+              background: #CCCCCC;
+              color: #333;
+          }
+        }
+        &:nth-child(4) {
+          button {
+              border: 1px solid #4DAC26;
+              background: #fff;
+              color: #4DAC26;
+          }
+     
+        }
+       
+     
+       
+        
+      }
+      li + li {
+        margin-left: 12px;
+      }
+    }
+   
+    
+    }
 }
 .nexess {
   .palette-wrap{
@@ -2804,6 +2867,51 @@ button { padding: 0; cursor: pointer;}
         }
       }
   }
+    .buttons-wrap {
+    ul {
+      li {
+        float: left;
+        width: 140px;
+        height: 48px;
+        button {
+          width: 140px;
+          height: 48px;
+          margin: 0 auto;
+          font-size: 20px;
+          text-align: center;
+        }
+        &:nth-child(1) {
+          button {
+          border: 1px solid #3986F6;
+            background: #3986F6;;
+            color: #fff;
+          }
+        }
+         &:nth-child(2) {
+          button {
+              border: 1px solid #012051;
+              background: #012051;
+              color: #fff;
+          }
+        }
+        &:nth-child(3) {
+          button {
+              border: 1px solid #494949;
+              background: #494949;
+              color: #fff;
+          }
+     
+        }
+        
+      }
+      li + li {
+        margin-left: 12px;
+      }
+    }
+   
+    
+    }
+
 }
 
 .sh-bank {
@@ -2863,6 +2971,102 @@ button { padding: 0; cursor: pointer;}
         }
       }
   }
+  
+    .icons-wrap {
+      ul {
+        li {
+          width: 80px;
+          height: 80px;
+           i {
+             display: block;
+             float: left;
+             width: 80px;
+            height: 80px;
+            background: #0D63AA;
+            @include display-flex {
+                  justify-content: getJustify(center);
+                  align-items: checkAlign(center);
+                }
+              img {
+                width: 55px;
+                margin: 0 auto;
+              }
+           
+         
+          }
+          &:nth-child(1) ,
+          &:nth-child(2) {
+            i {
+              img {
+              width: 42px;
+              }
+            }
+          }
+        
+        }
+        li + li {
+          margin-left: 0;
+        }
+      }
+    }
+  .buttons-wrap {
+    ul {
+      li {
+        float: left;
+        width: 140px;
+        height: 48px;
+        button {
+          width: 140px;
+          height: 48px;
+          margin: 0 auto;
+        
+          -moz-border-radius: 5px;
+          -webkit-border-radius: 5px;
+          border-radius: 5px;
+          font-size: 20px;
+          text-align: center;
+        }
+        &:nth-child(1) {
+          button {
+            border: 0;
+            background: #0d63aa;
+            color: #fff;
+          }
+        }
+        &:nth-child(2) {
+          button {
+              border: 1px solid #0d63aa;
+              background: #fff;
+              color: #0d63aa;
+          }
+     
+        }
+         &:nth-child(3) {
+          button {
+              border: 1px solid #d1d3d3;
+              background: #d1d3d3;
+              color: #333;
+          }
+        }
+      }
+      li + li {
+        margin-left: 12px;
+      }
+    }
+   
+      
+     
+      &:focus,
+      &:hover {
+          -webkit-box-shadow: 4px 2px 8px 1px rgba(0, 0, 0, 0.18); -moz-box-shadow: 4px 2px 8px 1px rgba(0, 0, 0, 0.18); box-shadow: 4px 2px 8px 1px rgba(0, 0, 0, 0.18); transition: all 0.1s;
+      }
+    
+    }
+
+    .icons .sub-ttl {
+      height: 120px;
+    }
+  
 }
 .mobilian {
   .project__info {
@@ -3040,3 +3244,5 @@ button { padding: 0; cursor: pointer;}
     float: left;
   }
 }
+
+

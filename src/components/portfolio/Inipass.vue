@@ -121,35 +121,42 @@
                       <li>
                         <i>
                           <img
-                            src="@/assets/images/projects/initech/inihub/icons/ico_cloud.png"
+                            src="@/assets/images/projects/initech/inipass/icons/a3_st01.png"
                             alt=""
                         /></i>
                       </li>
                       <li>
                         <i>
                           <img
-                            src="@/assets/images/projects/initech/inihub/icons/ico_public.png"
+                            src="@/assets/images/projects/initech/inipass/icons/a3_st04.png"
                             alt=""
                         /></i>
                       </li>
                       <li>
                         <i>
                           <img
-                            src="@/assets/images/projects/initech/inihub/icons/ico_easyauth.png"
+                            src="@/assets/images/projects/initech/inipass/icons/a4_st04.png"
                             alt=""
                         /></i>
                       </li>
                       <li>
                         <i>
                           <img
-                            src="@/assets/images/projects/initech/inihub/icons/ico_oauth.png"
+                            src="@/assets/images/projects/initech/inipass/icons/a4_st05.png"
                             alt=""
                         /></i>
                       </li>
                       <li>
                         <i>
                           <img
-                            src="@/assets/images/projects/initech/inihub/icons/ico_id.png"
+                            src="@/assets/images/projects/initech/inipass/icons/a4_st02.png"
+                            alt=""
+                        /></i>
+                      </li>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/inipass/icons/a4_st03.png"
                             alt=""
                         /></i>
                       </li>
@@ -157,20 +164,46 @@
                     <ul>
                       <li>
                         <img
-                          src="@/assets/images/projects/initech/inihub/icons/ico_step_01.png"
+                          src="@/assets/images/projects/initech/inipass/icons/a8_st01.png"
                           alt=""
                         />
                       </li>
                       <li>
                         <img
-                          src="@/assets/images/projects/initech/inihub/icons/ico_step_02.png"
-                          alt="아이콘_2단계"
+                          src="@/assets/images/projects/initech/inipass/icons/a8_st03.png"
+                          alt=""
                         />
                       </li>
                       <li>
                         <img
-                          src="@/assets/images/projects/initech/inihub/icons/ico_step_03.png"
-                          alt="아이콘_3단계"
+                          src="@/assets/images/projects/initech/inipass/icons/ico_mng03.png"
+                          alt=""
+                        />
+                      </li>
+                      <li>
+                        <img
+                          src="@/assets/images/projects/initech/inipass/icons/ico_mng08.png"
+                          alt=""
+                        />
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        <img
+                          src="@/assets/images/projects/initech/inipass/icons/ico_mng01.png"
+                          alt=""
+                        />
+                      </li>
+                      <li>
+                        <img
+                          src="@/assets/images/projects/initech/inipass/icons/ico_mng02.png"
+                          alt=""
+                        />
+                      </li>
+                      <li>
+                        <img
+                          src="@/assets/images/projects/initech/inipass/icons/ico_mng09.png"
+                          alt=""
                         />
                       </li>
                     </ul>

@@ -99,6 +99,115 @@
                     </ul>
                   </div>
                 </div>
+                <div class="style-guide icons">
+                  <div class="sub-ttl">
+                    <h4>Icons</h4>
+                  </div>
+                  <div class="style-guide buttons">
+                    <div class="sub-ttl">
+                      <h4>Buttons</h4>
+                    </div>
+                    <div class="buttons-wrap">
+                      <ul>
+                        <li><button>Button</button></li>
+                        <li><button>Button</button></li>
+                        <li><button>Button</button></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="icons-wrap">
+                    <ul>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/nexess/icons/ico_portal.png"
+                            alt=" 아이콘"
+                        /></i>
+                      </li>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/nexess/icons/ico_mail.png"
+                            alt=" 아이콘"
+                        /></i>
+                      </li>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/nexess/icons/ico_worlflow.png"
+                            alt=" 아이콘"
+                        /></i>
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/nexess/icons/ico_install_on.png"
+                            alt=" 아이콘"
+                        /></i>
+                      </li>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/nexess/icons/ico_install_off.png"
+                            alt=" 아이콘"
+                        /></i>
+                      </li>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/nexess/icons/ico_noinstall_on.png"
+                            alt=" 아이콘"
+                        /></i>
+                      </li>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/nexess/icons/ico_noinstall_off.png"
+                            alt=" 아이콘"
+                        /></i>
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/nexess/icons/ico_home.png"
+                            alt=" 아이콘"
+                        /></i>
+                      </li>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/nexess/icons/ico_profile_n.png"
+                            alt=" 아이콘"
+                        /></i>
+                      </li>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/nexess/icons/ico_profile.png"
+                            alt=" 아이콘"
+                        /></i>
+                      </li>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/nexess/icons/ico_alarm.png"
+                            alt=" 아이콘"
+                        /></i>
+                      </li>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/nexess/icons/ico_book.png"
+                            alt=" 아이콘"
+                        /></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

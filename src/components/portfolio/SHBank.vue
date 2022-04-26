@@ -99,6 +99,69 @@
                     </ul>
                   </div>
                 </div>
+                <div class="style-guide fonts">
+                  <div class="sub-ttl">
+                    <h4>Fonts</h4>
+                  </div>
+                  <div class="fonts-wrap">
+                    <ul>
+                      <li><p>노토산스 NotoSansKr 700</p></li>
+                      <li><p>노토산스 NotoSansKr 600</p></li>
+                      <li><p>노토산스 NotoSansKr 500</p></li>
+                      <li><p>노토산스 NotoSansKr 400</p></li>
+                      <li><p>노토산스 NotoSansKr 300</p></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="style-guide buttons">
+                  <div class="sub-ttl">
+                    <h4>Buttons</h4>
+                  </div>
+                  <div class="buttons-wrap">
+                    <ul>
+                      <li><button>Button</button></li>
+                      <li><button>Button</button></li>
+                      <li><button>Button</button></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="style-guide icons">
+                  <div class="sub-ttl">
+                    <h4>Icons</h4>
+                  </div>
+                  <div class="icons-wrap">
+                    <ul>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/suhyup/icons/ico_cert_1.png"
+                            alt=" 아이콘"
+                        /></i>
+                      </li>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/suhyup/icons/ico_cert_2.png"
+                            alt=" 아이콘"
+                        /></i>
+                      </li>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/suhyup/icons/ico_cert_3.png"
+                            alt=" 아이콘"
+                        /></i>
+                      </li>
+                      <li>
+                        <i>
+                          <img
+                            src="@/assets/images/projects/initech/suhyup/icons/ico_cert_4.png"
+                            alt=" 아이콘"
+                        /></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
