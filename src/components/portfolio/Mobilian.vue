@@ -31,6 +31,12 @@
                     {{ $t("project." + project.name + "_info_output") }}
                   </dd>
                 </dl>
+                <router-link
+                  tag="a"
+                  class="link"
+                  to="/portfolio/portfolio/mobilian/ia"
+                  >View Demo</router-link
+                >
                 <!-- <button class="btn__line" type="button">View Site</button>-->
               </div>
             </div>
@@ -247,9 +253,4 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/scss/main";
 @import "@/assets/scss/pages/_prj-detail";
-
-.project-detail {
-  background: #fff;
-  position: relative;
-}
 </style>

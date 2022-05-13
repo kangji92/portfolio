@@ -31,6 +31,7 @@
                     {{ $t("project." + project.name + "_info_output") }}
                   </dd>
                 </dl>
+
                 <!-- <button class="btn__line" type="button">View Site</button>-->
               </div>
             </div>

@@ -34,7 +34,7 @@
       color: #333;
       text-align: left;
       position: absolute;
-      top: 28vw;
+      top: 22vw;
       font-size: 1.25rem;
       line-height: 1.25; 
       @include respond-to("bp-max-820") {
@@ -493,7 +493,34 @@ background-color: #fff;
 
 
 
-
+ .link {
+   margin-top: 30px;
+      display: block;
+      width: 211px;
+      height: 60px;
+      border-radius: calc(60px * 0.5);
+      text-align: center;
+      font-size: 28px;
+      border: 1px solid #707070;
+      transition: 0.3s;
+      @include display-flex {
+        justify-content: getJustify(center);
+        align-items: checkAlign(center);
+      }
+      color: $txt-def;
+      font-family: $font-eng;
+      font-weight: 300;
+      &:hover {
+        background: #333;
+        color: #fff;
+    
+      }
+      @include respond-to("bp-max-820") {
+        width: 35vw;
+        height: 10vw;
+        font-size:5vw;
+      }
+  }
 
 button { padding: 0; cursor: pointer;}
 

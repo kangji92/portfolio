@@ -1,0 +1,52 @@
+
+.ini-mobilian__temp,
+.ini-mobilian__alert-pop {
+    //font-family: 'NotoR';
+    font-size: 1em;
+    font-size: 100%;
+    font-family: 'MalgunGothic', '맑은 고딕', "돋움", 'Apple SD Gothic Neo', sans-serif !important;
+    .inner {
+        position: relative;
+       // float: left;
+        width: 100%;
+        max-width: 720px;
+        margin: 0 auto;
+    }
+    em {
+        color: $main-color-blue;
+    }
+    .font-color-red {
+        color: #d10000 ;
+    }
+    .font-color-orange {
+        color: #d2613e !important ;
+    }
+     
+    .btn__blue {
+        background: $main-color-blue !important ;
+        color: #fff;
+    }
+    .btn__gray {
+        background: #5e5e5e !important ;
+        color: #fff;
+    }
+    .btn__wh {
+        background: #fff !important ;
+        border: 1px solid #cbcbcb;
+        color: #000;
+    }
+    i.ico {
+            &.refresh {
+                display: block;
+                float: left;
+                margin-right: .4em;
+                width: 1.2em;
+                height: 1.2em;
+                background:url('~@/assets/images/projects/initech/mobilian/demo/ico_refresh.png') no-repeat; background-size:100%;
+            }
+        
+    }
+
+    
+}
+

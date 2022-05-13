@@ -12,6 +12,10 @@ export default new VueRouter({
       path: "/",
       redirect: "/portfolio",
     },
+    {
+      path: "*",
+      component: () => import("@/views/NotFoundPage.vue"),
+    },
 
     {
       path: "/portfolio",
@@ -82,6 +86,7 @@ export default new VueRouter({
       component: () => import("@/components/portfolio/Inipass.vue"),
       //props: {},
     },
+
     // {
     //   path: "/portfolio/portfolio/snbcorp",
     //   component: () => import("@/components/portfolio/SnbCorp.vue"),
@@ -111,8 +116,115 @@ export default new VueRouter({
     },
 
     {
-      path: "*",
-      component: () => import("@/views/NotFoundPage.vue"),
+      // 모빌리언_데모 현황판
+      path: "/portfolio/portfolio/mobilian/ia",
+      component: () => import("@/components/projects_demo/MobilianIA.vue"),
+      //props: {},
+    },
+
+    {
+      // 모빌리언_데모 공인인증서_로그인_(인증서X)
+      name: "loginNoCert",
+      path: "/portfolio/portfolio/mobilian/login/noCert",
+      component: () => import("@/views/projects_demo/mobilian/LoginView.vue"),
+      props: { isNoCertList: true },
+    },
+    {
+      // 모빌리언_데모 공인인증서_로그인_(인증서O)
+      name: "loginCertList",
+      path: "/portfolio/portfolio/mobilian/login/certList",
+      component: () => import("@/views/projects_demo/mobilian/LoginView.vue"),
+      //props: { isNoCertList: false },
+    },
+    {
+      // 모빌리언_데모 인증서관리_(인증서X)
+      name: "noCert",
+      path: "/portfolio/portfolio/mobilian/manage/noCert",
+      component: () =>
+        import("@/views/projects_demo/mobilian/ManagementView.vue"),
+      //props: { isNoCertList: true, isShortcutShow: false },
+    },
+    {
+      // 모빌리언_데모 인증서관리_(인증서O)
+      name: "certList",
+      path: "//portfolio/portfolio/mobilian/manage/certList",
+      component: () =>
+        import("@/views/projects_demo/mobilian/ManagementView.vue"),
+      //props: { isNoCertList: false, isShortcutShow: false },
+    },
+    {
+      // 모빌리언_데모 인증서정보_상세보기
+      name: "selectCertDetail",
+      path: "/portfolio/portfolio/mobilian/manage/selectCertDetail",
+      component: () =>
+        import("@/views/projects_demo/mobilian/UserCertDetailView.vue"),
+    },
+    {
+      // 모빌리언_데모 인증서암호_변경
+      name: "certChangePwForm",
+      path: "/portfolio/portfolio/mobilian/certChangePwForm",
+      component: () => import("@/views/projects_demo/mobilian/PwFormView.vue"),
+      //props: { pwFormType: "certChangePwForm" },
+    },
+    {
+      // 모빌리언_데모 인증서암호_입력
+      name: "certEnterPwForm",
+      path: "/portfolio/portfolio/mobilian/certEnterPwForm",
+      component: () => import("@/views/projects_demo/mobilian/PwFormView.vue"),
+      //props: { pwFormType: "certEnterPwForm" },
+    },
+    {
+      // 모빌리언_데모 인증서 폐기 Step1
+      name: "certRevoke1",
+      path: "/portfolio/portfolio/mobilian/certRevoke/1",
+      component: () =>
+        import("@/views/projects_demo/mobilian/CertRevokeView.vue"),
+      //props: { isNextState: false },
+    },
+    {
+      // 모빌리언_데모 인증서 폐기 Step2
+      name: "certRevoke2",
+      path: "/portfolio/portfolio/mobilian/certRevoke/2",
+      component: () =>
+        import("@/views/projects_demo/mobilian/CertRevokeView.vue"),
+      //props: { isNextState: true },
+    },
+    {
+      // 모빌리언_데모 인증서 갱신 step1
+      name: "certRenew1",
+      path: "/portfolio/portfolio/mobilian/certRenew/1",
+      component: () =>
+        import("@/views/projects_demo/mobilian/CertRenewView.vue"),
+      //props: { isNextState: false },
+    },
+    {
+      // 모빌리언_데모 인증서 갱신 step2
+      name: "certRenew2",
+      path: "/portfolio/portfolio/mobilian/certRenew/2",
+      component: () =>
+        import("@/views/projects_demo/mobilian/CertRenewView.vue"),
+      // props: { isNextState: true },
+    },
+    {
+      // 모빌리언_데모 인증서 신규발급/재발급 폼
+      name: "certIssue",
+      path: "/portfolio/portfolio/mobilian/certIssue",
+      component: () =>
+        import("@/views/projects_demo/mobilian/CertIssueView.vue"),
+    },
+    {
+      // 모빌리언_데모 인증서 가져오기
+      name: "certImport",
+      path: "/portfolio/portfolio/mobilian/certImport",
+      component: () =>
+        import("@/views/projects_demo/mobilian/CertImportView.vue"),
+    },
+    {
+      // 모빌리언_데모 인증서 내보내기
+      name: "certExport",
+      path: "/portfolio/portfolio/mobilian/certExport",
+      component: () =>
+        import("@/views/projects_demo/mobilian/CertExportView.vue"),
     },
   ],
 });
