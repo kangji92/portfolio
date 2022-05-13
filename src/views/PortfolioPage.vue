@@ -557,6 +557,7 @@ b {
         position: relative;
         text-align: center;
         letter-spacing: 0.1em;
+
         &::after {
           content: "";
           width: 1px;
@@ -577,6 +578,9 @@ b {
           text-align: center;
           margin-bottom: 10px;
           line-height: 1.25em;
+          @include display-flex {
+            justify-content: getJustify(center);
+          }
           @include respond-to("bp-max-820") {
             font-size: 9.5vw;
           }

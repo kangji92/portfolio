@@ -99,21 +99,21 @@
                     </ul>
                   </div>
                 </div>
+                <div class="style-guide buttons">
+                  <div class="sub-ttl">
+                    <h4>Buttons</h4>
+                  </div>
+                  <div class="buttons-wrap">
+                    <ul>
+                      <li><button>Button</button></li>
+                      <li><button>Button</button></li>
+                      <li><button>Button</button></li>
+                    </ul>
+                  </div>
+                </div>
                 <div class="style-guide icons">
                   <div class="sub-ttl">
                     <h4>Icons</h4>
-                  </div>
-                  <div class="style-guide buttons">
-                    <div class="sub-ttl">
-                      <h4>Buttons</h4>
-                    </div>
-                    <div class="buttons-wrap">
-                      <ul>
-                        <li><button>Button</button></li>
-                        <li><button>Button</button></li>
-                        <li><button>Button</button></li>
-                      </ul>
-                    </div>
                   </div>
                   <div class="icons-wrap">
                     <ul>

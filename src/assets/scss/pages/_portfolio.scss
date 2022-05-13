@@ -4,7 +4,8 @@
 section {
   min-width: 1600px;
   @include respond-to("bp-max-820") {
-    min-width: auto;
+  min-width: auto;
+  width: 100%;
   }
 }
 
@@ -111,6 +112,7 @@ section {
     }
   }
   dl {
+   
     @include respond-to("bp-max-820") {
      display: none;
     }
@@ -121,6 +123,7 @@ section {
       padding-right: 10px;
       font-size: 18px;
       font-family: $font-eng;
+       font-family: 'NotoR';
       font-weight: 300;
       color: $txt-def;
           line-height: 1.5;
@@ -130,7 +133,8 @@ section {
       display: inline-block;
       font-size: 18px;
       font-family: $font-eng;
-      font-weight: 300;
+          //font-family: 'NotoR';
+      font-weight: 400;
       letter-spacing: normal;
       color: $txt-def;
     }

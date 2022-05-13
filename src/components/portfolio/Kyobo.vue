@@ -276,6 +276,7 @@
                 <span></span>
                 <span></span>
                 <span></span>
+                <span></span>
               </div>
             </div>
             <div class="visual-box type-mix pc">

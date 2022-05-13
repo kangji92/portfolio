@@ -1447,43 +1447,45 @@ button { padding: 0; cursor: pointer;}
       }
       &.kyobo2 {
         //width: 580px;
-        height: 896px;
+        height:715px;
         position: absolute;
         left: 0;
         top: 0;
         span {
           width: 320px;
-          height: 880px;
+          height: 702px;
           float: left;
+          border: 10px solid #888;
+          border-radius: 40px;
           &:nth-child(1) {
-            background: url('~@/assets/images/projects/initech/kyobo/indv_kakao_m.png') no-repeat ;
+            background: url('~@/assets/images/projects/initech/kyobo/indv/mo_01_kakao.png') no-repeat ;
             background-size: 100%;
             position:absolute;
             left: 0;
             top: 0;
           }
           &:nth-child(2) {
-            background: url('~@/assets/images/projects/initech/kyobo/indv_toss_m.png') no-repeat ;
+            background: url('~@/assets/images/projects/initech/kyobo/indv/mo_05_toss.png') no-repeat ;
             background-size: 100%;
             position:absolute;
-            left: 100px;
+            left: 120px;
             top: 0;
             @include respond-to("bp-max-820") {
               left: 12vw;
             }
           }
           &:nth-child(3) {
-            background: url('~@/assets/images/projects/initech/kyobo/indv_toss_m.png') no-repeat ;
+            background: url('~@/assets/images/projects/initech/kyobo/indv/mo_04_payco.png') no-repeat ;
             background-size: 100%;
             position:absolute;
-            left: 200px;
+            left: 240px;
             top: 0;
             @include respond-to("bp-max-820") {
               left: 24vw;
             }
           }
           &:nth-child(4) {
-            background: url('~@/assets/images/projects/initech/kyobo/indv_toss_m.png') no-repeat ;
+            background: url('~@/assets/images/projects/initech/kyobo/indv/mo_03_naver.png') no-repeat ;
             background-size: 100%;
             position:absolute;
             left: 380px;
@@ -1500,7 +1502,7 @@ button { padding: 0; cursor: pointer;}
         }
       }
       &.kyobo3 {
-        height: 760px;
+         height: 690px;
         position: absolute;
         left: 0;
         top: 28px;
@@ -1667,42 +1669,52 @@ button { padding: 0; cursor: pointer;}
       }
       &.kyobo7 {
         //width: 580px;
-        height: 800px;
+        height:715px;
         position: absolute;
         left: 0;
-        top: 28px;
+        top: 0;
         span {
           width: 320px;
+          height: 702px;
+          float: left;
+          border: 10px solid #888;
+          border-radius: 40px;
           &:nth-child(1) {
-            background: url('~@/assets/images/projects/initech/kyobo/indv_kakao_m.png') no-repeat ;
+            background: url('~@/assets/images/projects/initech/kyobo/intergration/inter_mo_02_pass.png') no-repeat ;
             background-size: 100%;
             position:absolute;
-            left: 0;
+            left: -100px;
+            top: 0;
+          }
+          &:nth-child(2) {
+            background: url('~@/assets/images/projects/initech/kyobo/intergration/inter_mo_03_toss.png') no-repeat ;
+            background-size: 100%;
+            position:absolute;
+            left: 80px;
+            top: 0;
+            @include respond-to("bp-max-820") {
+              left: 12vw;
+            }
+          }
+          &:nth-child(3) {
+            background: url('~@/assets/images/projects/initech/kyobo/intergration/inter_mo_04_naver.png') no-repeat ;
+            background-size: 100%;
+            position:absolute;
+            left: 240px;
             top: 0;
             @include respond-to("bp-max-820") {
               left: 24vw;
             }
           }
-          &:nth-child(2) {
-            background: url('~@/assets/images/projects/initech/kyobo/indv_kakao_m.png') no-repeat ;
-            background-size: 100%;
-            position:absolute;
-            left: 100px;
-            top: 0;
-          }
-           &:nth-child(3) {
-            background: url('~@/assets/images/projects/initech/kyobo/indv_kakao_m.png') no-repeat ;
-            background-size: 100%;
-            position:absolute;
-            left: 200px;
-            top: 0;
-          }
+         
+          
         }
         @include respond-to("bp-max-820") {
-          width: 48vw;
-          height: 48vw;
+          width: 29vw;
+          height: 65vw;
         }
       }
+    
       &.kyobo8 {
         height: 896px;
         // height: 550px;
@@ -2929,6 +2941,31 @@ button { padding: 0; cursor: pointer;}
     
     }
 
+    .icons {
+    height: 400px;
+  .icons-wrap {
+    ul {
+      float: left;
+    
+      height: 80px;
+    
+      &:nth-child(1) {
+           height: 108px;
+        li {
+            width: 80px;
+            height: 228px;
+            i {
+              width: 100%;
+                height: 80px;
+            }
+          
+        }
+      }
+    
+    }
+    
+  }
+  }
 }
 
 .sh-bank {
