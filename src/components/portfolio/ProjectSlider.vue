@@ -422,7 +422,7 @@ export default {
 </style>
 <style lang="scss" scoped>
 @import "@/assets/scss/main";
-@import "@/assets/scss/pages/_portfolio";
+@import "@/assets/scss/pages/_portfolio-main";
 
 .prj-info__num {
   font-size: 4.6rem;

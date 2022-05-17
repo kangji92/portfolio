@@ -105,24 +105,24 @@ export default {
           }
         } else {
           // 767
-          // if (window.matchMedia("(max-width: 767px)").matches) {
           if (window.matchMedia("(max-width: 1599px)").matches) {
-            //this.isNotSupport = true;
-            if (isPortrait) {
-              // 세로 모드일때
-              this.isNotSupport = false;
-            } else {
-              // 가로 모드일때
-              this.isNotSupport = true;
-            }
-          } else {
-            this.isNotSupport = false;
+            //if (window.matchMedia("(max-width: 767px)").matches) {
+            this.isNotSupport = true;
+            //if (isPortrait) {
+            // 세로 모드일때
+            //  this.isNotSupport = false;
+            // } else {
+            // 가로 모드일때
+            //   this.isNotSupport = true;
+            // }
+            // } else {
+            //   this.isNotSupport = false;
           }
         }
       } else {
         // PC
-        //  if (window.matchMedia("(max-width: 767px)").matches) {
         if (window.matchMedia("(max-width: 1599px)").matches) {
+          //if (window.matchMedia("(max-width: 767px)").matches) {
           if (window.innerWidth <= window.innerHeight) {
             // 세로 모드일때
             this.isNotSupport = false;
@@ -194,7 +194,7 @@ export default {
   padding: 10px;
   cursor: pointer;
 }
-/*
+/*:-moz-broken
 @media screen and (max-width: 480px) and (orientation: portrait) {
   #isNotSupport {
     display: none !important;
@@ -204,8 +204,7 @@ export default {
   #isNotSupport {
     display: block !important;
   }
-}
-*/
+}*/
 
 @media screen and (max-width: 1599px) and (orientation: portrait) {
   #isNotSupport {
