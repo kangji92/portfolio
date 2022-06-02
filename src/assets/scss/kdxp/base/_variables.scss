@@ -1,0 +1,61 @@
+
+// ----------------
+//   variables
+//-----------------
+
+// font-family
+$font-bk: "NotoBK",'Apple SD Gothic Neo', sans-serif , 'MalgunGothic';
+$font-b: "NotoB",'Apple SD Gothic Neo', sans-serif , 'MalgunGothic';
+$font-m: "NotoM",'Apple SD Gothic Neo', sans-serif , 'MalgunGothic';
+$font-r: "NotoR",'Apple SD Gothic Neo', sans-serif , 'MalgunGothic';
+$font-dl: "NotoDL",'Apple SD Gothic Neo', sans-serif , 'MalgunGothic';
+$font-l: "NotoL",'Apple SD Gothic Neo', sans-serif , 'MalgunGothic';
+$font-t: "NotoT",'Apple SD Gothic Neo', sans-serif , 'MalgunGothic';
+
+$font-kyobo-r: "KyoboR",'Apple SD Gothic Neo', sans-serif , 'MalgunGothic';
+
+$navy: #2475b6;
+
+
+// PC, Tablet Lanscape, MObile Portrait
+// Break Point (Desktop First)
+$pc-l-width: 1440px;
+$pc-m-width: 1280px;
+$tab-s-width: 960px;
+$mobi-l-width: 640px;
+$mobi-m-width: 425px;
+$mobi-s-width: 375px;
+$mobi-xs-width: 320px;
+
+
+/*----------------------------------------
+     Integration UI (TYPE A) Main Color
+------------------------------------------*/
+$type-a-pink: #ff6766;
+$type-a-pink2: #ff7f7e;
+/*----------------------------------------
+     Integration UI (TYPE B) Main Color
+------------------------------------------*/
+$type-b-navy: #2f5081;
+
+/*------------------------
+     Indiviual Main Color
+--------------------------*/
+//Indiviual Main Color
+$indv-sblue: #006abe;
+
+/*------------------------
+     KYOBO Main Color
+--------------------------*/
+$indv-lgreen: #4DAC26;
+$indv-indigo: #171C72;
+$indv-blue: #1C4196;
+$indv-gray: #CCC;
+
+
+/*------------------------
+     Common Color
+--------------------------*/
+$comn-line-color: #b9b9b9;
+$comn-line-color-1: #b9b9b9;
+$comn-line-color-2: #d9d9d9;

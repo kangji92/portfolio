@@ -1,0 +1,91 @@
+$breakpoints: (
+
+  "bp-landscape": (
+   orientation: landscape,
+  ),
+  /*--------------
+    PC First
+  ----------------*/
+  "bp-max-800": (
+    max-width: 800px,
+  ),
+  "bp-max-768": (
+    max-width: 768px,
+  ),
+  "bp-max-600": (
+    max-width: 600px,
+  ),
+  "bp-max-480": (
+    max-width: 480px,
+  ),
+  "bp-max-440": (
+    max-width: 440px,
+  ),
+  "bp-max-320": (
+    max-width: 320px,
+  ),
+  "bp-max-319": (
+    max-width: 319px,
+  ),
+  "bp-max-280": (
+    max-width: 280px,
+  ),
+
+  /*-----------------
+      모바일 First
+  -------------------*/
+  "bp-min-321": (
+    min-width: 321px,
+  ),
+  "bp-min-361": (
+    min-width: 361px,
+  ),
+   "bp-min-376": (
+    min-width: 376px,
+  ),
+  // 패드 세로대응 
+   "bp-min-481": (
+    min-width: 481px,
+  ),
+  "bp-min-561": (
+    min-width: 561px,
+  ),
+  "bp-min-799": (
+    min-width: 799px,
+  ),
+  // 패드 가로대응 (아이패드 / 갤럭시탭) 
+  "bp-min-801": (
+    min-width: 801px,
+  ),
+  "bp-min-1025": (
+    min-width: 1025px,
+  ),
+  // PC화면
+  "bp-min-1366": (
+    min-width: 1366px,
+  ),
+  
+);
+
+/// resposive Manager
+/// @access public
+/// @param {String} $breakpoint
+/// @requires $breakpoints
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == "string",
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+        + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}

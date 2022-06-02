@@ -1,6 +1,7 @@
 {
     "btn": {
-        "resume": "이력서"
+        "resume": "이력서",
+        "changeLocale": "언어변경"
     },
     "library": {
         "menu_1":"Home",
@@ -24,10 +25,13 @@
         "sec_1_ttl_h4_2": " Style Sheets ",
         "sec_1_ttl_h4_3": " Javascript",
         "sec_1_ttl_h4_4": "Colaboration Tool",
-        "sec_1_desc_1": " 웹표준을 바탕으로 컨텐츠 내용에 알맞은 시멘틱 마크업을 작성합니다. 크로스브라우징 이슈에 대한 다양한 해결방법을 공부하고 적용합니다.",
+        "sec_1_desc_1": " 웹표준을 바탕으로 컨텐츠 내용에 알맞은 시멘틱 마크업을 작성합니다. 크로스브라우징 이슈에 대한 다양한 해결방법을 공부하고 적용합니다. S.P.A 컴포넌트 구조설계와 마크업이 가능합니다.",
         "sec_1_desc_2": " 효율적인 유지보수를 고려하여 CSS를 작성합니다. Sass(scss) 프로세싱을 사용하여 CSS 확장 기능을 활용합니다.",
         "sec_1_desc_3": " 자바스크립트의 기본 문법을 이해하고 활용합니다.<br /> 라이브러리, 플러그인을 적용하거나 Vue.js 등의 자바스크립트 기반 S.P.A 프레임워크를 다룰 수 있습니다.",
-        "sec_1_desc_4": " 디자이너, 개발자와 원할한 협업을 끌어내기 위해 노력합니다. Git, Bitbucket, Zeplin, Sourcetree 등 협업을 위한 툴을 사용합니다."
+        "sec_1_desc_4": " 디자이너, 개발자와 원할한 협업을 끌어내기 위해 노력합니다. Git, Bitbucket, Zeplin, Sourcetree 등 협업을 위한 툴을 사용합니다.",
+        "about_ttl": "끊임없이 보다 나은 사람이 되자",
+        "about_sub": "웹퍼블리셔 강지연입니다. <br />저 자신을 발전시키기 위해<br />시간과 노력을 아끼지 않겠습니다."
+        
 
     },
     "project" : {
@@ -39,65 +43,122 @@
         "info_date": "날짜 : ",
         "info_output" : "기여도 : ",
 
+        "ttl_kdxp" : "경동택배 인증시스템 APP UI 개발",
+        "subttl_kdxp" : "WebView In APP",
+        "kdxp_info_date" : "2021.06 ~ 2021.09",
+        "kdxp_info_output": "UI개발 100%",
+        "info_dd_01_kdxp": "2021.07 ~ 2021.08",
+        "info_dd_02_kdxp": "UI개발",
+        "info_dd_03_kdxp" : "vue-cli, sass(scss)",
+        "info_dd_04_kdxp" : "Git, Bitbucket, SourceTree, zeplin",
+
         "ttl_sh-bank" : "수협은행 Nextro시스템 UX/UI 고도화",
         "subttl_sh-bank" : "SSO 2Factor인증시스템 UI화면 (PC Web/Tablet) ",
         "sh-bank_info_date" : "2021.06 ~ 2021.09",
-        "sh-bank_info_output": "퍼블리싱 100%",
+        "sh-bank_info_output": "웹퍼블리싱 100%",
+        "info_dd_01_sh-bank": "2021.06 ~ 2021.09",
+        "info_dd_02_sh-bank": "웹퍼블리싱",
+        "info_dd_03_sh-bank" : "Html5, css",
+        "info_dd_04_sh-bank" : "Tomcat",
 
         "ttl_mobilian": "공동인증서(구 공인인증서) <br> MobilianWeb 고도화",
         "subttl_mobilian": "Mobile / Tablet",
-        "mobilian_info_date" : "2021.06 - 2021.08",
-        "mobilian_info_output" : "퍼블리싱 100%, 프론트엔드 80% ",
+        "mobilian_info_date" : "2021.07 ~ 2021.11",
+        "mobilian_info_output" : "퍼블리싱 100%, 프론트엔드 60% ",
+        "info_dd_01_mobilian": "2021.07 ~ 2021.11",
+        "info_dd_02_mobilian": "UI개발",
+        "info_dd_03_mobilian" : "vue-cli, sass(scss)",
+        "info_dd_04_mobilian" : "Git, Bitbucket, SourceTree",
 
         "ttl_kyobo": "교보생명 통합인증센터 구축",
         "subttl_kyobo": "Responsive Web (PC / Tablet / Mobile)",
-        "kyobo_info_date" : "2021.03 - 2021.10",
-        "kyobo_info_output" : "퍼블리싱 100% / 프론트엔드 80%",
+        "kyobo_info_date" : "2021.07 ~ 2021.11",
+        "kyobo_info_output" : "UI개발 100%",
+        "info_dd_01_kyobo": "2021.07 ~ 2021.11",
+        "info_dd_02_kyobo": "UI개발",
+        "info_dd_03_kyobo" : "vue-cli, sass(scss)",
+        "info_dd_04_kyobo" : "Git, Bitbucket, SourceTree, zeplin, photoshop",
 
         "ttl_inihub": "인증통합플랫폼 이니허브 UI 개발",
         "subttl_inihub": "Responsive Web (PC / Tablet / Mobile)",
         "inihub_info_date" : "2020.12 - 2021.10",
-        "inihub_info_output" : "퍼블리싱 100% / 프론트엔드 80%",
+        "inihub_info_output" : "UI개발 100%",
+        "info_dd_01_inihub": "2020.12 - 2021.10",
+        "info_dd_02_inihub": "UI개발",
+        "info_dd_03_inihub" : "vue-cli, sass(scss)",
+        "info_dd_04_inihub" : "Git, Bitbucket, SourceTree, zeplin, photoshop",
 
         "ttl_nexess": "Nexess Demo System 구축",
         "subttl_nexess": "반응형 Web (PC / Tablet)",
         "nexess_info_date" : "2020.03 - 2020.05",
-        "nexess_info_output" : "퍼블리싱 100%",
+        "nexess_info_output" : "웹퍼블리싱 100%",
+        "info_dd_01_nexess": "2020.12 - 2021.10",
+        "info_dd_02_nexess": "웹퍼블리싱",
+        "info_dd_03_nexess" : "Html5, css",
+        "info_dd_04_nexess" : "Tomcat",
 
         "ttl_multi-demo": "멀티인증 Demo 시스템 구축 및 유지보수",
         "subttl_multi-demo":"Responsive Web (PC / Mobile)", 
         "multi-demo_info_date" : "2020.05 - 2021.12",
-        "multi-demo_info_output" : "퍼블리싱 100%",
+        "multi-demo_info_output" : "웹퍼블리싱 100%",
+        "info_dd_01_multi-demo": "2020.05 - 2021.12",
+        "info_dd_02_multi-demo": "웹퍼블리싱",
+        "info_dd_03_multi-demo" : "Html5, css",
+        "info_dd_04_multi-demo" : "Tomcat",
    
         "ttl_inipass": "공인인증서 이니패스 운영 및 유지보수",
         "subttl_inipass":"(구)인증사업본부 공인인증서 (PC / Mobile)", 
         "inipass_info_date" : "2019.09 ~ 2020.02",
-        "inipass_info_output" : "퍼블리싱 100%",
+        "inipass_info_output" : "웹퍼블리싱 50%",
+        "info_dd_01_inipass": "2019.09 ~ 2020.02",
+        "info_dd_02_inipass": "웹퍼블리싱",
+        "info_dd_03_inipass" : "Html5, css",
+        "info_dd_04_inipass" : "Tomcat",
 
-        "ttl_lotte": "롯데백화점 하이드리드앱 운영관리",
+        "ttl_lotte": "롯데백화점 통합앱 운영관리",
         "subttl_lotte":"PC / Mobile", 
         "lotte_info_date" : "2019.02 ~ 2019.06",
         "lotte_info_output" : "퍼블리싱 100%",
+        "info_dd_01_lotte": "2019.02 ~ 2020.06",
+        "info_dd_02_lotte": "웹퍼블리싱",
+        "info_dd_03_lotte" : "Html5, css",
+        "info_dd_04_lotte" : "Tomcat",
 
-        "ttl_lotte-event": "롯데백화점 하이드리드앱 운영관리",
+        "ttl_lotte-event": "롯데백화점 통합앱 운영관리",
         "subttl_lotte-event":"PC / Mobile", 
         "lotte-event_info_date" : "2019.02 ~ 2019.06",
         "lotte-event_info_output" : "퍼블리싱 100%",
+        "info_dd_01_lotte-event": "2019.02 ~ 2020.06",
+        "info_dd_02_lotte-event": "웹퍼블리싱 50%",
+        "info_dd_03_lotte-event" : "Html5, css",
+        "info_dd_04_lotte-event" : "Tomcat, Eclipse, 레드마인",
 
         "ttl_snbcorp": "SNB Corp. 기업 홈페이지 재구축",
         "subttl_snbcorp":"PC / Mobile", 
         "snbcorp_info_date" : "2018.02 ~ 2018.06",
         "snbcorp_info_output" : "기획100%, 디자인80%, 퍼블리싱 80%",
+        "info_dd_01_snbcorp": "2018.02 ~ 2018.06",
+        "info_dd_02_snbcorp": "기획/디자인/퍼블리싱",
+        "info_dd_03_snbcorp" : "Html5, css",
+        "info_dd_04_snbcorp" : "카페24플랫폼, FTP, photoshop",
 
         "ttl_wellpot": "웰포트 쇼핑몰 구축 및 운영관리",
         "subttl_wellpot":"PC / Mobile", 
         "wellpot_info_date" : "2015.04 ~ 2017.04",
         "wellpot_info_output" : "기획100%, 디자인80%, 퍼블리싱 80%",
+        "info_dd_01_wellpot": "2015.04 ~ 2017.04",
+        "info_dd_02_wellpot": "기획/디자인/퍼블리싱",
+        "info_dd_03_wellpot" : "Html5, css",
+        "info_dd_04_wellpot" : "카페24플랫폼, FTP, photoshop",
 
         "ttl_wedding": "모바일 청첩장",
         "subttl_wedding":"Mobile", 
         "wedding_info_date" : "2019.10",
-        "wedding_info_output" : "퍼블리싱 100%",
+        "wedding_info_output" : "웹퍼블리싱 100%",
+        "info_dd_01_wedding": "2015.04 ~ 2017.04",
+        "info_dd_02_wedding": "기획/디자인/퍼블리싱",
+        "info_dd_03_wedding" : "Html5, css",
+        "info_dd_04_wedding" : "github",
 
         "artical_ttl_01": "Tech Stack",
         "artical_ttl_02" : "Style Guide",
@@ -107,6 +168,45 @@
 
     },
 
+    "experience": {
+        "term_initech": "2019.09.16 ~ 재직중",
+        "name_initech": "이니텍(주)",
+        "ttl_initech": "KT그룹사 / 보안사업본부 솔루션지원팀 UX/UI 파트",
+        "subttl_initech": "· 보안솔루션 제품 UX/UI 개발 및 고도화",
+        "desc_initech": "  - 경동택배 간편인증시스템 APP UI 개발<br />- 신제품 이니허브(통합인증플랫폼) UX/UI 개발 및 고도화<br />- 교보생명 통합인증센터 구축<br />- 한국캐피탈 통합인증센터 구축<br />- 수협은행 2Factor인증 UX/UI 고도화 SSO제품(Nextro) <br />- PKI제품 모바일공인인증서(Mobilian) 고도화<br />- PKI / SSO 제품 데모사이트 구축<br />- (구)인증사업본부 내 공인인증서 이니패스 운영/유지보수 퍼블리싱",
+
+        "term_inov": "2019.02 ~ 2019.06 (5M)",
+        "name_inov": "이노브",
+        "ttl_inov": "온라인사업부 개발팀",
+        "subttl_inov": "· 롯데백화점 통합 앱 운영 및 유지보수",
+        "desc_inov": "  - 백화점 통합앱(PC/MobiliWeb/APP) 수정,추가 퍼블리싱<br> - 이벤트존 템플릿화 퍼블리싱",
+        
+        "term_snbcorp": "2017.05 ~ 2017.07 (2M)",
+        "name_snbcorp": "SNB 코퍼레이션",
+        "ttl_snbcorp": "단기 프로젝트",
+        "subttl_snbcorp": "의료기기 법인기업사이트 리뉴얼",
+        "desc_snbcorp": "  - 카페24 빌드형 플랫폼을 활용한 웹퍼블리싱<br />- 기획/디자인 참여<br />- 기능개선 및 이슈처리 사항 업데이트",
+
+        "term_erbario": "2018.11 ~ 2018.12 (2M)",
+        "name_erbario": "에르바리오 토스카노",
+        "ttl_erbario": "단기 프로젝트",
+        "subttl_erbario": " '에르바리오 토스카노' 쇼핑몰 리뉴얼",
+        "desc_erbario": " - 카페24 쇼핑몰형 (스마트디자인) 플랫폼 제공 모듈을 활용한 퍼블리싱<br /> - 기능개선 및 이슈처리 사항 업데이트",
+        
+        "term_wellpot": "2015.05 ~ 2017.04 (2Y)",
+        "name_wellpot": "한국웰포트",
+        "ttl_wellpot": "온라인 총괄",
+        "subttl_wellpot": " · 쇼핑몰 웹사이트 구축 및 운영",
+        "desc_wellpot": "- UI 디자인 / 웹퍼블리싱<br /> - 카페24 쇼핑몰형 (스마트디자인) 플랫폼<br />- 카페24 제공 모듈리스트 활용한 퍼블리싱 (html5/CSS/jQuery)<br /> - 제품 상세페이지 디자인 <br />- 기능개선 및 이슈처리 사항 업데이트",
+        
+        "term_squareplanet": "2013.03 ~ 2015.04 (2Y)",
+        "name_squareplanet": "스퀘어플래닛",
+        "ttl_squareplanet": "온라인 총괄",
+        "subttl_squareplanet": " · 쇼핑몰 웹사이트 리뉴얼 및 운영",
+        "desc_squareplanet": " - UI 디자인 / 웹퍼블리싱"
+        
+   
+    },
     "prj_mobilian" : {
         "ttl_CertManagement" : "인증서 관리",
         "ttl_CertPublicLogin" : "공동인증서 인증",
@@ -402,5 +502,37 @@
         "icon_ir_cert1" : "인증서 정상 이미지",
         "icon_ir_cert2" : "인증서 기한임박 이미지",
         "icon_ir_cert3" : "인증서 기한만료 이미지"
+    },
+    "easyauth" : {
+        "pin_msg_ttl_1": "PIN번호를 등록하세요",
+        "pin_msg_desc_1": "등록하신 PIN번호는 인증할 때 사용됩니다.",
+
+        "pin_msg_ttl_2": "PIN번호를 등록하세요",
+        "pin_msg_desc_2": "PIN번호가 시스템에<br>등록되어 있지 않습니다.",
+
+        "pin_msg_ttl_3": "PIN번호를 등록하세요",
+        "pin_msg_desc_3": "등록이 되어 있지 않아 인증에 실패했습니다. 간편인증 등록 후 사용해 주세요. ",
+        "pin_msg_ttl_4": "PIN번호가 일치하지 않습니다",
+        "pin_msg_desc_4": "PIN번호 6자리를 다시 입력해주세요.",
+
+        "bio_msg_ttl_1": "생체인증을 등록합니다",
+        "bio_msg_desc_1": "등록하신 인증은 본인인증 시 사용됩니다.",
+
+        "bio_msg_ttl_2": "생체인증을 인식시켜주세요",
+        "bio_msg_desc_2": "생체인증을 입력하세요.",
+       
+        "bio_msg_ttl_3": "생체인증을 인식시켜주세요",
+        "bio_msg_desc_3": "시스템의 생체인증이 변경되어<br> 등록한 생체인증이 더이상 유효하지 않습니다. <br>생체인증을 다시 등록 해주세요. ",
+
+        "bio_msg_ttl_4": "생체인증이 유효하지 않습니다",
+        "bio_msg_desc_4": "생체인증을 다시 등록 후 사용해 주시기 바랍니다.",
+
+        "bio_msg_ttl_5": "생체인증이 유효하지 않습니다",
+        "bio_msg_desc_5": "생체인증을 다시 등록 후<br>사용해 주시기 바랍니다.",
+
+        "bio_msg_ttl_6": "생체인증이 일치하지 않습니다",
+        "bio_msg_desc_6": "다시시도해주세요."
+       
     }
+
 }

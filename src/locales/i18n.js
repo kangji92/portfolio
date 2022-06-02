@@ -11,6 +11,7 @@ export const i18n = new VueI18n({
   locale: "ko",
   fallbackLocale: "ko",
   messages: { en, ko },
+  //silentTranslationWarn: process.env.NODE_ENV === "production",
 });
 
 const loadedLanguages = ["ko"];

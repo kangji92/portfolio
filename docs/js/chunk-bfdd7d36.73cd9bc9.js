@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-bfdd7d36"],{"96ec":function(t,n,c){"use strict";c("9bff")},"9bff":function(t,n,c){},f811:function(t,n,c){"use strict";c.r(n);var e=function(){var t=this,n=t.$createElement,c=t._self._c||n;return c("div",{staticClass:"blog-main"},[t._v("blog")])},i=[],o={created:function(){window.location.href="https://kang-ji.tistory.com"}},f=o,s=(c("96ec"),c("2877")),a=Object(s["a"])(f,e,i,!1,null,"69f39d94",null);n["default"]=a.exports}}]);
+//# sourceMappingURL=chunk-bfdd7d36.73cd9bc9.js.map

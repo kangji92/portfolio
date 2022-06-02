@@ -1,0 +1,298 @@
+//-----------
+//  base
+//-----------
+html,
+body {
+  overscroll-behavior: contain; // 모바일/태블릿에서 scroll chaining 막기 (안드로이드 Chrome, 삼성인터넷 용)
+}
+* {
+  touch-action: pan-y; // 터치 확대/축소막기
+}
+body {
+  -webkit-text-size-adjust:none;
+  min-width: 280px;
+  min-height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  @include prefix(box-sizing, border-box);
+  border: none;
+  word-break: keep-all;
+ // font-family: $font-dl;
+  font-size: 16px;
+  letter-spacing: normal;
+  letter-spacing: -0.05em;
+  letter-spacing: -0.35px;
+  line-height: 1;
+ 
+  //overflow-x: hidden;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  touch-action: pan-y; // 터치 확대/축소막기
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {list-style: none;}
+a {
+  // display: block;
+  text-decoration: none;
+  color: inherit;
+  font-style: normal;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+button {
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+textarea {
+  /* safari */
+  @include prefix(box-sizing, border-box);
+  @include prefix(appearance, none);
+  line-height: 1;
+}
+
+
+/* input  */
+input {
+  display: inline-block;
+  height: auto;
+  width: 100%;
+  padding: 0 14px;
+  font-size: 20px;
+  box-sizing: border-box;
+  //-webkit-appearance: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  border: 1px transparent;
+  background: transparent;
+  @include prefix(box-sizing, border-box);
+  @include prefix(appearance, none);
+
+  @include placeholder {
+    // vertical-align: middle;
+    color: #aeaeae;
+    opacity: 1;
+    
+  }
+  /* IE10 이상을 위한 css
+    &::placeholder {
+      opacity: 1; 파이어폭스에서 뿌옇게 나오는 현상을 방지하기 위한 css 
+    }
+    */
+  /*
+    &::-webkit-input-placeholder {
+      //  line-height: normal;
+    }  */
+  /* IE 
+    &:-ms-input-placeholder {
+      // line-height: 1;
+    }
+    */
+  /* Firefox 
+    &:-moz-input-placeholder {   
+    }
+    */
+  &::-ms-clear {
+    display: none; // IE10 이상에서 input box 에 추가된 지우기 버튼 제거
+  }
+}
+
+input,
+textarea {
+  @include prefix(appearance, none);
+  border-radius: 0;
+  -webkit-border-radius: 0;
+}
+input:read-only {
+  color: #000;
+}
+input[type='checkbox'] {
+  height: 100%;
+  // 모든 스타일링 삭제
+ @include prefix(appearance, none);
+ &:focus {
+  @include prefix(box-sizing, content-box);
+   height: 100%;
+ }
+}
+input {
+  height: auto;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  border: 1px transparent;
+  background: transparent;
+  @include prefix(box-sizing, border-box);
+  @include prefix(appearance, none);
+  }
+input[type="text"],
+input[type="password"] {
+  height: auto; /* 높이값 초기화 */
+  // line-height: normal; line-height 초기화
+  border-radius: 0; /* iSO 둥근모서리 제거 */
+  @include prefix(appearance, none); /* 브라우저별 기본 스타일링 제거 */
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+select {
+  border: 0;
+  /* Select box 스타일 초기화 */
+  @include prefix(appearance, none);
+  background: transparent;
+  &::-ms-expand {
+    /* IE 에서 Select box 화살표 제거 */
+    display: none;
+  }
+}
+
+.blind {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  font-size: 0;
+  line-height: 0;
+}
+.hide {
+  display: none;
+}
+.wrap {
+  position: relative;
+  width: 100%;
+  //min-height: 100vh;
+}
+@mixin loginBtn {
+  border-radius: 0;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+button[type="menu"]:disabled {
+  color: #b8b8b8;
+  cursor: auto;
+}
+legend {
+  width: 100%;
+}
+object {
+  width: 100%;
+}
+input:read-only,
+textarea:read-only {
+  color: #b8b8b8;
+  cursor: auto;
+}
+.center {
+  text-align: center;
+}
+.left {
+  text-align: left;
+}
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
+.disabled {
+  cursor: default;
+}
+
+.hidden {
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden !important;
+  touch-action: none;
+}
+
+.blind {
+  overflow:hidden; font-size: 0;
+}
+
+/* focus */
+a:focus,
+button:focus,
+select:focus,
+input:focus,
+input[type='checkbox']:focus {
+  outline: solid 3px #000 important;
+}
+
+
+/* 접근성 마우스사용시 focus 비활성 */
+.using-mouse :focus,
+.using-mouse a:focus,
+.using-mouse button:focus,
+.using-mouse select:focus,
+.using-mouse input:focus {
+  outline: none !important;
+}
+
+/* CSS */
+.touch-hidden {
+  height: 100%;
+  // min-height: 100%;
+  overflow: hidden !important;
+  touch-action: none;
+}
+
+#dimmed {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.41);
+  z-index: 600;
+}
+#notSupport {
+  z-index: 2000;
+}
+
+.ini-pop-overlay {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.41);
+}
+
+.inihub-dim {
+  min-height: 100%;
+  // overflow:hidden; // 스크롤막기
+  display: block;
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  /* z-index:1;*/
+  //z-index: 2;
+
+  width: 100%;
+  height: 100%;
+  overflow:hidden;
+  background: rgba(0,0,0,0.5);
+  transform:translate3d(0,0,0);
+  -webkit-tansform:translateZ(0);
+}

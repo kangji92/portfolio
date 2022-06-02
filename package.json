@@ -10,8 +10,9 @@
   },
   "dependencies": {
     "animejs": "^3.2.1",
-    "axios": "^0.26.0",
+    "axios": "^0.26.1",
     "core-js": "^3.6.5",
+    "gsap": "^3.10.4",
     "laravel-mix": "^6.0.43",
     "pdfvuer": "^1.9.2",
     "scroll-out": "^2.2.12",

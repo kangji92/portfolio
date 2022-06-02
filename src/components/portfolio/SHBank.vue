@@ -178,16 +178,18 @@
             </div>
           </article>
           <article class="hiring-info">
-            <div class="visual-box col pc">
-              <p class="visual__ttl">Section2</p>
-              <div class="mockup_sub" :class="project.name + 2">
-                <span></span>
+            <div class="inner">
+              <div class="visual-box col pc">
+                <p class="visual__ttl">Section2</p>
+                <div class="mockup_sub" :class="project.name + 2">
+                  <span></span>
+                </div>
               </div>
-            </div>
-            <div class="visual-box col pc">
-              <p class="visual__ttl">Section3</p>
-              <div class="mockup_sub" :class="project.name + 3">
-                <span></span>
+              <div class="visual-box col pc">
+                <p class="visual__ttl">Section3</p>
+                <div class="mockup_sub" :class="project.name + 3">
+                  <span></span>
+                </div>
               </div>
             </div>
           </article>
@@ -212,16 +214,18 @@
             </div>
           </article>
           <article class="hiring-info">
-            <div class="visual-box col pc">
-              <p class="visual__ttl">Section2</p>
-              <div class="mockup_sub" :class="project.name + 2">
-                <span></span>
+            <div class="inner">
+              <div class="visual-box col pc">
+                <p class="visual__ttl">Section2</p>
+                <div class="mockup_sub" :class="project.name + 2">
+                  <span></span>
+                </div>
               </div>
-            </div>
-            <div class="visual-box col pc">
-              <p class="visual__ttl">Section3</p>
-              <div class="mockup_sub" :class="project.name + 3">
-                <span></span>
+              <div class="visual-box col pc">
+                <p class="visual__ttl">Section3</p>
+                <div class="mockup_sub" :class="project.name + 3">
+                  <span></span>
+                </div>
               </div>
             </div>
           </article>

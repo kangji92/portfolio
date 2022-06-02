@@ -9,91 +9,51 @@
       :autoplay="false"
       :arrows="true"
       :dots="false"
-      v-bind="settings"
     >
       <div class="terms-group">
-        <dl>
-          <dt>
-            <p>2019.09.16 ~ 재직중</p>
-          </dt>
-          <dd>
-            <em>이니텍(주)</em>
-            <p>KT그룹사 / 보안사업본부 솔루션지원팀 UX/UI 파트</p>
-            <p>· 보안솔루션 제품 UX/UI 개발 및 고도화</p>
-            <span>
-              - 경동택배 간편인증시스템 UX/UI 개발<br />
-              - 신제품 이니허브(통합인증플랫폼) UX/UI 개발 및 고도화<br />
-              - 교보생명 통합인증센터 구축<br />
-              - 한국캐피탈 통합인증센터 구축<br />
-              - 수협은행 2Factor인증 UX/UI 고도화 SSO제품(Nextro) <br />
-              - PKI제품_모바일공인인증(Mobilian) 고도화<br />
-              - PKI / SSO 제품 데모사이트 구축<br />
-              - (구)인증사업본부 내 공인인증서 이니패스 운영/유지보수 퍼블리싱
-            </span>
-          </dd>
-        </dl>
-        <dl>
-          <dt>
-            <p>2019.02 ~ 2019.06 (4M)</p>
-          </dt>
-          <dd>
-            <em>이노브 </em>
-            <p>온라인사업부 개발팀</p>
-            <p>· 롯데백화점 통합 앱 운영 및 유지보수</p>
-            <span> - 백화점 통합앱(PC/MobiliWeb/APP) 수정,추가 퍼블리싱 </span>
-            <span> - 이벤트존 템플릿화 퍼블리싱</span>
-          </dd>
-        </dl>
-        <dl>
-          <dt>
-            <p>2017.11 ~ 2018.12 (1Y)</p>
-          </dt>
-          <dd>
-            <em>단기 프로젝트</em>
-            <p>1. '에르바리오 토스카노' 쇼핑몰 리뉴얼</p>
-            <span>
-              - 카페24 쇼핑몰형 (스마트디자인) 플랫폼 제공 모듈을 활용한
-              퍼블리싱<br />
-              - 기능개선 및 이슈처리 사항 업데이트</span
-            >
-            <p>2. 'SNB 코퍼레이션' 의료기기 법인기업사이트 리뉴얼</p>
-            <span>
-              - 카페24 빌드형 플랫폼을 활용한 웹퍼블리싱<br />
-              - 기획/디자인 참여<br />
-              - 기능개선 및 이슈처리 사항 업데이트
-            </span>
-            <p>3. 중고자동차 사이트리뉴얼</p>
-            <span> - Naver카페 사이트 리뉴얼<br /> </span>
-          </dd>
-        </dl>
+        <div class="terms" v-for="term in termList" :key="term.idx">
+          <dl>
+            <dt>
+              <p>{{ $t("experience.term_" + term.name) }}</p>
+            </dt>
+            <dd>
+              <em>{{ $t("experience.name_" + term.name) }}</em>
+              <p>{{ $t("experience.ttl_" + term.name) }}</p>
+              <p>{{ $t("experience.subttl_" + term.name) }}</p>
+              <span v-html="$t('experience.desc_' + term.name)"></span>
+            </dd>
+          </dl>
+        </div>
       </div>
       <div class="terms-group">
-        <dl>
-          <dt>
-            <p>2015.04 ~ 2017.04 (2Y)</p>
-          </dt>
-          <dd>
-            <em>한국웰포트 </em>
-            <p>· 쇼핑몰 웹사이트 구축 및 운영</p>
-            <span>
-              - UI 디자인 / 웹퍼블리싱<br />
-              - 카페24 쇼핑몰형 (스마트디자인) 플랫폼<br />
-              - 카페24 제공 모듈리스트 활용한 퍼블리싱 (html5/CSS/jQuery)<br />
-              - 제품 상세페이지 디자인 <br />
-              - 기능개선 및 이슈처리 사항 업데이트</span
-            >
-          </dd>
-        </dl>
-        <dl>
-          <dt>
-            <p>2013.03 ~ 2015.04 (2Y)</p>
-          </dt>
-          <dd>
-            <em>스퀘어플래닛 </em>
-            <p>· 쇼핑몰 웹사이트 리뉴얼 및 운영</p>
-            <span> - UI 디자인 / 퍼블리싱 </span>
-          </dd>
-        </dl>
+        <div class="terms" v-for="term in termList2" :key="term.idx">
+          <dl>
+            <dt>
+              <p>{{ $t("experience.term_" + term.name) }}</p>
+            </dt>
+            <dd>
+              <em>{{ $t("experience.name_" + term.name) }}</em>
+              <p>{{ $t("experience.ttl_" + term.name) }}</p>
+              <p>{{ $t("experience.subttl_" + term.name) }}</p>
+              <span v-html="$t('experience.desc_' + term.name)"></span>
+            </dd>
+          </dl>
+        </div>
+      </div>
+      <div class="terms-group">
+        <div class="terms" v-for="term in termList3" :key="term.idx">
+          <dl>
+            <dt>
+              <p>{{ $t("experience.term_" + term.name) }}</p>
+            </dt>
+            <dd>
+              <em>{{ $t("experience.name_" + term.name) }}</em>
+              <p>{{ $t("experience.ttl_" + term.name) }}</p>
+              <p>{{ $t("experience.subttl_" + term.name) }}</p>
+              <span v-html="$t('experience.desc_' + term.name)"></span>
+            </dd>
+          </dl>
+        </div>
       </div>
     </VueSlickCarousel>
   </div>
@@ -136,6 +96,40 @@ export default {
         infinite: false,
         // autoplaySpeed	: 3000
       },
+      termList: [
+        {
+          idx: 1,
+          name: "initech",
+        },
+        {
+          idx: 2,
+          name: "inov",
+        },
+      ],
+      termList2: [
+        {
+          idx: 3,
+          name: "snbcorp",
+        },
+        {
+          idx: 4,
+          name: "erbario",
+        },
+        {
+          idx: 5,
+          name: "wellpot",
+        },
+        {
+          idx: 6,
+          name: "squareplanet",
+        },
+      ],
+      termList3: [
+        {
+          idx: 6,
+          name: "squareplanet",
+        },
+      ],
     };
   },
 
@@ -170,8 +164,7 @@ export default {
   width: 75%;
   top: 50px;
 }
-.experience-inner .slick-track {
-}
+
 .experience-inner .slick-dots {
   margin-top: 100px;
   display: none;
@@ -347,7 +340,8 @@ export default {
   .terms-group {
     float: right;
     width: 80%;
-    height: 70vh;
+    height: 72vh;
+    //height: 100%;
     @include respond-to("bp-max-820") {
       height: 70vh;
     }
@@ -396,7 +390,7 @@ export default {
         }
         span {
           font-size: 18px;
-          line-height: 1.3em;
+          line-height: 1.4em;
           @include respond-to("bp-max-820") {
             font-size: 1.8vw;
           }

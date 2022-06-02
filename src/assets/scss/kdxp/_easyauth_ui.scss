@@ -1,0 +1,176 @@
+@import "@/assets/scss/kdxp/base/_reset";
+@import "@/assets/scss/kdxp/base/_fonts";
+@import "@/assets/scss/kdxp/base/_breakpoints";
+@import "@/assets/scss/kdxp/base/_mixins";
+
+.ini-easyauth-temp {
+    font-family: 'NotoM';
+    width: 100%;
+    height: 100%;
+    min-height: 472px;
+    .easyauth-inner {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      min-height: 472px;
+      background: #2b40ab;
+    }
+    .easyauth-nav {
+      .btn-close {
+        width: 24px;
+        height: 24px;
+        background: url('~@/assets/images/projects/initech/kdxp/demo/ico_close_off.svg') center center no-repeat;
+        background-size: 100%;
+        position: absolute;
+        top: 22px;
+        right: 15px;
+      }
+    }
+    .easyauth-type {
+      .inner {
+        width: 300px;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+        @include respond-to("bp-max-319") {
+          width: 260px;
+        }
+      }
+      .txt-wrap {
+        position: relative;
+        width: 100%;
+        color: #fff;
+        text-align: center;
+        em {
+          font-size: 1.5rem; 
+          line-height: 1; 
+          letter-spacing: -1.73px;
+          @include respond-to("bp-max-319") {
+            font-size: 1.4rem;
+          }
+        } 
+        p { 
+          margin-top: 10px; 
+          font-size: 1rem; 
+          letter-spacing: -1px; 
+          //line-height: 1.2; 
+          line-height: 1.4; 
+          font-family: 'NotoR';
+          @include respond-to("bp-max-319") {
+            font-size: 0.9rem;
+          }
+        }
+        p.error {
+          color: #ff9090; 
+          //line-height: 1.2; 
+          line-height: 1.4; 
+          letter-spacing: -1px;
+        }
+      }
+      &.pin {
+        .form-wrap {
+          width: 272px;
+          margin: 0 auto;
+          padding-top: 45%;
+          @include display-flex {
+            justify-content: getJustify(center) ;
+          }
+          @include respond-to("bp-min-376") {
+            //padding-top: 40%;
+          }
+          @include respond-to("bp-max-319") {
+            width: 258px;
+          }
+          .input {
+            width: 42px;
+            height: 42px;
+            float: left;
+            background: #fff;
+            border-radius: 8px;
+            @include respond-to("bp-max-319") {
+              width: 36px;
+              height: 36px;
+            }
+            input {
+              @include prefix(appearance, none); /* 브라우저별 
+              기본 스타일링 제거 */
+              @include prefix(box-sizing, border-box);
+              border-radius: 0; /* iSO 둥근모서리 제거 */
+              font-family: 'password';
+              height: 42px;
+              line-height: 42px; 
+              font-size: 52px;
+              vertical-align: middle;
+              letter-spacing: normal;
+              text-align: center;
+              padding: 0;
+              color: #525252;
+              @include respond-to("bp-max-319") {
+                line-height: 36px; 
+                height: 36px;
+              }
+              @include display-flex {
+                align-items: checkAlign(center);
+                justify-content: getJustify(center);
+              }
+            }
+          }
+          .input + .input {margin-left: 5px;}
+        }
+        .txt-wrap {
+          padding-top: 32%;
+        }
+      }
+      &.bio {
+        position: relative;
+        height: 100%;
+        .form-wrap {
+          width: 129px;
+          margin: 0 auto;
+          position: absolute;
+          //top: 20.65%;
+          top: 12.325%;
+          left: 50%;
+          @include translateX(-50%);
+          .btn-fgp {
+            width: 129px;
+            height: 129px;
+            background: transparent;
+            .ico-fingerprint {
+              display: block;
+              width: 145px;
+              height: 145px;
+              background: url('~@/assets/images/projects/initech/kdxp/demo/ico_finger_2.svg') center center no-repeat;
+              background-size: 100%;
+            }
+          }
+        }
+        .txt-wrap {
+          padding-top: 0;
+          position: absolute;
+          bottom: 14%;
+          p {
+            min-height: 68px;
+          }
+        }
+      }
+    } 
+    .easyauth-loading {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      left: 0;
+      top: 0;
+      background: rgba(0,0,0,0.6);
+      img { 
+        position: absolute;
+        left: 50%;
+        top: 32.63%;
+        @include translateX(-50%);
+        width: 80px;
+        height: 80px;
+        }
+    }
+}

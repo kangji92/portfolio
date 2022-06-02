@@ -2,32 +2,36 @@
   <div>
     <!--
     <button class="btn-prj__list"></button>-->
-    <VueSlickCarousel
+    <!-- <VueSlickCarousel
       class="slider"
       :arrows="true"
       :dots="true"
-      v-bind="settings"
-    >
+      v-bind="settings"{{ $t('project.ttl_' + { prjName: project.name }) }}
+    >-->
+    <VueSlickCarousel class="slider" :arrows="true" :dots="true">
       <div v-for="project in projectList" :key="project.idx" class="prj-wrap">
         <div class="prj-info">
           <p class="prj-info__num" v-html="$t(project.idx)"></p>
-          <h3 v-html="$t(project.ttl)"></h3>
-          <p class="prj-info__sub-ttl" v-html="$t(project.sub_ttl)"></p>
+          <h3 v-html="$t('project.ttl_' + project.name)"></h3>
+          <p
+            class="prj-info__sub-ttl"
+            v-html="$t('project.subttl_' + project.name)"
+          ></p>
           <dl>
             <dt v-html="$t('project.info_dt_01')"></dt>
-            <dd>{{ $t(project.info_dd_01) }}</dd>
+            <dd>{{ $t("project.info_dd_01_" + project.name) }}</dd>
           </dl>
           <dl>
             <dt v-html="$t('project.info_dt_02')"></dt>
-            <dd>{{ $t(project.info_dd_02) }}</dd>
+            <dd>{{ $t("project.info_dd_02_" + project.name) }}</dd>
           </dl>
           <dl>
             <dt v-html="$t('project.info_dt_03')"></dt>
-            <dd>{{ $t(project.info_dd_03) }}</dd>
+            <dd>{{ $t("project.info_dd_03_" + project.name) }}</dd>
           </dl>
           <dl>
             <dt v-html="$t('project.info_dt_04')"></dt>
-            <dd>{{ $t(project.info_dd_04) }}</dd>
+            <dd>{{ $t("project.info_dd_04_" + project.name) }}</dd>
           </dl>
           <div class="btn-wrap">
             <!--
@@ -117,51 +121,43 @@ export default {
           mockup_class_01: "mockup__respons",
           image_class: "my-portfolio",
         },  */
+
         {
           idx: "01",
+          id: "kdxp",
+          name: "kdxp",
+          ttl: "경동택배 인증시스템 APP UI 개발",
+          sub_ttl: " 보안솔루션 PKI팀 프로젝트",
+          mockup_class_01: "mockup__mo kdxp",
+          image_class: "kdxp",
+        },
+        {
+          idx: "02",
           id: "sh-bank",
           name: "sh-bank",
           ttl: "수협은행 Nextro시스템 고도화",
           sub_ttl: " 보안솔루션 IAM팀 제품 시스템고도화",
-          info_dt_01: "<b>기간: </b>",
-          info_dd_01: "2021.07 ~ 2021.08",
-          info_dd_02: "웹퍼블리싱",
-          info_dd_03: "Html5",
-          info_dd_04: "Tomcat",
           mockup_wrap: "",
           mockup_class_01: "mockup__pc sh-bank",
           image_class: "sh-bank",
         },
         {
-          idx: "02",
+          idx: "03",
           id: "mobilian",
           name: "mobilian",
           ttl: "INISAFE Mobilian <br> 모바일공인인증서 고도화",
           sub_ttl: " 보안솔루션 PKI 제품 고도화",
-          info_dt_01: "<b>기간: </b>",
-          info_dd_01: "2021.07 ~ 2021.11",
-          info_dd_02: "프론트앤드, 웹퍼블리싱",
-          info_dd_03: "vue-cli, sass(scss)",
-          info_dd_04: "Git, Bitbucket, SourceTree ",
           mockup_wrap: "",
           mockup_class_01: "mockup__mo mobilian",
           image_class: "mobilian",
         },
 
         {
-          idx: "03",
+          idx: "04",
           id: "kyobo",
           name: "kyobo",
           ttl: "교보생명 통합인증센터 구축",
           sub_ttl: " 보안솔루션 신제품 INIHUB ",
-          info_dt_01: "<b>기간: </b>",
-          info_dd_01: "2020.12 ~ 2021.07",
-          info_dt_02: "<b>담당업무: </b>",
-          info_dd_02: "프론트앤드, 웹퍼블리싱",
-          info_dt_03: "<b>마크업/개발방식: </b>",
-          info_dd_03: "vue-cli, sass(scss)",
-          info_dt_04: "<b>사용 Tool: </b>",
-          info_dd_04: "Git, Bitbucket, SourceTree, zeplin, photoshop",
           mockup_wrap: "mockup-wrap__respons",
           mockup_class_01: "mockup__respons-pc kyobo",
           mockup_class_02: "mockup__respons-pad kyobo",
@@ -169,37 +165,21 @@ export default {
           image_class: "kyobo",
         },
         {
-          idx: "04",
+          idx: "05",
           id: "inihub",
           name: "inihub",
           ttl: "인증통합플랫폼 이니허브 개발",
           sub_ttl: "보안솔루션 신제품 ",
-          info_dt_01: "<b>기간: </b>",
-          info_dd_01: "2021.07 ~ 2021.08",
-          info_dt_02: "<b>담당업무: </b>",
-          info_dd_02: "웹퍼블리싱, 프론트엔드",
-          info_dt_03: "<b>마크업/개발방식: </b>",
-          info_dd_03: "Vue.js (vue-cli), sass(scss)",
-          info_dt_04: "<b>사용 Tool: </b>",
-          info_dd_04: "Git, Bitbucket, SourceTree, zeplin, photoshop",
           mockup_wrap: "mockup-wrap__respons",
           mockup_class_01: "mockup__respons-pc inihub",
           mockup_class_03: "mockup__respons-mo inihub",
         },
         {
-          idx: "05",
-          id: "nexess-demo",
-          name: "nexess-demo",
+          idx: "06",
+          id: "nexess",
+          name: "nexess",
           ttl: "Nexess Demo System 구축",
           sub_ttl: "SSO 데모사이트 구축",
-          info_dt_01: "<b>기간: </b>",
-          info_dd_01: "2020.07 ~ 2020.08",
-          info_dt_02: "<b>담당업무: </b>",
-          info_dd_02: "웹퍼블리싱",
-          info_dt_03: "<b>마크업/개발방식: </b>",
-          info_dd_03: "html5, css3, javascript(jquery)",
-          info_dt_04: "<b>사용 Tool: </b>",
-          info_dd_04: "Tomcat, photoshop",
           info_ttl_06: "",
           mockup_wrap: "",
           mockup_class_01: "mockup__pc nexess-demo",
@@ -210,16 +190,6 @@ export default {
           ttl: "멀티인증 Demo 사이트 구축",
           id: "multi-demo",
           name: "multi-demo",
-          sub_ttl: "",
-          info_ttl_06: "",
-          info_dt_01: "<b>기간: </b>",
-          info_dd_01: "2021.07 ~ 2021.08",
-          info_dt_02: "<b>담당업무: </b>",
-          info_dd_02: "웹퍼블리싱",
-          info_dt_03: "<b>마크업/개발방식: </b>",
-          info_dd_03: "html5, css3, javascript, jquery",
-          info_dt_04: "<b>사용 Tool: </b>",
-          info_dt_05: "Tomcat, Git, Bitbucket",
           mockup_class_01: "mockup__respons-pc multi-demo",
           mockup_class_03: "mockup__respons-mo multi-demo",
           image_class: "multi-demo",
@@ -230,14 +200,6 @@ export default {
           name: "inipass",
           ttl: "공인인증서 이니패스 운영 및 유지보수",
           sub_ttl: "인증사업 공인인증 (PC/Mobile)",
-          info_dt_01: "<b>기간: </b>",
-          info_dd_01: "2019.09 ~ 2020.02",
-          info_dt_02: "<b>담당업무: </b>",
-          info_dd_02: "웹퍼블리싱",
-          info_dt_03: "<b>마크업/개발방식: </b>",
-          info_dd_03: "html5, css3, javascript, jquery",
-          info_dt_04: "<b>사용 Tool: </b>",
-          info_dt_05: "Photoshop",
           image_class: "inipass",
           mockup_class_01: "mockup__respons-pc inipass",
           mockup_class_03: "mockup__respons-mo inipass",
@@ -248,15 +210,6 @@ export default {
           name: "lotte-event",
           ttl: "롯데백화점 통합앱 운영관리",
           sub_ttl: "롯데백화점 이벤트존 컨텐츠 템플릿화 (PC/MobileWeb/App)",
-          info_dt_01: "<b>기간: </b>",
-          info_dd_01: "2019.02 ~ 2019.06",
-          info_dt_02: "<b>담당업무: </b>",
-          info_dd_02: "웹퍼블리싱",
-          info_dt_03: "<b>마크업/개발방식: </b>",
-          info_dd_03: "html5, css3, javascript, jquery",
-          info_dt_04: "<b>사용 Tool: </b>",
-          info_dd_04: "eclipse, 레드마인, photoshop",
-          info_ttl_07: "",
           mockup_wrap: "",
           mockup_class_01: "mockup__mo lotte",
         },
@@ -266,15 +219,6 @@ export default {
           name: "snbcorp",
           ttl: " SNB Corp. 홈페이지 재구축",
           sub_ttl: "의료기기 법인 사이트 리뉴얼",
-          info_dt_01: "<b>기간: </b>",
-          info_dd_01: "2019.07 ~ 2019.08",
-          info_dt_02: "<b>담당업무: </b>",
-          info_dd_02: "기획, 디자인, 퍼블리싱",
-          info_dt_03: "<b>마크업/개발방식: </b>",
-          info_dd_03: "html5, css3, javascript, jquery",
-          info_dt_04: "<b>사용 Tool: </b>",
-          info_dd_04: "카페24플랫폼, FTP, Adobe Photoshop",
-          info_ttl_07: "",
           mockup_wrap: "",
           mockup_class_01: "mockup__respons-pc snbcorp",
           mockup_class_02: "mockup__respons-mo snbcorp",
@@ -285,14 +229,6 @@ export default {
           name: "wellpot",
           ttl: "한국웰포트 쇼핑몰 구축 및 운영관리",
           sub_ttl: "소형가전 제조업체 쇼핑몰 구축 및 운영",
-          info_ttl_07: "",
-          info_dt_01: "<b>기간: </b>",
-          info_dd_01: "2015.04 ~ 2017.04",
-          info_dt_02: "<b>담당업무: </b>",
-          info_dd_02: "기획, 디자인, 퍼블리싱",
-          info_dd_03: "html5, css3, javascript, jquery",
-          info_dt_04: "<b>사용 Tool: </b>",
-          info_dd_04: "카페24플랫폼, FTP, Adobe Photoshop",
           mockup_wrap: "",
           mockup_class_01: "mockup__respons-pc wellpot",
           mockup_class_02: "mockup__respons-mo wellpot",
@@ -303,15 +239,6 @@ export default {
           name: "wedding",
           ttl: "모바일 청첩장",
           sub_ttl: "Mobile Wedding Invitation",
-          info_ttl_07: "",
-          info_dt_01: "<b>기간: </b>",
-          info_dd_01: "2018",
-          info_dt_02: "<b>담당업무: </b>",
-          info_dd_02: "웹퍼블리싱",
-          info_dt_03: "<b>개발환경: </b>",
-          info_dd_03: "",
-          info_dt_04: "<b>사용 Tool: </b>",
-          info_dt_05: "",
           mockup_wrap: "",
           mockup_class_01: "mockup__mo wedding",
         },

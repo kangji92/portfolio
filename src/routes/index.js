@@ -1,9 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+import store from "@/store/index";
 
 Vue.use(VueRouter);
-
-export default new VueRouter({
+const router = new VueRouter({
   mode: "history",
   // 페이지 전환시 스크롤 최상단으로 이동
   scrollBehavior: () => ({ y: 0 }),
@@ -55,6 +55,13 @@ export default new VueRouter({
       //name: "",
       path: "/portfolio/portfolio/inihub",
       component: () => import("@/components/portfolio/Inihub.vue"),
+      props: {},
+    },
+    {
+      // porfolio
+      //name: "",
+      path: "/portfolio/portfolio/kdxp",
+      component: () => import("@/components/portfolio/Kdxp.vue"),
       props: {},
     },
     {
@@ -114,6 +121,30 @@ export default new VueRouter({
       component: () => import("@/components/portfolio/MultiDemo.vue"),
       props: {},
     },
+    {
+      // 경동택배_데모 현황판
+      path: "/portfolio/portfolio/kdxp/ia",
+      component: () => import("@/components/projects_demo/KdxpIA.vue"),
+      //props: {},
+    },
+    {
+      // 경동택배_데모
+      path: "/portfolio/portfolio/kdxp/easyauth_PIN",
+      component: () => import("@/components/projects_demo/kdxp/EasyAuthUI.vue"),
+      props: { authType: "PIN" },
+    },
+    {
+      // 경동택배_데모
+      path: "/portfolio/portfolio/kdxp/easyauth_BIO",
+      component: () => import("@/components/projects_demo/kdxp/EasyAuthUI.vue"),
+      props: { authType: "BIO" },
+    },
+    {
+      // 경동택배_데모
+      path: "/portfolio/portfolio/kdxp/easyauth_loading",
+      component: () => import("@/components/projects_demo/kdxp/EasyAuthUI.vue"),
+      props: { isLoading: true },
+    },
 
     {
       // 모빌리언_데모 현황판
@@ -164,7 +195,7 @@ export default new VueRouter({
       name: "certChangePwForm",
       path: "/portfolio/portfolio/mobilian/certChangePwForm",
       component: () => import("@/views/projects_demo/mobilian/PwFormView.vue"),
-      //props: { pwFormType: "certChangePwForm" },
+      props: { pwFormType: "certChangePwForm" },
     },
     {
       // 모빌리언_데모 인증서암호_입력
@@ -228,3 +259,14 @@ export default new VueRouter({
     },
   ],
 });
+router.beforeEach((to, from, next) => {
+  store.commit("startSpinner");
+  setTimeout(() => {
+    next();
+  }, 1);
+});
+
+router.afterEach(() => {
+  store.commit("endSpinner");
+});
+export default router;

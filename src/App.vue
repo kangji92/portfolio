@@ -2,13 +2,19 @@
   <div id="app" class="app__root">
     <router-view></router-view>
     <TestModal v-if="isModalViewed" @close-modal="closeModal"></TestModal>
+    <button class="button" @click="changeLocale">
+      {{ $t("btn.changeLocale") }}
+    </button>
     <!--<button class="button" @click="openModal">열기</button>-->
     <NotSupport v-show="isNotSupport" id="isNotSupport"></NotSupport>
+    <Loading :isLoading="$store.state.LoadingStatus" id="isLoading"></Loading>
   </div>
 </template>
 <script>
 import TestModal from "@/components/common/TestModal.vue";
 import NotSupport from "@/components/common/NotSupport.vue";
+import Loading from "@/components/common/Loading.vue";
+import { Store } from "vuex";
 
 export default {
   name: "Home",
@@ -18,9 +24,13 @@ export default {
   created: function () {
     window.addEventListener("load", this.srceenHandler);
     window.addEventListener("resize", this.onResize);
+    Store.$on("start:spinner", this.startSpinner);
+    Store.$on("end:spinner", this.startSpinner);
   },
   mounted() {
     window.addEventListener("resize", this.onResize);
+    Store.$off("start:spinner", this.startSpinner);
+    Store.$off("end:spinner", this.startSpinner);
   },
 
   beforeDestroy() {
@@ -31,12 +41,14 @@ export default {
     //IntroPage,
     TestModal,
     NotSupport,
+    Loading,
   },
   data() {
     return {
       stateId: 0,
       isNotSupport: false,
       isModalViewed: false,
+      isLoading: false,
       //showRoute: false,
       menu: ["HOME", "ABOUT", "projectS", "ETC"],
       projects: [
@@ -158,8 +170,16 @@ export default {
     closePopup() {
       this.showPopup = false;
     },
-
-    doSend() {},
+    changeLocale() {
+      if (this.$i18n.locale === "en") return (this.$i18n.locale = "ko");
+      this.$i18n.locale = "en";
+    },
+    startSpinner() {
+      this.isLoading = true;
+    },
+    endSpinner() {
+      this.isLoading = false;
+    },
   },
 };
 </script>
@@ -189,8 +209,11 @@ export default {
   }
 }
 .button {
+  position: fixed;
+  top: 0;
+  right: 0;
   margin-top: 180px;
-  font-size: 22px;
+  font-size: 18px;
   padding: 10px;
   cursor: pointer;
 }

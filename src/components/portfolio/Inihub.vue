@@ -21,10 +21,18 @@
               <div class="project__info">
                 <div class="hash-group">
                   <ul>
-                    <li><a href="#">#Vue-cli</a></li>
-                    <li><a href="#">#vue-router</a></li>
-                    <li><a href="#">#반응형웹</a></li>
-                    <li><a href="#">#다국어지원</a></li>
+                    <li>
+                      <a href="#">{{ $t("hash.vuecli") }}</a>
+                    </li>
+                    <li>
+                      <a href="#">{{ $t("hash.vuerouter") }}</a>
+                    </li>
+                    <li>
+                      <a href="#">{{ $t("hash.responsive") }}</a>
+                    </li>
+                    <li>
+                      <a href="#">{{ $t("hash.multilang") }}</a>
+                    </li>
                   </ul>
                 </div>
                 <dl>
