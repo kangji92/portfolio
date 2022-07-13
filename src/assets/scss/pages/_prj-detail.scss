@@ -2850,7 +2850,56 @@ button { padding: 0; cursor: pointer;}
     
 }
 
+.kdxp {
+  .palette-wrap{
+      ul {
+        li {
+          border-radius: 5px;
+          &:nth-child(1) {
+            background: #000;
+            border:1px solid  #000;
+          }
+          &:nth-child(2) {
+            background: #2b40ab;
+            border:1px solid  #2b40ab;
+          }
+          &:nth-child(3) {
+            background: #ff9090;
+            border:1px solid  #4DAC26;
+          }
+          &:nth-child(4) {
+            background: #fff;
+            border:1px solid  #707070;
+          }
+           &:nth-child(5) {
+          display: none;
+          }
+        }
+      }
+  }
+  .fonts-wrap {
+      ul {
+        li {
+           font-size: 19px;
+          &:nth-child(1) {
+            font-family: 'KyoboSB';
+          }
+          &:nth-child(2) {
+            font-family: 'KyoboB';
+          }
+          &:nth-child(3) {
+            font-family: 'KyoboR';
+          }
+          &:nth-child(4) {
+            font-family: 'KyoboL';
+          }
+        }
+      }
 
+  }
+  
+  
+}
 .kyobo {
   .palette-wrap{
       ul {
@@ -3454,6 +3503,7 @@ button { padding: 0; cursor: pointer;}
   }
 }
 
+
 .mobilian {
   .visual-box {
     height: 800px;
@@ -3461,4 +3511,169 @@ button { padding: 0; cursor: pointer;}
   }
 }
 
+    .cont {
+        width: 100%;
+        text-align: left;
+        @include display-flex {
+             justify-content: getJustify(fs);
+                 
+        }
+        @include respond-to("bp-max-820") {
+            width: 100%;
+            margin-top: 10vw;
+        }
+        .col {
+            width: 50%;
+            
+        }
+    }
 
+    .col+.col {
+      @include respond-to("bp-max-820") {
+        margin-top: 13vw;
+      }
+    }
+    .contour {
+      display: block;
+      width: 64px;
+      height: 1px;
+      background: #707070;
+      margin-bottom: 24px;
+    }
+
+  .prj-preview {
+        width: 100%;
+        padding-bottom: 100px;
+        @include display-flex {
+            
+        }  
+        .ttl {
+            margin-top: 80px;
+            width: 100%;
+            @include display-flex {
+                justify-content: getJustify(fs);
+            }  
+            h2 {
+                
+            }
+            p {
+                padding-left: 80px;
+                font-size: 20px;
+            }
+        }
+        .visual__ttl {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .visual-box {
+             @include display-flex {
+                  justify-content: getJustify(fs);
+               
+                }
+            .visual {
+             @include display-flex {
+                  justify-content: getJustify(fs);
+               
+                }
+            .mockup_sub {
+                position: relative;
+                width: 760px;
+                margin: 0 auto;
+            }
+        }
+      
+        }
+        .cont {
+            height: 815px;
+            margin-top: 60px;
+        }
+       
+       
+    }
+
+    .mockup_sub {
+   @include display-flex {
+      justify-content: getJustify(fs);
+    }
+
+    &.kdxp1 {
+        @include background-image-render;
+        height: 779px;
+
+        span {
+          width: 360px;
+          height: 779px;
+          border-radius: 20px;
+          background: url('~@/assets/images/projects/initech/kdxp/easyauth_01.png') no-repeat;
+          background-size: 100%;
+        
+          &:nth-child(2) {
+            margin-left: 10px;
+            background: url('~@/assets/images/projects/initech/kdxp/easyauth_02.png') no-repeat;
+            background-size: 100%;
+          
+          }
+        }
+        
+    }
+    &.kdxp2 {
+      @include background-image-render;
+      height: 779px;
+     
+      span {
+        
+        width: 360px;
+        height: 779px;
+       
+        border-radius: 20px;
+       
+        background: url('~@/assets/images/projects/initech/kdxp/easyauth_03.png') no-repeat;
+        background-size: 100%;
+  
+        &:nth-child(2) {
+          margin-left: 10px;
+          background: url('~@/assets/images/projects/initech/kdxp/easyauth_04.png') no-repeat;
+          background-size: 100%;
+        }
+      }
+    }
+    &.kdxp3 {
+      @include background-image-render;
+      height: 779px;
+      span {
+        width: 360px;
+        height: 779px;
+      
+        border-radius: 20px;
+        background: url('~@/assets/images/projects/initech/kdxp/easyauth_06.png') no-repeat;
+        background-size: 100%;
+
+        &:nth-child(2) {
+          margin-left: 10px;
+          background: url('~@/assets/images/projects/initech/kdxp/easyauth_07.png') no-repeat;
+          background-size: 100%;
+        }
+      }
+    }
+    &.kdxp4 {
+      @include background-image-render;
+      height: 779px;
+
+      span {
+        width: 360px;
+        height: 779px;
+       
+        border-radius: 20px;
+        background: url('~@/assets/images/projects/initech/kdxp/easyauth_05.png') no-repeat;
+        background-size: 100%;
+
+        &:nth-child(2) {
+          margin-left: 10px;
+          background: url('~@/assets/images/projects/initech/kdxp/easyauth_05.png') no-repeat;
+          background-size: 100%;
+        }
+      }
+    }
+   
+}
+    

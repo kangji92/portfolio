@@ -123,72 +123,20 @@
                   </div>
                   <div class="fonts-wrap">
                     <ul>
-                      <li><p>노토산스 NotoSansKr 700</p></li>
-                      <li><p>노토산스 NotoSansKr 600</p></li>
-                      <li><p>노토산스 NotoSansKr 500</p></li>
-                      <li><p>노토산스 NotoSansKr 400</p></li>
-                      <li><p>노토산스 NotoSansKr 300</p></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="style-guide icons">
-                  <div class="sub-ttl">
-                    <h4>Icons</h4>
-                  </div>
-                  <div class="icons-wrap">
-                    <ul>
                       <li>
-                        <i>
-                          <img
-                            src="@/assets/images/projects/initech/mobilian/icons/media_select.png"
-                            alt="아이콘패키지"
-                        /></i>
-                      </li>
-                    </ul>
-                    <ul>
-                      <li class="big">
-                        <i class="big">
-                          <img
-                            src="@/assets/images/projects/initech/mobilian/icons/ico_cert_export.png"
-                            alt="내보내기 아이콘"
-                        /></i>
-                      </li>
-                      <li class="big">
-                        <i class="big">
-                          <img
-                            src="@/assets/images/projects/initech/mobilian/icons/ico_cert_import.png"
-                            alt="가져오기 아이콘"
-                        /></i>
-                      </li>
-                    </ul>
-                    <ul>
-                      <li>
-                        <i>
-                          <img
-                            src="@/assets/images/projects/initech/mobilian/icons/ico_cert_01.png"
-                            alt="아이콘"
-                        /></i>
+                        <p>노토산스 NotoSansKr 700</p>
                       </li>
                       <li>
-                        <i>
-                          <img
-                            src="@/assets/images/projects/initech/mobilian/icons/ico_cert_02.png"
-                            alt="아이콘"
-                        /></i>
+                        <p>노토산스 NotoSansKr 600</p>
                       </li>
                       <li>
-                        <i>
-                          <img
-                            src="@/assets/images/projects/initech/mobilian/icons/ico_cert_03.png"
-                            alt="아이콘"
-                        /></i>
+                        <p>노토산스 NotoSansKr 500</p>
                       </li>
                       <li>
-                        <i>
-                          <img
-                            src="@/assets/images/projects/initech/mobilian/icons/ico_cert_04.png"
-                            alt="아이콘"
-                        /></i>
+                        <p>노토산스 NotoSansKr 400</p>
+                      </li>
+                      <li>
+                        <p>노토산스 NotoSansKr 300</p>
                       </li>
                     </ul>
                   </div>
@@ -197,37 +145,69 @@
             </div>
           </div>
         </div>
-        <section class="section-wrap">
-          <article class="hiring-info components">
-            <div class="inner">
-              <div class="ttl">
-                <h2>Components</h2>
-                <p>Mobile / Tablet | Resolution 820 | 17 pages</p>
-              </div>
-              <div class="visual-box col">
-                <p class="visual__ttl">PIN인증</p>
-                <div class="mockup_sub" :class="project.name + 1">
-                  <span></span>
-                  <span></span>
-                </div>
-              </div>
-              <div class="visual-box col">
-                <p class="visual__ttl">생체인증</p>
-                <div class="mockup_sub" :class="project.name + 2">
-                  <span></span>
-                  <span></span>
-                </div>
-              </div>
-              <div class="visual-box col">
-                <p class="visual__ttl">로딩화면</p>
-                <div class="mockup_sub" :class="project.name + 3">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-              </div>
+        <section class="prj-preview">
+          <div class="inner">
+            <div class="ttl">
+              <h2>{{ $t("project." + project.name + "_preview_ttl") }}</h2>
+              <p>{{ $t("project." + project.name + "_preview_subttl") }}</p>
             </div>
-          </article>
+            <div class="cont">
+              <article class="col">
+                <p class="visual__ttl">
+                  {{ $t("project." + project.name + "_preview_itemttl_1") }}
+                </p>
+                <div class="visual-box">
+                  <div class="visual">
+                    <div class="mockup_sub" :class="project.name + 1">
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="col">
+                <p class="visual__ttl">
+                  {{ $t("project." + project.name + "_preview_itemttl_2") }}
+                </p>
+                <div class="visual-box">
+                  <div class="visual">
+                    <div class="mockup_sub" :class="project.name + 2">
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="cont">
+              <article class="col">
+                <p class="visual__ttl">
+                  {{ $t("project." + project.name + "_preview_itemttl_3") }}
+                </p>
+                <div class="visual-box">
+                  <div class="visual">
+                    <div class="mockup_sub" :class="project.name + 3">
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="col">
+                <p class="visual__ttl">
+                  {{ $t("project." + project.name + "_preview_itemttl_4") }}
+                </p>
+                <div class="visual-box">
+                  <div class="visual">
+                    <div class="mockup_sub" :class="project.name + 4">
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
         </section>
       </div>
     </div>

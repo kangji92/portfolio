@@ -2,9 +2,12 @@
   <div id="app" class="app__root">
     <router-view></router-view>
     <TestModal v-if="isModalViewed" @close-modal="closeModal"></TestModal>
-    <button class="button" @click="changeLocale">
-      {{ $t("btn.changeLocale") }}
-    </button>
+    <div class="lang">
+      <button class="button" @click="changeLocale">
+        {{ $t("btn.changeLocale") }}
+      </button>
+    </div>
+
     <!--<button class="button" @click="openModal">열기</button>-->
     <NotSupport v-show="isNotSupport" id="isNotSupport"></NotSupport>
     <Loading :isLoading="$store.state.LoadingStatus" id="isLoading"></Loading>

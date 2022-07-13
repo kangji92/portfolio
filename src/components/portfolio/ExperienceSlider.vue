@@ -2,7 +2,7 @@
   <div class="experience-inner">
     <div class="ttl">
       <h3>Experience</h3>
-      <p>6년차 웹퍼블리셔</p>
+      <p>7년차</p>
     </div>
     <VueSlickCarousel
       :vertical="true"

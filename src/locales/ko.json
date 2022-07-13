@@ -35,7 +35,6 @@
 
     },
     "project" : {
-
         "info_dt_01": "<b>기간: </b>",
         "info_dt_02": "<b>담당업무: </b>",
         "info_dt_03" : "<b>마크업/개발방식: </b>",
@@ -43,14 +42,20 @@
         "info_date": "날짜 : ",
         "info_output" : "기여도 : ",
 
-        "ttl_kdxp" : "경동택배 인증시스템 APP UI 개발",
+        "ttl_kdxp" : "<b>경동택배</b> 인증시스템 APP UI 개발",
         "subttl_kdxp" : "WebView In APP",
-        "kdxp_info_date" : "2021.06 ~ 2021.09",
+        "kdxp_info_date" : "2022.05 ~ 2022.05",
         "kdxp_info_output": "UI개발 100%",
-        "info_dd_01_kdxp": "2021.07 ~ 2021.08",
+        "info_dd_01_kdxp": "2022.05 ~ 2022.05",
         "info_dd_02_kdxp": "UI개발",
         "info_dd_03_kdxp" : "vue-cli, sass(scss)",
         "info_dd_04_kdxp" : "Git, Bitbucket, SourceTree, zeplin",
+            "kdxp_preview_ttl" : "Components",
+        "kdxp_preview_subttl" : "Mobile / Tablet | Resolution 820",
+        "kdxp_preview_itemttl_1": "PIN 인증",
+        "kdxp_preview_itemttl_2": "생체인증",
+        "kdxp_preview_itemttl_3": "패턴인증",
+        "kdxp_preview_itemttl_4": "로딩화면",
 
         "ttl_sh-bank" : "수협은행 Nextro시스템 UX/UI 고도화",
         "subttl_sh-bank" : "SSO 2Factor인증시스템 UI화면 (PC Web/Tablet) ",
@@ -92,7 +97,7 @@
         "subttl_nexess": "반응형 Web (PC / Tablet)",
         "nexess_info_date" : "2020.03 - 2020.05",
         "nexess_info_output" : "웹퍼블리싱 100%",
-        "info_dd_01_nexess": "2020.12 - 2021.10",
+        "info_dd_01_nexess": "2020.03 - 2020.05",
         "info_dd_02_nexess": "웹퍼블리싱",
         "info_dd_03_nexess" : "Html5, css",
         "info_dd_04_nexess" : "Tomcat",
@@ -204,7 +209,6 @@
         "ttl_squareplanet": "온라인 총괄",
         "subttl_squareplanet": " · 쇼핑몰 웹사이트 리뉴얼 및 운영",
         "desc_squareplanet": " - UI 디자인 / 웹퍼블리싱"
-        
    
     },
     "prj_mobilian" : {
@@ -270,7 +274,6 @@
         "certInfo_dd_17" : "6d001e0375c06da86bdc0e0d912ca613642fe6d8",
         "certInfo_dd_18" : "LOCAL",
 
-
         "noti_nocert" : "인증서 목록이 없습니다.",
         "import_noti_1" : "PC에서 모바일 웹/앱으로 접속하신 후 공동인증센터의 <em>‘스마트폰 인증서복사  → 기기(브라우저)간 복사’→기기간 인증서 내보내기</em> 버튼을 선택하시기 바랍니다.",
         "import_noti_2" : "PC에 복사할 인증서 암호를 입력 → 모바일에서 <em>인증번호 8자리를 입력</em>하시고 다음 버튼을 선택하시기 바랍니다.",
@@ -326,24 +329,22 @@
     },
 
     "prj_inihub" : {
-            "item_ttl_0": "<em>금융인증서 </em>",
-            "item_ttl_1": "<em>공동인증서</em><br/><span style='font-size: 18px'>(구 공인인증서)</span>",
-            "item_ttl_2": "<em>간편인증</em>",
-            "item_ttl_3": "<em>SNS계정 인증 </em>",
-            "tab_ttl_0": "<em>금융인증서 </em>",
-            "tab_ttl_1": "<em>공동인증서</em><br/>(구 공인인증서)",
-            "tab_ttl_2": "<em>간편인증</em>",
-            "tab_ttl_3": "<em>OAUTH </em>",
-            "tab_ttl_4": "<em>아이디 인증 </em>",
-            "agreeForm_ttl": "간편인증서비스 이용에 대한 동의",
-            "agreeForm_agree-all": "전체동의",
-            "agreeForm_agree_ttl_0":"개인정보 이용동의(필수)",
-            "agreeForm_agree_ttl_1":"고유식별정보 처리 동의 (필수)",
-            "agreeForm_agree_ttl_2":"개인정보 제공 동의(필수)",
-            "agreeForm_agree_ttl_3":"전자금융서비스 약관 (필수)",
-            "agreeForm_agree_btn_detail": "약관동의"
-
-
+        "item_ttl_0": "<em>금융인증서 </em>",
+        "item_ttl_1": "<em>공동인증서</em><br/><span style='font-size: 18px'>(구 공인인증서)</span>",
+        "item_ttl_2": "<em>간편인증</em>",
+        "item_ttl_3": "<em>SNS계정 인증 </em>",
+        "tab_ttl_0": "<em>금융인증서 </em>",
+        "tab_ttl_1": "<em>공동인증서</em><br/>(구 공인인증서)",
+        "tab_ttl_2": "<em>간편인증</em>",
+        "tab_ttl_3": "<em>OAUTH </em>",
+        "tab_ttl_4": "<em>아이디 인증 </em>",
+        "agreeForm_ttl": "간편인증서비스 이용에 대한 동의",
+        "agreeForm_agree-all": "전체동의",
+        "agreeForm_agree_ttl_0":"개인정보 이용동의(필수)",
+        "agreeForm_agree_ttl_1":"고유식별정보 처리 동의 (필수)",
+        "agreeForm_agree_ttl_2":"개인정보 제공 동의(필수)",
+        "agreeForm_agree_ttl_3":"전자금융서비스 약관 (필수)",
+        "agreeForm_agree_btn_detail": "약관동의"
         
     },
        
@@ -380,9 +381,6 @@
         "agreeForm_agree_ttl_a_1":"고유식별정보 동의 (필수)",
         "agreeForm_agree_ttl_a_2":"개인정보 제공 동의 (필수)",
         "agreeForm_agree_ttl_a_3":"전자금융서비스 약관 (필수)"
-
-
-    
     
     },
 
@@ -448,7 +446,6 @@
         "certInfo_dd_16" : "OCSP=http://snoopy.yessign.or.kr:4612",
         "certInfo_dd_17" : "6d001e0375c06da86bdc0e0d912ca613642fe6d8",
         "certInfo_dd_18" : "LOCAL",
-
 
         "noti_nocert" : "인증서 목록이 없습니다.",
         "import_noti_1" : "PC에서 모바일 웹/앱으로 접속하신 후 공동인증센터의 <em>‘스마트폰 인증서복사  → 기기(브라우저)간 복사’→기기간 인증서 내보내기</em> 버튼을 선택하시기 바랍니다.",
