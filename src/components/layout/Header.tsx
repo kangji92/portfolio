@@ -24,50 +24,102 @@ export default function Header() {
           Kang JiYeon
         </Link>
 
-        {/* 데스크톱 네비게이션 */}
-        <nav className="hidden gap-6 sm:flex">
-          {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="text-sm text-zinc-600 transition-colors hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-zinc-50"
-            >
-              {item.label}
-            </a>
-          ))}
-        </nav>
+        <div className="flex items-center gap-3">
+          {/* 데스크톱 네비게이션 */}
+          <nav className="hidden gap-6 sm:flex">
+            {navItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-sm text-zinc-600 transition-colors hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-zinc-50"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
 
-        {/* 모바일 토글 버튼 */}
-        <button
-          type="button"
-          onClick={() => setOpen((v) => !v)}
-          className="flex h-9 w-9 items-center justify-center rounded-md border border-black/[.08] transition-colors hover:bg-black/[.04] sm:hidden dark:border-white/[.12] dark:hover:bg-white/[.06]"
-          aria-label="메뉴 열기/닫기"
-          aria-expanded={open}
-        >
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
+          {/* 검색(커맨드 팔레트) 트리거 — 데스크톱: 검색창 형태 */}
+          <button
+            type="button"
+            onClick={() =>
+              window.dispatchEvent(new Event("command-palette:open"))
+            }
+            className="hidden items-center gap-2 rounded-md border border-black/[.08] bg-black/[.02] px-3 py-1.5 text-sm text-zinc-400 transition-colors hover:bg-black/[.04] sm:flex dark:border-white/[.12] dark:bg-white/[.03] dark:hover:bg-white/[.06]"
+            aria-label="검색 (Cmd+K)"
           >
-            {open ? (
-              <>
-                <line x1="6" y1="6" x2="18" y2="18" />
-                <line x1="6" y1="18" x2="18" y2="6" />
-              </>
-            ) : (
-              <>
-                <line x1="3" y1="6" x2="21" y2="6" />
-                <line x1="3" y1="12" x2="21" y2="12" />
-                <line x1="3" y1="18" x2="21" y2="18" />
-              </>
-            )}
-          </svg>
-        </button>
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+            >
+              <circle cx="11" cy="11" r="7" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
+            <span className="w-20 text-left">검색</span>
+            <kbd className="rounded border border-black/[.08] px-1.5 py-0.5 text-[11px] font-medium dark:border-white/[.15]">
+              ⌘K
+            </kbd>
+          </button>
+
+          {/* 검색 트리거 — 모바일: 아이콘 */}
+          <button
+            type="button"
+            onClick={() =>
+              window.dispatchEvent(new Event("command-palette:open"))
+            }
+            className="flex h-9 w-9 items-center justify-center rounded-md border border-black/[.08] transition-colors hover:bg-black/[.04] sm:hidden dark:border-white/[.12] dark:hover:bg-white/[.06]"
+            aria-label="검색"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+            >
+              <circle cx="11" cy="11" r="7" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
+          </button>
+
+          {/* 모바일 토글 버튼 */}
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            className="flex h-9 w-9 items-center justify-center rounded-md border border-black/[.08] transition-colors hover:bg-black/[.04] sm:hidden dark:border-white/[.12] dark:hover:bg-white/[.06]"
+            aria-label="메뉴 열기/닫기"
+            aria-expanded={open}
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+            >
+              {open ? (
+                <>
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                  <line x1="6" y1="18" x2="18" y2="6" />
+                </>
+              ) : (
+                <>
+                  <line x1="3" y1="6" x2="21" y2="6" />
+                  <line x1="3" y1="12" x2="21" y2="12" />
+                  <line x1="3" y1="18" x2="21" y2="18" />
+                </>
+              )}
+            </svg>
+          </button>
+        </div>
       </div>
 
       {/* 모바일 드롭다운 메뉴 */}

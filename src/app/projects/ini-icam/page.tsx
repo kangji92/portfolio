@@ -1,12 +1,38 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AdminConsoleMock from "@/components/console/AdminConsoleMock";
+import Tag from "@/components/ui/Tag";
+import {
+  iniIcamStack,
+  iniIcamPipeline,
+  type StackGroup,
+} from "@/data/ini-icam-stack";
 
 export const metadata: Metadata = {
   title: "INI-ICAM 관리자 콘솔 — 예시 UI",
   description:
     "INI-ICAM 관리자 콘솔을 재구성한 예시 UI (실제 제품 화면이 아닌 더미 데이터 기반 데모).",
 };
+
+function StackTable({ groups }: { groups: StackGroup[] }) {
+  return (
+    <div className="divide-y divide-black/[.06] dark:divide-white/[.08]">
+      {groups.map((g) => (
+        <div
+          key={g.area}
+          className="grid gap-2 py-4 sm:grid-cols-[140px_1fr] sm:gap-6"
+        >
+          <span className="text-sm font-semibold text-zinc-500">{g.area}</span>
+          <div className="flex flex-wrap gap-1.5">
+            {g.items.map((item) => (
+              <Tag key={item}>{item}</Tag>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export default function IniIcamDetailPage() {
   return (
@@ -38,6 +64,28 @@ export default function IniIcamDetailPage() {
 
       <div className="mt-8">
         <AdminConsoleMock />
+      </div>
+
+      <div className="mt-16">
+        <h2 className="text-2xl font-bold tracking-tight">상세 기술 스택</h2>
+        <p className="mt-2 text-sm text-zinc-500">
+          관리자 콘솔 프론트엔드에 사용한 기술 구성입니다.
+        </p>
+        <div className="mt-6">
+          <StackTable groups={iniIcamStack} />
+        </div>
+      </div>
+
+      <div className="mt-14">
+        <h2 className="text-2xl font-bold tracking-tight">
+          품질 · 보안 파이프라인
+        </h2>
+        <p className="mt-2 text-sm text-zinc-500">
+          테스트 · 정적분석 · 보안 · 배포 등 개발 도구 체계입니다.
+        </p>
+        <div className="mt-6">
+          <StackTable groups={iniIcamPipeline} />
+        </div>
       </div>
     </section>
   );

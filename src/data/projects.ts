@@ -11,7 +11,7 @@ export const projects: Project[] = [
     role: "Front-end Developer",
     summary:
       "Vue.js 기반 벼룩시장 통합 플랫폼의 프론트엔드 UI 개발 및 서비스 안정화에 참여한 프로젝트.",
-    stack: ["Vue.js", "JavaScript", "Storybook"],
+    stack: ["Vue.js", "JavaScript", "Vuetify", "CKEditor", "Storybook"],
     highlights: [
       "통합 테스트 단계에 투입되어 화면 및 UI 기능 관련 이슈 분석·개선",
       "테스트 과정에서 발견된 UI 오류 및 기존 구현 이슈 수정",
