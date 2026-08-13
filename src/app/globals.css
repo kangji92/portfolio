@@ -56,3 +56,44 @@ body {
     transition: none;
   }
 }
+
+/* 인쇄(PDF 저장) 전용 스타일 */
+@media print {
+  html {
+    scroll-behavior: auto;
+  }
+
+  /* no-print 요소(헤더/버튼/인터랙티브 데모)는 인쇄에서 제외 */
+  .no-print {
+    display: none !important;
+  }
+
+  /* 스크롤 인 애니메이션 콘텐츠를 인쇄 시 모두 보이게 강제 */
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* 다크모드에서도 흰 배경·검정 텍스트로 통일 (잉크 절약 + 가독성) */
+  * {
+    background: transparent !important;
+    color: #1f2937 !important;
+    box-shadow: none !important;
+    border-color: #d1d5db !important;
+  }
+
+  body {
+    background: #ffffff !important;
+  }
+
+  a {
+    text-decoration: none !important;
+  }
+
+  /* 섹션 상하 여백 축소로 지면 효율 */
+  section {
+    padding-top: 1.25rem !important;
+    padding-bottom: 1.25rem !important;
+  }
+}

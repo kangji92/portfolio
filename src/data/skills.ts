@@ -33,6 +33,10 @@ export const skills: SkillCategory[] = [
     items: [{ name: "Playwright" }, { name: "Vitest" }, { name: "SonarQube" }],
   },
   {
+    category: "AI-Assisted Development",
+    items: [{ name: "Claude Code" }, { name: "Codex" }],
+  },
+  {
     category: "Styling",
     items: [{ name: "Tailwind CSS" }, { name: "Sass (SCSS)" }],
   },

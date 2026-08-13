@@ -68,7 +68,7 @@ function CaseStudyCard({ project }: { project: Project }) {
       </div>
 
       {project.architecture && (
-        <div className="mt-8">
+        <div className="mt-8 no-print">
           <h4 className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
             Architecture Transition
           </h4>

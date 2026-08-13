@@ -14,7 +14,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-black/[.06] bg-white/80 backdrop-blur dark:border-white/[.08] dark:bg-black/70">
+    <header className="no-print sticky top-0 z-50 border-b border-black/[.06] bg-white/80 backdrop-blur dark:border-white/[.08] dark:bg-black/70">
       <div className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between px-6">
         <Link
           href="#profile"

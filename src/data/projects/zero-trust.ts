@@ -72,6 +72,7 @@ export const zeroTrust: Project = {
         "E2E 테스트 자동화 — Playwright로 핵심 사용자 시나리오 자동화",
         "단위 테스트 — 커버리지 80% 이상 유지로 코드 품질 확보",
         "문서화 자동화 — Playwright를 활용해 관리자 콘솔 사용 가이드 문서화",
+        "AI 활용 — Claude Code·Codex로 테스트 코드 생성·보강, SonarQube 분석 결과 기반 코드 품질 개선, 데모 데이터 시드 자동화",
       ],
     },
   ],
