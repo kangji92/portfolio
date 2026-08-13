@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Read(//Users/imac/Dev/personal/ai-fe-harness/**)",
+      "Bash(gh repo *)"
     ]
   }
 }
