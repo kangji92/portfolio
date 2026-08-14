@@ -9,9 +9,10 @@ export const career: CareerItem[] = [
     end: null,
     summary: "보안 솔루션 프론트엔드 개발 및 아키텍처 설계·개선 담당.",
     highlights: [
-      "Zero Trust 보안 플랫폼(INI-ICAM) 프론트엔드 아키텍처 설계 및 MFE → React 통합 구조 전환 주도",
+      "Zero Trust 보안 플랫폼(INI-ICAM) 프론트엔드 아키텍처 설계 및 MFE → React 통합 구조 전환 전담",
       "통합 인증 플랫폼(INIHUB) Cloud·On-premise 프론트엔드 개발 및 기능 고도화",
-      "E2E 테스트 자동화(Playwright) 및 단위 테스트 커버리지 80% 이상 유지로 품질 개선",
+      "벼룩시장 통합 플랫폼(미디어윌) 구축에 참여해 화면·UI 이슈를 개선하고 공유용 UI 컴포넌트를 Storybook으로 문서화",
+      "E2E 테스트 자동화(Playwright) 및 단위 테스트로 품질 개선",
     ],
     stack: [
       "React",
@@ -19,6 +20,7 @@ export const career: CareerItem[] = [
       "Vue.js",
       "TypeScript",
       "React Flow",
+      "Storybook",
       "Tailwind CSS",
       "Sass (SCSS)",
     ],
