@@ -4,10 +4,11 @@ import Link from "next/link";
 import { useState } from "react";
 
 const navItems = [
-  { label: "Profile", href: "#profile" },
-  { label: "Career", href: "#career" },
-  { label: "Projects", href: "#projects" },
-  { label: "Skills", href: "#skills" },
+  { label: "Profile", href: "/#profile" },
+  { label: "Career", href: "/#career" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Skills", href: "/#skills" },
+  { label: "Notes", href: "/guides" },
 ];
 
 export default function Header() {
@@ -38,13 +39,13 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* 검색(커맨드 팔레트) 트리거 — 데스크톱: 검색창 형태 */}
+          {/* 검색(커맨드 팔레트) 트리거 — 데스크톱: 검색창 형태 (nav 뒤 우측 끝) */}
           <button
             type="button"
             onClick={() =>
               window.dispatchEvent(new Event("command-palette:open"))
             }
-            className="hidden items-center gap-2 rounded-md border border-black/[.08] bg-black/[.02] px-3 py-1.5 text-sm text-zinc-400 transition-colors hover:bg-black/[.04] sm:flex dark:border-white/[.12] dark:bg-white/[.03] dark:hover:bg-white/[.06]"
+            className="hidden items-center gap-2 rounded-md border border-black/[.08] bg-black/[.02] px-3 py-1.5 text-sm text-zinc-400 transition-colors hover:bg-black/[.04] sm:ml-3 sm:flex dark:border-white/[.12] dark:bg-white/[.03] dark:hover:bg-white/[.06]"
             aria-label="검색 (Cmd+K)"
           >
             <svg

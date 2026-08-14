@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { skills } from "@/data/skills";
+import { guides } from "@/data/guides";
 
 interface Command {
   group: string;
@@ -16,9 +17,18 @@ const NAV: Command[] = [
   { group: "이동", label: "Career", href: "/#career" },
   { group: "이동", label: "Projects", href: "/#projects" },
   { group: "이동", label: "Skills", href: "/#skills" },
+  { group: "이동", label: "Notes", href: "/guides" },
   { group: "데모", label: "INI-ICAM 관리자 콘솔", href: "/projects/ini-icam" },
   { group: "데모", label: "INIHUB 인증 모달", href: "/projects/inihub" },
 ];
+
+// 가이드 — 검색 시에만 노출. 선택하면 해당 가이드로 이동.
+const GUIDE_COMMANDS: Command[] = guides.map((g) => ({
+  group: "노트",
+  label: g.title,
+  href: `/guides/${g.slug}`,
+  keywords: g.tags.join(" "),
+}));
 
 // 스킬(스택) — 검색 시에만 노출. 선택하면 Skills 섹션으로 이동.
 const SKILL_COMMANDS: Command[] = skills.flatMap((g) =>
@@ -39,7 +49,7 @@ export default function CommandPalette() {
 
   const q = query.trim().toLowerCase();
   // 검색어가 없으면 기본 항목만, 있으면 스킬까지 포함해 검색
-  const pool = q ? [...NAV, ...SKILL_COMMANDS] : NAV;
+  const pool = q ? [...NAV, ...SKILL_COMMANDS, ...GUIDE_COMMANDS] : NAV;
   const filtered = pool.filter((c) =>
     (c.label + " " + c.group + " " + (c.keywords ?? "")).toLowerCase().includes(q),
   );
