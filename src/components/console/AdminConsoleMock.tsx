@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import DashboardView from "./views/DashboardView";
 import RolesView from "./views/RolesView";
 import WorkflowView from "./views/WorkflowView";
@@ -8,17 +8,21 @@ import MonitoringView from "./views/MonitoringView";
 import ThreatView from "./views/ThreatView";
 import PoliciesView from "./views/PoliciesView";
 import AuditLogsView from "./views/AuditLogsView";
+import AccountsView from "./views/AccountsView";
+import ThreatRulesView from "./views/ThreatRulesView";
 
 type ViewKey =
   | "dashboard"
-  | "roles"
-  | "workflow"
   | "monitoring"
   | "threat"
+  | "workflow"
+  | "rules"
+  | "accounts"
+  | "roles"
   | "policies"
   | "audit";
 
-const NAV: { key: ViewKey; label: string; icon: React.ReactNode }[] = [
+const NAV: { key: ViewKey; label: string; parent?: string; icon: React.ReactNode }[] = [
   {
     key: "dashboard",
     label: "대시보드",
@@ -28,29 +32,6 @@ const NAV: { key: ViewKey; label: string; icon: React.ReactNode }[] = [
         <rect x="14" y="3" width="7" height="7" rx="1" />
         <rect x="3" y="14" width="7" height="7" rx="1" />
         <rect x="14" y="14" width="7" height="7" rx="1" />
-      </svg>
-    ),
-  },
-  {
-    key: "roles",
-    label: "역할 관리",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4">
-        <circle cx="9" cy="7" r="3" />
-        <path d="M3 21v-1a5 5 0 0 1 5-5h2a5 5 0 0 1 5 5v1" />
-        <path d="M16 3.5a3 3 0 0 1 0 6M21 21v-1a5 5 0 0 0-3.5-4.8" />
-      </svg>
-    ),
-  },
-  {
-    key: "workflow",
-    label: "워크플로우 에디터",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4">
-        <circle cx="6" cy="6" r="2.5" />
-        <circle cx="18" cy="18" r="2.5" />
-        <circle cx="6" cy="18" r="2.5" />
-        <path d="M6 8.5v7M8.5 6H15a3 3 0 0 1 3 3v6.5" />
       </svg>
     ),
   },
@@ -67,10 +48,60 @@ const NAV: { key: ViewKey; label: string; icon: React.ReactNode }[] = [
   {
     key: "threat",
     label: "위협 탐지",
+    parent: "위협 관리",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4">
         <path d="M12 3l9 16H3z" />
         <path d="M12 10v4M12 17h.01" />
+      </svg>
+    ),
+  },
+  {
+    key: "workflow",
+    label: "위협 대응 프로세스",
+    parent: "위협 관리",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4">
+        <circle cx="6" cy="6" r="2.5" />
+        <circle cx="18" cy="18" r="2.5" />
+        <circle cx="6" cy="18" r="2.5" />
+        <path d="M6 8.5v7M8.5 6H15a3 3 0 0 1 3 3v6.5" />
+      </svg>
+    ),
+  },
+  {
+    key: "rules",
+    label: "위협 평가 규칙",
+    parent: "위협 관리",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4">
+        <line x1="4" y1="7" x2="20" y2="7" />
+        <circle cx="9" cy="7" r="2" />
+        <line x1="4" y1="17" x2="20" y2="17" />
+        <circle cx="15" cy="17" r="2" />
+      </svg>
+    ),
+  },
+  {
+    key: "accounts",
+    label: "사용자 관리",
+    parent: "계정 관리",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4">
+        <circle cx="12" cy="8" r="3.5" />
+        <path d="M5 20v-1a7 7 0 0 1 14 0v1" />
+      </svg>
+    ),
+  },
+  {
+    key: "roles",
+    label: "역할 관리",
+    parent: "계정 관리",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4">
+        <circle cx="9" cy="7" r="3" />
+        <path d="M3 21v-1a5 5 0 0 1 5-5h2a5 5 0 0 1 5 5v1" />
+        <path d="M16 3.5a3 3 0 0 1 0 6M21 21v-1a5 5 0 0 0-3.5-4.8" />
       </svg>
     ),
   },
@@ -112,28 +143,47 @@ export default function AdminConsoleMock() {
             <span className="text-sm font-semibold">INI-ICAM Console</span>
           </div>
           <nav className="flex gap-1 overflow-x-auto p-2 sm:flex-col">
-            {NAV.map((item) => (
-              <button
-                key={item.key}
-                type="button"
-                onClick={() => setActive(item.key)}
-                className={`flex shrink-0 items-center gap-2 rounded-md px-3 py-2 text-sm transition-colors ${
-                  active === item.key
-                    ? "bg-white/10 text-white"
-                    : "text-slate-400 hover:bg-white/5 hover:text-slate-200"
-                }`}
-              >
-                {item.icon}
-                <span className="whitespace-nowrap">{item.label}</span>
-              </button>
-            ))}
+            {NAV.map((item, i) => {
+              const showGroup =
+                item.parent && item.parent !== NAV[i - 1]?.parent;
+              return (
+                <Fragment key={item.key}>
+                  {showGroup && (
+                    <p className="hidden px-3 pb-1 pt-3 text-[11px] font-semibold uppercase tracking-wide text-slate-500 sm:block">
+                      {item.parent}
+                    </p>
+                  )}
+                  <button
+                    type="button"
+                    onClick={() => setActive(item.key)}
+                    className={`flex shrink-0 items-center gap-2 rounded-md px-3 py-2 text-sm transition-colors ${
+                      item.parent ? "sm:ml-2" : ""
+                    } ${
+                      active === item.key
+                        ? "bg-white/10 text-white"
+                        : "text-slate-400 hover:bg-white/5 hover:text-slate-200"
+                    }`}
+                  >
+                    {item.icon}
+                    <span className="whitespace-nowrap">{item.label}</span>
+                  </button>
+                </Fragment>
+              );
+            })}
           </nav>
         </aside>
 
         {/* 메인 */}
         <div className="min-w-0 flex-1">
           <div className="flex items-center justify-between border-b border-white/10 px-4 py-3">
-            <h3 className="text-sm font-semibold">{current.label}</h3>
+            <h3 className="text-sm font-semibold">
+              {current.parent && (
+                <span className="font-normal text-slate-500">
+                  {current.parent} ›{" "}
+                </span>
+              )}
+              {current.label}
+            </h3>
             <div className="flex items-center gap-2">
               <span className="flex h-6 w-6 items-center justify-center rounded-full bg-indigo-400/20 text-xs font-semibold text-indigo-300">
                 A
@@ -144,10 +194,12 @@ export default function AdminConsoleMock() {
 
           <div className="h-[540px] overflow-y-auto p-4">
             {active === "dashboard" && <DashboardView />}
-            {active === "roles" && <RolesView />}
-            {active === "workflow" && <WorkflowView />}
             {active === "monitoring" && <MonitoringView />}
             {active === "threat" && <ThreatView />}
+            {active === "workflow" && <WorkflowView />}
+            {active === "rules" && <ThreatRulesView />}
+            {active === "accounts" && <AccountsView />}
+            {active === "roles" && <RolesView />}
             {active === "policies" && <PoliciesView />}
             {active === "audit" && <AuditLogsView />}
           </div>

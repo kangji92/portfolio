@@ -536,6 +536,11 @@ export interface ThreatEvent {
   detail: {
     description: string;
     score: number;
+    sourceIp: string;
+    location: string;
+    resource: string;
+    rule: string;
+    recommended: string[];
     timeline: { time: string; label: string }[];
   };
 }
@@ -551,6 +556,11 @@ export const threatEvents: ThreatEvent[] = [
     detail: {
       description: "평소와 다른 국가 IP에서 관리자 콘솔 접근 시도가 감지되었습니다.",
       score: 87,
+      sourceIp: "203.0.113.42",
+      location: "해외 (RU)",
+      resource: "admin-console",
+      rule: "비정상 위치 로그인 탐지",
+      recommended: ["SSO 강제 로그아웃", "인증 레벨 강화", "IP 차단"],
       timeline: [
         { time: "10:21", label: "이상 탐지 — 비정상 위치" },
         { time: "10:21", label: "위험 점수 87 산정" },
@@ -568,6 +578,11 @@ export const threatEvents: ThreatEvent[] = [
     detail: {
       description: "짧은 시간 내 다수의 인증 실패가 발생해 계정을 일시 잠금했습니다.",
       score: 64,
+      sourceIp: "198.51.100.7",
+      location: "국내",
+      resource: "finance-api",
+      rule: "브루트포스 탐지 (5회/1분)",
+      recommended: ["계정 일시 잠금", "MFA 재요구"],
       timeline: [
         { time: "09:55", label: "인증 실패 5회 누적" },
         { time: "09:58", label: "계정 일시 잠금" },
@@ -585,6 +600,11 @@ export const threatEvents: ThreatEvent[] = [
     detail: {
       description: "일반 사용자가 관리자 전용 리소스에 접근을 시도했습니다.",
       score: 79,
+      sourceIp: "10.0.4.19",
+      location: "사내",
+      resource: "admin-console",
+      rule: "권한 경계 위반 탐지",
+      recommended: ["접근 차단", "권한 재검토", "감사 로그 확인"],
       timeline: [
         { time: "09:40", label: "관리자 리소스 접근 시도" },
         { time: "09:40", label: "정책 평가 — 거부" },
@@ -601,6 +621,11 @@ export const threatEvents: ThreatEvent[] = [
     detail: {
       description: "단시간 내 API 호출량이 임계치를 초과했습니다.",
       score: 41,
+      sourceIp: "10.0.4.12",
+      location: "사내",
+      resource: "iap-api",
+      rule: "API 레이트 임계치 초과",
+      recommended: ["레이트 리밋 적용"],
       timeline: [
         { time: "09:12", label: "호출량 임계치 초과" },
         { time: "09:15", label: "레이트 리밋 적용" },
@@ -610,3 +635,237 @@ export const threatEvents: ThreatEvent[] = [
 ];
 
 export const threatRiskLevels = ["전체", "높음", "중간", "낮음"];
+
+// 위협 탐지 화면 상단 요약 (더미)
+export const threatSummary: {
+  label: string;
+  value: string;
+  tone?: "up" | "down" | "warn";
+}[] = [
+  { label: "오늘 위협", value: "342" },
+  { label: "대응 완료", value: "289", tone: "up" },
+  { label: "대응 중", value: "35", tone: "warn" },
+  { label: "미대응", value: "18", tone: "down" },
+];
+
+// 계정 관리 — master-detail용 더미 계정 (위협·모니터링과 사용자ID 정합)
+export interface Account {
+  id: string;
+  name: string;
+  email: string;
+  role: string;
+  dept: string;
+  status: "활성" | "잠금" | "비활성";
+  mfa: boolean;
+  lastLogin: string;
+  detail: {
+    createdAt: string;
+    lastIp: string;
+    mfaMethods: string[];
+    activeSessions: number;
+    roles: string[];
+    recent: { time: string; label: string }[];
+    stats: {
+      totalLogins: number;
+      last30dAccess: number;
+      authSuccess: number;
+      authFail: number;
+      topResources: { name: string; count: number }[];
+      loginTrend: number[];
+    };
+  };
+}
+
+export const accounts: Account[] = [
+  {
+    id: "user_0087",
+    name: "이서연",
+    email: "seoyeon.lee@example.com",
+    role: "관리자",
+    dept: "보안팀",
+    status: "활성",
+    mfa: true,
+    lastLogin: "2026-08-14 10:21",
+    detail: {
+      createdAt: "2024-03-11",
+      lastIp: "203.0.113.42",
+      mfaMethods: ["OTP", "FIDO2"],
+      activeSessions: 2,
+      roles: ["관리자", "보안 운영"],
+      recent: [
+        { time: "10:22", label: "MFA 재인증 요구됨" },
+        { time: "10:21", label: "비정상 위치 접근 탐지" },
+        { time: "09:40", label: "관리자 콘솔 로그인" },
+      ],
+      stats: {
+        totalLogins: 1284,
+        last30dAccess: 412,
+        authSuccess: 1270,
+        authFail: 14,
+        topResources: [
+          { name: "admin-console", count: 210 },
+          { name: "demo-gw", count: 98 },
+          { name: "iap-api", count: 60 },
+        ],
+        loginTrend: [18, 22, 19, 25, 30, 12, 15],
+      },
+    },
+  },
+  {
+    id: "user_1042",
+    name: "김민준",
+    email: "minjun.kim@example.com",
+    role: "일반 사용자",
+    dept: "영업팀",
+    status: "활성",
+    mfa: true,
+    lastLogin: "2026-08-14 10:24",
+    detail: {
+      createdAt: "2025-01-08",
+      lastIp: "10.0.4.88",
+      mfaMethods: ["OTP"],
+      activeSessions: 1,
+      roles: ["일반 사용자"],
+      recent: [
+        { time: "10:24", label: "demo-crm SSO 로그인" },
+        { time: "09:02", label: "비밀번호 변경" },
+      ],
+      stats: {
+        totalLogins: 642,
+        last30dAccess: 180,
+        authSuccess: 638,
+        authFail: 4,
+        topResources: [
+          { name: "demo-crm", count: 140 },
+          { name: "demo-gw", count: 30 },
+        ],
+        loginTrend: [8, 10, 9, 12, 11, 6, 7],
+      },
+    },
+  },
+  {
+    id: "user_0510",
+    name: "박도윤",
+    email: "doyoon.park@example.com",
+    role: "일반 사용자",
+    dept: "재무팀",
+    status: "잠금",
+    mfa: true,
+    lastLogin: "2026-08-14 09:55",
+    detail: {
+      createdAt: "2024-07-22",
+      lastIp: "198.51.100.7",
+      mfaMethods: ["OTP"],
+      activeSessions: 0,
+      roles: ["일반 사용자", "재무 열람"],
+      recent: [
+        { time: "09:58", label: "반복 인증 실패로 계정 잠금" },
+        { time: "09:55", label: "인증 실패 5회 누적" },
+      ],
+      stats: {
+        totalLogins: 388,
+        last30dAccess: 96,
+        authSuccess: 372,
+        authFail: 16,
+        topResources: [
+          { name: "finance-api", count: 78 },
+          { name: "demo-gw", count: 12 },
+        ],
+        loginTrend: [6, 7, 5, 4, 9, 0, 0],
+      },
+    },
+  },
+  {
+    id: "user_1789",
+    name: "최지우",
+    email: "jiwoo.choi@example.com",
+    role: "일반 사용자",
+    dept: "개발팀",
+    status: "활성",
+    mfa: false,
+    lastLogin: "2026-08-14 09:40",
+    detail: {
+      createdAt: "2025-05-30",
+      lastIp: "10.0.4.19",
+      mfaMethods: [],
+      activeSessions: 1,
+      roles: ["일반 사용자"],
+      recent: [
+        { time: "09:40", label: "관리자 리소스 접근 시도 — 거부" },
+        { time: "08:55", label: "iap-api 호출" },
+      ],
+      stats: {
+        totalLogins: 510,
+        last30dAccess: 150,
+        authSuccess: 498,
+        authFail: 12,
+        topResources: [
+          { name: "iap-api", count: 90 },
+          { name: "demo-sp-1", count: 40 },
+        ],
+        loginTrend: [10, 12, 8, 14, 9, 7, 11],
+      },
+    },
+  },
+  {
+    id: "user_2231",
+    name: "정하준",
+    email: "hajun.jung@example.com",
+    role: "관리자",
+    dept: "인프라팀",
+    status: "활성",
+    mfa: true,
+    lastLogin: "2026-08-14 10:24",
+    detail: {
+      createdAt: "2023-11-02",
+      lastIp: "10.0.4.12",
+      mfaMethods: ["OTP", "FIDO2"],
+      activeSessions: 3,
+      roles: ["관리자", "인프라 운영"],
+      recent: [
+        { time: "10:24", label: "iap-api 접근 허용" },
+        { time: "10:10", label: "정책 번들 배포 확인" },
+      ],
+      stats: {
+        totalLogins: 1560,
+        last30dAccess: 520,
+        authSuccess: 1548,
+        authFail: 12,
+        topResources: [
+          { name: "iap-api", count: 240 },
+          { name: "admin-console", count: 160 },
+          { name: "demo-gw", count: 80 },
+        ],
+        loginTrend: [22, 24, 20, 26, 28, 18, 21],
+      },
+    },
+  },
+  {
+    id: "user_3320",
+    name: "강수아",
+    email: "sua.kang@example.com",
+    role: "일반 사용자",
+    dept: "인사팀",
+    status: "비활성",
+    mfa: false,
+    lastLogin: "2026-06-30 17:20",
+    detail: {
+      createdAt: "2024-02-14",
+      lastIp: "10.0.4.51",
+      mfaMethods: [],
+      activeSessions: 0,
+      roles: ["일반 사용자"],
+      recent: [{ time: "06-30", label: "장기 미접속으로 비활성 전환" }],
+      stats: {
+        totalLogins: 210,
+        last30dAccess: 0,
+        authSuccess: 206,
+        authFail: 4,
+        topResources: [{ name: "demo-gw", count: 40 }],
+        loginTrend: [0, 0, 0, 0, 0, 0, 0],
+      },
+    },
+  },
+];
+
+export const accountStatuses = ["전체", "활성", "잠금", "비활성"];
