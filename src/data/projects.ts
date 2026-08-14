@@ -25,6 +25,8 @@ export const projects: Project[] = [
       "SonarQube 리포트 → AI 개선 → 재검증 품질 루프 설계",
       "본 포트폴리오를 동일 접근으로 구축 (dogfooding)",
     ],
+    detailHref: "/projects/ai-fe-harness",
+    detailLabel: "개발 파이프라인 상세 보기",
     links: [
       { label: "GitHub", href: "https://github.com/kangji92/ai-fe-harness" },
     ],

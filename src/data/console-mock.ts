@@ -5,13 +5,115 @@ export interface Kpi {
   label: string;
   value: string;
   delta?: string;
+  hint?: string;
+  tone?: "up" | "down" | "warn";
 }
 
+// 상단 KPI — 위협 대응 현황 중심 (전부 더미)
 export const dashboardKpis: Kpi[] = [
-  { label: "등록 사용자", value: "12,480", delta: "+128" },
-  { label: "활성 세션", value: "1,204", delta: "+43" },
-  { label: "오늘 인증 요청", value: "8,932", delta: "+6.2%" },
-  { label: "차단된 접근", value: "37", delta: "-9" },
+  { label: "위협 이벤트", value: "342", hint: "전체 24,860건 중", delta: "▲ 4.2%", tone: "warn" },
+  { label: "대응 완료", value: "289", hint: "대응률 84.5%", delta: "▲ 12", tone: "up" },
+  { label: "미처리", value: "18", hint: "SLA 초과 3건", delta: "▲ 5", tone: "down" },
+  { label: "고위협 사용자", value: "7", hint: "격리 2 · 관찰 5", tone: "warn" },
+];
+
+// 위협 유형 분포 (막대 차트)
+export const threatByType = [
+  { label: "비정상 위치 접근", value: 108, tone: "negative" as const },
+  { label: "반복 인증 실패", value: 79, tone: "negative" as const },
+  { label: "권한 상승 시도", value: 63, tone: "negative" as const },
+  { label: "비정상 API 호출량", value: 47, tone: "negative" as const },
+  { label: "정책 위반 접근", value: 25, tone: "negative" as const },
+  { label: "기타", value: 20, tone: "negative" as const },
+];
+
+// 위협 탐지 추이 (24시간, 12구간) — 에어리어 차트
+export const threatTrend: number[] = [
+  8, 14, 11, 19, 26, 22, 17, 34, 41, 28, 24, 31,
+];
+
+// 대응 상태 요약 (세그먼트 바 + 범례)
+export const responseSummary: {
+  label: string;
+  value: number;
+  color: "emerald" | "amber" | "rose";
+}[] = [
+  { label: "대응 완료", value: 289, color: "emerald" },
+  { label: "대응 중", value: 35, color: "amber" },
+  { label: "미처리", value: 18, color: "rose" },
+];
+
+// 시스템 상태 — 구성요소 헬스체크 (명칭은 일반화한 더미)
+export interface SystemComponent {
+  name: string;
+  latency: string;
+  status: "정상" | "지연" | "점검";
+}
+
+export const systemStatus: SystemComponent[] = [
+  { name: "인증 서비스", latency: "38ms", status: "정상" },
+  { name: "정책 엔진", latency: "51ms", status: "정상" },
+  { name: "API 게이트웨이", latency: "182ms", status: "지연" },
+  { name: "세션 스토어", latency: "12ms", status: "정상" },
+  { name: "위협 탐지 엔진", latency: "44ms", status: "정상" },
+  { name: "로그·감사 수집", latency: "27ms", status: "정상" },
+];
+
+// ── Monitoring(접근제어 실시간 모니터링) 더미 데이터 ──
+
+export const monitorKpis: Kpi[] = [
+  { label: "접근 요청", value: "42/s", hint: "실시간 RPS" },
+  { label: "허용률", value: "96.8%", delta: "▲ 0.4%", tone: "up" },
+  { label: "거부", value: "312", delta: "▲ 22", tone: "down", hint: "최근 1시간" },
+  { label: "활성 세션", value: "1,204", hint: "동시 접속" },
+];
+
+// 정책 판정(Decision) 분포 — 세그먼트 바
+export const decisionBreakdown: {
+  label: string;
+  value: number;
+  color: "emerald" | "amber" | "rose";
+}[] = [
+  { label: "허용 (Permit)", value: 9240, color: "emerald" },
+  { label: "추가 인증 (Step-up)", value: 486, color: "amber" },
+  { label: "거부 (Deny)", value: 312, color: "rose" },
+];
+
+// 리소스별 접근 Top
+export const topResources: { name: string; allow: number; deny: number }[] = [
+  { name: "demo-crm.example.com", allow: 3120, deny: 24 },
+  { name: "demo-gw.example.com", allow: 2480, deny: 12 },
+  { name: "admin-console", allow: 1860, deny: 48 },
+  { name: "finance-api", allow: 1240, deny: 86 },
+  { name: "iap-api", allow: 980, deny: 9 },
+];
+
+// 거부 사유 Top — 막대 차트
+export const denyReasons = [
+  { label: "정책 미충족", value: 118, tone: "negative" as const },
+  { label: "비정상 위치", value: 74, tone: "negative" as const },
+  { label: "MFA 실패", value: 63, tone: "negative" as const },
+  { label: "권한 없음", value: 34, tone: "negative" as const },
+  { label: "세션 만료", value: 23, tone: "negative" as const },
+];
+
+// 실시간 접근 로그 스트림
+export interface AccessLog {
+  time: string;
+  user: string;
+  resource: string;
+  decision: "허용" | "거부" | "추가 인증";
+  reason: string;
+}
+
+export const accessLogs: AccessLog[] = [
+  { time: "10:24:31", user: "user_1042", resource: "demo-crm", decision: "허용", reason: "정책 평가 통과" },
+  { time: "10:24:29", user: "user_0087", resource: "admin-console", decision: "추가 인증", reason: "고위험 · MFA 요구" },
+  { time: "10:24:27", user: "user_2231", resource: "iap-api", decision: "허용", reason: "지속 평가 정상" },
+  { time: "10:24:24", user: "user_0510", resource: "finance-api", decision: "거부", reason: "비정상 위치" },
+  { time: "10:24:22", user: "user_1789", resource: "admin-console", decision: "거부", reason: "권한 없음" },
+  { time: "10:24:19", user: "user_3320", resource: "demo-gw", decision: "허용", reason: "정책 평가 통과" },
+  { time: "10:24:17", user: "user_0087", resource: "legacy-erp", decision: "거부", reason: "정책 미충족" },
 ];
 
 // 인증 시도 추이 (24시간, 12개 구간) — 라인/에어리어 차트용
@@ -79,129 +181,125 @@ export interface FlowNodeSeed {
   settings?: NodeSettings;
 }
 
-// 가로형(좌 → 우) 배치 + 노드별 설정(세팅 패널용)
+// 위협 대응 프로세스 — 노드별 설정(세팅 패널용). 전부 더미.
 export const workflowNodes: FlowNodeSeed[] = [
   {
-    id: "req",
-    label: "접근 요청",
+    id: "trigger",
+    label: "Event Triggered",
     kind: "start",
-    position: { x: 0, y: 80 },
+    position: { x: 0, y: 160 },
     nodeType: "트리거",
     settings: {
       input: [],
       task: [
-        { label: "진입점", value: "접근 요청" },
-        { label: "프로토콜", value: "OIDC / SAML" },
+        { label: "진입점", value: "위협 이벤트" },
+        { label: "소스", value: "위협 탐지 엔진" },
       ],
       output: [
-        { label: "requestId", value: "string" },
-        { label: "userId", value: "string" },
+        { label: "eventId", value: "string" },
+        { label: "riskType", value: "string" },
+        { label: "riskScore", value: "number" },
       ],
     },
   },
   {
-    id: "identity",
-    label: "신원 확인",
-    kind: "step",
-    position: { x: 220, y: 80 },
-    nodeType: "인증 단계",
-    settings: {
-      input: [{ label: "userId", value: "${req.userId}" }],
-      task: [
-        { label: "인증 방식", value: "사설인증" },
-        { label: "필수 여부", value: "필수" },
-      ],
-      output: [
-        { label: "subject", value: "string" },
-        { label: "identityVerified", value: "boolean" },
-      ],
-    },
-  },
-  {
-    id: "policy",
-    label: "정책 평가",
-    kind: "step",
-    position: { x: 440, y: 80 },
-    nodeType: "정책 평가",
-    settings: {
-      input: [
-        { label: "subject", value: "${identity.subject}" },
-        { label: "resource", value: "${req.resource}" },
-      ],
-      task: [
-        { label: "정책 세트", value: "기본 접근 정책" },
-        { label: "평가 모드", value: "전체 일치" },
-      ],
-      output: [
-        { label: "decision", value: "permit | deny" },
-        { label: "matchedRules", value: "string[]" },
-      ],
-    },
-  },
-  {
-    id: "mfa",
-    label: "MFA 인증",
-    kind: "step",
-    position: { x: 660, y: 80 },
-    nodeType: "인증 단계",
-    settings: {
-      input: [{ label: "subject", value: "${identity.subject}" }],
-      task: [
-        { label: "인증 수단", value: "OTP / FIDO2" },
-        { label: "재시도", value: "3회" },
-      ],
-      output: [{ label: "mfaPassed", value: "boolean" }],
-    },
-  },
-  {
-    id: "risk",
-    label: "지속 평가",
+    id: "type-branch",
+    label: "위협 유형 분기",
     kind: "decision",
-    position: { x: 880, y: 80 },
+    position: { x: 260, y: 280 },
     nodeType: "조건 분기",
     settings: {
       input: [
-        { label: "subject", value: "${identity.subject}" },
-        { label: "context", value: "${req.context}" },
+        { label: "riskType", value: "${trigger.riskType}" },
+        { label: "riskScore", value: "${trigger.riskScore}" },
       ],
       task: [
-        { label: "기준", value: "위험 점수 ≥ 70" },
-        { label: "평가 주기", value: "지속" },
+        { label: "분기 기준", value: "위협 유형" },
+        { label: "규칙", value: "고위험 / 급등 / 등급 상승" },
       ],
-      output: [
-        { label: "riskScore", value: "number" },
-        { label: "branch", value: "normal | risky" },
-      ],
+      output: [{ label: "branch", value: "high | surge | escalation" }],
     },
   },
   {
-    id: "allow",
-    label: "접근 허용",
-    kind: "allow",
-    position: { x: 1120, y: 0 },
-    nodeType: "종료",
+    id: "step-up",
+    label: "인증 레벨 강화",
+    kind: "step",
+    position: { x: 540, y: 120 },
+    nodeType: "대응 액션",
     settings: {
-      input: [{ label: "decision", value: "${policy.decision}" }],
+      input: [{ label: "userId", value: "${trigger.userId}" }],
       task: [
-        { label: "결과", value: "접근 허용" },
-        { label: "세션", value: "토큰 발급" },
+        { label: "액션", value: "인증 레벨 상향" },
+        { label: "요구 수단", value: "MFA / FIDO2" },
       ],
-      output: [{ label: "sessionToken", value: "string" }],
+      output: [{ label: "enforced", value: "boolean" }],
     },
   },
   {
-    id: "deny",
-    label: "접근 거부",
-    kind: "deny",
-    position: { x: 1120, y: 160 },
-    nodeType: "종료",
+    id: "blocklist",
+    label: "블랙리스트 등록",
+    kind: "step",
+    position: { x: 540, y: 280 },
+    nodeType: "대응 액션",
     settings: {
-      input: [{ label: "reason", value: "${risk.branch}" }],
-      task: [
-        { label: "결과", value: "접근 거부" },
-        { label: "로깅", value: "감사 기록" },
+      input: [
+        { label: "userId", value: "${trigger.userId}" },
+        { label: "sourceIp", value: "${trigger.sourceIp}" },
       ],
-      output: [{ label: "auditId", value: "string" }],
+      task: [
+        { label: "액션", value: "블랙리스트 등록" },
+        { label: "대상", value: "사용자 · IP" },
+        { label: "유효기간", value: "24시간" },
+      ],
+      output: [{ label: "blocked", value: "boolean" }],
+    },
+  },
+  {
+    id: "level-branch",
+    label: "위험 등급 분기",
+    kind: "decision",
+    position: { x: 540, y: 440 },
+    nodeType: "조건 분기",
+    settings: {
+      input: [{ label: "riskScore", value: "${trigger.riskScore}" }],
+      task: [
+        { label: "분기 기준", value: "위험 점수" },
+        { label: "임계값", value: "심각≥90 · 높음≥70 · 중간≥40" },
+      ],
+      output: [{ label: "level", value: "심각 | 높음 | 중간 | 낮음" }],
+    },
+  },
+  {
+    id: "force-logout",
+    label: "SSO 강제 로그아웃",
+    kind: "step",
+    position: { x: 820, y: 260 },
+    nodeType: "대응 액션",
+    settings: {
+      input: [{ label: "sessionId", value: "${trigger.sessionId}" }],
+      task: [
+        { label: "액션", value: "SSO 세션 강제 종료" },
+        { label: "범위", value: "전체 서비스" },
+      ],
+      output: [{ label: "loggedOut", value: "boolean" }],
+    },
+  },
+  {
+    id: "notify",
+    label: "이메일 알림",
+    kind: "step",
+    position: { x: 1100, y: 380 },
+    nodeType: "알림",
+    settings: {
+      input: [
+        { label: "to", value: "보안 담당자" },
+        { label: "eventId", value: "${trigger.eventId}" },
+      ],
+      task: [
+        { label: "채널", value: "이메일" },
+        { label: "템플릿", value: "위협 대응 리포트" },
+      ],
+      output: [{ label: "notified", value: "boolean" }],
     },
   },
 ];
@@ -211,15 +309,20 @@ export interface FlowEdgeSeed {
   source: string;
   target: string;
   label?: string;
+  tone?: "high" | "mid" | "low";
 }
 
 export const workflowEdges: FlowEdgeSeed[] = [
-  { id: "e1", source: "req", target: "identity" },
-  { id: "e2", source: "identity", target: "policy" },
-  { id: "e3", source: "policy", target: "mfa" },
-  { id: "e4", source: "mfa", target: "risk" },
-  { id: "e5", source: "risk", target: "allow", label: "정상" },
-  { id: "e6", source: "risk", target: "deny", label: "위험" },
+  { id: "e1", source: "trigger", target: "type-branch" },
+  { id: "e2", source: "type-branch", target: "step-up", label: "고위험 이벤트", tone: "high" },
+  { id: "e3", source: "type-branch", target: "blocklist", label: "위험도 급등", tone: "high" },
+  { id: "e4", source: "type-branch", target: "level-branch", label: "위험 등급 상승", tone: "mid" },
+  { id: "e5", source: "step-up", target: "force-logout" },
+  { id: "e6", source: "blocklist", target: "force-logout" },
+  { id: "e7", source: "level-branch", target: "force-logout", label: "심각", tone: "high" },
+  { id: "e8", source: "level-branch", target: "force-logout", label: "높음", tone: "high" },
+  { id: "e9", source: "level-branch", target: "notify", label: "중간", tone: "mid" },
+  { id: "e10", source: "force-logout", target: "notify" },
 ];
 
 // 역할 관리(Role Management) — 가로형 계층 트리 + 노드 클릭 시 상세 패널.

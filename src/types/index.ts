@@ -37,6 +37,8 @@ export interface Project {
   contributions?: ContributionGroup[];
   /** 케이스 스터디 상세 페이지 경로 (예: "/projects/ini-icam") */
   detailHref?: string;
+  /** 상세 링크 문구 (미지정 시 "예시 UI 상세 보기") */
+  detailLabel?: string;
 }
 
 export interface SkillCategory {

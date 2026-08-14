@@ -63,7 +63,7 @@ export default function AuthModalMock() {
 
   return (
     <div className="relative flex min-h-[560px] items-center justify-center rounded-xl border border-black/10 bg-slate-200/60 p-4 dark:border-white/10 dark:bg-slate-800/40">
-      <div className="w-full max-w-[400px] overflow-hidden rounded-2xl bg-white shadow-2xl">
+      <div className="flex h-[520px] w-full max-w-[400px] flex-col overflow-hidden rounded-2xl bg-white shadow-2xl">
         {/* 헤더 */}
         <div className="flex items-center justify-between border-b border-slate-100 px-5 py-4">
           {step !== "select" ? (
@@ -92,7 +92,8 @@ export default function AuthModalMock() {
           </button>
         </div>
 
-        {/* 본문 */}
+        {/* 본문 — 높이 고정 + 스크롤로 단계 전환 시 덜컹임 방지 */}
+        <div className="flex-1 overflow-y-auto">
         {step === "select" && (
           <div>
             <div className="flex border-b border-slate-100">
@@ -263,6 +264,7 @@ export default function AuthModalMock() {
             </button>
           </div>
         )}
+        </div>
       </div>
     </div>
   );

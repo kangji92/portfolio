@@ -68,24 +68,35 @@ export default function WorkflowView() {
       position: n.position,
       data: n as unknown as Record<string, unknown>,
     }));
-    const edges: Edge[] = workflowEdges.map((e) => ({
-      id: e.id,
-      source: e.source,
-      target: e.target,
-      label: e.label,
-      type: "smoothstep",
-      animated: true,
-      style: { stroke: "#475569" },
-      labelStyle: { fill: "#94a3b8", fontSize: 11 },
-      labelBgStyle: { fill: "#0f172a" },
-    }));
+    const toneColor: Record<string, string> = {
+      high: "#f87171",
+      mid: "#fbbf24",
+      low: "#34d399",
+    };
+    const edges: Edge[] = workflowEdges.map((e) => {
+      const c = e.tone ? toneColor[e.tone] : undefined;
+      return {
+        id: e.id,
+        source: e.source,
+        target: e.target,
+        label: e.label,
+        type: "smoothstep",
+        animated: true,
+        style: { stroke: "#475569" },
+        labelStyle: { fill: c ?? "#94a3b8", fontSize: 11, fontWeight: c ? 600 : 400 },
+        labelShowBg: true,
+        labelBgStyle: { fill: "#0f172a", stroke: c ?? "#1e293b" },
+        labelBgPadding: [6, 3] as [number, number],
+        labelBgBorderRadius: 4,
+      };
+    });
     return { nodes, edges };
   }, []);
 
   return (
     <div>
       <p className="mb-3 text-sm text-slate-400">
-        인증·인가 워크플로우를 노드 기반으로 구성하는 에디터 (React Flow).{" "}
+        위협 대응 프로세스를 노드 기반으로 정의하는 워크플로우 에디터 (React Flow).{" "}
         <span className="text-slate-500">노드를 클릭하면 설정 패널이 열립니다.</span>
       </p>
       <div className="flex h-[440px] overflow-hidden rounded-lg border border-white/10">

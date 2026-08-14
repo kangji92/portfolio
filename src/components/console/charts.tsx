@@ -4,10 +4,12 @@ export function AreaChart({
   data,
   gradientId,
   className = "",
+  color = "#34d399",
 }: {
   data: number[];
   gradientId: string;
   className?: string;
+  color?: string;
 }) {
   const w = 100;
   const h = 40;
@@ -37,15 +39,15 @@ export function AreaChart({
     >
       <defs>
         <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#34d399" stopOpacity="0.35" />
-          <stop offset="1" stopColor="#34d399" stopOpacity="0" />
+          <stop offset="0" stopColor={color} stopOpacity="0.35" />
+          <stop offset="1" stopColor={color} stopOpacity="0" />
         </linearGradient>
       </defs>
       <path d={area} fill={`url(#${gradientId})`} />
       <path
         d={line}
         fill="none"
-        stroke="#34d399"
+        stroke={color}
         strokeWidth="1.5"
         vectorEffect="non-scaling-stroke"
       />

@@ -168,7 +168,7 @@ function ProjectCard({ project }: { project: Project }) {
             href={project.detailHref}
             className="inline-flex items-center gap-1 text-sm font-medium text-zinc-950 underline-offset-4 hover:underline dark:text-zinc-50"
           >
-            예시 UI 상세 보기 →
+            {project.detailLabel ?? "예시 UI 상세 보기"} →
           </Link>
         </div>
       )}

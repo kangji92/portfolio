@@ -21,7 +21,7 @@ type ViewKey =
 const NAV: { key: ViewKey; label: string; icon: React.ReactNode }[] = [
   {
     key: "dashboard",
-    label: "Dashboard",
+    label: "대시보드",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4">
         <rect x="3" y="3" width="7" height="7" rx="1" />
@@ -44,7 +44,7 @@ const NAV: { key: ViewKey; label: string; icon: React.ReactNode }[] = [
   },
   {
     key: "workflow",
-    label: "Workflow Editor",
+    label: "워크플로우 에디터",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4">
         <circle cx="6" cy="6" r="2.5" />
@@ -56,7 +56,7 @@ const NAV: { key: ViewKey; label: string; icon: React.ReactNode }[] = [
   },
   {
     key: "monitoring",
-    label: "Monitoring",
+    label: "모니터링",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4">
         <path d="M3 3v18h18" />
@@ -66,7 +66,7 @@ const NAV: { key: ViewKey; label: string; icon: React.ReactNode }[] = [
   },
   {
     key: "threat",
-    label: "Threat",
+    label: "위협 탐지",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4">
         <path d="M12 3l9 16H3z" />
@@ -76,7 +76,7 @@ const NAV: { key: ViewKey; label: string; icon: React.ReactNode }[] = [
   },
   {
     key: "policies",
-    label: "Policies",
+    label: "정책 관리",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4">
         <path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z" />
@@ -86,7 +86,7 @@ const NAV: { key: ViewKey; label: string; icon: React.ReactNode }[] = [
   },
   {
     key: "audit",
-    label: "Audit Logs",
+    label: "감사 로그",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4">
         <rect x="5" y="3" width="14" height="18" rx="2" />
@@ -142,7 +142,7 @@ export default function AdminConsoleMock() {
             </div>
           </div>
 
-          <div className="p-4">
+          <div className="h-[540px] overflow-y-auto p-4">
             {active === "dashboard" && <DashboardView />}
             {active === "roles" && <RolesView />}
             {active === "workflow" && <WorkflowView />}
