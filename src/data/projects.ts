@@ -54,7 +54,7 @@ export const projects: Project[] = [
     role: "Front-end Developer",
     summary:
       "사설인증·본인인증·2차 인증·전자서명 등 다양한 인증 수단을 하나로 통합하는 인증통합플랫폼의 프론트엔드 UI를 개발한 프로젝트.",
-    stack: ["Vue 3", "Vue 2", "TypeScript", "JavaScript", "Sass (SCSS)"],
+    stack: ["Vue 3", "Vue 2", "TypeScript", "JavaScript", "Sass (SCSS)", "i18n"],
     highlights: [
       "다양한 인증 수단을 통합하는 모달 형태의 인증 UI 개발",
       "Cloud 형(Vue 3 / TypeScript)·On-premise 형(Vue 2 / JavaScript)을 각각 개발·출시",

@@ -21,8 +21,23 @@ export const skills: SkillCategory[] = [
     items: [{ name: "MFE (Micro Frontend)" }],
   },
   {
+    category: "Data Visualization",
+    items: [
+      { name: "React Flow" },
+      { name: "d3" },
+      { name: "ECharts" },
+      { name: "Recharts" },
+    ],
+  },
+  {
     category: "Libraries & Tools",
-    items: [{ name: "React Flow" }, { name: "Storybook" }],
+    items: [
+      { name: "Storybook" },
+      { name: "CKEditor" },
+      { name: "CodeMirror" },
+      { name: "Vuetify" },
+      { name: "i18n (vue-i18n)" },
+    ],
   },
   {
     category: "Version Control",
