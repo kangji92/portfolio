@@ -5,6 +5,31 @@ import { zeroTrust } from "./projects/zero-trust";
 export const projects: Project[] = [
   zeroTrust,
   {
+    id: "ai-fe-harness",
+    title: "AI Front-end Harness",
+    period: "2026",
+    role: "Personal Project",
+    summary:
+      "Markdown 개발 표준을 AI 에이전트가 읽고 컴포넌트·테스트를 일관되게 생성하는 프론트엔드 개발 하네스.",
+    stack: [
+      "Node.js",
+      "TypeScript",
+      "React",
+      "Vitest",
+      "Testing Library",
+      "GitHub Actions",
+    ],
+    highlights: [
+      "Markdown 개발 표준(standards · AGENTS.md)을 단일 진실 소스로 수립",
+      "표준을 강제하는 컴포넌트 스캐폴더 + 재사용 프롬프트 라이브러리 구축",
+      "SonarQube 리포트 → AI 개선 → 재검증 품질 루프 설계",
+      "본 포트폴리오를 동일 접근으로 구축 (dogfooding)",
+    ],
+    links: [
+      { label: "GitHub", href: "https://github.com/kangji92/ai-fe-harness" },
+    ],
+  },
+  {
     id: "mediawill-flea-market",
     title: "미디어윌 벼룩시장 통합 플랫폼 구축",
     period: "2024.06 - 2024.12",
@@ -35,30 +60,5 @@ export const projects: Project[] = [
     ],
     detailHref: "/projects/inihub",
     links: [{ label: "제품 소개", href: "https://www.inihub.biz/" }],
-  },
-  {
-    id: "ai-fe-harness",
-    title: "AI Front-end Harness",
-    period: "2026",
-    role: "Personal Project",
-    summary:
-      "Markdown 개발 표준을 AI 에이전트가 읽고 컴포넌트·테스트를 일관되게 생성하는 프론트엔드 개발 하네스.",
-    stack: [
-      "Node.js",
-      "TypeScript",
-      "React",
-      "Vitest",
-      "Testing Library",
-      "GitHub Actions",
-    ],
-    highlights: [
-      "Markdown 개발 표준(standards · AGENTS.md)을 단일 진실 소스로 수립",
-      "표준을 강제하는 컴포넌트 스캐폴더 + 재사용 프롬프트 라이브러리 구축",
-      "SonarQube 리포트 → AI 개선 → 재검증 품질 루프 설계",
-      "본 포트폴리오를 동일 접근으로 구축 (dogfooding)",
-    ],
-    links: [
-      { label: "GitHub", href: "https://github.com/kangji92/ai-fe-harness" },
-    ],
   },
 ];
