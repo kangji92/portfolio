@@ -13,8 +13,8 @@ export default function Skills() {
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {skills.map((group, index) => (
-            <Reveal key={group.category} delay={index * 80}>
-              <Card>
+            <Reveal key={group.category} delay={index * 80} className="h-full">
+              <Card className="h-full">
                 <h3 className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
                   {group.category}
                 </h3>

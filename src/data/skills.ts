@@ -14,7 +14,11 @@ export const skills: SkillCategory[] = [
   },
   {
     category: "Language",
-    items: [{ name: "TypeScript" }],
+    items: [{ name: "TypeScript" }, { name: "JavaScript" }],
+  },
+  {
+    category: "State Management",
+    items: [{ name: "Zustand" }, { name: "TanStack Query" }],
   },
   {
     category: "Architecture",
@@ -36,6 +40,7 @@ export const skills: SkillCategory[] = [
       { name: "CKEditor" },
       { name: "CodeMirror" },
       { name: "Vuetify" },
+      { name: "jQuery" },
       { name: "i18n (vue-i18n)" },
     ],
   },
